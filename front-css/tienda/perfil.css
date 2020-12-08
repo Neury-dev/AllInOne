@@ -1,0 +1,86 @@
+/* 
+    Created on : 14 oct. 2020, 12:35:12
+    Author     : desarrollador
+*/
+body > section {
+    max-width: 1200px;
+    height: auto;
+    margin: auto;
+}
+nav {
+    padding: 1.10em 1em 0.10em 0em;
+}
+:not(nav) {
+    font-family: var(--n-fuente-dos);
+}
+section.n-contenedor {
+    background-image: url("../../font-img/tienda/jeans.jpg");
+    background-size: auto;
+    vertical-align: middle;
+    object-fit: cover;
+    border-radius: 1em;
+    height: 31.25em;
+    margin: 0em auto;
+}
+section.n-contenedor > section.n-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--n-color-dos);
+    background-color: var( --n-color-uno-uno);
+    width: 100%;
+    height: 100%;
+    border-radius: 1em;
+}
+section.n-contenedor > section.n-contenido > section {
+    margin: 1em 0em 0em 0em;
+}
+section.n-contenedor > section.n-contenido > section > img {
+    width: 8em;
+    height: 8em;
+    vertical-align: middle;
+    border-radius: 50%;
+    filter: grayscale(100%);
+}
+/*
+    buscar
+*/
+form.n-perfilado > input[type=email], form.n-perfilado > input[type=password] {
+    float: left;
+    width: 18em;
+    padding: 0.30em; 
+    border: 0.10em solid var(--n-color-dos);
+    border-radius: 1em 0em 0em 1em;
+}
+form.n-perfilado > input[type=email]:valid, form.n-perfilado > input[type=password]:valid {
+    color: var(--n-color);
+    background: var(--n-color-dos);
+    caret-color: var(--n-color);
+}
+form.n-perfilado > input[type=email]:invalid, form.n-perfilado > input[type=password]:invalid {
+    color: var(--n-color-rojo);
+    background-color: transparent;
+}
+form.n-perfilado > button  {
+    color: white;
+    background-color: var(--n-color-dos);
+    border: none;
+    border-radius: 0em 2.50em 2.50em 0em;
+    padding: 0.37em 0.80em 0.37em 0.80em;
+}
+form.n-perfilado > button:hover {
+    color: var(--n-color-dos);
+    /*background-color: var(--n-color-tres);*/
+    text-shadow: var(--n-sombra-de-texto);
+}
+/*form.n-perfilado > button::before {
+    content: "-";
+    clear: both;
+    display: table;
+    color: white;
+}*/
+@media screen and (max-width: 24.10em) {
+    * {
+        display: none;           
+    }
+}

@@ -1,0 +1,127 @@
+/* 
+    Created on : 15 sept. 2020, 13:59:36
+    Author     : desarrollador
+*/
+/*@import url("root.css");*/
+footer.n-footer {
+    display: grid;
+    grid-template-columns: 33% 25% auto;
+    grid-gap: 0.625em;             
+}
+.n-footer-area-1 { grid-area: 1 / 1 / span 1 / span 1; }
+.n-footer-area-2 { grid-area: 1 / 2 / span 1 / span 1; }
+.n-footer-area-3 { grid-area: 1 / 3 / span 1 / span 1; }
+section.n-grid-area-5 > hr {
+    color: var(--n-color-tres);
+    width: 90%;
+}
+footer.n-footer > section > h3 {
+    color: var(--n-color-dos);
+    font-family: var(--n-fuente);
+    font-size: 0.90em;
+}
+footer.n-footer > section.n-footer-area-1 > p {
+    color: var(--n-color-dos);
+    font-family: var(--n-fuente-dos);
+    font-size: 0.90em;
+    padding: 0em 0em 0.70em 0em;
+}
+footer.n-footer > section#n-contacto > form > p > input, 
+footer.n-footer > section#n-contacto > form > p > textArea { 
+    caret-color: var(--n-color-dos); 
+    font-family: var(--n-fuente-dos);
+    font-size: 0.80em;
+    width: 70%;
+    border: 0.10em solid var(--n-color-dos);
+    border-radius: 0.50em;
+    padding: 0.60em;
+    outline: none;
+}
+::placeholder { 
+    color: var(--n-color-tres);
+}
+footer.n-footer > section#n-contacto > form > p > input:valid,
+footer.n-footer > section#n-contacto > form > p > textArea:valid {
+    color: var(--n-color);
+    background: var(--n-color-dos);
+    caret-color: var(--n-color);
+}
+footer.n-footer > section#n-contacto > form > p > input:invalid, 
+footer.n-footer > section#n-contacto > form > p > textArea:invalid {
+    color: var(--n-color-rojo);
+    background: var(--n-color);
+}
+footer.n-footer > section#n-contacto > form > button {
+    color: var(--n-color);
+    background-color: var(--n-color-dos);
+    font-family: var(--n-fuente);
+    font-size: 0.90em;
+    width: 70%;
+    border: none;
+    border-radius: 0.50em;
+    padding: 0.50em;
+}
+footer.n-footer > section#n-contacto > form > button:hover {
+    color: var(--n-color-dos);
+    background-color: var(--n-color-tres);
+    text-shadow: var(--n-sombra-de-texto);
+}
+footer.n-footer > section.n-footer-area-2 {
+    display: flex;
+    flex-direction: column;
+}
+footer.n-footer > section.n-footer-area-2 > a {
+    color: var(--n-color-dos);
+    font-family: var(--n-fuente-dos);
+    font-size: 0.90em;
+    text-decoration: none;
+    padding: 0em 0em 0.70em 0em;
+}
+footer.n-footer > section.n-footer-area-2 > a:hover {
+    color: var(--n-color-tres);
+    font-weight: bold;
+}
+footer.n-footer > section.n-footer-area-3 > address {
+    color: var(--n-color-dos);
+    font-family: var(--n-fuente-dos);
+    font-size: 0.90em;
+    margin: 0em 0em 0.70em 0em;
+}
+footer.n-footer > section.n-footer-area-3 > address > p > i {
+    padding: 0em 0em 0.20em 0em;
+}
+footer.n-footer > section.n-footer-area-3 > address > a > i {
+    color: var(--n-color-dos);
+    font-size: 1em;
+}
+footer.n-footer > section.n-footer-area-3 > a > i {
+    color: var(--n-color-dos);
+    font-size: 4em;
+}
+@media screen and (min-width: 24.1099em) and (max-width: 56.99em)  {
+    footer.n-footer {
+        display: grid;
+        grid-template-columns: 48% auto;
+        grid-gap: 0.625em;             
+    }
+    .n-footer-area-1 { grid-area: 1 / 1 / span 1 / span 4; }
+    .n-footer-area-2 { grid-area: 2 / 1 / span 1 / span 1; }
+    .n-footer-area-3 { grid-area: 2 / 2 / span 1 / span 1; }
+    footer.n-footer > section#n-contacto > form > p > input, 
+    footer.n-footer > section#n-contacto > form > p > textArea,
+    footer.n-footer > section#n-contacto > form > button { 
+        width: 98%;
+    } 
+    footer.n-footer > section > h3,
+    footer.n-footer > section.n-footer-area-1 > p,
+    footer.n-footer > section.n-footer-area-2 > a,
+    footer.n-footer > section.n-footer-area-3 > address {
+        font-size: 0.80em;
+    }
+    footer.n-footer > section.n-footer-area-3 > address > a > i {
+        font-size: 0.90em;
+    }
+    footer.n-footer > section.n-footer-area-3 > a > i {
+        font-size: 3.60em;
+    }
+}

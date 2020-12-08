@@ -1,0 +1,27 @@
+-PSRs (PHP Standards Recommendations)
+https://www.php-fig.org/
+
+- Ideas de proyectos
+https://github.com/florinpop17/app-ideas/
+
+- Importar archivos JavaScript a archivos JavaScript
+https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import
+
+- ECMAScript 6
+http://www.ecma-international.org/ecma-262/6.0/
+
+- Font Awesome: Iconos individuales
+https://fontello.com/
+
+- Plantilla de codigo
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_syntax_highlight
+
+- GitHub
+https://www.youtube.com/watch?v=6ldPabaV2Xo
+https://www.youtube.com/watch?v=GqLD52IV-gM
+
+- Importar ultima version de los archivos
+encabezado HTTP: como solicitar la ultima version del fichero (last-modified) 
+
+- JSON
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript

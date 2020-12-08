@@ -1,0 +1,139 @@
+/* 
+    Created on : 22 nov. 2020, 23:43:05
+    Author     : desarrollador
+*/
+main {
+    position: relative;
+    width: calc(100% - 3em);
+    padding: 0em 0em 3em 0em;
+}
+main > img {
+    width: 100%;
+    height: 35em;
+    vertical-align: middle;
+    border-radius: 1em;
+    object-fit: cover;
+}
+main > section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-size: cover;
+    width: 100%;
+    height: 35em;
+    border-radius: 1em;
+}
+main > section > section > img {
+    width: 20em;
+    height: 35em;
+    vertical-align: middle;
+    border-radius: 1em;
+    object-fit: cover;
+    box-shadow: 0 0 4px #1c1d22, 0 0 4px #1c1d22, 0 0 8px #1c1d22;
+}
+main > section > section.n-etiqueta {
+    display: flex;
+    flex-direction: column;
+}
+main > section > section.n-etiqueta > span {
+    color: var(--n-color);
+    background-color: var(--n-color-dos);
+    font-family: var(--n-fuente-dos);
+    font-size: 0.80em;
+    margin: 0.50em auto 0.50em 0em;
+    border-radius: 0.50em;
+    padding: 0.50em;
+}
+main > section > section > form {
+    color: var(--n-color-dos);
+    font-family: var(--n-fuente-dos);
+    font-size: 0.80em;
+    text-align: center;
+}
+main > section > section > button.n-menos, main > section > section > button.n-mas {
+    float: left;
+    color: var(--n-color);
+    background-color: var(--n-color-dos);
+    text-align: center;
+    width: 2em;
+    height: 2em;
+    border: none;
+}
+main > section > section > button.n-menos {
+    border-radius: 0.50em 0em 0em 0.50em;
+}
+main > section > section > button.n-mas {
+    border-radius: 0em 0.50em 0.50em 0em;
+}
+form#detalles {
+    float: left;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+form#detalles > input#mas {
+    text-align: center;
+    width: 12em;
+    border: 0.10em solid var(--n-color-dos);
+    padding: 0.35em 0em 0.35em 0em;
+}
+main > section > section > div > button#escogiendo {
+    color: var(--n-color);
+    background-color: var(--n-color-dos);
+    font-family: var(--n-fuente);
+    font-size: 0.80em;
+    width: 18.40em;
+    margin-top: 0.50em;
+    border: none;
+    border-radius: 0.50em;
+    padding: 0.50em;
+}
+main > section > section > div.n-total {
+    position: absolute; 
+    margin-top: -3em;
+}
+main > section > section > div.n-total > input#n-total {text-align: center; width: 21.80em; }
+@media screen and (max-width: 69.99em) {
+    main {
+        width: calc(100% - 1em);
+        padding: 0em 0em 0.50em 0em;
+    }
+    main > img {
+        height: 30em;
+    }
+    main > section {
+        height: 30em;
+    }
+    main > section > section > img {
+        width: 20em;
+        height: 30em;
+    }
+}
+@media screen and (max-width: 59.99em) {
+    main > section {
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+    }
+    main > section > section > img {
+        width: 10em;
+        height: 14em;
+    }
+    main > section > section.n-etiqueta {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    main > section > section.n-etiqueta > span {
+        color: var(--n-color);
+        background-color: var(-color-dos);
+        font-family: var(--n-fuente-dos);
+        font-size: 0.80em;
+        margin: 0em auto 0.50em 0.50em;
+        border-radius: 0.50em;
+        padding: 0.50em;
+    }
+    main > section > section > div.n-total > input#n-total { width: 10.90em; }
+}

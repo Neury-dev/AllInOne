@@ -1,0 +1,87 @@
+/* 
+    Created on : 14 sept. 2020, 1:50:09
+    Author     : desarrollador
+*/
+@import url("http://localhost/AllInOne/front-css/root.css");
+*, *:before, *:after { 
+    box-sizing: border-box;     
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-size: 100%;
+}
+button, a { 
+    cursor: pointer; 
+    outline: none;
+}
+@media screen and (min-width: 70em) {
+    .n-grid {
+        display: grid;
+        grid-template-columns: auto 80%;/*grid-gap: 10px;*/             
+    }
+}
+.n-grid > section {/*background: red*/}
+.n-grid-area-1 { grid-area: 1 / 1 / span 5 / span 1; }
+.n-grid-area-2 { grid-area: 1 / 2 / span 1 / span 1; }
+.n-grid-area-3 { grid-area: 2 / 2 / span 1 / span 1; }
+.n-grid-area-4 { grid-area: 3 / 2 / span 1 / span 1; }
+.n-grid-area-5 { grid-area: 4 / 2 / span 1 / span 1; }
+.n-grid-area-6 { grid-area: 5 / 2 / span 1 / span 1; }
+@media screen and (max-width: 69.99em) {
+    .n-grid {
+        display: grid;
+        grid-template-columns: auto 90%;            
+    }
+}
+@media screen and (max-width: 24.10em) {
+    * {
+        display: none;           
+    }
+}
+/*
+    Alerta General +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+#n-alerta-general {
+    visibility: hidden;
+    position: fixed;
+    z-index: 10;
+    left: 50%;
+    bottom: 30px;
+    color: white;
+    background-color: #373538;
+    font-family: var(--n-fuente-dos);
+    font-size: 0.80em;
+    text-align: center;
+    min-width: 250px;
+    margin-left: -125px;
+    border-radius: 1em;
+    padding: 16px;
+}
+#n-alerta-general.n-mostrar {
+    visibility: visible;
+    -webkit-animation: aparecer 0.5s, desaparecer 0.5s 2.5s;
+    animation: aparecer 0.5s, desaparecer 0.5s 2.5s;
+}
+
+@-webkit-keyframes aparecer {
+    from    { bottom: 0;    opacity: 0; } 
+    to      { bottom: 30px; opacity: 1; }
+}
+
+@keyframes aparecer {
+    from    { bottom: 0;    opacity: 0; }
+    to      { bottom: 30px; opacity: 1; }
+}
+
+@-webkit-keyframes desaparecer {
+    from    { bottom: 30px; opacity: 1; } 
+    to      { bottom: 0;    opacity: 0; }
+}
+
+@keyframes desaparecer {
+    from    { bottom: 30px; opacity: 1; }
+    to      { bottom: 0;    opacity: 0; }
+}

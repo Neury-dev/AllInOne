@@ -1,0 +1,10 @@
+<?php
+header("Content-type: text/javascript; charset: UTF-8");
+//header("Content-type: text/css; charset: UTF-8");
+$offset = 60 * 60 * 24;
+header('Content-type: text/css');
+header('Cache-Control: max-age=' . $offset);
+header('Expires: ' . gmdate ("D, d M Y H:i:s", time() + $offset) . ' GMT');
+header('Last-Modified: ' . gmdate ("D, d M Y H:i:s", time()) . ' GMT');
+?>
+

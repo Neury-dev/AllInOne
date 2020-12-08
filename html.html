@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <!--meta http-equiv="cache-control" content="NO-CACHE" /-->
+    <!--meta http-equiv="cache-control" value="no-cache, no-store, must-revalidate" /-->
+</head>
+<body>
+    <div id="noticias"></div>
+    <script>
+        var pageNumber=1; 
+        var pageSize=1; 
+        var noticias =["Noticia 1","Noticia 2", "Noticia 3"];
+        var noticiasHtml="";
+        var pagination;
+        var pageCont =Math.ceil(noticias.length/pageSize);
+        function paginate(array, page_size, page_number) {
+            return array.slice((page_number - 1) * page_size, page_number * page_size);
+        }
+        function nextPage(){
+            pageNumber ++;
+            showNoticias(pagination)
+        }
+        function previusPage(){
+            pageNumber --;
+            showNoticias(pagination)
+        }
+        function showNoticias(_noticias){
+            var pagination = paginate(noticias,pageSize,pageNumber);
+            console.log("nextPage",pagination)
+            noticiasHtml ="<ul>";
+            pagination.forEach(element => {
+             console.log(element)
+             noticiasHtml+="<li>"+element+"</li>";
+              });
+            noticiasHtml+="</ul>"
+            noticiasHtml+= pageNumber >1  ? " <button onclick='previusPage()'>Anterior</button>":"";
+            noticiasHtml+= pageNumber < pageCont ?(" <button onclick='nextPage()'>Siguiente</button>"):"" ;
+            document.getElementById("noticias").innerHTML="";
+            document.getElementById("noticias").innerHTML=noticiasHtml;
+        }
+        showNoticias(noticias);
+    </script>
+</body>
+</html>
