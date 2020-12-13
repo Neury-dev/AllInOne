@@ -1,28 +1,46 @@
 function 
 colorcoding() {
-    var text = document.querySelector("#n-form").innerHTML;
+//    var text = document.querySelector("#n-form").innerHTML;
+//    
+//    text = text.replace(/&/g, "&amp;");
+//    text = text.replace(/\t/g, "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+//    text = text.replace(/  /g, " &nbsp;");
+//    //text = text.replace(/</g, "&lt;");
+//    //text = text.replace(/>/g, "&gt;");
+//    text = text.replace(/(?:\r\n|\r|\n)/g, '<br>');
+//    text = text.replace(/<br> /g, "<br>&nbsp;");
+//    text = w3CodeColorize(text);
+//
+//    document.querySelector("div#n-form").innerHTML = text;
     
-    text = text.replace(/&/g, "&amp;");
-    text = text.replace(/\t/g, "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
-    text = text.replace(/  /g, " &nbsp;");
-    //text = text.replace(/</g, "&lt;");
-    //text = text.replace(/>/g, "&gt;");
-    text = text.replace(/(?:\r\n|\r|\n)/g, '<br>');
-    text = text.replace(/<br> /g, "<br>&nbsp;");
-    text = w3CodeColorize(text);
+//    var text2 = document.querySelector(".n-full-stack").innerHTML;
+//    
+//    text2 = text2.replace(/\t/g, "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+//    text2 = text2.replace(/  /g, " &nbsp;");
+//    text2 = text2.replace(/(?:\r\n|\r|\n)/g, '<br>');
+//    text2 = text2.replace(/<br> /g, "<br>&nbsp;");
+//    text2 = w3CodeColorize(text2);
+//
+//    
+//    document.querySelector(".n-full-stack").innerHTML = text2;
 
-    document.querySelector("div#n-form").innerHTML = text;
+    var text2 = document.querySelectorAll(".n-full-stack").innerHTML;
+//    var text22 = document.querySelector(".n-full-stack").innerHTML;
     
-    var text2 = document.querySelector("#n-full-stack").innerHTML;
-    
-    text2 = text2.replace(/\t/g, "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
-    text2 = text2.replace(/  /g, " &nbsp;");
-    text2 = text2.replace(/(?:\r\n|\r|\n)/g, '<br>');
-    text2 = text2.replace(/<br> /g, "<br>&nbsp;");
-    text2 = w3CodeColorize(text2);
 
+    for (var i = 0; i < text2.length; i++) {
+        console.log(text2[i]);
+        
+        text2[i] = text2[i].replace(/\t/g, "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+        text2[i] = text2[i].replace(/  /g, " &nbsp;");
+        text2[i] = text2[i].replace(/(?:\r\n|\r|\n)/g, '<br>');
+        text2[i] = text2[i].replace(/<br> /g, "<br>&nbsp;");
+        text2[i] = w3CodeColorize(text2[i]);
+        
+        document.querySelectorAll(".n-full-stack").innerHTML = text2[i];  
+    }
     
-    document.querySelector("div#n-full-stack").innerHTML = text2;
+    
 }
 
 colorcoding();

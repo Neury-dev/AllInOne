@@ -1,9 +1,6 @@
 -PSRs (PHP Standards Recommendations)
 https://www.php-fig.org/
 
-- Ideas de proyectos
-https://github.com/florinpop17/app-ideas/
-
 - Importar archivos JavaScript a archivos JavaScript
 https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import
 
@@ -16,12 +13,20 @@ https://fontello.com/
 - Plantilla de codigo
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_syntax_highlight
 
+- Importar ultima version de los archivos
+encabezado HTTP: como solicitar la ultima version del fichero (last-modified) 
+
+- JSON y Arrays
+https://www.json.org/json-en.html
+https://repo.progsbase.com/repoviewer/no.inductive.idea10.programs/JSON/latest/
+
+https://www.php.net/manual/es/ref.array.php
+https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_loop_foreach
+
+- Ideas de proyectos
+https://github.com/florinpop17/app-ideas/
+
 - GitHub
 https://www.youtube.com/watch?v=6ldPabaV2Xo
 https://www.youtube.com/watch?v=GqLD52IV-gM
 
-- Importar ultima version de los archivos
-encabezado HTTP: como solicitar la ultima version del fichero (last-modified) 
-
-- JSON
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript

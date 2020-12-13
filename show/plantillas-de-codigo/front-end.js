@@ -1,6 +1,6 @@
 //w3CodeColor(document.getElementById("myDiv"));
 //w3CodeColor(document.querySelector("pre > div"));
-w3CodeColor(document.querySelector("div#n-front-end > pre > code"));
+w3CodeColor(document.querySelector("div.n-front-end > pre > code"));
 
 function w3CodeColor(elmnt, mode) {
     var lang = (mode || "html");

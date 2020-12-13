@@ -15,11 +15,9 @@
 </head>
 <body>
     <h1><a href="http://localhost/AllInOne/index.php#n-all-in-one">AllInOne</a></h1>
-    <h2>form</h2>
-    
-   
+    <h2>form</h2> 
 <!--<section class="n-flex-box">-->
-<div id="n-form" style="height: 12em;">
+<div class="n-full-stack" id="n-form" style="height: 8em;">
     <pre>
         <code>
     &lt;form method="POST" name="form" id="form" enctype="multipart/form-data" action="&lt;?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?&gt;"&gt;
@@ -35,7 +33,56 @@
         </code>
     </pre>
 </div>
-<div id="n-full-stack">
+    <h2>html</h2>
+<div class="n-front-end" style="height: 24em;">
+    <pre>
+        <code>
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;title&lt;/title&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;link rel="stylesheet" href=""&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;header&gt;&lt;/header&gt;
+        &lt;nav&gt;&lt;/nav&gt;
+        &lt;aside&gt;&lt;/aside&gt;
+        &lt;main&gt;&lt;/main&gt;
+        &lt;section&gt;&lt;/section&gt;
+        &lt;article&gt;&lt;/article&gt;
+        &lt;footer&gt;&lt;/footer&gt;
+    &lt;script src=""&gt;&lt;/script&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+        </code>
+    </pre>
+</div>
+<div class="n-front-end" style="height: 22em;">
+    <pre>
+        <code>
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;title22222222222222222222&lt;/title&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;link rel="stylesheet" href=""&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;header&gt;&lt;/header&gt;
+        &lt;nav&gt;&lt;/nav&gt;
+        &lt;aside&gt;&lt;/aside&gt;
+        &lt;main&gt;&lt;/main&gt;
+        &lt;section&gt;&lt;/section&gt;
+        &lt;article&gt;&lt;/article&gt;
+        &lt;footer&gt;&lt;/footer&gt;
+    &lt;script src=""&gt;&lt;/script&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+        </code>
+    </pre>
+</div>
+<div class="n-full-stack" id="n-full-stack">
     <pre>
         <code>
         &lt;!DOCTYPE HTML&gt;  
@@ -101,7 +148,7 @@
     </pre>
 </div>
 <!--</section>-->
-<!--<script src="show/plantillas-de-codigo/front-end.js" async=""></script>-->
+<script src="show/plantillas-de-codigo/front-end.js" async=""></script>
 <script src="show/plantillas-de-codigo/full-stack.js"></script>
 </body>
 </html>
