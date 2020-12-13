@@ -23,6 +23,11 @@
                 <a href="sistema_JSON.php">JSON</a>
                 <!--a href="front/sistema_JSON/en_JavaScript.php">JSON en JavaScript</a-->
                 <a href="front/sistema_JSON/en_PHP.php">JSON en PHP</a>
+<!--                <a href="sql/sistema-JSON/crear.php">Crear</a>
+                <a href="sql/sistema-JSON/leer.php">Leer</a>
+                <a href="sql/sistema-JSON/actualizar.php">Actualizar</a>
+                <a href="sql/sistema-JSON/borrar.php">Borrar</a>
+                <a href="sql/sistema-JSON/insertar.php">Insertar</a>-->
             </section>
             <hr>
             <div id="n-respuesta"></div>
@@ -32,16 +37,18 @@
         </section>
         <section class="area-3">
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="crear" id="crear">
-                <label for="id" hidden="">
+                <label for="id">
                     <input type="text" name="id" id="id" value="">
                 </label>
+                <label for="fecha">Fecha</label>
+                    <input type="date" name="fecha" id="fecha">
                 <label for="marca">Marca</label>
                     <input type="text" name="marca" id="marca" placeholder="Marca">
                 <label for="nombre">Nombre</label>
                     <input type="text" name="nombre" id="nombre" placeholder="Nombre">
                 <label for="precio">Precio</label>
                     <input type="number" name="precio" id="precio" placeholder="1">
-                <input type="submit" name="crear-envio" id="crear-envio" value="Crear">
+                <input type="submit" name="crear" id="crear-envio" value="Crear">
             </form>
         </section>
         <section class="area-4">

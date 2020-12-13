@@ -5,6 +5,7 @@ const leerDatos     = document.querySelector("#n-leer");
 const leerResponde  = document.querySelector("#n-respuesta");
 
 id      = document.querySelector("#id");
+fecha   = document.querySelector("#fecha");
 marca   = document.querySelector("#marca");
 nombre  = document.querySelector("#nombre");
 precio  = document.querySelector("#precio");
@@ -21,7 +22,7 @@ leer(busqueda) {
         if(response.ok) { return response.json(); } 
         else { throw "Error en la llamada"; }
     }).then(function(json) {
-//        console.log(json[0].marca);
+//        console.log(json[0]);
         jsonObject = json;
         lectura();
     });
@@ -33,17 +34,17 @@ lectura() {
     for(let i in jsonObject) {
         salida += `
             <tr>
-                <td>${jsonObject[i].id}</td>
-                <td>${jsonObject[i].fecha}</td>
-                <td>${jsonObject[i].fecha}</td>
-                <td>${jsonObject[i].marca}</td>
-                <td>${jsonObject[i].nombre}</td>
-                <td>${jsonObject[i].precio}</td>
+                <td>${jsonObject[i].ID}</td>
+                <td>${jsonObject[i].FECHA}</td>
+                <td>${jsonObject[i].FECHA}</td>
+                <td>${jsonObject[i].MARCA}</td>
+                <td>${jsonObject[i].NOMBRE}</td>
+                <td>${jsonObject[i].PRECIO}</td>
                 <td>
-                    <button type='submit' onclick=actualizar(${jsonObject[i].id})>Editar</button>
+                    <button type='submit' onclick=actualizar(${jsonObject[i].ID})>Editar</button>
                 </td> 
                 <td>
-                    <button type='button' onclick=borrar(${jsonObject[i].id})>Borrar</button>
+                    <button type='button' onclick=borrar(${jsonObject[i].ID})>Borrar</button>
                 </td>  
             </tr>
         `;
@@ -56,26 +57,28 @@ crear.addEventListener('submit', function(e) {
     e.preventDefault();
     
     let id          = document.forms["crear"]["id"].value;
+    let fecha       = document.forms["crear"]["fecha"].value;
     let marca       = document.forms["crear"]["marca"].value;
     let nombre      = document.forms["crear"]["nombre"].value;
     let precio      = document.forms["crear"]["precio"].value;
-    let crearEnvio  = document.forms["crear"]["crear-envio"].value;
+    let crearEnvio  = document.forms["crear"]["crear"].value;
 
     let datos           = new FormData(crear);
     
     datos.append('id', id);
+    datos.append('fecha', fecha),
     datos.append('marca', marca);
     datos.append('nombre', nombre);
     datos.append('precio', precio);
-    datos.append('crear-envio', crearEnvio);
+    datos.append('crear', crearEnvio);
 
-    fetch('sql/sistema-PHP/Crear.php', {
+    fetch('sql/sistema-JSON/Crear.php', {
         method: 'POST',
         body: datos
     }).then(function(response) {
         if(response.ok) { return response.text(); } 
         else { throw "Error en la llamada"; }
-    }).then(function(texto) {
+    }).then(function(texto) {//console.log(texto);
         enviar.value = "Crear";
         crear.reset();
         leer();
@@ -85,18 +88,20 @@ crear.addEventListener('submit', function(e) {
     });
 });
 function 
-actualizar(editarID) {
-    fetch("sql/sistema-PHP/Actualizar.php", {
+actualizar(idU) {
+    fetch("sql/sistema-JSON/Editar.php", {
         method: "POST",
-        body: editarID
+        body: idU
     }).then(function (response) {
         if(response.ok) { return response.json(); } 
         else { throw "Error en la llamada"; }
     }).then(function (json) {
-        id.value        = json[0].id;
-        marca.value     = json[0].marca;
-        nombre.value    = json[0].nombre;
-        precio.value    = json[0].precio;
+//        console.log(json);
+        id.value        = json.ID;
+        fecha.value     = json.FECHA;
+        marca.value     = json.MARCA;
+        nombre.value    = json.NOMBRE;
+        precio.value    = json.PRECIO;
         enviar.value    = "Actualizar";
         
         leerResponde.innerHTML = "Listo para actualizar";
@@ -106,7 +111,7 @@ actualizar(editarID) {
 }
 function 
 borrar(borrarID) {
-    fetch("sql/sistema-PHP/Borrar.php", {
+    fetch("sql/sistema-JSON/Borrar.php", {
         method: "POST",
         body: borrarID
     }).then(function(response) {

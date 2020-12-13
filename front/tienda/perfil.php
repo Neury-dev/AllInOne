@@ -13,7 +13,7 @@
 <body>
 <section>
     <nav>
-        <a href="http://localhost/AllInOne/index.php"><i class='fas fa-home'></i></a> 
+        <a href="../../tienda.php"><i class='fas fa-home'></i></a> 
         <a href="perfil.php">Perfil</a> 
         <a href="carrito.php">Carrito</a>
         <a href="">Buscar</a>

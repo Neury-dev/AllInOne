@@ -16,12 +16,12 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_syntax_highlight
 - Importar ultima version de los archivos
 encabezado HTTP: como solicitar la ultima version del fichero (last-modified) 
 
-- JSON y Arrays
+- JSON, funciones para archivos y Arrays
 https://www.json.org/json-en.html
-https://repo.progsbase.com/repoviewer/no.inductive.idea10.programs/JSON/latest/
-
 https://www.php.net/manual/es/ref.array.php
-https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_loop_foreach
+https://www.php.net/manual/en/function.file
+
+https://repo.progsbase.com/repoviewer/no.inductive.idea10.programs/JSON/latest/
 
 - Ideas de proyectos
 https://github.com/florinpop17/app-ideas/

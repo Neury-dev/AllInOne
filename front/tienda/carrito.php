@@ -67,7 +67,7 @@
 <section class="n-grid-area-2">
     <nav>
         <!--<h2 hidden=""><a href="">Tienda</a></h2>-->
-        <a href="http://localhost/AllInOne/index.php"><!--i class='fas fa-store-alt'></i--><i class='fas fa-home'></i></a> 
+        <a href="../../tienda.php"><!--i class='fas fa-store-alt'></i--><i class='fas fa-home'></i></a> 
         <a href="perfil.php">Perfil</a> 
         <a href="">Carrito</a>
         <a href="">Buscar</a>
