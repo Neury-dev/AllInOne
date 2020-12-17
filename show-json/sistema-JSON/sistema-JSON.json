@@ -2,22 +2,71 @@
     {
         "ID": "1",
         "FECHA": "2020-12-13",
-        "MARCA": "Marca 1",
-        "NOMBRE": "Nombre 1",
-        "PRECIO": "1"
+        "MARCA": "A",
+        "NOMBRE": "Z",
+        "PRECIO": "2"
     },
     {
         "ID": "2",
         "FECHA": "2020-12-13",
-        "MARCA": "Marca 2",
-        "NOMBRE": "Nombre 2",
-        "PRECIO": "2"
+        "MARCA": "B",
+        "NOMBRE": "Y",
+        "PRECIO": "1"
     },
     {
         "ID": "3",
         "FECHA": "2020-12-13",
-        "MARCA": "Marca 3",
-        "NOMBRE": "Nombre 3",
+        "MARCA": "C",
+        "NOMBRE": "X",
+        "PRECIO": "4"
+    },
+    {
+        "ID": "4",
+        "FECHA": "2020-12-15",
+        "MARCA": "D",
+        "NOMBRE": "W",
         "PRECIO": "3"
+    },
+    {
+        "ID": "5",
+        "FECHA": "2020-12-15",
+        "MARCA": "E",
+        "NOMBRE": "V",
+        "PRECIO": "6"
+    },
+    {
+        "ID": "6",
+        "FECHA": "2020-12-15",
+        "MARCA": "F",
+        "NOMBRE": "U",
+        "PRECIO": "5"
+    },
+    {
+        "ID": "7",
+        "FECHA": "2020-12-15",
+        "MARCA": "G",
+        "NOMBRE": "T",
+        "PRECIO": "8"
+    },
+    {
+        "ID": "8",
+        "FECHA": "2020-12-15",
+        "MARCA": "H",
+        "NOMBRE": "S",
+        "PRECIO": "7"
+    },
+    {
+        "ID": "9",
+        "FECHA": "2020-12-15",
+        "MARCA": "I",
+        "NOMBRE": "R",
+        "PRECIO": "10"
+    },
+    {
+        "ID": "10",
+        "FECHA": "2020-12-15",
+        "MARCA": "J",
+        "NOMBRE": "Q",
+        "PRECIO": "9"
     }
 ]

@@ -4,17 +4,8 @@ https://www.php-fig.org/
 - Importar archivos JavaScript a archivos JavaScript
 https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import
 
-- ECMAScript 6
-http://www.ecma-international.org/ecma-262/6.0/
-
-- Font Awesome: Iconos individuales
-https://fontello.com/
-
 - Plantilla de codigo
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_syntax_highlight
-
-- Importar ultima version de los archivos
-encabezado HTTP: como solicitar la ultima version del fichero (last-modified) 
 
 - JSON, funciones para archivos y Arrays
 https://www.json.org/json-en.html
@@ -26,7 +17,11 @@ https://repo.progsbase.com/repoviewer/no.inductive.idea10.programs/JSON/latest/
 - Ideas de proyectos
 https://github.com/florinpop17/app-ideas/
 
-- GitHub
-https://www.youtube.com/watch?v=6ldPabaV2Xo
-https://www.youtube.com/watch?v=GqLD52IV-gM
+- ECMAScript 6
+http://www.ecma-international.org/ecma-262/6.0/
 
+- Font Awesome: Iconos individuales
+https://fontello.com/
+
+- Importar ultima version de los archivos
+encabezado HTTP: como solicitar la ultima version del fichero (last-modified) 

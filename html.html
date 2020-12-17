@@ -10,40 +10,55 @@
     <!--meta http-equiv="cache-control" value="no-cache, no-store, must-revalidate" /-->
 </head>
 <body>
-    <div id="noticias"></div>
-    <script>
-        var pageNumber=1; 
-        var pageSize=1; 
-        var noticias =["Noticia 1","Noticia 2", "Noticia 3"];
-        var noticiasHtml="";
-        var pagination;
-        var pageCont =Math.ceil(noticias.length/pageSize);
-        function paginate(array, page_size, page_number) {
-            return array.slice((page_number - 1) * page_size, page_number * page_size);
-        }
-        function nextPage(){
-            pageNumber ++;
-            showNoticias(pagination)
-        }
-        function previusPage(){
-            pageNumber --;
-            showNoticias(pagination)
-        }
-        function showNoticias(_noticias){
-            var pagination = paginate(noticias,pageSize,pageNumber);
-            console.log("nextPage",pagination)
-            noticiasHtml ="<ul>";
-            pagination.forEach(element => {
-             console.log(element)
-             noticiasHtml+="<li>"+element+"</li>";
-              });
-            noticiasHtml+="</ul>"
-            noticiasHtml+= pageNumber >1  ? " <button onclick='previusPage()'>Anterior</button>":"";
-            noticiasHtml+= pageNumber < pageCont ?(" <button onclick='nextPage()'>Siguiente</button>"):"" ;
-            document.getElementById("noticias").innerHTML="";
-            document.getElementById("noticias").innerHTML=noticiasHtml;
-        }
-        showNoticias(noticias);
-    </script>
+ 
+<script>
+    /*
+     * ecma
+        https://tc39.es/ecma262/#sec-date-time-string-format
+     */
+    
+    
+    //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toDateString
+    const event = new Date("2019-10-10");
+
+console.log(event.toString());
+// expected output: Wed Jul 28 1993 14:39:07 GMT+0200 (CEST)
+// (note: your timezone may vary)
+
+console.log(event.toDateString());
+// expected output: Wed Jul 28 1993
+
+
+
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
+const event2 = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+console.log(event2.toLocaleDateString('de-DE', options));
+// expected output: Donnerstag, 20. Dezember 2012
+
+console.log(event2.toLocaleDateString('ar-EG', options));
+// expected output: الخميس، ٢٠ ديسمبر، ٢٠١٢
+
+console.log(event2.toLocaleDateString(undefined, options));
+// expected output: Thursday, December 20, 2012 (varies according to default locale)
+
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
+const date = new Date("2020-12-13");
+// Results below assume UTC timezone - your results may vary
+
+// Specify default date formatting for language (locale)
+console.log(new Intl.DateTimeFormat('es-ES').format(date));
+// expected output: "12/20/2020"
+
+// Specify default date formatting for language with a fallback language (in this case Indonesian)
+console.log(new Intl.DateTimeFormat(['ban', 'id']).format(date));
+// expected output: "20/12/2020"
+
+// Specify date and time format using "style" options (i.e. full, long, medium, short)
+console.log(new Intl.DateTimeFormat('en-GB', { dateStyle: 'full', timeStyle: 'long' }).format(date));
+// Expected output "Sunday, 20 December 2020 at 14:23:16 GMT+11"
+</script>
 </body>
 </html>

@@ -20,7 +20,7 @@ foreach ($detalles as $detalle) {
 <img src="../../front-img/tienda/detalles.jpg" alt="" loading="lazy">
 <section>
     <section>
-        <img src="../../multi/tienda/img/<?php echo $detalle['imagen']; ?>" alt="">
+        <img src="../../front-multimedia/tienda/img/<?php echo $detalle['imagen']; ?>" alt="">
         <div class="n-total">
             <input id="n-total" type="text" value="<?php echo $detalle["precio"]; ?>" disabled="">
         </div>

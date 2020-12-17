@@ -65,15 +65,15 @@
         </div>
         <div class="n-contenedor n-izquierda">
             <div class="n-contenido">
-                <h2>Sistema PHP</h2>
-                <p>01/12/2020 - 06/12/2020Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent 
+                <h2><a href="http://localhost/AllInOne/sistema_PHP.php">Sistema PHP</a></h2>
+                <p>01/12/2020 - 06/12/2020: Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent 
                     detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
             </div>
         </div>
         <div class="n-contenedor n-derecha">
             <div class="n-contenido">
-                <h2>2012</h2>
-                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent 
+                <h2><a href="http://localhost/AllInOne/sistema_JSON.php">Sistema JSON</a></h2>
+                <p>09/12/2020 - 16/12/2020: Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent 
                     detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
             </div>
         </div>

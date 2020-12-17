@@ -21,7 +21,7 @@ class Subir {
             $ruta           = $GLOBALS["base"]->conexion->real_escape_string($_FILES['imagen']['tmp_name']);
 
             if (is_uploaded_file($ruta)) { 
-                $destino =  "../../multi/tienda/img/" . $imagen;
+                $destino =  "../../front-multimedia/tienda/img/" . $imagen;
                 copy($ruta, $destino);
             } 
 

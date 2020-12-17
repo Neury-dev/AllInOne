@@ -124,7 +124,7 @@
             </article>
             <article>
                 <h4><a href="sistema_JSON.php">Sistema JSON</a></h4>
-                <p>09/12/2020 - 00/00/2020: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>09/12/2020 - 16/12/2020: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </article>
             <article>
                 <h4><a href="">Demo</a></h4>

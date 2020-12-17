@@ -23,11 +23,6 @@
                 <a href="sistema_JSON.php">JSON</a>
                 <!--a href="front/sistema_JSON/en_JavaScript.php">JSON en JavaScript</a-->
                 <a href="front/sistema_JSON/en_PHP.php">JSON en PHP</a>
-<!--                <a href="sql/sistema-JSON/crear.php">Crear</a>
-                <a href="sql/sistema-JSON/leer.php">Leer</a>
-                <a href="sql/sistema-JSON/actualizar.php">Actualizar</a>
-                <a href="sql/sistema-JSON/borrar.php">Borrar</a>
-                <a href="sql/sistema-JSON/insertar.php">Insertar</a>-->
             </section>
             <hr>
             <div id="n-respuesta"></div>
@@ -52,9 +47,9 @@
             </form>
         </section>
         <section class="area-4">
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="buscar" id="buscar">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form-buscar" id="form-buscar">
                 <label for="buscar">Buscar:</label>
-                <input type="search" name="buscar" id="buscar" placeholder="Buscar...">
+                <input type="search" id="buscar" placeholder="Buscar...">
             </form>
         </section>
         <section class="area-5">
@@ -78,9 +73,9 @@
                 <tfoot>
                     <tr>
                         <td colspan="8">
-                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="cantidad" id="cantidad">
+                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                                 <label for="cantidad">Cantidad</label>
-                                <select id="cantidad" name="cantidad">
+                                <select id="cantidad">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -93,7 +88,7 @@
                                     <option value="10">10</option>
                                 </select>
                             </form>
-                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="por" id="por">
+                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form-por" id="form-por">
                                 <label for="por">Por</label>
                                 <select id="por" name="por">
                                     <option value="id">ID</option>
@@ -104,21 +99,15 @@
                                     <option value="precio">Precio</option>
                                 </select>
                             </form>
-                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="ordenar" id="ordenar">
-                                <label for="ordenar">Ordenar</label>
-                                <select id="ordenar" name="ordenar">
-                                    <option value="ASC">Acendente</option>
-                                    <option value="DESC">Decendente</option>
-                                </select>
-                            </form>
+                            <button id="n-ordenar">Decendente</button>
                         </td>
                     </tr>
                      <tr>
                         <td colspan="8">
                             <button class="n-anterior">Anterior</button>
-                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="paginacion" id="paginacion">
+                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" id="paginacion">
                                 <label for="inicio-de-paginacion" hidden="">
-                                    <input type="number" name="inicio-de-paginacion" id="inicio-de-paginacion" value="" min="0" >
+                                    <input type="number" id="inicio-de-paginacion" value="" min="0" >
                                 </label>
                             </form>
                             <button class="n-siguiente">Siguiente</button>
@@ -130,7 +119,6 @@
         </section>
     </section>
 <script src="show/sistema-JSON//crud.js" async=""></script>
-<!--<script src="show/sistema-JSON//complementos.js" defer=""></script>-->
 <script>
 
 </script>
