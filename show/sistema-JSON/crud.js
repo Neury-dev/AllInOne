@@ -52,8 +52,8 @@ lectura() {
         salida += `
             <tr>
                 <td>${jsonObject[i].ID}</td>
-                <td>${new Intl.DateTimeFormat('es-ES').format(date)}</td>
-                <td>${new Intl.DateTimeFormat('es-ES', opciones).format(date)}</td>
+                <td>${new Intl.DateTimeFormat('es-DO').format(date)}</td>
+                <td>${new Intl.DateTimeFormat('es-DO', opciones).format(date)}</td>
                 <td>${jsonObject[i].MARCA}</td>
                 <td>${jsonObject[i].NOMBRE}</td>
                 <td>${jsonObject[i].PRECIO}</td>

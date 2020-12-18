@@ -1,11 +1,14 @@
 -PSRs (PHP Standards Recommendations)
 https://www.php-fig.org/
 
-- Importar archivos JavaScript a archivos JavaScript
-https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import
-
 - Plantilla de codigo
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_syntax_highlight
+
+- Ideas de proyectos
+https://github.com/florinpop17/app-ideas/
+
+- ECMAScript 6
+http://www.ecma-international.org/ecma-262/6.0/
 
 - JSON, funciones para archivos y Arrays
 https://www.json.org/json-en.html
@@ -14,14 +17,8 @@ https://www.php.net/manual/en/function.file
 
 https://repo.progsbase.com/repoviewer/no.inductive.idea10.programs/JSON/latest/
 
-- Ideas de proyectos
-https://github.com/florinpop17/app-ideas/
-
-- ECMAScript 6
-http://www.ecma-international.org/ecma-262/6.0/
+- Importar ultima version de los archivos
+encabezado HTTP: como solicitar la ultima version del fichero (last-modified) 
 
 - Font Awesome: Iconos individuales
 https://fontello.com/
-
-- Importar ultima version de los archivos
-encabezado HTTP: como solicitar la ultima version del fichero (last-modified) 

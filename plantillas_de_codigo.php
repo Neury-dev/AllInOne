@@ -6,25 +6,21 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="front-css/plantillas-de-codigo/plantillas-de-codigo.css"/>
     <style>
-/*        section.n-flex-box {
-            display: flex;
-            flex-direction: column;
-            align-content: space-between;
-        }*/
+
     </style>
 </head>
 <body>
     <h1><a href="http://localhost/AllInOne/index.php#n-all-in-one">AllInOne</a></h1>
     <h2>form</h2> 
-<!--<section class="n-flex-box">-->
-<div class="n-full-stack" id="n-form" style="height: 8em;">
+
+<div class="n-full-stack" id="n-form" style="height: 9em;">
     <pre>
         <code>
     &lt;form method="POST" name="form" id="form" enctype="multipart/form-data" action="&lt;?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?&gt;"&gt;
         &lt;label for="texto"&gt;Texto:&lt;/label&gt;
             &lt;input type="text" name="texto" id="texto" value="Texto"&gt;
         &lt;label for="numero"&gt;Numero:&lt;/label&gt;
-            &lt;input type="number" name="numero" id="numero" value="1" min="0" max="100" step="1"&gt;
+            &lt;input type="number" name="numero" id="numero" value="1"&gt;
         &lt;label for="buscar">Buscar:&lt;/label&gt;
             &lt;input type="search" name="buscar" id="buscar" value="Bucar"&gt;
         &lt;button type="submit" name="enviar" id="enviar" value="Enviar"&gt;Enviar&lt;/button&gt;
@@ -34,7 +30,7 @@
     </pre>
 </div>
     <h2>html</h2>
-<div class="n-front-end" style="height: 24em;">
+<div class="n-full-stack" style="height: 24em;">
     <pre>
         <code>
     &lt;html&gt;
@@ -58,31 +54,7 @@
         </code>
     </pre>
 </div>
-<div class="n-front-end" style="height: 22em;">
-    <pre>
-        <code>
-    &lt;html&gt;
-    &lt;head&gt;
-        &lt;title&gt;title22222222222222222222&lt;/title&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-        &lt;link rel="stylesheet" href=""&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;header&gt;&lt;/header&gt;
-        &lt;nav&gt;&lt;/nav&gt;
-        &lt;aside&gt;&lt;/aside&gt;
-        &lt;main&gt;&lt;/main&gt;
-        &lt;section&gt;&lt;/section&gt;
-        &lt;article&gt;&lt;/article&gt;
-        &lt;footer&gt;&lt;/footer&gt;
-    &lt;script src=""&gt;&lt;/script&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
-        </code>
-    </pre>
-</div>
-<div class="n-full-stack" id="n-full-stack">
+<!--<div class="n-full-stack" id="n-full-stack">
     <pre>
         <code>
         &lt;!DOCTYPE HTML&gt;  
@@ -92,7 +64,7 @@
         &lt;body&gt;  
 
         &lt;?php
-        // define variables and set to empty values
+        define variables and set to empty values
         $name = $email = $gender = $comment = $website = "";
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -146,9 +118,7 @@
         &lt;/html&gt;
         </code>
     </pre>
-</div>
-<!--</section>-->
-<script src="show/plantillas-de-codigo/front-end.js" async=""></script>
+</div>-->
 <script src="show/plantillas-de-codigo/full-stack.js"></script>
 </body>
 </html>

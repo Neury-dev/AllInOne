@@ -15,7 +15,7 @@
     --n-color-verde:            #457725;/*rgba(69, 119, 37, 0.5) hsl(97, 53%, 31%)*/
     --n-color-rojo:             #901E1D;/*rgb(144, 30, 29), hsl(1, 66%, 34%)*/
     
-    --n-transicion:             all 0.8s ease-in-out;/*No...............................................................*/
+    --n-transicion:             all 0.8s ease-in-out;/*Interior...............................................................*/
     
     --n-sombra-de-texto:        -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
     --n-sombra-de-texto-dos:    -1px 0 #1c1d22, 0 1px #1c1d22, 1px 0 #1c1d22, 0 -1px #1c1d22;

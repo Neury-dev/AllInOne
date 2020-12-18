@@ -1,6 +1,11 @@
 //w3CodeColor(document.getElementById("myDiv"));
 //w3CodeColor(document.querySelector("pre > div"));
-w3CodeColor(document.querySelector("div.n-front-end > pre > code"));
+//w3CodeColor(document.querySelector("div.n-front-end > pre > code"));
+var frontEnd = document.querySelectorAll("div.n-front-end > pre > code");
+
+frontEnd.forEach(function(eventoDeCodigo) {
+   w3CodeColor(eventoDeCodigo); 
+});
 
 function w3CodeColor(elmnt, mode) {
     var lang = (mode || "html");

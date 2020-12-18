@@ -1,13 +1,69 @@
-var fullStack = document.querySelectorAll("div.n-full-stack > pre > code");
+function 
+colorcoding() {
+//    var text = document.querySelector("#n-form").innerHTML;
+//    
+//    text = text.replace(/&/g, "&amp;");
+//    text = text.replace(/\t/g, "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+//    text = text.replace(/  /g, " &nbsp;");
+//    //text = text.replace(/</g, "&lt;");
+//    //text = text.replace(/>/g, "&gt;");
+//    text = text.replace(/(?:\r\n|\r|\n)/g, '<br>');
+//    text = text.replace(/<br> /g, "<br>&nbsp;");
+//    text = w3CodeColorize(text);
+//
+//    document.querySelector("div#n-form").innerHTML = text;
+    
+//    var text2 = document.querySelector(".n-full-stack").innerHTML;
+//    
+//    text2 = text2.replace(/\t/g, "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+//    text2 = text2.replace(/  /g, " &nbsp;");
+//    text2 = text2.replace(/(?:\r\n|\r|\n)/g, '<br>');
+//    text2 = text2.replace(/<br> /g, "<br>&nbsp;");
+//    text2 = w3CodeColorize(text2);
+//
+//    
+//    document.querySelector(".n-full-stack").innerHTML = text2;
 
-fullStack.forEach(function(bucle) {
-    w3CodeColor(bucle); 
-});
+    var text2 = document.querySelectorAll(".n-full-stack").innerHTML;
+//    var text22 = document.querySelector(".n-full-stack").innerHTML;
+    
 
-function w3CodeColor(elmnt, mode) {
-    var lang = (mode || "html");
-    var elmntObj = (document.getElementById(elmnt) || elmnt);
-    var elmntTxt = elmntObj.innerHTML;
+    for (var i = 0; i < text2.length; i++) {
+        console.log(text2[i]);
+        
+        text2[i] = text2[i].replace(/\t/g, "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+        text2[i] = text2[i].replace(/  /g, " &nbsp;");
+        text2[i] = text2[i].replace(/(?:\r\n|\r|\n)/g, '<br>');
+        text2[i] = text2[i].replace(/<br> /g, "<br>&nbsp;");
+        text2[i] = w3CodeColorize(text2[i]);
+        
+        document.querySelectorAll(".n-full-stack").innerHTML = text2[i];  
+    }
+    
+    
+}
+
+colorcoding();
+/* w3codecolor ver 1.31 by w3schools.com */
+function 
+w3CodeColor() {
+    var x, i, j, k, l, modes = ["html", "js", "css", "sql", "python"];
+    
+    if (!document.getElementsByClassName) { return; }
+    
+    k = modes.length;
+    
+    for (j = 0; j < k; j++) {
+        x = document.getElementsByClassName(modes[j] + "High");
+        l = x.length;
+        
+        for (i = 0; i < l; i++) {
+            x[i].innerHTML = w3CodeColorize(x[i].innerHTML, modes[j]);
+        }
+    }
+}
+function 
+w3CodeColorize(x, lang) {
     var tagcolor = "mediumblue";
     var tagnamecolor = "brown";
     var attributecolor = "red";
@@ -39,18 +95,15 @@ function w3CodeColor(elmnt, mode) {
     var sqlstringcolor = "brown";
     var sqlnumbercolor = "";
     
-    elmntObj.style.fontFamily = "Consolas,'Courier New', monospace";
-    elmntObj.style.fontSize = "0.80em";
+    if (!lang)              { lang = "html";        }
+    if (lang == "html")     { return htmlMode(x);   }
+    if (lang == "css")      { return cssMode(x);    }
+    if (lang == "js")       { return jsMode(x);     }
+    if (lang == "php")      { return phpMode(x);    }
+    if (lang == "sql")      { return sqlMode(x);    }
+    if (lang == "python")   { return pythonMode(x); }
     
-    if (!lang)              { lang = "html"; }
-    if (lang == "html")     { elmntTxt = htmlMode(elmntTxt);   }
-    if (lang == "css")      { elmntTxt = cssMode(elmntTxt);    }
-    if (lang == "js")       { elmntTxt = jsMode(elmntTxt);     }
-    if (lang == "php")      { elmntTxt = phpMode(elmntTxt);    }
-    if (lang == "sql")      { elmntTxt = sqlMode(elmntTxt);    }
-    if (lang == "python")   { elmntTxt = pythonMode(elmntTxt); }
-    
-    elmntObj.innerHTML = elmntTxt;
+    return x;
     
     function 
     extract(str, start, end, func, repl) {
