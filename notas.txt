@@ -1,14 +1,29 @@
 -PSRs (PHP Standards Recommendations)
 https://www.php-fig.org/
 
-- Plantilla de codigo
-https://www.w3schools.com/howto/tryit.asp?filename=tryhow_syntax_highlight
-
 - Ideas de proyectos
 https://github.com/florinpop17/app-ideas/
 
-- ECMAScript 6
-http://www.ecma-international.org/ecma-262/6.0/
+- Red Social
+    - Iniciar o Registro
+        https://www.w3schools.com/howto/howto_css_social_login.asp
+        https://www.w3schools.com/howto/howto_css_form_icon.asp
+        https://www.w3schools.com/howto/howto_js_form_steps.asp
+    - Home "Inicio"
+        https://www.w3schools.com/w3css/tryw3css_templates_social.htm
+        https://www.w3schools.com/howto/howto_css_browser_window.asp
+    -Zoom de imagen y lupa
+        https://www.w3schools.com/howto/howto_js_image_zoom.asp
+        https://www.w3schools.com/howto/howto_js_image_magnifier_glass.asp
+        https://www.w3schools.com/howto/howto_css_flip_image.asp
+    - Chat
+        https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_examples_mail
+        https://www.w3schools.com/w3css/tryw3css_templates_mail.htm
+        https://www.w3schools.com/howto/howto_css_chat.asp
+    - Grid: Cambio de anchura
+        https://www.w3schools.com/howto/howto_js_list_grid_view.asp
+    - Auto-completar campo
+        https://www.w3schools.com/howto/howto_js_autocomplete.asp
 
 - JSON, funciones para archivos y Arrays
 https://www.json.org/json-en.html
