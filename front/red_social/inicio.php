@@ -1,120 +1,79 @@
 <html>
-    <head>
-        <title>Inicio</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="">
-        <style>
-            body {
-                font-family: Arial
-            }
-
-            * {
-                box-sizing: border-box;
-            }
-
-            /* The browser window */
-            .container {
-                border: 3px solid #f1f1f1;
-                border-top-left-radius: 4px;
-                border-top-right-radius: 4px;
-            }
-
-            /* Container for columns and the top "toolbar" */
-            .row {
-                padding: 10px;
-                background: #f1f1f1;
-                border-top-left-radius: 4px;
-                border-top-right-radius: 4px;
-            }
-
-            /* Create three unequal columns that floats next to each other */
-            .column {
-                float: left;
-            }
-
-            .left {
-                width: 15%;
-            }
-
-            .right {
-                width: 10%;
-            }
-
-            .middle {
-                width: 75%;
-            }
-
-            /* Clear floats after the columns */
-            .row:after {
-                content: "";
-                display: table;
-                clear: both;
-            }
-
-            /* Three dots */
-            .dot {
-                margin-top: 4px;
-                height: 12px;
-                width: 12px;
-                background-color: #bbb;
-                border-radius: 50%;
-                display: inline-block;
-            }
-
-            /* Style the input field */
-            input[type=text] {
-                width: 100%;
-                border-radius: 3px;
-                border: none;
-                background-color: white;
-                margin-top: -8px;
-                height: 25px;
-                color: #666;
-                padding: 5px;
-            }
-
-            /* Three bars (hamburger menu) */
-            .bar {
-                width: 17px;
-                height: 3px;
-                background-color: #aaa;
-                margin: 3px 0;
-                display: block;
-            }
-
-            /* Page content */
-            .content {
-                padding: 10px;
-            }
-        </style>
-    </head>
-    <body>
-
-        <div class="container">
-            <div class="row">
-                <div class="column left">
-                    <span class="dot" style="background:#ED594A;"></span>
-                    <span class="dot" style="background:#FDD800;"></span>
-                    <span class="dot" style="background:#5AC05A;"></span>
-                </div>
-                <div class="column middle">
-                    <input type="text" value="http://www.w3schools.com">
-                </div>
-                <div class="column right">
-                    <div style="float:right">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content">
-                <h3>Browser Window</h3>
-                <p>How to create a detailed browser window look with CSS.</p>
-            </div>
-        </div>
-
-    </body>
+<head>
+    <title>Inicio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../front-css/red-social/header.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <header id="n-header" class="n-grid-header">
+        <section class="area-1">
+            <h1><a href="http://localhost/AllInOne/index.php" style="display: block;">AllInOne</a></h1>
+        </section>
+        <section class="area-2">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form" id="form" enctype="multipart/form-data">
+                <!--<label for="buscar">Buscar:</label>-->
+                <input type="search" name="buscar" id="buscar" value="Buscar gente...">
+                <!--            <button type="submit" name="enviar" id="enviar" value="Enviar">Enviar</button>
+                            <input type="submit" name="enviar" id="enviar" value="Enviar">-->
+            </form>
+        </section>
+        <section class="area-3">
+            <section class="sesion-1">
+                <a href="" class="n-header-maximo-oculto"><i class="fas fa-envelope-open"></i></a>
+                <a href="" class="n-header-maximo-oculto"><i class="fas fa-bell-slash"></i></a>
+            </section>
+            <section class="n-header-mediano">
+                <section id="n-header-mediano">
+                    <a href="" class="n-header-maximo-oculto"><i class="fas fa-bell-slash"></i></a>
+                    <a href="" class="n-header-maximo-oculto"><i class="fas fa-bell-slash"></i></a>
+                    <a href="" class="n-header-maximo-oculto"><i class="fas fa-bell-slash"></i></a>
+                </section>
+                <span class="n-header-span" id="n-header-span">
+                    <a href="" class="n-header-maximo-oculto"><i class="fas fa-envelope-open"></i></a>
+                    <a href="javascript:void(0);" id="n-icono-mediano" class="n-icono-mediano" onclick="ejecutarHeader.mediano();">&#9776;</a>
+                </span>
+                <!--<a href="javascript:void(0);" id="n-icono-mediano" class="n-icono-mediano" onclick="mediano()">&#9776;</a>-->
+            </section>
+<!--            <section class="n-header-minimo-oculto">
+                <section class="n-header-minimo" id="n-header-minimo">
+                    <a href="historial.php">Historial</a>
+                    <a href="insertar.php">Insertar</a>
+                    <a href="estadisticas.php">Estadisticas</a>
+                </section>
+                <a href="javascript:void(0);" class="n-icono-minimo" onclick="header()">&#9776;</a>
+            </section>-->
+            <!--<a href="javascript:void(0);" class="n-icono-minimo n-header-maximo-oculto" onclick="header()">&#9776;</a>-->
+            <section>
+                <img src="../../front-multimedia/red-social/imagen/mist.jpg" class="n-img-portada-header"alt="alt"/>
+                <img src="../../front-multimedia/red-social/imagen/firefoxos.png" class="n-img-perfil-header"alt="alt"/>
+            </section>
+        </section>
+    </header>
+    <section class="n-grid">
+        <section class="area-1">
+            <nav>
+                a
+            </nav>
+        </section>
+        <section class="area-2">
+            <main>
+                a   
+            </main>
+            <article>
+                a
+            </article>
+        </section>
+        <section class="area-3">
+            <aside>
+                a
+            </aside>
+        </section>
+    </section>
+<script src="../../show/red-social/header.js"></script>
+</body>
 </html> 

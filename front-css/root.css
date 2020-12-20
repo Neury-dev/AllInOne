@@ -2,6 +2,12 @@
     Created on : 14 sept. 2020, 4:16:08
     Author     : desarrollador
 */
+*, *:before, *:after { box-sizing: border-box; }
+body { margin: 0; font-size: 100%; }
+a { text-decoration: none; }
+/*html {
+    scroll-behavior: smooth;
+}*/
 :root {
     --n-fuente:                 'Arial Black', Gadget, sans-serif;
     --n-fuente-dos:             'Gadget', sans-serif;/*'Arial', Helvetica, sans-serif*/

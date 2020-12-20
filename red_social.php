@@ -11,18 +11,18 @@
 </head>
 <body>
     <section class="n-form-contenedor">
-        <form autocomplete="">
-            <section class="fila">
-                <header>
-                    <h1><a href="http://localhost/AllInOne/index.php">AllInOne</a></h1>
-                </header>
-                <section class="linea">
-                    <span>or</span>
-                </section>
-                <section class="columna">
+        <section class="fila">
+            <header>
+                <h1><a href="http://localhost/AllInOne/index.php">AllInOne</a></h1>
+            </header>
+            <section class="linea">
+                <span>or</span>
+            </section>
+            <section class="columna">
 <!--                    <section class="hide-md-lg">
-                        <p>Or sign in manually:</p>
-                    </section>-->
+                    <p>Or sign in manually:</p>
+                </section>-->
+                <form action="front/red_social/inicio.php" method="POST" autocomplete="">
                     <h2>Iniciar</h2>
                     <section class="input-contenedor">
                         <input type="email" name="correo" placeholder="Correo">
@@ -30,9 +30,11 @@
                     <section class="input-contenedor">
                         <input type="password" name="password" placeholder="Contraseña">
                     </section>
-                    <button type="submit" formaction="front/red_social/inicio.php" formmethod="POST" value="Iniciar">Iniciar</button>
-                </section>
-                <section class="columna">
+                    <button type="submit" value="Iniciar">Iniciar</button>
+                </form>
+            </section>
+            <section class="columna">
+                <form action="front/red_social/perfil.php" method="POST" autocomplete=""> 
                     <h2>Registrarse</h2>
                     <section class="input-contenedor">
                         <i class="fas fa-envelope-open-text"></i>
@@ -42,12 +44,11 @@
                         <i class="fas fa-key"></i>
                         <input type="password" name="psw" placeholder="Contraseña">
                     </section>
-                    <button type="submit" formaction="front/red_social/perfil.php" formmethod="POST">Registrarse</button>
-                </section>
+                    <button type="submit">Registrarse</button>
+                </form>
             </section>
-        </form>
+        </section>
     </section>
-
 <!--    <section class="bottom-container">
         <section class="fila">
             <section class="columna">
@@ -58,7 +59,5 @@
             </section>
         </section>
     </section>-->
-
 </body>
 </html>
-

@@ -1,9 +1,6 @@
 -PSRs (PHP Standards Recommendations)
 https://www.php-fig.org/
 
-- Ideas de proyectos
-https://github.com/florinpop17/app-ideas/
-
 - Red Social
     - Iniciar o Registro
         https://www.w3schools.com/howto/howto_css_social_login.asp
@@ -24,6 +21,9 @@ https://github.com/florinpop17/app-ideas/
         https://www.w3schools.com/howto/howto_js_list_grid_view.asp
     - Auto-completar campo
         https://www.w3schools.com/howto/howto_js_autocomplete.asp
+
+- Ideas de proyectos
+https://github.com/florinpop17/app-ideas/
 
 - JSON, funciones para archivos y Arrays
 https://www.json.org/json-en.html

@@ -1,10 +1,8 @@
+@import url("http://localhost/AllInOne/front-css/root.css");
 /* 
     Created on : 19 dic. 2020, 16:13:17
     Author     : desarrollador
 */
-@import url("http://localhost/AllInOne/front-css/root.css");
-*, *:before, *:after { box-sizing: border-box; }
-body { margin: 0; font-size: 100%; }
 header { text-align: center; width: 100%; }
 h1 > a  {
     color: var(--n-color-dos);
@@ -32,14 +30,14 @@ h2 {
     display: table;
     clear: both;
 }
-.n-form-contenedor > form > .fila > .linea { /* vertical line */
+.n-form-contenedor > .fila > .linea { /* vertical line */
     position: absolute;
     left: 50%;
     transform: translate(-50%);
     border: 0.125em solid var(--n-color-dos);
     height: 15em;
 }
-.n-form-contenedor > form > .fila > .linea > span {
+.n-form-contenedor > .fila > .linea > span {
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -50,19 +48,19 @@ h2 {
     border-radius: 50%;
     padding: 0.50em 0.625em;
 }
-.n-form-contenedor > form > .fila > .columna {
+.n-form-contenedor > .fila > .columna > form {
     float: left;
     width: 50%;
     margin: auto;
     padding: 0 3.125em;
     margin-top: 0.375em;
 }
-.n-form-contenedor > form > .fila > .columna > .input-contenedor {
+.n-form-contenedor > .fila > .columna > form > .input-contenedor {
     display: flex;
     width: 100%;
     margin-bottom: 0.9375em;
 }
-.n-form-contenedor > form > .fila > .columna > .input-contenedor > input {
+.n-form-contenedor > .fila > .columna > form > .input-contenedor > input {
     width: 100%;
     border: none;
     border-radius: 0.40em;
@@ -70,12 +68,12 @@ h2 {
     padding: 0.625em;
     display: inline-block;
 }
-.n-form-contenedor > form > .fila > .columna > .input-contenedor > input:focus {
+.n-form-contenedor > .fila > .columna > form > .input-contenedor > input:focus {
     color: var(--n-color);
     background-color: var(--n-color-tres);
     outline: none;
 }
-.n-form-contenedor > form > .fila > .columna > .input-contenedor > i {
+.n-form-contenedor > .fila > .columna > form > .input-contenedor > i {
     color: var(--n-color);
     background-color: var(--n-color-dos);
     text-align: center;
@@ -83,7 +81,7 @@ h2 {
     border-radius: 0.40em;
     padding: 0.625em;
 }
-.n-form-contenedor > form > .fila > .columna > button {
+.n-form-contenedor > .fila > .columna > form > button {
     color: var(--n-color);
     background-color: var(--n-color-dos);
     font-family: var(--n-fuente);
@@ -95,7 +93,7 @@ h2 {
     outline: none;
     cursor: pointer;
 }
-.n-form-contenedor > form > .fila > .columna > button:hover {
+.n-form-contenedor > .fila > .columna > form > button:hover {
     color: var(--n-color-dos);
     background-color: var(--n-color-tres);
     text-shadow: var(--n-sombra-de-texto);
@@ -115,8 +113,8 @@ h2 {
 
 /* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 650px) {
-    .n-form-contenedor > form > .fila > .columna { width: 100%; }
-    .n-form-contenedor > form > .fila > .linea { display: none; }
+    .n-form-contenedor > .fila > .columna > form { width: 100%; }
+    .n-form-contenedor > .fila > .linea { display: none; }
     /* show the hidden text on small screens */
     /*.hide-md-lg {
         display: block;

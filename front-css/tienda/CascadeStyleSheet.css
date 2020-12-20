@@ -1,17 +1,11 @@
+@import url("http://localhost/AllInOne/front-css/root.css");
 /* 
     Created on : 14 sept. 2020, 1:50:09
     Author     : desarrollador
 */
-@import url("http://localhost/AllInOne/front-css/root.css");
-*, *:before, *:after { 
-    box-sizing: border-box;     
-}
+
 html {
     scroll-behavior: smooth;
-}
-body {
-    margin: 0;
-    font-size: 100%;
 }
 button, a { 
     cursor: pointer; 
