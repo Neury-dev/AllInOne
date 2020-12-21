@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../front-css/red-social/header.css">
+    <link rel="stylesheet" href="../../front-css/red-social/nav.css"/>
+    <link rel="stylesheet" href="../../front-css/red-social/main.css"/>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <style>
        
     </style>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+<!-- 
+    header
+-->
     <header id="n-header" class="n-grid-header">
         <section class="area-1">
             <h1><a href="http://localhost/AllInOne/index.php" style="display: block;">AllInOne</a></h1>
@@ -24,17 +31,17 @@
         </section>
         <section class="area-3">
             <section class="sesion-1">
+                <a href="" class="n-header-maximo-oculto"><i class='fas fa-chalkboard-teacher'></i></a>
                 <a href="" class="n-header-maximo-oculto"><i class="fas fa-envelope-open"></i></a>
                 <a href="" class="n-header-maximo-oculto"><i class="fas fa-bell-slash"></i></a>
             </section>
             <section class="n-header-mediano">
                 <section id="n-header-mediano">
-                    <a href="" class="n-header-maximo-oculto"><i class="fas fa-bell-slash"></i></a>
-                    <a href="" class="n-header-maximo-oculto"><i class="fas fa-bell-slash"></i></a>
+                    <a href="" class="n-header-maximo-oculto"><i class="fas fa-envelope-open"></i></a>
                     <a href="" class="n-header-maximo-oculto"><i class="fas fa-bell-slash"></i></a>
                 </section>
                 <span class="n-header-span" id="n-header-span">
-                    <a href="" class="n-header-maximo-oculto"><i class="fas fa-envelope-open"></i></a>
+                    <a href="" class="n-header-maximo-oculto"><i class='fas fa-chalkboard-teacher'></i></a>
                     <a href="javascript:void(0);" id="n-icono-mediano" class="n-icono-mediano" onclick="ejecutarHeader.mediano();">&#9776;</a>
                 </span>
                 <!--<a href="javascript:void(0);" id="n-icono-mediano" class="n-icono-mediano" onclick="mediano()">&#9776;</a>-->
@@ -54,26 +61,86 @@
             </section>
         </section>
     </header>
+<!-- 
+    nav
+-->
     <section class="n-grid">
         <section class="area-1">
             <nav>
-                a
+                <section class="principal">
+                    <a href="#"><i class='far fa-newspaper'></i> <span>Todo</span></a>
+                    <a href="#"><i class='fas fa-file-alt'></i> <span>Articulos</span></a>
+                    <a href="#"><i class='fas fa-images'></i> <span>Imagenes</span></a>
+                    <a href="#"><i class='fas fa-file-audio'></i> <span>Audios</span></a>
+                    <a href="#"><i class='fas fa-video'></i> <span>videos</span></a>
+                    
+                </section>
+                <section class="segundario">
+                    <ul>
+                        <li><a href="#">Aserca de</a></li>
+                        <li><a href="#">Mapa del sitio</a></li>
+                        <li><a href="#">Otros</a></li>
+                    </ul>
+                </section>
             </nav>
         </section>
         <section class="area-2">
             <main>
-                a   
+                <p>Publicar?</p>
+                <div class="tab">
+                    <button class="tablinks" onclick="openCity(event, 'London')"><i class='fas fa-file-alt'></i></button>
+                    <button class="tablinks" onclick="openCity(event, 'Paris')"><i class='fas fa-images'></i></button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')"><i class='fas fa-file-audio'></i></button>
+                    <button class="tablinks" onclick="openCity(event, 'Paris')"><i class='fas fa-video'></i></button>
+                </div>  
+                <div id="London" class="tabcontent">
+                    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+                    <h3>London</h3>
+                    <p>London is the capital city of England.</p>
+                </div>
+
+                <div id="Paris" class="tabcontent">
+                    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+                    <h3>Paris</h3>
+                    <p>Paris is the capital of France.</p> 
+                </div>
+
+                <div id="Tokyo" class="tabcontent">
+                    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+                    <h3>Tokyo</h3>
+                    <p>Tokyo is the capital of Japan.</p>
+                </div>
             </main>
             <article>
-                a
+                articulos
             </article>
         </section>
         <section class="area-3">
             <aside>
-                a
+                <section>
+                    aside
+                </section>
+                <section>
+                    <div class="w3-card w3-round w3-white w3-center">
+                        <div class="w3-container">
+                            <p>Friend Request</p>
+                            <img src="../../front-multimedia/red-social/imagen/avatar3.png" alt="Avatar" style="width:50%"><br>
+                            <span>Jane Doe</span>
+                            <div class="w3-row w3-opacity">
+                                <div class="w3-half">
+                                    <button class="w3-button w3-block w3-green w3-section" title="Accept"><i class="fa fa-check"></i></button>
+                                </div>
+                                <div class="w3-half">
+                                    <button class="w3-button w3-block w3-red w3-section" title="Decline"><i class="fa fa-remove"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </aside>
         </section>
     </section>
-<script src="../../show/red-social/header.js"></script>
+<script src="../../show/red-social/header.js" async=""></script>
+<script src="../../show/red-social/main.js" defer=""></script>
 </body>
 </html> 

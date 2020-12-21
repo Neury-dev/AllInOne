@@ -6,9 +6,14 @@ https://www.php-fig.org/
         https://www.w3schools.com/howto/howto_css_social_login.asp
         https://www.w3schools.com/howto/howto_css_form_icon.asp
         https://www.w3schools.com/howto/howto_js_form_steps.asp
-    - Home "Inicio"
+    - Home "Inicio" y perfil
         https://www.w3schools.com/w3css/tryw3css_templates_social.htm
-        https://www.w3schools.com/howto/howto_css_browser_window.asp
+    - Iconos
+        Sapo: <i class='fas fa-frog'></i> 
+        Estrella: <i class='fas fa-star'></i>  / <i class='far fa-star'></i>
+        Estrella 50 - 50: <i class='fas fa-star-half-alt'></i>
+        Estrella media: <i class='fas fa-star-half'></i> / <i class='far fa-star-half'></i>
+        Me gusta y no me gusta: <i class='fas fa-thumbs-down'></i> / <i class='far fa-thumbs-down'></i> / <i class='fas fa-thumbs-up'></i> / <i class='far fa-thumbs-up'></i>
     -Zoom de imagen y lupa
         https://www.w3schools.com/howto/howto_js_image_zoom.asp
         https://www.w3schools.com/howto/howto_js_image_magnifier_glass.asp

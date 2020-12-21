@@ -23,30 +23,13 @@
         grid-template-columns: auto 90%;            
     }
 }*/
-/*
-    Cuadricula Principal
-*/
-.n-grid {
-    display: grid;
-    grid-template-columns: 20em auto 20em;
-    grid-gap: 0.10em;  
-    
-    position: absolute;
-    top: 6em;
-    left: 2em;
-    width: calc(100% - 4em);
-}
-.n-grid > section { background: red } 
-.n-grid > .area-1 { grid-area: 1 / 1 / span 1 / span 1; }
-.n-grid > .area-2 { grid-area: 1 / 2 / span 1 / span 1; }
-.n-grid > .area-3 { grid-area: 1 / 3 / span 1 / span 1; }
-h1 {
+header > .area-1 > h1 {
     position: absolute; 
     top: -0.90em;
     /*left: 1em;*/
     /*z-index: 3;*/
 }
-h1 > a  {
+header > .area-1 > h1 > a  {
     /*display: block;*/
     color: var(--n-color);
     font-family: var(--n-fuente-tres);
@@ -58,7 +41,7 @@ h1 > a  {
     outline: none;
     letter-spacing: -0.145em;
 }
-h1 > a:hover { color: var(--n-color); }
+header > .area-1 > h1 > a:hover { color: var(--n-color); }
 header {
     position: fixed;
     top: 0;
@@ -88,9 +71,6 @@ header > .area-2 > form  > input {
     border-radius: 0.20em;
     padding-left: 0.50em;
     outline: none;
-}
-i {
-    padding-top: 0.90em;
 }
 .n-grid-header > .area-3 {
     display: flex;
@@ -123,7 +103,6 @@ i {
     .n-header-mediano { display: none; }
     header .n-icono-minimo { display: none; }
     header > .area-3 > section > a {
-        display: inline-block;
         color: var(--n-color);
         font-size: 1.10em;
         font-family: var(--n-fuente-dos);
@@ -131,7 +110,7 @@ i {
         padding: 0em 0em 0em 1em;
         line-height: 3em;
     }
-    header a:hover { color: #373538; text-shadow: var(--n-sombra-de-texto); } 
+    header > .area-3 > section > a:hover { color: var(--n-color-tres); text-shadow: var(--n-sombra-de-texto); } 
 }
 /*@media screen and (min-width: 902px) and (max-width: 1199px) {
     .n-header-span { display: none; }
@@ -234,9 +213,8 @@ i {
         line-height: 3em;
     }*/
     /*.n-header-mediano a.n-icono-mediano { font-size: 1.20em; }*/
-    
-    .n-header-mediano a.n-icono-mediano:hover, .n-header-mediano #n-header-mediano a:hover, .n-header-mediano section a:hover {
-        color: #373538;
+    header > .area-3 > section > #n-header-span > a:hover, .n-header-mediano > #n-header-mediano > a:hover {
+        color: var(--n-color-tres);
         text-shadow: var(--n-sombra-de-texto);  
     }
 }

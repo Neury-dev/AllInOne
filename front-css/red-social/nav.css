@@ -1,0 +1,62 @@
+@import url("http://localhost/AllInOne/front-css/root.css");
+/* 
+    Created on : 20 dic. 2020, 19:09:10
+    Author     : desarrollador
+*/
+/*
+    Cuadricula Principal
+*/
+.n-grid {
+    display: grid;
+    grid-template-columns: 20em auto 20em;
+    grid-gap: 0.10em;  
+    
+    position: absolute;
+    top: 6em;
+    left: 2em;
+    width: calc(100% - 4em);
+}
+.n-grid > section { border: 0.10em solid var(--n-color-dos); } 
+.n-grid > .area-1 { grid-area: 1 / 1 / span 1 / span 1; }
+.n-grid > .area-2 { grid-area: 1 / 2 / span 1 / span 1; }
+.n-grid > .area-3 { grid-area: 1 / 3 / span 1 / span 1; }
+.n-grid > .area-1 > nav {
+    display: flex;
+    flex-direction: column;
+}
+.n-grid > .area-1 > nav > .principal {
+    display: flex;
+    flex-direction: column;
+}
+.n-grid > .area-1 > nav > .principal > a {
+    color: var(--n-color-dos);
+    font-family: var(--n-fuente);
+    font-size: 0.90em;
+    margin-bottom: 0.50em;
+}
+
+
+
+
+.n-grid > .area-1 > nav > .segundario > ul {
+    padding: 0;
+    list-style: none;
+}
+.n-grid > .area-1 > nav > .segundario > ul > li {
+    display: inline;
+    font-family: var(--n-fuente-dos);
+    font-size: 0.70em;
+}
+.n-grid > .area-1 > nav > .segundario > ul > li+li:before {
+    padding: 0.20em;
+    color: var(--n-color-dos);
+    content: "/\00a0";
+}
+.n-grid > .area-1 > nav > .segundario > ul > li a {
+    color: var(--n-color-tres);
+    text-decoration: none;
+}
+.n-grid > .area-1 > nav > .segundario > ul > li a:hover {
+    color: var(--n-color-dos);
+    text-decoration: underline;
+}
