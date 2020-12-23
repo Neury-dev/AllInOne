@@ -13,6 +13,7 @@ https://www.php-fig.org/
         Estrella: <i class='fas fa-star'></i>  / <i class='far fa-star'></i>
         Estrella 50 - 50: <i class='fas fa-star-half-alt'></i>
         Estrella media: <i class='fas fa-star-half'></i> / <i class='far fa-star-half'></i>
+        Estrella de lado: <i class='fas fa-splotch'></i>
         Me gusta y no me gusta: <i class='fas fa-thumbs-down'></i> / <i class='far fa-thumbs-down'></i> / <i class='fas fa-thumbs-up'></i> / <i class='far fa-thumbs-up'></i>
     -Zoom de imagen y lupa
         https://www.w3schools.com/howto/howto_js_image_zoom.asp

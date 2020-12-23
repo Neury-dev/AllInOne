@@ -24,7 +24,7 @@
         <section class="area-2">
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form" id="form" enctype="multipart/form-data">
                 <!--<label for="buscar">Buscar:</label>-->
-                <input type="search" name="buscar" id="buscar" value="Buscar gente...">
+                <input type="search" name="buscar" id="buscar" placeholder="Buscar gente...">
                 <!--            <button type="submit" name="enviar" id="enviar" value="Enviar">Enviar</button>
                             <input type="submit" name="enviar" id="enviar" value="Enviar">-->
             </form>
@@ -68,10 +68,11 @@
         <section class="area-1">
             <nav>
                 <section class="principal">
-                    <a href="#"><i class='far fa-newspaper'></i> <span>Todo</span></a>
+                    <a href="#"><i class='fas fa-house-user'></i> <span>Inicio</span></a>
+                    <a href="#"><i class='fas fa-search'></i> <span>Buscar</span></a>
                     <a href="#"><i class='fas fa-file-alt'></i> <span>Articulos</span></a>
                     <a href="#"><i class='fas fa-images'></i> <span>Imagenes</span></a>
-                    <a href="#"><i class='fas fa-file-audio'></i> <span>Audios</span></a>
+                    <a href="#"><i class='fas fa-play'></i> <span>Audios</span></a>
                     <a href="#"><i class='fas fa-video'></i> <span>videos</span></a>
                     
                 </section>
@@ -79,6 +80,7 @@
                     <ul>
                         <li><a href="#">Aserca de</a></li>
                         <li><a href="#">Mapa del sitio</a></li>
+                        <li><a href="#">Idioma</a></li>
                         <li><a href="#">Otros</a></li>
                     </ul>
                 </section>
@@ -87,28 +89,52 @@
         <section class="area-2">
             <main>
                 <p>Publicar?</p>
-                <div class="tab">
-                    <button class="tablinks" onclick="openCity(event, 'London')"><i class='fas fa-file-alt'></i></button>
-                    <button class="tablinks" onclick="openCity(event, 'Paris')"><i class='fas fa-images'></i></button>
-                    <button class="tablinks" onclick="openCity(event, 'Tokyo')"><i class='fas fa-file-audio'></i></button>
-                    <button class="tablinks" onclick="openCity(event, 'Paris')"><i class='fas fa-video'></i></button>
-                </div>  
-                <div id="London" class="tabcontent">
+                <section class="main-nav">
+                    <button class="tablinks" onclick="openCity(event, 'n-articulo')"><i class='fas fa-file-alt'></i></button>
+                    <button class="tablinks" onclick="openCity(event, 'n-imagen')"><i class='fas fa-images'></i></button>
+                    <button class="tablinks" onclick="openCity(event, 'n-audio')"><i class='fas fa-play'></i></button>
+                    <button class="tablinks" onclick="openCity(event, 'n-video')"><i class='fas fa-video'></i></button>
+                </section>  
+                <div id="n-articulo" class="tabcontent">
                     <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-                    <h3>London</h3>
-                    <p>London is the capital city of England.</p>
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form-articulo" id="form-articulo" enctype="multipart/form-data">
+                        <label for="titulo" class="etiqueta">Titulo</label>
+                        <input type="text" name="titulo" id="titulo" placeholder="Titulo...">
+                        <label for="articulo" class="etiqueta">Articulo</label>
+                        <textarea name="articulo" id="articulo" rows="5" cols="10" placeholder="Articulo..."></textarea>
+                        <label for="imagen" class="cargar-archivo">Seleccionar Imagen</label>
+                        <input type="file" name="imagen" id="imagen" hidden="">
+                        <input type="text" disabled="">
+                        <button type="submit" name="subir" id="subir" value="Articulo">Subir</button>
+                    </form>
                 </div>
 
-                <div id="Paris" class="tabcontent">
+                <div id="n-imagen" class="tabcontent">
                     <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-                    <h3>Paris</h3>
-                    <p>Paris is the capital of France.</p> 
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form" id="form" enctype="multipart/form-data">
+                        <label for="imagen" class="cargar-archivo">Seleccionar Imagen</label>
+                        <input type="file" name="imagen" id="imagen" hidden="">
+                        <input type="text" disabled="">
+                        <button type="submit" name="subir-archivo" id="subir-archivo" value="Imagen">Subir</button>
+                    </form>
                 </div>
-
-                <div id="Tokyo" class="tabcontent">
+                <div id="n-audio" class="tabcontent">
                     <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-                    <h3>Tokyo</h3>
-                    <p>Tokyo is the capital of Japan.</p>
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form" id="form" enctype="multipart/form-data">
+                        <label for="audio" class="cargar-archivo">Seleccionar Audio</label>
+                        <input type="file" name="audio" id="audio" hidden="">
+                        <input type="text" disabled="">
+                        <button type="submit" name="subir-archivo" id="subir-archivo" value="Audio">Subir</button>
+                    </form>
+                </div>
+                <div id="n-video" class="tabcontent">
+                    <span class="topright">&times</span>
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form" id="form" enctype="multipart/form-data">
+                        <label for="video" class="cargar-archivo">Seleccionar Video</label>
+                        <input type="file" name="video" id="video" hidden="">
+                        <input type="text" disabled="">
+                        <button type="submit" name="subir-archivo" id="subir-archivo" value="Video">Subir</button>
+                    </form>
                 </div>
             </main>
             <article>
