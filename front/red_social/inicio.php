@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../../front-css/red-social/header.css">
     <link rel="stylesheet" href="../../front-css/red-social/nav.css"/>
     <link rel="stylesheet" href="../../front-css/red-social/main.css"/>
+    <link rel="stylesheet" href="../../front-css/red-social/article.css"/>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <style>
        
@@ -138,7 +139,32 @@
                 </div>
             </main>
             <article>
-                articulos
+                <section>
+                    <section>
+                        <section>
+                            <img src="../../front-multimedia/red-social/imagen/mist.jpg" class="n-img-portada-header"alt="alt"/>
+                            <img src="../../front-multimedia/red-social/imagen/firefoxos.png" class="n-img-perfil-header"alt="alt"/>
+                        </section>  
+                        <section>
+                            <span class="">1 de enero 2021</span> <button><i class='fas fa-ellipsis-v'></i></button>
+                        </section>
+                    </section>
+                    <section>
+                        <h3>Articulo</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+                            eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                        <img src="../../front-multimedia/red-social/imagen/app.jpg" alt="" style="width: 100%;"/>
+                    </section>
+                    <section>
+                        <section><button><i class='fas fa-thumbs-up'></i></button></section><section><span class="">100</span></section>
+                        <section><button><i class='fas fa-thumbs-down'></i></button></section><section><span class="">100</span></section>
+                        <section><button><i class='fas fa-comments'></i></button></section><section><span class="">100</span></section>
+                        <section><button><i class='fas fa-share'></i></button></section><section><span class="">100</span></section>
+                    </section>
+                </section>
             </article>
         </section>
         <section class="area-3">
