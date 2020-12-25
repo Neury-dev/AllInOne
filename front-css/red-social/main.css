@@ -18,9 +18,8 @@
     float: left;
     border: none;
     outline: none;
-    cursor: pointer;
     padding: 14px 16px;
-    font-size: 17px;
+    font-size: 1.0625em;
 }
 .main-nav > button:hover {
     background-color: var(--n-color-tres);
@@ -42,7 +41,6 @@
 /* Style the close button */
 .topright {
     float: right;
-    cursor: pointer;
     font-size: 28px;
 }
 
@@ -92,7 +90,6 @@
     border: 0.10em solid var(--n-color-dos);
     border-radius: 0.50em;
     padding: 0.50em;
-    cursor: pointer;
 }
 .n-grid > .area-2 > main > div > form > input:disabled {
     color: var(--n-color-dos);

@@ -5,6 +5,7 @@
 *, *:before, *:after { box-sizing: border-box; }
 body { margin: 0; font-size: 100%; }
 a { text-decoration: none; }
+a, button { cursor: pointer; }
 /*html {
     scroll-behavior: smooth;
 }*/

@@ -140,16 +140,18 @@
             </main>
             <article>
                 <section>
-                    <section>
+                    <section class="articulo-head">
                         <section>
-                            <img src="../../front-multimedia/red-social/imagen/mist.jpg" class="n-img-portada-header"alt="alt"/>
-                            <img src="../../front-multimedia/red-social/imagen/firefoxos.png" class="n-img-perfil-header"alt="alt"/>
+                            <img src="../../front-multimedia/red-social/imagen/mist.jpg" class="portada" alt="alt"/>
+                            <img src="../../front-multimedia/red-social/imagen/firefoxos.png" class="foto" alt="alt"/>
+                            <h2>Neury Aguasvivas</h2>
                         </section>  
                         <section>
                             <span class="">1 de enero 2021</span> <button><i class='fas fa-ellipsis-v'></i></button>
                         </section>
                     </section>
-                    <section>
+                    <hr>
+                    <section class="articulo-body">
                         <h3>Articulo</h3>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
@@ -158,7 +160,8 @@
                         </p>
                         <img src="../../front-multimedia/red-social/imagen/app.jpg" alt="" style="width: 100%;"/>
                     </section>
-                    <section>
+                    <hr>
+                    <section class="articulo-footer">
                         <section><button><i class='fas fa-thumbs-up'></i></button></section><section><span class="">100</span></section>
                         <section><button><i class='fas fa-thumbs-down'></i></button></section><section><span class="">100</span></section>
                         <section><button><i class='fas fa-comments'></i></button></section><section><span class="">100</span></section>
@@ -170,7 +173,7 @@
         <section class="area-3">
             <aside>
                 <section>
-                    aside
+                    <h4>Solicitudes de amistad</h4>
                 </section>
                 <section>
                     <div class="w3-card w3-round w3-white w3-center">
