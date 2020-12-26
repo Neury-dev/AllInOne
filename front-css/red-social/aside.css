@@ -3,4 +3,55 @@
     Created on : 25 dic. 2020, 4:50:00
     Author     : desarrollador
 */
-
+.n-grid > .area-3 > aside > h4 {
+    color: var(--n-color-dos);
+    font-family: var(--n-fuente-dos);
+    font-size: 0.90em;
+    font-weight: bold;
+    text-align: center;
+}
+.n-grid > .area-3 > aside > section > img {
+    float: left;
+    width: 4em;
+    height: 4em;
+    margin: 0.30em;
+    border-radius: 50%;
+}
+.n-grid > .area-3 > aside > section > h5 {
+    position: relative;
+    top: 1.80em;
+    color: var(--n-color-dos);
+    font-family: var(--n-fuente-dos);
+    font-size: 0.90em;
+    font-weight: bold;
+}
+.n-grid > .area-3 > aside > section {
+    padding-bottom: 1em;
+}
+.n-grid > .area-3 > aside > section > section {
+    position: relative;
+    top: 0.40em;
+    left: -0.40em;
+}
+.n-grid > .area-3 > aside > section > section > button.aceptar  {
+    color: var(--n-color);
+    background-color: var(--n-color-verde);
+    border: 0.10em solid var(--n-color-verde);
+    border-radius: 0.40em;
+    padding: 0.10em 0.70em 0.10em 0.70em;
+}
+.n-grid > .area-3 > aside > section > section > button.aceptar:hover {
+    color: var(--n-color-verde);
+    background-color: var(--n-color);
+}
+.n-grid > .area-3 > aside > section > section > button.rechazar {
+    color: var(--n-color);
+    background-color: var(--n-color-rojo);
+    border: 0.10em solid var(--n-color-rojo);
+    border-radius: 0.40em;
+    padding: 0.10em 0.70em 0.10em 0.70em;
+}
+.n-grid > .area-3 > aside > section > section > button.rechazar:hover {
+    color: var(--n-color-rojo);
+    background-color: var(--n-color);
+}

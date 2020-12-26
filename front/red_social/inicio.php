@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="../../front-css/red-social/nav.css"/>
     <link rel="stylesheet" href="../../front-css/red-social/main.css"/>
     <link rel="stylesheet" href="../../front-css/red-social/article.css"/>
+    <link rel="stylesheet" href="../../front-css/red-social/aside.css"/>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <style>
        
     </style>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <!-- 
@@ -172,25 +171,22 @@
         </section>
         <section class="area-3">
             <aside>
+                <h4>Solicitudes de amistad</h4>
                 <section>
-                    <h4>Solicitudes de amistad</h4>
+                    <img src="../../front-multimedia/red-social/imagen/avatar3.png" alt="alt"/>
+                    <h5>Jonh Doe</h5>
+                    <section>
+                        <button class="aceptar"><i class='fas fa-user-friends'></i></button>
+                        <button class="rechazar"><i class='fas fa-user-slash'></i></button>
+                    </section>
                 </section>
                 <section>
-                    <div class="w3-card w3-round w3-white w3-center">
-                        <div class="w3-container">
-                            <p>Friend Request</p>
-                            <img src="../../front-multimedia/red-social/imagen/avatar3.png" alt="Avatar" style="width:50%"><br>
-                            <span>Jane Doe</span>
-                            <div class="w3-row w3-opacity">
-                                <div class="w3-half">
-                                    <button class="w3-button w3-block w3-green w3-section" title="Accept"><i class="fa fa-check"></i></button>
-                                </div>
-                                <div class="w3-half">
-                                    <button class="w3-button w3-block w3-red w3-section" title="Decline"><i class="fa fa-remove"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <img src="../../front-multimedia/red-social/imagen/avatar3.png" alt="alt"/>
+                    <h5>Jonh Doe</h5>
+                    <section>
+                        <button class="aceptar"><i class='fas fa-user-friends'></i></button>
+                        <button class="rechazar"><i class='fas fa-user-slash'></i></button>
+                    </section>
                 </section>
             </aside>
         </section>
