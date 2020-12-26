@@ -142,8 +142,10 @@
                     <section class="articulo-head">
                         <section>
                             <img src="../../front-multimedia/red-social/imagen/mist.jpg" class="portada" alt="alt"/>
-                            <img src="../../front-multimedia/red-social/imagen/firefoxos.png" class="foto" alt="alt"/>
-                            <h2>Neury Aguasvivas</h2>
+                            <section>
+                                <img src="../../front-multimedia/red-social/imagen/avatar3.png" class="foto" alt="alt"/>
+                                <h2><span>Neury</span><br><span>Aguasvivas</span></h2>
+                            </section>
                         </section>  
                         <section>
                             <span class="">1 de enero 2021</span> <button><i class='fas fa-ellipsis-v'></i></button>

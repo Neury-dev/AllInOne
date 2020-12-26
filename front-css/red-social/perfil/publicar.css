@@ -1,0 +1,124 @@
+@import url("http://localhost/AllInOne/front-css/root.css");
+/* 
+    Created on : 26 dic. 2020, 16:12:07
+    Author     : desarrollador
+*/
+.n-grid > .area-3 > section {
+    margin: 0em 6em 0em 6em;
+}
+.n-grid > .area-3 > section > p {
+    color: var(--n-color-dos);
+    font-family: var(--n-fuente);
+}
+.section-nav {
+    background-color: var(--n-color-dos);
+    border-radius: 2em;
+    overflow: hidden;
+}
+.section-nav > button {
+    color: var(--n-color);
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    font-size: 1.0625em;
+}
+.section-nav > button:hover {
+    background-color: var(--n-color-tres);
+    border-radius: 2em;
+}
+.section-nav > button.activo {
+    color: var(--n-color-dos);
+    background-color: var(--n-color);
+    border-radius: 2em;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+/* Style the close button */
+.topright {
+    float: right;
+    font-size: 28px;
+}
+
+.topright:hover {color: red;}
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.n-grid > .area-3 > section > div > form {
+    margin-top: 4em;
+}
+#form-articulo > .etiqueta {
+    color: var(--n-color-dos);
+    font-family: var(--n-fuente-dos);
+    font-size: 0.80em;
+    font-weight: bold;
+}
+.n-grid > .area-3 > section > div > #form-articulo > #titulo, .n-grid > .area-3 > section > div > #form-articulo > #articulo {
+    color: var(--n-color-dos);
+    font-family: var(--n-fuente-dos);
+    font-size: 0.80em;
+    width: 100%;
+    margin-bottom: 0.50em;
+    border: none;
+    border-radius: 0.50em;
+    padding: 0.625em;
+}
+.n-grid > .area-3 > section > div > #form-articulo > #titulo:focus, .n-grid > .area-3 > section > div > #form-articulo > #articulo:focus {
+    color: var(--n-color);
+    background-color: var(--n-color-tres);
+    outline: none;
+}
+.n-grid > .area-3 > section > div > #form-articulo > #articulo {
+    resize: none;
+}
+.n-grid > .area-3 > section > div > form > .cargar-archivo {
+    color: var(--n-color);
+    background-color: var(--n-color-verde);
+    font-family: var(--n-fuente);
+    font-size: 0.80em;
+    border: 0.10em solid var(--n-color-dos);
+    border-radius: 0.50em;
+    padding: 0.50em;
+}
+.n-grid > .area-3 > section > div > form > input:disabled {
+    color: var(--n-color-dos);
+    background-color: var(--n-color);
+    font-family: var(--n-fuente-dos);
+    font-size: 0.80em;
+    border: none;
+    border: 0.10em solid var(--n-color-dos);
+    border-radius: 0.50em;
+    padding: 0.50em;
+    cursor: not-allowed;
+}
+.n-grid > .area-3 > section > div > form > #subir, .n-grid > .area-3 > section > div > form > #subir-archivo {
+    color: var(--n-color);
+    background-color: var(--n-color-dos);
+    font-family: var(--n-fuente);
+    font-size: 0.90em;
+    width: 100%;
+    margin-top: 0.20em;
+    border: none;
+    border-radius: 0.50em;
+    padding: 0.50em;
+}
+.n-grid > .area-3 > section > div > form >  #subir:hover, .n-grid > .area-3 > section > div > form > #subir-archivo:hover {
+    color: var(--n-color-dos);
+    background-color: var(--n-color-tres);
+    text-shadow: var(--n-sombra-de-texto);
+}
+

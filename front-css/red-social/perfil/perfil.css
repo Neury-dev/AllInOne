@@ -1,0 +1,53 @@
+@import url("http://localhost/AllInOne/front-css/root.css");
+/* 
+    Created on : 26 dic. 2020, 16:10:17
+    Author     : desarrollador
+*/
+/*
+    Cuadricula Principal
+*/
+.n-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: 20em auto;;
+    /*grid-gap: 0.10em;*/  
+    
+    position: absolute;
+    top: 6em;
+    left: 2em;
+    width: calc(100% - 4em);
+}
+/*.n-grid > section { border: 0.10em solid var(--n-color-dos); }*/ 
+.n-grid > .area-1 { grid-area: 1 / 1 / span 1 / span 1; }
+.n-grid > .area-2 { grid-area: 2 / 1 / span 1 / span 1; }
+.n-grid > .area-3 { grid-area: 1 / 2 / span 2 / span 1; }
+/*main { width: 100%; }*/
+.n-grid > .area-1 > main > img {
+    position: absolute;
+    object-fit: cover;
+    width: 50%;
+    height: 20em;
+    border-radius: 1em;
+}
+.n-grid > .area-1 > main > .contenedor {
+   position: relative;
+   top: 12em;
+   z-index: 1;
+}
+.n-grid > .area-1 > main > .contenedor > img.foto {
+    float: left;
+    position: relative;
+    z-index: 1;
+    width: 8em;
+    height: 8em;
+    border-radius: 50% 50% 50% 1em;
+}
+.n-grid > .area-1 > main > .contenedor > h2 {
+    position: relative;
+    top: 5.80em;
+    z-index: 0;
+    color: var(--n-color-dos);
+    background-color: var(--n-color-uno-uno);
+    font-family: var(--n-fuente-tres);
+    font-size: 1.10em;
+}

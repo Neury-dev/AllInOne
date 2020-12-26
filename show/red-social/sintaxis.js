@@ -24,6 +24,21 @@ class Instancia {
 
 let instancia = new Instancia("instant");
 document.getElementById("demo").innerHTML = instancia.hello(instancia);
+
+class Instancia2 {
+    constructor() {
+        const claseInstanciada = new Instancia();
+    }
+    hola2() {
+        return "Hola Instancia2";
+    }
+    hello2(x) {
+        return "Hello2 " + x.name + " : " + this.hola2();
+    }
+}
+
+let instancia2 = new Instancia2("instant");
+document.getElementById("demo").innerHTML = instancia2.hello();
 /*
     *Clase Estatica 
  */

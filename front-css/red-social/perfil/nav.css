@@ -1,0 +1,34 @@
+@import url("http://localhost/AllInOne/front-css/root.css");
+/* 
+    Created on : 26 dic. 2020, 17:11:54
+    Author     : desarrollador
+*/
+.n-grid > .area-2 {
+    margin: 1em 0em 0em 0em;
+}
+.n-grid > .area-2 > nav {
+    overflow: auto;
+    white-space: nowrap;
+}
+.n-grid > .area-2 > nav > ul {
+    padding: 0;
+    list-style: none;
+}
+.n-grid > .area-2 > nav > ul > li {
+    display: inline;
+    font-family: var(--n-fuente-dos);
+    font-size: 0.70em;
+}
+.n-grid > .area-2 > nav > ul > li + li:before {
+    padding: 0.20em;
+    color: var(--n-color-dos);
+    content: "/\00a0";
+}
+.n-grid > .area-2 > nav > ul > li a {
+    color: var(--n-color-tres);
+    text-decoration: none;
+}
+.n-grid > .area-2 > nav > ul > li a:hover {
+    color: var(--n-color-dos);
+    text-decoration: underline;
+}

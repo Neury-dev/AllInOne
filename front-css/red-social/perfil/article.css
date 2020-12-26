@@ -1,0 +1,73 @@
+@import url("http://localhost/AllInOne/front-css/root.css");
+/* 
+    Created on : 26 dic. 2020, 17:07:31
+    Author     : desarrollador
+*/
+.n-grid > .area-3 > article {
+    margin: 3em 6em 0em 6em;
+}
+.n-grid > .area-3 > article > section > .articulo-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.n-grid > .area-3 > article > section > .articulo-head > section > img.foto {
+    float: left;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+}
+.n-grid > .area-3 > article > section > .articulo-head > section > h2 {
+    float: left;
+    position: relative;
+    top: 1.40em;
+    color: var(--n-color-dos);
+    font-family: var(--n-fuente-dos);
+    font-size: 0.90em;
+    font-weight: bold;
+    /*margin: -0.20em 0em 0em 0em;*/
+}
+.n-grid > .area-3 > article > section > .articulo-head > section > span {
+    color: var(--n-color-dos);
+    font-family: var(--n-fuente-dos);
+    font-size: 0.70em;
+}
+.n-grid > .area-3 > article > section > .articulo-head > section > button {
+    color: var(--n-color-dos);
+    background-color: var(--n-color);
+    font-size: 0.90em;
+    border: none;
+}
+.n-grid > .area-3 > article > section > .articulo-body {
+    margin: 0em 0em 1em 0em;
+}
+.n-grid > .area-3 > article > section > .articulo-body > h3 {
+    color: var(--n-color-dos);
+    font-family: var(--n-fuente-dos);
+    font-size: 0.90em;
+    font-weight: bold;
+}
+.n-grid > .area-3 > article > section > .articulo-body > p {
+    color: var(--n-color-dos);
+    font-family: var(--n-fuente-dos);
+    font-size: 0.90em;
+}
+.n-grid > .area-3 > article > section > .articulo-body > img {
+    /*margin: 0em 0em 1em 0em;*/
+}
+.n-grid > .area-3 > article > section > .articulo-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;  
+}
+.n-grid > .area-3 > article > section > .articulo-footer  > section > button {
+    color: var(--n-color-dos);
+    background-color: var(--n-color);
+    font-size: 1.30em;
+    border: none;
+}
+.n-grid > .area-3 > article > section > .articulo-footer  > section > span {
+    color: var(--n-color-dos);
+    font-size: 0.90em;
+    margin: 0em 0.70em 0em 0em;
+}

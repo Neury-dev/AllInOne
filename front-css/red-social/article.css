@@ -12,28 +12,34 @@
     justify-content: space-between;
 }
 .n-grid > .area-2 > article > section > .articulo-head > section > img.portada {
-    position: relative;
+    position: absolute;
     width: 7em;
     height: 4em;
     border: 0.10em solid var(--n-color);
     border-radius: 0.50em;
 }
-.n-grid > .area-2 > article > section > .articulo-head > section > img.foto {
+.n-grid > .area-2 > article > section > .articulo-head > section > section {
     position: relative;
-    left: -7.20em;
-    bottom: -0.50em;
-    z-index: 1;
+    
+}
+.n-grid > .area-2 > article > section > .articulo-head > section > section > img.foto {
+    float: left;
+    position: relative;
+    top: 1em;
     width: 3em;
     height: 3em;
+    margin-right: 0.10em;
     border: 0.10em solid var(--n-color);
-    border-radius: 50%;
+    border-radius: 50% 50% 50% 0.50em;;
 }
-.n-grid > .area-2 > article > section > .articulo-head > section > h2 {
-    color: var(--n-color-dos);
-    font-family: var(--n-fuente-dos);
-    font-size: 0.90em;
-    font-weight: bold;
-    margin: -0.20em 0em 0em 0em;
+.n-grid > .area-2 > article > section > .articulo-head > section > section > h2 {
+    float: left;
+    position: relative;
+    top: 2em;
+    color: var(--n-color);
+    font-family: var(--n-fuente-tres);
+    text-shadow: var(--n-sombra-de-texto-dos);
+    font-size: 0.70em;
 }
 .n-grid > .area-2 > article > section > .articulo-head > section > span {
     color: var(--n-color-dos);
