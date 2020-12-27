@@ -9,7 +9,7 @@
 .n-grid {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-auto-rows: 20em auto;;
+    grid-auto-rows: 20em 3em auto;
     /*grid-gap: 0.10em;*/  
     
     position: absolute;
@@ -20,7 +20,8 @@
 /*.n-grid > section { border: 0.10em solid var(--n-color-dos); }*/ 
 .n-grid > .area-1 { grid-area: 1 / 1 / span 1 / span 1; }
 .n-grid > .area-2 { grid-area: 2 / 1 / span 1 / span 1; }
-.n-grid > .area-3 { grid-area: 1 / 2 / span 2 / span 1; }
+.n-grid > .area-3 { grid-area: 1 / 2 / span 3 / span 1; }
+.n-grid > .area-4 { grid-area: 3 / 1 / span 1 / span 1; }
 /*main { width: 100%; }*/
 .n-grid > .area-1 > main > img {
     position: absolute;

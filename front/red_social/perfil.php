@@ -65,6 +65,11 @@
                 <section class="contenedor">
                     <img src="../../front-multimedia/red-social/imagen/avatar3.png" class="foto" alt="alt"/>
                     <h2>Neury E. Aguasvivas L.</h2>
+                    <section class="">
+                        <button><i class='fas fa-user-friends'></i></button>
+                        <section><button><i class='fas fa-comments'></i></button></section><section></section>
+                        <section><button><i class='fas fa-share'></i></button></section><section></section>
+                    </section>
                 </section>
             </main>
         </section>
@@ -164,6 +169,30 @@
                     </section>
                 </section>
             </article>
+        </section>
+        <section class="area-4">
+            <section>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+            </section>
+            <section>
+                <p>
+                    <span>span</span>
+                    <span>span</span>
+                    <span>span</span>
+                    <span>span</span>
+                    <span>span</span>
+                    <span>span</span>
+                    <span>span</span>
+                    <span>span</span>
+                    <span>span</span>
+                    <span>text</span>
+                </p>
+            </section>
         </section>
     </section>
     <script src="../../show/red-social/header.js" async=""></script>
