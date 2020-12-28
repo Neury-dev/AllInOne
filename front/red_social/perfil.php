@@ -9,6 +9,27 @@
     <link rel="stylesheet" href="../../front-css/red-social/perfil/publicar.css"/>
     <link rel="stylesheet" href="../../front-css/red-social/perfil/article.css"/>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <style>
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 3em;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.show {display: block;}
+    </style>
 </head>
 <body>
 <!-- 
@@ -52,23 +73,27 @@
                 <a href="javascript:void(0);" class="n-icono-minimo" onclick="header()">&#9776;</a>
             </section>-->
             <!--<a href="javascript:void(0);" class="n-icono-minimo n-header-maximo-oculto" onclick="header()">&#9776;</a>-->
-            <section>
+            <section class="dropdown" style="z-index: 9;">
                 <img src="../../front-multimedia/red-social/imagen/mist.jpg" class="n-img-portada-header"alt="alt"/>
-                <img src="../../front-multimedia/red-social/imagen/firefoxos.png" class="n-img-perfil-header"alt="alt"/>
+                <img src="../../front-multimedia/red-social/imagen/firefoxos.png" class="n-img-perfil-header dropbtn" alt="alt"/>
             </section>
         </section>
     </header>
+    <div id="myDropdown" class="dropdown-content">
+        <a href="../../front/red_social/perfil/editar.php">Editar</a>
+        <a href="#">Salir</a>
+        <a href="#">Link 3</a>
+    </div>
     <section class="n-grid">
         <section class="area-1">
             <main>
                 <img src="../../front-multimedia/red-social/imagen/app.jpg" class="portada" alt="alt"/>
                 <section class="contenedor">
                     <img src="../../front-multimedia/red-social/imagen/avatar3.png" class="foto" alt="alt"/>
-                    <h2>Neury E. Aguasvivas L.</h2>
-                    <section class="">
+                    <!--<h2>Neury E. Aguasvivas L.</h2>-->
+                    <section class="perfil-nav">
                         <button><i class='fas fa-user-friends'></i></button>
-                        <section><button><i class='fas fa-comments'></i></button></section><section></section>
-                        <section><button><i class='fas fa-share'></i></button></section><section></section>
+                        <button><i class='fas fa-comments'></i></button>
                     </section>
                 </section>
             </main>
@@ -77,7 +102,7 @@
             <nav>
                 <ul>
                     <li><a href="#">Perfil</a></li>
-                    <li><a href="#">Chat</a></li>
+                    <li><a href="perfil/chat.php">Chat</a></li>
                     <li><a href="perfil/fotos.php">Fotos</a></li>
                     <li><a href="#">Audios</a></li>
                     <li><a href="#">Videos</a></li>
@@ -171,16 +196,28 @@
             </article>
         </section>
         <section class="area-4">
-            <section>
-                <p>text</p>
-                <p>text</p>
-                <p>text</p>
-                <p>text</p>
-                <p>text</p>
-                <p>text</p>
+            <section class="sesion-1">
+                <h2>Neury Aguasvivas</h2>
+                <p>21/09/1991</p>
+                <p>neury@email.com</p>
+                <p>Republica Dominicana</p>
+                <p>Santo Domingo</p>
+<!--                <p>text</p>
+                <p>text</p>-->
             </section>
-            <section>
+            <section class="sesion-2">
+                <h4>Intereses</h4>
                 <p>
+                    <span>span</span>
+                    <span>span</span>
+                    <span>span</span>
+                    <span>span</span>
+                    <span>span</span>
+                    <span>span</span>
+                    <span>span</span>
+                    <span>span</span>
+                    <span>span</span>
+                    <span>text</span>
                     <span>span</span>
                     <span>span</span>
                     <span>span</span>
@@ -193,9 +230,77 @@
                     <span>text</span>
                 </p>
             </section>
+            <section class="sesion-3">
+                <h4>Otros</h4>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+            </section>
         </section>
     </section>
-    <script src="../../show/red-social/header.js" async=""></script>
+<script src="../../show/red-social/header.js" async=""></script>
 <script src="../../show/red-social/main.js" defer=""></script>
+<script>
+var boton = document.querySelector(".n-img-perfil-header");
+
+class HeaderNav {
+    
+    contructor(ejecutar) {
+        ejecutar.onclick = function() {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+        };
+        
+    }
+    
+//    function myFunction() {
+//        document.getElementById("myDropdown").classList.toggle("show");
+//    }
+}
+//new HeaderNav(boton);
+let eje = new HeaderNav(boton);
+
+
+//window.onclick = function(event) {
+//  if (!event.target.matches('.dropbtn')) {
+//    var dropdowns = document.getElementsByClassName("dropdown-content");
+//    var i;
+//    for (i = 0; i < dropdowns.length; i++) {
+//      var openDropdown = dropdowns[i];
+//      if (openDropdown.classList.contains('show')) {
+//        openDropdown.classList.remove('show');
+//      }
+//    }
+//  }
+//}
+
+
+
+//function myFunction() {
+//  document.getElementById("myDropdown").classList.toggle("show");
+//}
+//
+//window.onclick = function(event) {
+//  if (!event.target.matches('.dropbtn')) {
+//    var dropdowns = document.getElementsByClassName("dropdown-content");
+//    var i;
+//    for (i = 0; i < dropdowns.length; i++) {
+//      var openDropdown = dropdowns[i];
+//      if (openDropdown.classList.contains('show')) {
+//        openDropdown.classList.remove('show');
+//      }
+//    }
+//  }
+//}
+</script>
 </body>
 </html>

@@ -88,6 +88,10 @@
         </section>
         <section class="area-2">
             <main>
+<!--
+    - Opción para remplazar el JS.
+    https://www.w3schools.com/cssref/sel_target.asp
+-->
                 <p>Publicar?</p>
                 <section class="main-nav">
                     <button class="tablinks" onclick="openCity(event, 'n-articulo')"><i class='fas fa-file-alt'></i></button>

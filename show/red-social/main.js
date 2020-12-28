@@ -18,13 +18,13 @@ openCity(evt, cityName) {
 }
 
 
-const c = document.querySelector(".topright");
-
-c.onclick = function () {
-    document.querySelector("#n-video").style.display = "none";
-};
-
-function myFunction(event) { 
-  var x = event.target;
-  document.getElementById("demo").innerHTML = "Triggered by a " + x.tagName + " element";
-}
+//const c = document.querySelector(".topright");
+//
+//c.onclick = function () {
+//    document.querySelector("#n-video").style.display = "none";
+//};
+//
+//function myFunction(event) { 
+//  var x = event.target;
+//  document.getElementById("demo").innerHTML = "Triggered by a " + x.tagName + " element";
+//}
