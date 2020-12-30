@@ -10,25 +10,8 @@
     <link rel="stylesheet" href="../../front-css/red-social/perfil/article.css"/>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <style>
+@import url("http://localhost/AllInOne/front-css/root.css");
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 3em;
-  right: 0;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-.show {display: block;}
     </style>
 </head>
 <body>
@@ -75,11 +58,11 @@
             <!--<a href="javascript:void(0);" class="n-icono-minimo n-header-maximo-oculto" onclick="header()">&#9776;</a>-->
             <section class="dropdown" style="z-index: 9;">
                 <img src="../../front-multimedia/red-social/imagen/mist.jpg" class="n-img-portada-header"alt="alt"/>
-                <img src="../../front-multimedia/red-social/imagen/firefoxos.png" class="n-img-perfil-header dropbtn" alt="alt"/>
+                <img src="../../front-multimedia/red-social/imagen/firefoxos.png" class="n-img-perfil-header" onclick="headerNav()" alt="alt"/>
             </section>
         </section>
     </header>
-    <div id="myDropdown" class="dropdown-content">
+    <div id="n-header-nav" class="n-header-nav-contenedor">
         <a href="../../front/red_social/perfil/editar.php">Editar</a>
         <a href="#">Salir</a>
         <a href="#">Link 3</a>
@@ -244,59 +227,40 @@
 <script src="../../show/red-social/header.js" async=""></script>
 <script src="../../show/red-social/main.js" defer=""></script>
 <script>
-var boton = document.querySelector(".n-img-perfil-header");
-
-class HeaderNav {
-    
-    contructor(ejecutar) {
-        ejecutar.onclick = function() {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-        };
-        
-    }
-    
-//    function myFunction() {
-//        document.getElementById("myDropdown").classList.toggle("show");
-//    }
-}
-//new HeaderNav(boton);
-let eje = new HeaderNav(boton);
-
-
-//window.onclick = function(event) {
-//  if (!event.target.matches('.dropbtn')) {
-//    var dropdowns = document.getElementsByClassName("dropdown-content");
-//    var i;
-//    for (i = 0; i < dropdowns.length; i++) {
-//      var openDropdown = dropdowns[i];
-//      if (openDropdown.classList.contains('show')) {
-//        openDropdown.classList.remove('show');
-//      }
-//    }
-//  }
-//}
-
-
-
-//function myFunction() {
-//  document.getElementById("myDropdown").classList.toggle("show");
-//}
+//var boton = document.querySelector(".n-img-perfil-header");
 //
+//class HeaderNav {
+//    
+//    contructor(ejecutar) {
+//        ejecutar.onclick = function() {
+//            var dropdowns = document.getElementsByClassName("dropdown-content");
+//        var i;
+//        for (i = 0; i < dropdowns.length; i++) {
+//          var openDropdown = dropdowns[i];
+//          if (openDropdown.classList.contains('display')) {
+//            openDropdown.classList.remove('display');
+//          }
+//        }
+//        };
+//        
+//    }
+//    
+////    function headerNav() {
+////        document.getElementById("myDropdown").classList.toggle("display");
+////    }
+//}
+////new HeaderNav(boton);
+//let eje = new HeaderNav(boton);
+
+
 //window.onclick = function(event) {
 //  if (!event.target.matches('.dropbtn')) {
 //    var dropdowns = document.getElementsByClassName("dropdown-content");
 //    var i;
 //    for (i = 0; i < dropdowns.length; i++) {
 //      var openDropdown = dropdowns[i];
-//      if (openDropdown.classList.contains('show')) {
-//        openDropdown.classList.remove('show');
+//      if (openDropdown.classList.contains('display')) {
+//        openDropdown.classList.remove('display');
 //      }
 //    }
 //  }

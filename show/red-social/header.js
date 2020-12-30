@@ -45,3 +45,23 @@ window.onscroll = function() {
 
     prevScrollpos = currentScrollPos;
 };
+/*
+    * 
+ */
+function headerNav() {
+    document.querySelector("#n-header-nav").classList.toggle("n-display");
+}
+
+window.onclick = function (evento) {
+    if (!evento.target.matches('.n-img-perfil-header')) {
+        var dropdowns = document.getElementsByClassName("n-header-nav-contenedor");
+        var i;
+        
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('n-display')) {
+                openDropdown.classList.remove('n-display');
+            }
+        }
+    }
+};
