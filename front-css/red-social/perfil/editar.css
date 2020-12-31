@@ -1,0 +1,58 @@
+@import url("http://localhost/AllInOne/front-css/root.css");
+/* 
+    Created on : 31 dic. 2020, 10:27:51
+    Author     : desarrollador
+*/
+.n-grid > .area-3 > :nth-child(2) {
+    margin-top: 8em;
+}
+.n-grid > .area-3 > section {
+    margin: 0em 6em 0em 6em;
+}
+.n-grid > .area-3 > section > h3 {
+    color: var(--n-color-dos);
+    font-family: var(--n-fuente-dos);
+    font-size: 1em;
+    border-bottom: 0.10em solid var(--n-color-dos-uno);
+}
+/*.n-grid > .area-3 > section > form {
+
+}*/
+.n-grid > .area-3 > section > form > label {
+    color: var(--n-color-dos);
+    font-family: var(--n-fuente-dos);
+    font-size: 0.80em;
+    font-weight: bold;
+}
+.n-grid > .area-3 > section > form > input, .n-grid > .area-3 > section > form > select {
+    color: var(--n-color);
+    background-color: var(--n-color-dos-uno);
+    font-family: var(--n-fuente-dos);
+    font-size: 0.80em;
+    width: 100%;
+    margin-bottom: 1.50em;
+    border: none;
+    border-radius: 0.50em;
+    padding: 0.625em;
+}
+.n-grid > .area-3 > section > form > input:focus {
+    color: var(--n-color);
+    background-color: var(--n-color-tres);
+    outline: none;
+}
+.n-grid > .area-3 > section > form > button {
+    color: var(--n-color);
+    background-color: var(--n-color-dos);
+    font-family: var(--n-fuente);
+    font-size: 0.90em;
+    width: 100%;
+    margin-top: 0.20em;
+    border: none;
+    border-radius: 0.50em;
+    padding: 0.50em;
+}
+.n-grid > .area-3 > section > form > button:hover {
+    color: var(--n-color-dos);
+    background-color: var(--n-color-tres);
+    text-shadow: var(--n-sombra-de-texto);
+}

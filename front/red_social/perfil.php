@@ -65,9 +65,11 @@
     <div id="n-header-nav" class="n-header-nav-contenedor">
         <a href="../../front/red_social/perfil/editar.php">Editar</a>
         <a href="#">Salir</a>
-        <a href="#">Link 3</a>
     </div>
     <section class="n-grid">
+<!--
+    main 
+-->
         <section class="area-1">
             <main>
                 <img src="../../front-multimedia/red-social/imagen/app.jpg" class="portada" alt="alt"/>
@@ -81,6 +83,9 @@
                 </section>
             </main>
         </section>
+<!--
+    nav 
+-->
         <section class="area-2">
             <nav>
                 <ul>
@@ -183,6 +188,8 @@
                 <h2>Neury Aguasvivas</h2>
                 <p>21/09/1991</p>
                 <p>neury@email.com</p>
+                <p>809 123 4567</p>
+                <p>Soltero</p>
                 <p>Republica Dominicana</p>
                 <p>Santo Domingo</p>
 <!--                <p>text</p>
