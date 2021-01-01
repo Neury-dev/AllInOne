@@ -15,6 +15,12 @@ h1 > a  {
     letter-spacing: -0.145em;
 }
 h1 > a:hover { color: var(--n-color); }
+header > p {
+    color: var(--n-color-rojo);
+    font-family: var(--n-fuente-dos);
+    font-size: 1.10em;
+    font-weight: bold;
+}
 h2 {
     color: var(--n-color-dos);
     font-family: var(--n-fuente);

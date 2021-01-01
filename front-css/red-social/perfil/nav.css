@@ -16,7 +16,7 @@
     color: var(--n-color-dos);
     content: "/\00a0";
 }
-.n-grid > .area-2 > nav > ul > li a { color: var(--n-color-dos); }
+.n-grid > .area-2 > nav > ul > li a { color: var(--n-color-dos); outline: none;}
 .n-grid > .area-2 > nav > ul > li a:hover { 
     color: var(--n-color-dos-uno); 
     text-decoration: none; 

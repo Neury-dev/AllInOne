@@ -32,6 +32,7 @@
         </section>
         <section class="area-3">
             <section class="sesion-1">
+                <a href="http://localhost/AllInOne/front/red_social/inicio.php"><i class='fas fa-home'></i></a>
                 <a href="" class="n-header-maximo-oculto"><i class='fas fa-chalkboard-teacher'></i></a>
                 <a href="" class="n-header-maximo-oculto"><i class="fas fa-envelope-open"></i></a>
                 <a href="" class="n-header-maximo-oculto"><i class="fas fa-bell-slash"></i></a>
@@ -90,6 +91,7 @@
             <nav>
                 <ul>
                     <li><a href="#">Perfil</a></li>
+                    <li><a href="#">Amigos</a></li>
                     <li><a href="perfil/chat.php">Chat</a></li>
                     <li><a href="perfil/fotos.php">Fotos</a></li>
                     <li><a href="#">Audios</a></li>
@@ -189,6 +191,7 @@
                 <p>21/09/1991</p>
                 <p>neury@email.com</p>
                 <p>809 123 4567</p>
+                <p>Hombre</p>
                 <p>Soltero</p>
                 <p>Republica Dominicana</p>
                 <p>Santo Domingo</p>

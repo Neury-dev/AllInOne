@@ -86,6 +86,7 @@
             <nav>
                 <ul>
                     <li><a href="../perfil.php">Perfil</a></li>
+                    <li><a href="#">Amigos</a></li>
                     <li><a href="chat.php">Chat</a></li>
                     <li><a href="fotos.php">Fotos</a></li>
                     <li><a href="#">Audios</a></li>

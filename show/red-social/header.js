@@ -11,8 +11,8 @@ class Header {
     }
 }
 let ejecutarHeader = new Header();
-//ejecutarHeader.mediano();
 
+//document.querySelector("#n-icono-mediano").addEventListener('click', ejecutarHeader.mediano());
 
 //function 
 //header() {
@@ -29,24 +29,16 @@ window.onscroll = function() {
 
     if (prevScrollpos > currentScrollPos) {
         document.querySelector("#n-header").style.top = "0em";
-//        document.querySelector("#n-header").style.top = "0%";
-//        document.querySelector("#n-header-span").style.top = "5%";
-//        document.querySelector("#n-icono-mediano").style.top = "5%";
         document.querySelector("#n-header-mediano").style.top = "3em";
-//        document.querySelector("#n-header-minimo").style.top = "10%";
     } else {
         document.querySelector("#n-header").style.top = "-3em";
-//        document.querySelector("#n-header").style.top = "-10%";
-//        document.querySelector("#n-header-span").style.top = "-10%";
-//        document.querySelector("#n-icono-mediano").style.top = "-10%";
         document.querySelector("#n-header-mediano").style.top = "-3em";
-//        document.querySelector("#n-header-minimo").style.top = "-12%";
     }
 
     prevScrollpos = currentScrollPos;
 };
 /*
-    * 
+    * header nav
  */
 function headerNav() {
     document.querySelector("#n-header-nav").classList.toggle("n-display");
@@ -54,13 +46,13 @@ function headerNav() {
 
 window.onclick = function (evento) {
     if (!evento.target.matches('.n-img-perfil-header')) {
-        var dropdowns = document.getElementsByClassName("n-header-nav-contenedor");
+        var contenedor = document.getElementsByClassName("n-header-nav-contenedor");
         var i;
         
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('n-display')) {
-                openDropdown.classList.remove('n-display');
+        for (i = 0; i < contenedor.length; i++) {
+            var abrirContenedor = contenedor[i];
+            if (abrirContenedor.classList.contains('n-display')) {
+                abrirContenedor.classList.remove('n-display');
             }
         }
     }

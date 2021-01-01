@@ -111,6 +111,7 @@ header > .area-2 > form  > input {
         font-weight: bold;
         padding: 0em 0em 0em 1em;
         line-height: 3em;
+        outline: none;
     }
     header > .area-3 > section > a:hover { color: var(--n-color-tres); text-shadow: var(--n-sombra-de-texto); } 
 }
