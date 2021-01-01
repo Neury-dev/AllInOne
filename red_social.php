@@ -23,15 +23,15 @@
 <!--                    <section class="hide-md-lg">
                     <p>Or sign in manually:</p>
                 </section>-->
-                <form action="front/red_social/inicio.php" method="POST" autocomplete="">
+                <form action="sql/red-social/Iniciar.php" method="POST" autocomplete="">
                     <h2>Iniciar</h2>
                     <section class="input-contenedor">
-                        <input type="email" name="correo" placeholder="Correo">
+                        <input type="email" name="correo" placeholder="Correo" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" oninvalid="Globales.validarCorreo()">
                     </section>
                     <section class="input-contenedor">
-                        <input type="password" name="password" placeholder="Contraseña">
+                        <input type="password" name="codigo" placeholder="Contraseña" required="">
                     </section>
-                    <button type="submit" value="Iniciar">Iniciar</button>
+                    <button type="submit" name="iniciar">Iniciar</button>
                 </form>
             </section>
             <section class="columna">
@@ -39,9 +39,7 @@
                     <h2>Registrarse</h2>
                     <section class="input-contenedor">
                         <i class="fas fa-envelope-open-text"></i>
-                        <input type="email" name="correo" placeholder="Correo" required=""
-                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                        oninvalid="Globales.validarCorreo()">
+                        <input type="email" name="correo" placeholder="Correo" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" oninvalid="Globales.validarCorreo()">
                     </section>
                     <section class="input-contenedor">
                         <i class="fas fa-key"></i>

@@ -1,3 +1,4 @@
+<?php require_once '../../sql/red-social/SesionIniciada.php'; ?>
 <html>
 <head>
     <title>Inicio</title>
@@ -57,10 +58,15 @@
             <!--<a href="javascript:void(0);" class="n-icono-minimo n-header-maximo-oculto" onclick="header()">&#9776;</a>-->
             <section>
                 <img src="../../front-multimedia/red-social/imagen/mist.jpg" class="n-img-portada-header"alt="alt"/>
-                <img src="../../front-multimedia/red-social/imagen/firefoxos.png" class="n-img-perfil-header"alt="alt"/>
+                <img src="../../front-multimedia/red-social/imagen/firefoxos.png" class="n-img-perfil-header" onclick="headerNav()" alt="alt"/>
             </section>
         </section>
     </header>
+    <div id="n-header-nav" class="n-header-nav-contenedor">
+        <a href="perfil.php">Perfil</a>
+        <a href="../../front/red_social/perfil/editar.php">Editar</a>
+        <a href="../../sql/CerrarSesion.php">Salir</a>
+    </div>
 <!-- 
     nav
 -->

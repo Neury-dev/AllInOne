@@ -1,3 +1,4 @@
+<?php require_once '../../../sql/red-social/SesionIniciada.php'; ?>
 <html>
 <head>
     <title>Editar</title>
@@ -59,8 +60,9 @@
         </section>
     </header>
     <div id="n-header-nav" class="n-header-nav-contenedor">
-        <a href="../../front/red_social/perfil/editar.php">Editar</a>
-        <a href="#">Salir</a>
+        <a href="../perfil.php">Perfil</a>
+        <a href="">Editar</a>
+        <a href="../../../sql/CerrarSesion.php">Salir</a>
     </div>
     <section class="n-grid">
 <!--

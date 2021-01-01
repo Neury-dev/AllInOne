@@ -1,3 +1,4 @@
+<?php require_once '../../sql/red-social/SesionIniciada.php'; ?>
 <html>
 <head>
     <title>Perfil</title>
@@ -64,8 +65,9 @@
         </section>
     </header>
     <div id="n-header-nav" class="n-header-nav-contenedor">
+        <a href="#">Perfil</a>
         <a href="../../front/red_social/perfil/editar.php">Editar</a>
-        <a href="#">Salir</a>
+        <a href="../../sql/CerrarSesion.php">Salir</a>
     </div>
     <section class="n-grid">
 <!--
@@ -75,7 +77,7 @@
             <main>
                 <img src="../../front-multimedia/red-social/imagen/app.jpg" class="portada" alt="alt"/>
                 <section class="contenedor">
-                    <img src="../../front-multimedia/red-social/imagen/avatar3.png" class="foto" alt="alt"/>
+                    <img class="foto" alt=""/>
                     <!--<h2>Neury E. Aguasvivas L.</h2>-->
                     <section class="perfil-nav">
                         <button><i class='fas fa-user-friends'></i></button>
@@ -187,16 +189,14 @@
         </section>
         <section class="area-4">
             <section class="sesion-1">
-                <h2>Neury Aguasvivas</h2>
-                <p>21/09/1991</p>
-                <p>neury@email.com</p>
-                <p>809 123 4567</p>
-                <p>Hombre</p>
-                <p>Soltero</p>
-                <p>Republica Dominicana</p>
-                <p>Santo Domingo</p>
-<!--                <p>text</p>
-                <p>text</p>-->
+                <h2  class="nombre"></h2>
+                <p class="nacimiento"></p>
+                <p class="correo"></p>
+                <p class="numero"></p>
+                <p class="sexo"></p>
+                <p class="estado"></p>
+                <p class="pais"></p>
+                <p class="ciudad"></p>
             </section>
             <section class="sesion-2">
                 <h4>Intereses</h4>
@@ -235,6 +235,7 @@
         </section>
     </section>
 <script src="../../show/red-social/header.js" async=""></script>
+<script src="../../show/red-social/adaptador/usuario.js" async=""></script>
 <script src="../../show/red-social/main.js" defer=""></script>
 <script>
 //var boton = document.querySelector(".n-img-perfil-header");

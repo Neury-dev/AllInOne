@@ -35,6 +35,11 @@
             text-align: center;
             margin-top: 3em;
         }
+        h3 {
+            color: var(--n-color-dos-uno);
+            font-family: var(--n-fuente-dos);
+            text-align: center;
+        }
         /*
             Desarrollador
         */
@@ -108,6 +113,8 @@
             <a href="https://www.mysql.com/" title="MySQL" target="_blank"><i class='fas'>&#xf1c0;</i></a>
             <a href="https://netbeans.org/" title="NetBeans" target="_blank"><i class='fas'>&#xf1b2;</i></a>
             <a href="https://www.apachefriends.org/es/index.html" title="XAMPP" target="_blank"><i class='fas'>&#xf233;</i></a>
+            
+            <h3>eleasarnal@gmail.com</h3>
         </section>
         <section class="n-desarrollos">
             <article>
