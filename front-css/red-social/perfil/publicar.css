@@ -67,7 +67,8 @@
     font-size: 0.80em;
     font-weight: bold;
 }
-.n-grid > .area-3 > section > div > #form-articulo > #titulo, .n-grid > .area-3 > section > div > #form-articulo > #articulo {
+/*.n-grid > .area-3 > section > div > #form-articulo > #titulo,*/ 
+.n-grid > .area-3 > section > div > #form-articulo > #publicacion {
     color: var(--n-color-dos);
     font-family: var(--n-fuente-dos);
     font-size: 0.80em;
@@ -77,12 +78,12 @@
     border-radius: 0.50em;
     padding: 0.625em;
 }
-.n-grid > .area-3 > section > div > #form-articulo > #titulo:focus, .n-grid > .area-3 > section > div > #form-articulo > #articulo:focus {
+.n-grid > .area-3 > section > div > #form-articulo > #titulo:focus, .n-grid > .area-3 > section > div > #form-articulo > #publicacion:focus {
     color: var(--n-color);
     background-color: var(--n-color-tres);
     outline: none;
 }
-.n-grid > .area-3 > section > div > #form-articulo > #articulo {
+.n-grid > .area-3 > section > div > #form-articulo > #publicacion {
     resize: none;
 }
 .n-grid > .area-3 > section > div > form > .cargar-archivo {

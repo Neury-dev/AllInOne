@@ -43,7 +43,7 @@ class Leer {
 $ejecutarLeer = new Leer();
 $leer = $ejecutarLeer->datos();
 foreach ($leer as $dato) {
-    $fecha  = DateTime::createFromFormat('Y-m-d', $dato['fecha']);
+    $fecha  = DateTime::createFromFormat('Y-m-d ', $dato['fecha']);
     $hora   = DateTime::createFromFormat('H:i:s', $dato['hora']);
     
     echo "<tr>

@@ -116,16 +116,11 @@
                 </section>  
                 <div id="n-articulo" class="tabcontent">
                     <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-                    <form action="../../sql/red-social/Publicacion.php" method="POST" name="form-articulo" id="form-articulo" enctype="multipart/form-data">
-                        
-                        
-                        <label for="titulo" class="etiqueta">Titulo</label>
-                        <input type="text" name="titulo" id="titulo" placeholder="Titulo...">
-                        
-                        
-                        
+                    <form action="../../sql/red-social/Publicar.php" method="POST" name="form-articulo" id="form-articulo" enctype="multipart/form-data">
+<!--                        <label for="titulo" class="etiqueta">Titulo</label>
+                        <input type="text" name="titulo" id="titulo" placeholder="Titulo...">-->
                         <label for="articulo" class="etiqueta">Publicación</label>
-                        <textarea name="publicacion" id="articulo" rows="5" cols="10" placeholder="Articulo..." required=""></textarea>
+                        <textarea name="publicacion" id="publicacion" rows="5" cols="10" placeholder="Publicación..." required=""></textarea>
                         <label for="imagen" class="cargar-archivo">Seleccionar Imagen</label>
                         <input type="file" name="imagen" id="imagen" hidden="" required="">
                         <input type="text" disabled="">
@@ -161,8 +156,11 @@
                     </form>
                 </div>
             </section>
-            <article>
-                <section>
+            <section class="publicacion">
+                
+                
+                
+<!--                <article>
                     <section class="articulo-head">
                         <section>
                             <img src="../../front-multimedia/red-social/imagen/avatar3.png" class="foto" alt="alt"/>
@@ -189,8 +187,11 @@
                         <section><button><i class='fas fa-comments'></i></button></section><section><span class="">100</span></section>
                         <section><button><i class='fas fa-share'></i></button></section><section><span class="">100</span></section>
                     </section>
-                </section>
-            </article>
+                </article>-->
+                
+                
+                
+            </section>
         </section>
         <section class="area-4">
             <section class="sesion-1">
@@ -242,6 +243,7 @@
 <script src="../../show/red-social/header.js" async=""></script>
 <script src="../../show/red-social/adaptador/usuario.js" async=""></script>
 <script src="../../show/red-social/main.js" defer=""></script>
+<script src="../../show/red-social/adaptador/publicacion.js" defer=""></script>
 <script>
 //var boton = document.querySelector(".n-img-perfil-header");
 //

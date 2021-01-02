@@ -3,70 +3,81 @@
     Created on : 26 dic. 2020, 17:07:31
     Author     : desarrollador
 */
-.n-grid > .area-3 > article {
-    margin: 3em 6em 0em 6em;
+/*.n-grid > .area-3 > :nth-child(2) {
+    margin-top: 3em;
+}*/
+.n-grid > .area-3 > section > article {
+    margin-top: 3em;
 }
-.n-grid > .area-3 > article > section > .articulo-head {
+.n-grid > .area-3 > section > article > .articulo-head {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.n-grid > .area-3 > article > section > .articulo-head > section > img.foto {
+.n-grid > .area-3 > section > article > .articulo-head > section > img.foto {
     float: left;
     width: 3em;
     height: 3em;
+    margin-right: 0.10em;
     border-radius: 50%;
 }
-.n-grid > .area-3 > article > section > .articulo-head > section > h2 {
+.n-grid > .area-3 > section > article > .articulo-head > section > span {
     float: left;
     position: relative;
     top: 1.40em;
-    color: var(--n-color-dos);
-    font-family: var(--n-fuente-dos);
-    font-size: 0.90em;
-    font-weight: bold;
-    /*margin: -0.20em 0em 0em 0em;*/
-}
-.n-grid > .area-3 > article > section > .articulo-head > section > span {
-    color: var(--n-color-dos);
+    color: var(--n-color-dos-uno);
     font-family: var(--n-fuente-dos);
     font-size: 0.70em;
 }
-.n-grid > .area-3 > article > section > .articulo-head > section > button {
+.n-grid > .area-3 > section > article > .articulo-head > section > h2 {
+    /*float: left;*/
+    position: relative;
+    top: 1.20em;
+    color: var(--n-color-dos);
+    font-family: var(--n-fuente-tres);
+    font-size: 0.90em;
+    font-weight: bold;
+}
+/*.n-grid > .area-3 > section > article > .articulo-head > section > span {
+    color: var(--n-color-dos);
+    font-family: var(--n-fuente-dos);
+    font-size: 0.70em;
+}*/
+.n-grid > .area-3 > section > article > .articulo-head > section > button {
     color: var(--n-color-dos);
     background-color: var(--n-color);
     font-size: 0.90em;
     border: none;
 }
-.n-grid > .area-3 > article > section > .articulo-body {
+.n-grid > .area-3 > section > article > .articulo-body {
     margin: 0em 0em 1em 0em;
 }
-.n-grid > .area-3 > article > section > .articulo-body > h3 {
+.n-grid > .area-3 > section > article > .articulo-body > h3 {
     color: var(--n-color-dos);
     font-family: var(--n-fuente-dos);
     font-size: 0.90em;
     font-weight: bold;
 }
-.n-grid > .area-3 > article > section > .articulo-body > p {
+.n-grid > .area-3 > section > article > .articulo-body > p {
     color: var(--n-color-dos);
     font-family: var(--n-fuente-dos);
     font-size: 0.90em;
 }
-.n-grid > .area-3 > article > section > .articulo-body > img {
+.n-grid > .area-3 > section > article > .articulo-body > img {
     /*margin: 0em 0em 1em 0em;*/
 }
-.n-grid > .area-3 > article > section > .articulo-footer {
+.n-grid > .area-3 > section > article > .articulo-footer {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;  
 }
-.n-grid > .area-3 > article > section > .articulo-footer  > section > button {
+.n-grid > .area-3 > section > article > .articulo-footer  > section > button {
     color: var(--n-color-dos);
     background-color: var(--n-color);
     font-size: 1.30em;
     border: none;
 }
-.n-grid > .area-3 > article > section > .articulo-footer  > section > span {
+.n-grid > .area-3 > section > article > .articulo-footer  > section > span {
     color: var(--n-color-dos);
     font-size: 0.90em;
     margin: 0em 0.70em 0em 0em;
