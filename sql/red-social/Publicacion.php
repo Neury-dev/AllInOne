@@ -1,38 +1,37 @@
 <?php
-
+session_start();
 //class Publicacion {
 //    //put your code here
 //}
-if(isset($_POST["submit"])) {
+if(isset($_POST["subir"])) {
     require_once '../Conexion.php';
     
-    $imagen         = $_FILES['file-input']['tmp_name'];
-    $imagen_tipo    = exif_imagetype($_FILES['file-input']['tmp_name']);
+    $imagen         = $_FILES['imagen']['tmp_name'];
+    $imagen_tipo    = exif_imagetype($_FILES['imagen']['tmp_name']);
     
     if ($imagen_tipo == IMAGETYPE_PNG or $imagen_tipo == IMAGETYPE_JPEG or $imagen_tipo == IMAGETYPE_BMP) {
         
-        $descripcion = $_POST["descripcion"];
+        $descripcion = $_POST["publicacion"];
         
-        if (is_uploaded_file($_FILES['file-input']['tmp_name'])) {
+        if (is_uploaded_file($_FILES['imagen']['tmp_name'])) {
             
-            $result     = $mysqli->query("SHOW TABLE STATUS WHERE Name = imagenes");
-            $data       = $result->fetch_assoc();
-            $next_id    = $data['Auto_increment'];
+//            $result     = $GLOBALS["base"]->conexion->query("SHOW TABLE STATUS WHERE `Name` = `Imagenes`");
+//            $data       = $result->fetch_all(MYSQLI_ASSOC);
+//            $next_id    = $data['Auto_increment'];
             
             $ext        = ".jpg";
-            $namefinal  = trim($_FILES['file-input']['name']);
+            $namefinal  = trim($_FILES['imagen']['name']);
             $namefinal  = str_replace(" ", "", $namefinal);
             $aleatorio  = substr(strtoupper(md5(microtime(true))), 0,6);
-            $namefinal  = "ID-".$next_id."-NAME-".$aleatorio;
+//            $namefinal  = "ID-".$next_id."-NAME-".$aleatorio;
+            $namefinal  = "ID-"."-NAME-".$aleatorio;
             
             if ($imagen_tipo == IMAGETYPE_PNG) {
                 $imagen = imagecreatefrompng($imagen);
                 imagejpeg($imagen, "../../front-multimedia/red-social/imagen/".$namefinal.$ext, 100);
                 
                 $nuevaimagen = "../../front-multimedia/red-social/imagen/".$namefinal.$ext;
-            }
-            
-            else {
+            } else {
                 $nuevaimagen = $imagen;
             }
             
@@ -56,11 +55,23 @@ if(isset($_POST["submit"])) {
                 $alto_final = $max_alto;
             }
             
-//            $lienzo = 
             imagedestroy($original);
             
-            if ($_FILES['file-input']['tmp_name']) {
-                
+            if (is_uploaded_file($imagen)) { 
+                $destino =  "../../front-multimedia/red-social/imagen/".$namefinal.$ext;
+                copy($imagen, $destino);
+            } 
+            
+            if ($_FILES['imagen']['tmp_name']) {
+                $sql = $GLOBALS["base"]->conexion-> 
+                query("INSERT INTO `Publicaciones`(`idUsuario`, `publicacion`, `fecha`) VALUES ('".$_SESSION["johnDoe"]."', '".$descripcion."', NOW())"); 
+
+                if ($sql === true) {
+                    $sql3 = $GLOBALS["base"]->conexion-> 
+                    query("INSERT INTO `Imagenes`(`idUsuario`, `idPublicacion`, `imagen`, `fecha`) "
+                    . "VALUES ('".$_SESSION["johnDoe"]."', '".$GLOBALS["base"]->conexion->insert_id."', '".$namefinal.$ext."', NOW())"); 
+            
+                }
             }
         }
     }

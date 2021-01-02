@@ -116,13 +116,18 @@
                 </section>  
                 <div id="n-articulo" class="tabcontent">
                     <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form-articulo" id="form-articulo" enctype="multipart/form-data">
+                    <form action="../../sql/red-social/Publicacion.php" method="POST" name="form-articulo" id="form-articulo" enctype="multipart/form-data">
+                        
+                        
                         <label for="titulo" class="etiqueta">Titulo</label>
                         <input type="text" name="titulo" id="titulo" placeholder="Titulo...">
-                        <label for="articulo" class="etiqueta">Articulo</label>
-                        <textarea name="articulo" id="articulo" rows="5" cols="10" placeholder="Articulo..."></textarea>
+                        
+                        
+                        
+                        <label for="articulo" class="etiqueta">Publicación</label>
+                        <textarea name="publicacion" id="articulo" rows="5" cols="10" placeholder="Articulo..." required=""></textarea>
                         <label for="imagen" class="cargar-archivo">Seleccionar Imagen</label>
-                        <input type="file" name="imagen" id="imagen" hidden="">
+                        <input type="file" name="imagen" id="imagen" hidden="" required="">
                         <input type="text" disabled="">
                         <button type="submit" name="subir" id="subir" value="Articulo">Subir</button>
                     </form>
