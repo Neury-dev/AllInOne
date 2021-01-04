@@ -19,6 +19,7 @@ a, button { cursor: pointer; }
     --n-color-dos:              #1c1d22;/*rgb(28, 29, 34), hsl(230, 10%, 12%)*/
     --n-color-dos-uno:          rgba(28, 29, 34, 0.5);
     --n-color-tres:             #373538;/*rgb(55, 53, 56), hsl(280, 3%, 21%)*/
+    --n-color-tres-uno:         rgba(55, 53, 56, 0.5);
     --n-color-verde:            #457725;/*rgba(69, 119, 37, 0.5) hsl(97, 53%, 31%)*/
     --n-color-rojo:             #901E1D;/*rgb(144, 30, 29), hsl(1, 66%, 34%)*/
     

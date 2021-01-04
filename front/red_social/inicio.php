@@ -74,9 +74,10 @@
         <section class="area-1">
             <nav>
                 <section class="principal">
-                    <a href="#"><i class='fas fa-house-user'></i> <span>Inicio</span></a>
+                    <a href="inicio.php"><i class='fas fa-house-user'></i> <span>Inicio</span></a>
                     <a href="#"><i class='fas fa-search'></i> <span>Buscar</span></a>
-                    <a href="#"><i class='fas fa-file-alt'></i> <span>Articulos</span></a>
+                    <a href="usuarios.php"><i class='fas fa-users'></i> <span>Usuarios</span></a>
+                    <a href="#"><i class='fas fa-file-alt'></i> <span>Publicaciones</span></a>
                     <a href="#"><i class='fas fa-images'></i> <span>Imagenes</span></a>
                     <a href="#"><i class='fas fa-play'></i> <span>Audios</span></a>
                     <a href="#"><i class='fas fa-video'></i> <span>videos</span></a>

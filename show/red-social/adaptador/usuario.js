@@ -1,36 +1,37 @@
-var nombre, apellido, nacimiento, correo, codigo, numero, sexo, estado, pais, ciudad, fecha, foto;
+var jsonObject;
 
-nombre      = document.querySelector(".nombre");
-apellido    = document.querySelector(".apellido");
-nacimiento  = document.querySelector(".nacimiento");
-correo      = document.querySelector(".correo");
-codigo      = document.querySelector(".codigo");
-numero      = document.querySelector(".numero");
-sexo        = document.querySelector(".sexo");
-estado      = document.querySelector(".estado");
-pais        = document.querySelector(".pais");
-ciudad      = document.querySelector(".ciudad");
-fecha       = document.querySelector(".fecha");
-foto        = document.querySelector("img.foto");
-
-fetch('../../sql/red-social/Sesion.php', {
+fetch('../../../sql/red-social/Usuario.php', {
     method: 'GET'
 }).then(function (response) {
     if(response.ok) { return response.json(); } 
     else { console.log("..........................................."); }
-}).then(function (json) {//console.log("Directo: " + json[0].correo);
-    nombre.innerHTML        = json[0].nombre + " " + json[0].apellido;
-    nacimiento.innerHTML    = json[0].nacimiento;
-//    apellido.innerHTML  = json[0].apellido;
-    correo.innerHTML        = json[0].correo;
-//    codigo.innerHTML    = json[0].codigo;
-    numero.innerHTML        = json[0].numero;
-    sexo.innerHTML          = json[0].sexo;
-    estado.innerHTML        = json[0].estado;
-    pais.innerHTML          = json[0].pais;
-    ciudad.innerHTML        = json[0].ciudad;
-//    fecha.innerHTML         = json[0].fecha;
-    foto.src                = '../../front-multimedia/red-social/imagen/' + json[0].foto;
+}).then(function (json) {
+    jsonObject = json;
+
+    Obtener.usuario();
 }).catch(function (err) {
     console.log('Fetch problem: ' + err.message);
 });
+
+class Obtener {
+    static
+    usuario() {
+        let salida = "";
+
+        for (let i in jsonObject) {
+            salida += `
+            <main>
+                <img src="../../../front-multimedia/red-social/imagen/app.jpg" class="portada" alt="alt"/>
+                <section class="contenedor">
+                    <img src="../../../front-multimedia/red-social/imagen/${jsonObject[i].foto}" class="foto" alt=""/>
+                    <section class="perfil-nav">
+                        <button><i class='fas fa-user-friends'></i></button>
+                        <button><i class='fas fa-comments'></i></button>
+                    </section>
+                </section>
+            </main>
+            `;
+        }
+        document.querySelector(".n-grid > .area-1").innerHTML = salida;
+    }
+}

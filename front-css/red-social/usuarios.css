@@ -1,0 +1,50 @@
+@import url("http://localhost/AllInOne/front-css/root.css");
+/* 
+    Created on : 4 ene. 2021, 18:56:52
+    Author     : desarrollador
+*/
+.n-grid > .area-2 > article > .contenedor {
+    color: var(--n-color-dos);
+    background-color: var(--n-color);
+    border-radius: 1em;
+    padding: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 0 2px var(--n-color-dos), 0 0 4px var(--n-color-dos), 0 0 8px var(--n-color-dos);
+}
+.n-grid > .area-2 > article > .contenedor::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.n-grid > .area-2 > article > .contenedor > img {
+    float: left;
+    width: 6em;
+    height: 6em;
+    margin-right: 1.10em;
+    border-radius: 50%;
+}
+.n-grid > .area-2 > article > .contenedor > form > button {
+    position: relative;
+    top: 1em;
+    color: var(--n-color-dos);
+    background-color: var(--n-color);
+    font-family: var(--n-fuente-dos);
+    font-size: 0.90em;
+    font-weight: bold;
+    border: none;
+    padding: 0;
+}
+.n-grid > .area-2 > article > .contenedor > form > button:hover { color: var(--n-color-dos-uno); }
+.n-grid > .area-2 > article > .contenedor > p {
+    color: var(--n-color-dos);
+    font-family: var(--n-fuente-dos);
+    font-size: 0.80em;
+}
+@media (max-width: 500px) {
+    .n-grid > .area-2 > article > .contenedor { text-align: center; }
+    .n-grid > .area-2 > article > .contenedor > img {
+        margin: auto;
+        float: none;
+        display: block;
+    }
+}

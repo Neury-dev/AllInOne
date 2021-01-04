@@ -1,14 +1,14 @@
-<?php require_once '../../sql/red-social/SesionIniciada.php'; ?>
+<?php require_once '../../../sql/red-social/SesionIniciada.php'; ?>
 <html>
 <head>
     <title>Perfil</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../front-css/red-social/header.css">
-    <link rel="stylesheet" href="../../front-css/red-social/perfil/perfil.css"/>
-    <link rel="stylesheet" href="../../front-css/red-social/perfil/nav.css"/>
-    <link rel="stylesheet" href="../../front-css/red-social/perfil/publicar.css"/>
-    <link rel="stylesheet" href="../../front-css/red-social/perfil/article.css"/>
+    <link rel="stylesheet" href="../../../front-css/red-social/header.css">
+    <link rel="stylesheet" href="../../../front-css/red-social/perfil/perfil.css"/>
+    <link rel="stylesheet" href="../../../front-css/red-social/perfil/nav.css"/>
+    <link rel="stylesheet" href="../../../front-css/red-social/perfil/publicar.css"/>
+    <link rel="stylesheet" href="../../../front-css/red-social/perfil/article.css"/>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <style>
 @import url("http://localhost/AllInOne/front-css/root.css");
@@ -74,17 +74,18 @@
     main 
 -->
         <section class="area-1">
-            <main>
+            <?php // require_once '../../../sql/red-social/Usuario.php';?>
+<!--            <main>
                 <img src="../../front-multimedia/red-social/imagen/app.jpg" class="portada" alt="alt"/>
                 <section class="contenedor">
                     <img class="foto" alt=""/>
-                    <!--<h2>Neury E. Aguasvivas L.</h2>-->
+                    <h2>Neury E. Aguasvivas L.</h2>
                     <section class="perfil-nav">
                         <button><i class='fas fa-user-friends'></i></button>
                         <button><i class='fas fa-comments'></i></button>
                     </section>
                 </section>
-            </main>
+            </main>-->
         </section>
 <!--
     nav 
@@ -240,49 +241,12 @@
             </section>
         </section>
     </section>
-<script src="../../show/red-social/header.js" async=""></script>
-<script src="../../show/red-social/adaptador/perfil.js" async=""></script>
-<script src="../../show/red-social/main.js" defer=""></script>
-<script src="../../show/red-social/adaptador/publicacion.js" defer=""></script>
+<script src="../../../show/red-social/header.js" async=""></script>
+<script src="../../../show/red-social/adaptador/usuario.js" async=""></script>
+<!--<script src="../../show/red-social/main.js" defer=""></script>-->
+<!--<script src="../../show/red-social/adaptador/publicacion.js" defer=""></script>-->
 <script>
-//var boton = document.querySelector(".n-img-perfil-header");
-//
-//class HeaderNav {
-//    
-//    contructor(ejecutar) {
-//        ejecutar.onclick = function() {
-//            var dropdowns = document.getElementsByClassName("dropdown-content");
-//        var i;
-//        for (i = 0; i < dropdowns.length; i++) {
-//          var openDropdown = dropdowns[i];
-//          if (openDropdown.classList.contains('display')) {
-//            openDropdown.classList.remove('display');
-//          }
-//        }
-//        };
-//        
-//    }
-//    
-////    function headerNav() {
-////        document.getElementById("myDropdown").classList.toggle("display");
-////    }
-//}
-////new HeaderNav(boton);
-//let eje = new HeaderNav(boton);
 
-
-//window.onclick = function(event) {
-//  if (!event.target.matches('.dropbtn')) {
-//    var dropdowns = document.getElementsByClassName("dropdown-content");
-//    var i;
-//    for (i = 0; i < dropdowns.length; i++) {
-//      var openDropdown = dropdowns[i];
-//      if (openDropdown.classList.contains('display')) {
-//        openDropdown.classList.remove('display');
-//      }
-//    }
-//  }
-//}
 </script>
 </body>
 </html>
