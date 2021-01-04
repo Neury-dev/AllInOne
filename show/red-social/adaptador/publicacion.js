@@ -1,11 +1,9 @@
-var jsonObject, salida;
+var jsonObject;
 
-fetch('../../sql/red-social/Publicacion2.php').then(function (response) {
+fetch('../../sql/red-social/Publicacion.php').then(function (response) {
     return response.json();
-//    return response.text();
 }).then(function (json) {
     jsonObject = json;
-//    console.log("O: " + jsonObject.publicacion.id);
 //    document.querySelector(".n-grid > .area-3 > section.publicacion").innerHTML = json;
     Obtener.publicacion();
 }).catch(function (err) {
@@ -18,23 +16,22 @@ class Obtener {
         let salida = "";
 
         for (let i in jsonObject) {
-            console.log("R: " + jsonObject[i][i].fecha);
-//            console.log("L: " + jsonObject[i].length);
             salida += `
             <article>
                 <section class="articulo-head">
                     <section>
-                        <img src="../../front-multimedia/red-social/imagen/avatar3.png" class="foto" alt="alt"/>
-                        <h2></h2>
+                        <img src="../../front-multimedia/red-social/imagen/${jsonObject[i].foto}" class="foto" alt="alt"/>
+                        <span class="">${jsonObject[i].fecha}, Por</span>
+                        <h2>${jsonObject[i].nombre}</h2>
                     </section>  
                     <section>
-                        <span class="">${jsonObject[i].fecha}</span> <button><i class='fas fa-ellipsis-v'></i></button>
+                        <button><i class='fas fa-ellipsis-v'></i></button>
                     </section>
                 </section>
                 <hr>
                 <section class="articulo-body">
                     <p>${jsonObject[i].publicacion}</p>
-                    <img src="../../front-multimedia/red-social/imagen/app.jpg" alt="" style="width: 100%;"/>
+                    <img src="../../front-multimedia/red-social/imagen/${jsonObject[i].imagen}" alt="" style="width: 100%;"/>
                 </section>
                 <hr>
                 <section class="articulo-footer">

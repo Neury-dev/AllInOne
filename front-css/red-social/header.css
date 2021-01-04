@@ -397,4 +397,5 @@ header > .area-2 > form  > input {
     text-decoration: none;
     display: block;
 }
+.n-header-nav-contenedor > a:hover { font-weight: bold; }
 .n-display { display: block; }

@@ -1,63 +1,53 @@
 <?php
+
 require_once '../Conexion.php';
 
 class Publicacion {
-//    private $sql;
-//    private $resultado;
+
+    private $sql;
+    private $resultado;
+    private $obtenidos;
 
     public function
     publicada() {
-        $sql = $GLOBALS["base"]->conexion->query("SELECT * FROM `Publicaciones` ORDER BY id DESC");
-        $resultado = $sql->fetch_all(MYSQLI_ASSOC);
-        
-        
-//        $this->articulosContados = count($_SESSION["JSONenPHP"]);
-//                            
-//        $this->sesionArticulos = array(
-//            'ID' => $_POST["id"],
-//            'FECHA' => $_POST["fecha"],
-//            'MARCA' => $_POST["marca"],
-//            'NOMBRE' => $_POST["nombre"],
-//            'PRECIO' => $_POST["precio"]
-//        );
-//
-//        is_array($_SESSION["JSONenPHP"][$this->articulosContados] = $this->sesionArticulos);
-        
-        foreach ($resultado as $valor) {
-//            $sqlUsuario = $GLOBALS["base"]->conexion->query("SELECT * FROM `Usuarios` WHERE id = '".$valor["idUsuario"]."'");
-//            $resultadoUsuario = $sqlUsuario->fetch_all(MYSQLI_ASSOC);
-            
-//            $obtenido = array(
-////                "usuario" => array(
-////                    "nombre"        => $resultadoUsuario["nombre"]
-////                ),
-//                "publicacion" => array(
-//                    "id"            => $valor["id"], 
-//                    "idUsuario"     => $valor["idUsuario"],
-//                    "publicacion"   => $valor["publicacion"], 
-//                    "fecha"         => $valor["fecha"]
-//                ),
-//            );
-//            exit(json_encode($obtenido));
-            $obtenido = array(
-                $valor["id"], 
-                $valor["idUsuario"],
-//                "nombre"        => $resultadoUsuario["nombre"],
-                $valor["publicacion"], 
-                $valor["fecha"]
-            );
-//            
-            exit(json_encode($obtenido));
+        $this->obtenidos = array();
+
+        $this->sql = $GLOBALS["base"]->conexion->query("SELECT * FROM `Publicaciones` ORDER BY id DESC");
+        $this->resultado = $this->sql->fetch_all(MYSQLI_ASSOC);
+
+        if (empty($this->resultado)) {
+            echo 'No hay publicaciones.';
         }
 
+        foreach ($this->resultado as $valor) {
+            $this->sql = $GLOBALS["base"]->conexion->query("SELECT nombre, foto FROM `Usuarios` WHERE id = '" . $valor["idUsuario"] . "'");
+            $this->resultado = $this->sql->fetch_all(MYSQLI_ASSOC);
 
+            foreach ($this->resultado as $usuario) {
+                $this->sql = $GLOBALS["base"]->conexion->query("SELECT imagen FROM `Imagenes` WHERE idPublicacion = '" . $valor["id"] . "'");
+                $this->resultado = $this->sql->fetch_all(MYSQLI_ASSOC);
 
-        if (empty($resultado)) { echo 'No hay publicaciones.'; exit(json_encode('No hay publicaciones.')); }
+                foreach ($this->resultado as $imagen) {
+                    $fecha = DateTime::createFromFormat('Y-m-d H:i:s', $valor['fecha']);
 
-//        exit(json_encode($resultado));
-//        exit(json_encode($this->resultado));
+                    array_push($this->obtenidos, array(
+                        "id" => $valor["id"],
+                        "idUsuario" => $valor["idUsuario"],
+                        "nombre" => $usuario["nombre"],
+                        "foto" => $usuario["foto"],
+                        "publicacion" => $valor["publicacion"],
+                        "imagen" => $imagen["imagen"],
+                        "fecha" => $fecha->format('d M Y')
+                    ));
+                }
+            }
+        }
+
+        exit(json_encode($this->obtenidos));
     }
+
 }
-$publicacion    = new Publicacion();
-$publicada      = $publicacion->publicada();
+
+$publicacion = new Publicacion();
+$publicada = $publicacion->publicada();
 ?>
