@@ -1,7 +1,7 @@
 <?php require_once '../../../sql/red-social/SesionIniciada.php'; ?>
 <html>
 <head>
-    <title>Perfil</title>
+    <title>Usuario</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../front-css/red-social/header.css">
@@ -74,18 +74,16 @@
     main 
 -->
         <section class="area-1">
-            <?php // require_once '../../../sql/red-social/Usuario.php';?>
-<!--            <main>
-                <img src="../../front-multimedia/red-social/imagen/app.jpg" class="portada" alt="alt"/>
+            <main>
+                <img src="../../../front-multimedia/red-social/imagen/app.jpg" class="portada" alt="alt"/>
                 <section class="contenedor">
                     <img class="foto" alt=""/>
-                    <h2>Neury E. Aguasvivas L.</h2>
                     <section class="perfil-nav">
                         <button><i class='fas fa-user-friends'></i></button>
                         <button><i class='fas fa-comments'></i></button>
                     </section>
                 </section>
-            </main>-->
+            </main>
         </section>
 <!--
     nav 

@@ -80,8 +80,8 @@
                     <img class="foto" alt=""/>
                     <!--<h2>Neury E. Aguasvivas L.</h2>-->
                     <section class="perfil-nav">
-                        <button><i class='fas fa-user-friends'></i></button>
-                        <button><i class='fas fa-comments'></i></button>
+                        <!--<button><i class='fas fa-user-friends'></i></button>-->
+                        <!--<button><i class='fas fa-comments'></i></button>-->
                     </section>
                 </section>
             </main>
@@ -157,40 +157,7 @@
                 </div>
             </section>
             <section class="publicacion">
-                
-                
-                
-<!--                <article>
-                    <section class="articulo-head">
-                        <section>
-                            <img src="../../front-multimedia/red-social/imagen/avatar3.png" class="foto" alt="alt"/>
-                            <h2>Neury</h2>
-                        </section>  
-                        <section>
-                            <span class="">1 de enero 2021</span> <button><i class='fas fa-ellipsis-v'></i></button>
-                        </section>
-                    </section>
-                    <hr>
-                    <section class="articulo-body">
-                        <h3>Articulo</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
-                            eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                        <img src="../../front-multimedia/red-social/imagen/app.jpg" alt="" style="width: 100%;"/>
-                    </section>
-                    <hr>
-                    <section class="articulo-footer">
-                        <section><button><i class='fas fa-thumbs-up'></i></button></section><section><span class="">100</span></section>
-                        <section><button><i class='fas fa-thumbs-down'></i></button></section><section><span class="">100</span></section>
-                        <section><button><i class='fas fa-comments'></i></button></section><section><span class="">100</span></section>
-                        <section><button><i class='fas fa-share'></i></button></section><section><span class="">100</span></section>
-                    </section>
-                </article>-->
-                
-                
-                
+                <!--publicaiones-->   
             </section>
         </section>
         <section class="area-4">

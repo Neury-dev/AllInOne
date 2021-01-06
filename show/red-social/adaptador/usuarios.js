@@ -23,7 +23,7 @@ class Obtener {
             <section class="contenedor">
                 <img src="../../front-multimedia/red-social/imagen/${jsonObject[i].foto}" alt="">
                 <form action="../../sql/red-social/Redireccionar.php" method="POST">
-                    <button type="submit" name="usuario" id="usuario" value="${jsonObject[i].id}">${jsonObject[i].nombre + " " + jsonObject[i].apellido}</button>
+                    <button type="submit" name="usuario" value="${jsonObject[i].id}">${jsonObject[i].nombre + " " + jsonObject[i].apellido}</button>
                 </form>
                 <p>John Doe saved us from a web disaster.</p>
             </section>

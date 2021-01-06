@@ -13,8 +13,8 @@ class Paises {
         }
     }
 }
-let pais = new Paises();
-document.querySelector("#pais").addEventListener('click', pais.delPlaneta());
+let country = new Paises();
+document.querySelector("#pais").addEventListener('click', country.delPlaneta());
 /*
     * intereses 
  */

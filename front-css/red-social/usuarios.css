@@ -48,3 +48,44 @@
         display: block;
     }
 }
+/*
+    aside
+*/
+.n-grid > .area-3 > aside > section > form > label {
+    color: var(--n-color-dos);
+    font-family: var(--n-fuente-dos);
+    font-size: 0.80em;
+    font-weight: bold;
+}
+.n-grid > .area-3 > aside > section > form > input, .n-grid > .area-3 > aside > section > form > select {
+    color: var(--n-color);
+    background-color: var(--n-color-dos-uno);
+    font-family: var(--n-fuente-dos);
+    font-size: 0.80em;
+    width: 100%;
+    margin-bottom: 1.50em;
+    border: none;
+    border-radius: 0.50em;
+    padding: 0.625em;
+}
+.n-grid > .area-3 > aside > section > form > input:focus {
+    color: var(--n-color);
+    background-color: var(--n-color-tres);
+    outline: none;
+}
+.n-grid > .area-3 > aside > section > form > button {
+    color: var(--n-color);
+    background-color: var(--n-color-dos);
+    font-family: var(--n-fuente);
+    font-size: 0.90em;
+    width: 100%;
+    margin-top: 0.20em;
+    border: none;
+    border-radius: 0.50em;
+    padding: 0.50em;
+}
+.n-grid > .area-3 > aside > section > form > button:hover {
+    color: var(--n-color-dos);
+    background-color: var(--n-color-tres);
+    text-shadow: var(--n-sombra-de-texto);
+}

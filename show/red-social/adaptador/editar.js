@@ -1,4 +1,5 @@
 var nombre, apellido, nacimiento, correo, codigo, numero, sexo, estado, pais, ciudad, fecha, foto;
+var nombreForm, apellidoForm, nacimientoForm, correoForm, codigoForm, numeroForm, sexoForm, estadoForm, paisForm, ciudadForm, fechaForm, fotoForm;
 
 nombre      = document.querySelector(".nombre");
 apellido    = document.querySelector(".apellido");
@@ -13,7 +14,20 @@ ciudad      = document.querySelector(".ciudad");
 fecha       = document.querySelector(".fecha");
 foto        = document.querySelector("img.foto");
 
-fetch('../../../sql/red-social/Usuario.php', {
+nombreForm      = document.querySelector("#nombre");
+apellidoForm    = document.querySelector("#apellido");
+nacimientoForm  = document.querySelector("#nacimiento");
+correoForm      = document.querySelector("#correo");
+codigoForm      = document.querySelector("#codigo");
+numeroForm      = document.querySelector("#numero");
+sexoForm        = document.querySelector("#sexo");
+estadoForm      = document.querySelector("#estado");
+paisForm        = document.querySelector("#pais");
+ciudadForm      = document.querySelector("#ciudad");
+fechaForm       = document.querySelector("#fecha");
+//foto        = document.querySelector("img#foto");
+
+fetch('../../../sql/red-social/Sesion.php', {
     method: 'GET'
 }).then(function (response) {
     if(response.ok) { return response.json(); } 
@@ -31,6 +45,12 @@ fetch('../../../sql/red-social/Usuario.php', {
     ciudad.innerHTML        = json[0].ciudad;
 //    fecha.innerHTML         = json[0].fecha;
     foto.src                = '../../../front-multimedia/red-social/imagen/' + json[0].foto;
+    
+    nombreForm.value        = json[0].nombre;
+    apellidoForm.value      = json[0].apellido;
+    nacimientoForm.value    = json[0].nacimiento;
+    correoForm.value        = json[0].correo;
+    numeroForm.value        = json[0].numero;
 }).catch(function (err) {
     console.log('Fetch problem: ' + err.message);
 });

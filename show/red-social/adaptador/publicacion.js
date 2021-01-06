@@ -3,8 +3,13 @@ var jsonObject;
 fetch('../../sql/red-social/Publicacion.php').then(function (response) {
     return response.json();
 }).then(function (json) {
-    jsonObject = json;
-//    document.querySelector(".n-grid > .area-3 > section.publicacion").innerHTML = json;
+//    console.log(json.vacio);
+    
+//    if(json[0]) {
+//        document.querySelector(".n-grid > .area-3 > section.publicacion").innerHTML = "No tienes publicaciones.";
+//    } else {
+        jsonObject = json;
+//    }
     Obtener.publicacion();
 }).catch(function (err) {
     console.log('Fetch problem: ' + err.message);

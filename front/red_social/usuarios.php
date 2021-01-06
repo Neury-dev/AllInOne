@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../front-css/red-social/header.css">
     <link rel="stylesheet" href="../../front-css/red-social/nav.css"/>
     <link rel="stylesheet" href="../../front-css/red-social/usuarios.css"/>
-    <link rel="stylesheet" href="../../front-css/red-social/aside.css"/>
+    <!--<link rel="stylesheet" href="../../front-css/red-social/aside.css"/>-->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <style>
         @import url("http://localhost/AllInOne/front-css/root.css");
@@ -102,25 +102,58 @@
             <aside>
                 <h4>Solicitudes de amistad</h4>
                 <section>
-                    <img src="../../front-multimedia/red-social/imagen/avatar3.png" alt="alt"/>
-                    <h5>Jonh Doe</h5>
-                    <section>
-                        <button class="aceptar"><i class='fas fa-user-friends'></i></button>
-                        <button class="rechazar"><i class='fas fa-user-slash'></i></button>
-                    </section>
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form" id="form" enctype="multipart/form-data">
+                        <label for="foto">Foto</label>
+                        <input type="file" name="foto" id="foto">
+
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Ingresar nombre...">
+
+                        <label for="apellido">Apellido</label>
+                        <input type="text" name="apellido" id="apellido" placeholder="Ingresar pellido...">
+
+                        <label for="nacimiento">Cumpleaños</label>
+                        <input type="date" name="nacimiento" id="nacimiento">
+
+                        <label for="correo">Correo</label>
+                        <input type="email" name="correo" id="correo" placeholder="Ingresar correo...">
+
+                        <label for="numero">Celular</label>
+                        <input type="tel" name="numero" id="numero" placeholder="Ingresar numero...">
+
+                        <!--                    <label for="estado">Estado</label>
+                                            <select name="estado" id="estado">
+                                                <option value="Soltero">Soltero</option>
+                                                <option value="Casado">Casado</option>
+                                            </select>-->
+
+                        <label for="pais">País</label>
+                        <select name="pais" id="pais">
+                            <option value="">Escoger país</option>
+                        </select>
+
+                        <!--                    <label for="ciudad">Ciudad</label>
+                                            <select name="ciudad" id="ciudad">
+                                                <option value="...">...</option>
+                                                <option value="...">...</option>
+                                            </select>-->
+
+                        <button type="submit" name="editar" id="editar" value="Editar">Buscar</button>
+                    </form>
                 </section>
                 <section>
-                    <img src="../../front-multimedia/red-social/imagen/avatar3.png" alt="alt"/>
+<!--                    <img src="../../front-multimedia/red-social/imagen/avatar3.png" alt="alt"/>
                     <h5>Jonh Doe</h5>
                     <section>
                         <button class="aceptar"><i class='fas fa-user-friends'></i></button>
                         <button class="rechazar"><i class='fas fa-user-slash'></i></button>
-                    </section>
+                    </section>-->
                 </section>
             </aside>
         </section>
     </section>
 <script src="../../show/red-social/header.js" async=""></script>
 <script src="../../show/red-social/adaptador/usuarios.js" defer=""></script>
+<script src="../../show/red-social/perfil/editar.js"></script>
 </body>
 </html> 
