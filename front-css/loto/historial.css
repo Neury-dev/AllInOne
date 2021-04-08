@@ -1,0 +1,38 @@
+/* 
+    Created on : 4 jul. 2020, 18:07:11
+    Author     : desarrollador
+*/
+body {
+    margin: 0;
+    background: #1c1d22;
+    font-family: 'Charcoal', sans-serif;/*font-family: 'Impact', Charcoal, sans-serif;*/
+}
+p {
+    margin-top: 15%;
+    color: white;
+    text-align: center;
+}
+input {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 25%;
+    color: #1c1d22;
+    caret-color: #1c1d22;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5em 0.5em;
+}
+Input:focus { outline: none; }
+table {
+    position: absolute; 
+    top: 25%; 
+    width: 100%;
+}
+tr > th { color: #1c1d22; background: white; }
+tr > td { color: white; }
+/*tr:nth-child(even) { background-color:#1c1d22; }*/
+tr:nth-child(odd) { background-color: #373538; }

@@ -1,0 +1,269 @@
+/* 
+    Created on : 9 ago. 2020, 19:39:52
+    Author     : desarrollador
+*/
+@import url("import/root.css");
+nav, #n-nav-span, #n-icono-mediano, #n-nav-mediano, .n-nav-minimo { transition: top 0.3s ease-in-out; }
+@media screen and (min-width: 1200px) {
+    .n-nav-span { display: none; }
+    .n-nav-mediano { display: none; }
+    nav .n-icono-minimo { display: none; }
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        background: #1c1d22;
+        padding: 0;
+        margin: 0;
+        height: 10%;
+        /*width: 80%;*/
+        width: 100%;
+        overflow: hidden;
+        /*transition: 1s ease-in-out;*/  
+        /*mix-blend-mode: multiply;*/
+        /*border: 1px solid white;*/
+    }
+    nav a {
+        display: block;
+        float: right;
+        font-size: 1.10em;
+        color: white;
+        /*background-color: #373538;*/
+        /*font-family: 'Impact', Charcoal, sans-serif;*/
+        font-family: 'Charcoal', sans-serif;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 3% 0% 0% 3%;
+        transition: 1s ease-in-out;  
+    }
+    nav a:hover { color: #373538; text-shadow: var(--n-sombra-de-texto); }  
+}
+@media screen and (min-width: 902px) and (max-width: 1199px) {
+    .n-nav-span { display: none; }
+    .n-nav-mediano { display: none; }
+    nav .n-icono-minimo { display: none; }
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        background: #1c1d22;
+        padding: 0;
+        margin: 0;
+        height: 10%;
+        width: 80%;
+        overflow: hidden;
+        /*border: 1px solid white;*/
+    }
+    nav a {
+        display: block;
+        float: right;
+        color: white;
+        font-family: 'Charcoal', sans-serif;
+        font-size: 1.10em;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 1s ease-in-out;
+        padding: 5.4% 0% 0% 3%;
+    }
+    nav a:hover { color: #373538; text-shadow: var(--n-sombra-de-texto); }
+}
+@media screen and (min-width: 768px) and (max-width: 901px) {
+    nav > a { display: none; }
+    nav .n-icono-minimo { display: none; }
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        color: white;
+        background: #1c1d22;
+        /*border: 1px solid red;*/
+        padding: 0;
+        margin: 0;
+        height: 10%;
+        width: 100%;
+        overflow: hidden; 
+    }
+    #n-nav-span {
+        position: fixed;
+        top: 5%;
+        right: 6%;
+        z-index: 2;
+    }
+    .n-nav-mediano > #n-nav-mediano {
+        display: none;
+        position: fixed;
+        top: 10%;
+        right: 5%;
+        z-index: 2; 
+    }
+    .n-nav-mediano a {
+        float: left;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 1s ease-in-out;
+    }
+    .n-nav-mediano a.n-icono-mediano {
+        position: fixed;
+        top: 5%;
+        right: 0;
+        z-index: 5;  
+    }
+    .n-nav-mediano a.n-icono-mediano { font-size: 1.20em; }
+    .n-nav-mediano #n-nav-mediano a {
+        position: relative;
+        left: 0;
+        background: #373538;
+        font-size: 1em;
+        text-align: left;
+        width: 100%;  
+        cursor: pointer;
+    }
+    .n-nav-mediano a { /*font-size: 1em;*/ padding: 6px 16px; }
+    .n-nav-mediano a.n-icono-mediano:hover, .n-nav-mediano #n-nav-mediano a:hover, .n-nav-mediano section a:hover {
+        color: #373538;
+        text-shadow: var(--n-sombra-de-texto);  
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 767px) {
+    nav > a { display: none; }
+    nav .n-icono-minimo { display: none; }
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        color: white;
+        background: #1c1d22;
+        /*border: 1px solid red;*/
+        padding: 0;
+        margin: 0;
+        height: 10%;
+        width: 100%;
+        overflow: hidden; 
+    }
+     #n-nav-span {
+        position: fixed;
+        top: 5%;
+        right: 6%;
+        z-index: 2;
+    }
+    .n-nav-mediano #n-nav-mediano {
+        display: none;
+        position: fixed;
+        top: 10%;
+        right: 5%;
+        z-index: 2;    
+    }
+    .n-nav-mediano #n-nav-mediano a {
+        position: relative;
+        left: 0;
+        background: #373538;
+        font-size: 1.00em;
+        text-align: left;
+        width: 100%;  
+        cursor: pointer;
+    }
+    .n-nav-mediano a {
+        float: left;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 1s ease-in-out;
+    }
+    .n-nav-mediano a.n-icono-mediano {
+        position: fixed;
+        top: 5%;
+        right: 0;
+        z-index: 5;  
+        font-size: 1.20em;
+    }
+    .n-nav-mediano a { padding: 8px 12px; }
+    .n-nav-mediano a.n-icono-mediano:hover, .n-nav-mediano #n-nav-mediano a:hover, .n-nav-mediano span a:hover {
+        color: #373538;
+        text-shadow: var(--n-sombra-de-texto);  
+    }
+}
+@media screen and (max-width: 600px) {
+    .n-nav-span { display: none; }
+    .n-nav-mediano { display: none; }
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        color: white;
+        background: #1c1d22;
+        /*border: 1px solid red;*/
+        padding: 0;
+        margin: 0;
+        height: 10%;
+        width: 100%;
+        overflow: hidden; 
+    }
+    nav > section > .n-nav-minimo {
+        position: fixed;
+        top: 10%;
+        left: 0;
+        background: #373538;
+        font-size: 1.00em;
+        text-align: left;
+        width: 100%;  
+/*        padding-top: 1%;*/
+        cursor: pointer;
+    }
+    nav section > section > a {
+        display: none;
+        float: right;
+        color: white;
+        font-weight: bold;
+        font-size: 1em;
+        text-decoration: none;
+        padding: 1% 0% 1% 3%;
+        transition: 1s ease-in-out; 
+    }
+    nav > section > a.n-icono-minimo {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        /*z-index: 10;*/
+        color: white;
+        font-size: 1.50em;
+        text-decoration: none;
+        padding: 0% 3% 2% 0%;
+        transition: 1s ease-in-out;   
+    }
+    nav section > section > a:hover, nav > section > a.n-icono-minimo:hover {
+        color: #373538;
+        text-shadow: var(--n-sombra-de-texto);
+    }
+    nav.responsive {
+        position: fixed;
+        height: 10%;
+        /*padding: 10% 0% 0% 3%;*/   
+    }
+    nav.responsive section > a.n-icono-minimo {
+        position: absolute;
+        /*top: 0;*/
+        right: 0;
+        bottom: 0;
+        /*padding: 0% 3% 0% 0%;*/  
+    }
+    nav.responsive section > section > a {
+        display: block;
+        float: none;
+        text-align: left;
+    }
+}
+@media screen and (max-width: 600px) { nav > a { display: none; } }
+@media screen and (min-width: 600px) { .n-nav-minimo-oculto { display: none; } }
+@media screen and (max-width: 600px) { .n-nav-maximo-oculto { display: none; } }
+
+
+
+
+

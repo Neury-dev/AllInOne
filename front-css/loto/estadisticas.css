@@ -1,0 +1,24 @@
+/* 
+    Created on : 11 jul. 2020, 15:02:27
+    Author     : desarrollador
+*/
+body {
+    margin: 0;
+    background: #1c1d22;
+    font-family: 'Charcoal', sans-serif;/*font-family: 'Impact', Charcoal, sans-serif;*/
+}
+h2, caption { 
+    color: white; 
+    text-align: center; 
+    font-family: 'Impact', Charcoal, sans-serif;
+    font-size: 6vmin;
+    padding-top: 10%;
+}
+table {
+    position: relative; 
+    top: 10%; 
+    width: 100%;
+}
+tr > th { color: #1c1d22; background: white; }
+tr > td, p { color: white; }
+tr:nth-child(odd) { background-color: #373538; }

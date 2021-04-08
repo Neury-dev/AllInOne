@@ -1,0 +1,113 @@
+/* 
+    Created on : 9 ago. 2020, 19:46:27
+    Author     : desarrollador
+*/
+@import url("import/root.css");
+:root {
+    /*--n-sombra-de-texto: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+    /*--n-sombra-de-texto: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;*/
+}
+@media screen and (min-width: 1200px) {
+    header {
+        position: fixed;
+        top: 0%;
+        z-index: 3;
+        background: #1c1d22;
+        width: 20%;
+        height: 10%;
+        padding: 0% 0% 0% 3%;
+        transition: top 0.3s ease-in-out;
+        /*background: black;*/
+        /*background: rgba(0, 0, 0, 0.7);*/
+        /*mix-blend-mode: multiply;*/
+        /*border: 1px solid white;*/
+    }
+    header h1 { font-size: 2.50em; }
+    header h1 a {
+        color: white;
+        text-decoration: none;
+        text-shadow: var(--n-sombra-de-texto); 
+    }
+}
+@media screen and (min-width: 902px) and (max-width: 1199px) {
+    header {
+        position: fixed;
+        top: 0;
+        z-index: 3;
+        background: #1c1d22;
+        width: 20%;
+        height: 10%;
+        color: white;
+        padding: 0% 0% 0% 3%;
+        transition: top 0.3s ease-in-out;
+        /*border: 1px solid white;*/
+    }
+    header h1 { font-size: 2.50em }  
+    header h1 a {
+        color: white;
+        text-decoration: none;
+        text-shadow: var(--n-sombra-de-texto);
+    }
+}
+@media screen and (max-width: 901px) and (min-width: 768px) {
+    header {
+        position: fixed;
+        top: 0;
+        z-index: 3;
+        background: #1c1d22;
+        width: 28%;
+        height: 10%;
+        color: white;
+        padding: 0% 0% 0% 3%;
+        transition: top 0.3s ease-in-out;
+        /*border: 1px solid white;*/
+    }
+    header h1 { font-size: 2.30em; }  
+    header h1 a {
+        color: white;
+        text-decoration: none;
+        text-shadow: var(--n-sombra-de-texto); 
+    }
+}
+@media screen and (max-width: 767px) and (min-width: 601px) {
+    header {
+        position: fixed;
+        top: 0;
+        z-index: 3;
+        background: #1c1d22;
+        width: 28%;
+        height: 10%;
+        color: white;
+        padding: 0% 0% 0% 3%; 
+        transition: top 0.3s ease-in-out;
+    }
+    header h1 { font-size: 2.30em; }
+    header h1 a {
+        color: white;
+        text-decoration: none;
+        text-shadow: var(--n-sombra-de-texto);
+    }
+}
+@media screen and (max-width: 600px) {
+    header {
+        position: fixed;
+        top: 0;
+        z-index: 3;
+        background: #1c1d22;
+        width: 80%;
+        height: 10%;
+        color: white;
+        /*border: 1px solid white;*/
+        padding: 0% 0% 0% 3%;   
+        transition: top 0.3s ease-in-out;
+    }
+    header h1 { font-size: 2.00em; }  
+    header h1 a {
+        color: white;
+        text-decoration: none;
+        text-shadow: var(--n-sombra-de-texto);
+    }
+}
+
+
+

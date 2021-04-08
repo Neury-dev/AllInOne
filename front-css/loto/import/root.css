@@ -1,0 +1,7 @@
+/* 
+    Created on : 16 ago. 2020, 0:29:42
+    Author     : desarrollador
+*/
+:root {
+    --n-sombra-de-texto: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}

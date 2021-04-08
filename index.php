@@ -114,9 +114,13 @@
             <a href="https://netbeans.org/" title="NetBeans" target="_blank"><i class='fas'>&#xf1b2;</i></a>
             <a href="https://www.apachefriends.org/es/index.html" title="XAMPP" target="_blank"><i class='fas'>&#xf233;</i></a>
             
-            <h3>eleasarnal@gmail.com</h3>
+            <h3>neury.eleasar@gmail.com</h3>
         </section>
         <section class="n-desarrollos">
+            <article>
+                <h4><a href="http://localhost/AllInOne/loto.php">Loto</a></h4>
+                <p>04/07/2020 - 13/09/2020: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </article>
             <article>
                 <h4><a href="http://localhost/AllInOne/tienda.php">Tienda</a></h4>
                 <p>14/09/2020 - 29/11/2020: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -136,10 +140,6 @@
             <article>
                 <h4><a href="red_social.php">Red Social</a></h4>
                 <p>19/12/2020 - 00/00/2020: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </article>
-            <article>
-                <h4><a href="">Demo</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </article>
             <article>
                 <h4><a href="">Demo</a></h4>

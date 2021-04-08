@@ -1,0 +1,39 @@
+/* 
+    Created on : 5 jul. 2020, 9:23:55
+    Author     : desarrollador
+*/
+body {
+    margin: 0;
+    background: #1c1d22;
+    font-family: 'Charcoal', sans-serif;
+}
+form {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-0%);
+}
+input {
+    color: white;
+    background-color: #373538;
+    caret-color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5em 0.5em;
+}
+Input:focus { outline: none; }
+button {
+    transition: 1.5s; 
+    outline: none;
+    width: 100%;
+    color: #1c1d22;
+    background: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5em 0.5em;
+    cursor: pointer;
+}
