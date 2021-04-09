@@ -79,6 +79,16 @@
                 <section class="contenedor">
                     <img class="foto" alt=""/>
                     <section class="perfil-nav">
+<!--                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form" id="form" enctype="multipart/form-data">
+                            <label for="texto">Texto:</label>
+                            <input type="text" name="texto" id="texto" value="texto">
+                            <label for="numero">Numero:</label>
+                            <input type="number" name="numero" id="numero" value="1">
+                            <label for="buscar">Buscar:</label>
+                            <input type="search" name="buscar" id="buscar" value="Bucar">
+                            <button type="submit" name="enviar" id="enviar" value="Enviar">Enviar</button>
+                            <input type="submit" name="enviar" id="enviar" value="Enviar">
+                        </form>-->
                         <button><i class='fas fa-user-friends'></i></button>
                         <button><i class='fas fa-comments'></i></button>
                     </section>
@@ -105,7 +115,7 @@
             </nav>
         </section>
         <section class="area-3">
-            <section>
+<!--            <section>
                 <p>Publicar?</p>
                 <section class="section-nav">
                     <button class="tablinks" onclick="openCity(event, 'n-articulo')"><i class='fas fa-file-alt'></i></button>
@@ -116,8 +126,8 @@
                 <div id="n-articulo" class="tabcontent">
                     <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
                     <form action="../../sql/red-social/Publicar.php" method="POST" name="form-articulo" id="form-articulo" enctype="multipart/form-data">
-<!--                        <label for="titulo" class="etiqueta">Titulo</label>
-                        <input type="text" name="titulo" id="titulo" placeholder="Titulo...">-->
+                        <label for="titulo" class="etiqueta">Titulo</label>
+                        <input type="text" name="titulo" id="titulo" placeholder="Titulo...">
                         <label for="articulo" class="etiqueta">Publicación</label>
                         <textarea name="publicacion" id="publicacion" rows="5" cols="10" placeholder="Publicación..." required=""></textarea>
                         <label for="imagen" class="cargar-archivo">Seleccionar Imagen</label>
@@ -154,7 +164,7 @@
                         <button type="submit" name="subir-archivo" id="subir-archivo" value="Video">Subir</button>
                     </form>
                 </div>
-            </section>
+            </section>-->
             <section class="publicacion">
                 
                 
@@ -242,7 +252,7 @@
 <script src="../../../show/red-social/header.js" async=""></script>
 <script src="../../../show/red-social/adaptador/usuario.js" async=""></script>
 <!--<script src="../../show/red-social/main.js" defer=""></script>-->
-<!--<script src="../../show/red-social/adaptador/publicacion.js" defer=""></script>-->
+<script src="../../../show/red-social/adaptador/publicacionDeUsuario.js" defer=""></script>
 <script>
 
 </script>

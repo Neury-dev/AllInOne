@@ -1,5 +1,5 @@
 <header id="n-header">
-    <h1><a href="index.php">Loto</a></h1>
+    <h1><a href="http://localhost/AllInOne/loto.php">Loto</a></h1>
 </header>
 <nav id="n-nav">
     <a href="../../front/loto/estadisticas.php" class="n-nav-maximo-oculto" style="padding-right: 3%;">Estadisticas</a>

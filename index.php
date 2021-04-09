@@ -141,62 +141,6 @@
                 <h4><a href="red_social.php">Red Social</a></h4>
                 <p>19/12/2020 - 00/00/2020: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </article>
-            <article>
-                <h4><a href="">Demo</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </article>
-            <article>
-                <h4><a href="">Demo</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </article>
-            <article>
-                <h4><a href="">Demo</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </article>
-            <article>
-                <h4><a href="">Demo</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </article>
-            <article>
-                <h4><a href="">Demo</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </article>
-            <article>
-                <h4><a href="">Demo</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </article>
-            <article>
-                <h4><a href="">Demo</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </article>
-            <article>
-                <h4><a href="">Demo</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </article>
-            <article>
-                <h4><a href="">Demo</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </article>
-            <article>
-                <h4><a href="">Demo</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </article>
-            <article>
-                <h4><a href="">Demo</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </article>
-            <article>
-                <h4><a href="">Demo</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </article>
-            <article>
-                <h4><a href="">Demo</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </article>
-            <article>
-                <h4><a href="">Demo</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </article>
         </section>
     </article>
 </body>

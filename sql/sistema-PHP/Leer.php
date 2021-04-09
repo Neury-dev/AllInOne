@@ -43,12 +43,12 @@ class Leer {
 $ejecutarLeer = new Leer();
 $leer = $ejecutarLeer->datos();
 foreach ($leer as $dato) {
-    $fecha  = DateTime::createFromFormat('Y-m-d ', $dato['fecha']);
+    $fecha  = date_create($dato['fecha']);
     $hora   = DateTime::createFromFormat('H:i:s', $dato['hora']);
     
     echo "<tr>
         <td>" . $dato['id'] . "</td>
-        <td>" . $fecha->format('d M Y') . "</td>
+        <td>" . date_format($fecha, 'd/m/y') . "</td>
         <td>" . $hora->format('H:i a') . "</td>
         <td>" . $dato['marca'] . "</td>
         <td>" . $dato['nombre'] . "</td>
