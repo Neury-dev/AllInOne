@@ -12,6 +12,10 @@ pais        = document.querySelector(".pais");
 ciudad      = document.querySelector(".ciudad");
 fecha       = document.querySelector(".fecha");
 foto        = document.querySelector("img.foto");
+/*
+ * Amigos 
+ */
+let usuario = document.querySelector("#usuario");
 
 fetch('../../../sql/red-social/Usuario.php', {
     method: 'GET'
@@ -31,6 +35,28 @@ fetch('../../../sql/red-social/Usuario.php', {
     ciudad.innerHTML        = json[0].ciudad;
 //    fecha.innerHTML         = json[0].fecha;
     foto.src                = '../../../front-multimedia/red-social/imagen/' + json[0].foto;
+    /*
+     * Amigos
+     */
+    usuario.value           = json[0].id;
+}).catch(function (err) {
+    console.log('Fetch problem: ' + err.message);
+});
+/*
+ * Amigos 
+ */
+let johnDoe = document.querySelector("#yo");
+
+fetch('../../../sql/red-social/Sesion.php', {
+    method: 'GET'
+}).then(function (response) {
+    if(response.ok) { return response.json(); } 
+    else { console.log("..........................................."); }
+}).then(function (json) {
+    /*
+     * Amigos
+     */
+    johnDoe.value           = json[0].id;
 }).catch(function (err) {
     console.log('Fetch problem: ' + err.message);
 });

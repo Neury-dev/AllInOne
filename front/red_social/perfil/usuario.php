@@ -79,18 +79,21 @@
                 <section class="contenedor">
                     <img class="foto" alt=""/>
                     <section class="perfil-nav">
-<!--                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form" id="form" enctype="multipart/form-data">
-                            <label for="texto">Texto:</label>
-                            <input type="text" name="texto" id="texto" value="texto">
-                            <label for="numero">Numero:</label>
-                            <input type="number" name="numero" id="numero" value="1">
-                            <label for="buscar">Buscar:</label>
-                            <input type="search" name="buscar" id="buscar" value="Bucar">
-                            <button type="submit" name="enviar" id="enviar" value="Enviar">Enviar</button>
-                            <input type="submit" name="enviar" id="enviar" value="Enviar">
-                        </form>-->
-                        <button><i class='fas fa-user-friends'></i></button>
-                        <button><i class='fas fa-comments'></i></button>
+<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="amigo" id="amigo">
+    <input type="text" value="" hidden="" name="yo" id="yo">
+    <input type="text" value="" hidden="" name="usuario" id="usuario">
+    <input type="text" value="" hidden="" name="amigos" id="amigos">
+<!--    <label for="amigos"><i class='fas fa-user-alt'></i></label>
+    <input type="submit" name="amigos" id="amigos" value="" hidden="">-->
+    <button type="submit" name="" id="amigo-boton" value="">
+        <i id="amistad-icono" class=''></i>
+    </button>
+</form>
+<!--                        
+<button style='font-size:24px'>Button <i class='fas fa-user-alt'></i></button>
+<button style='font-size:24px'>Button <i class='fas fa-user-check'></i></button>
+<button><i class='fas fa-user-friends'></i></button>
+                        <button><i class='fas fa-comments'></i></button>-->
                     </section>
                 </section>
             </main>
@@ -115,6 +118,7 @@
             </nav>
         </section>
         <section class="area-3">
+            <p id="amigo-responde"></p>
 <!--            <section>
                 <p>Publicar?</p>
                 <section class="section-nav">
@@ -253,6 +257,7 @@
 <script src="../../../show/red-social/adaptador/usuario.js" async=""></script>
 <!--<script src="../../show/red-social/main.js" defer=""></script>-->
 <script src="../../../show/red-social/adaptador/publicacionDeUsuario.js" defer=""></script>
+<script src="../../../show/red-social/adaptador/amigos.js" defer=""></script>
 <script>
 
 </script>

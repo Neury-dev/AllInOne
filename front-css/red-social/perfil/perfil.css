@@ -62,14 +62,24 @@
     /*left: -8em;*/
     z-index: 1;
 }
-.n-grid > .area-1 > main > .contenedor > .perfil-nav > button {
+.n-grid > .area-1 > main > .contenedor > .perfil-nav > form > button[type="submit"] {
+/*.n-grid > .area-1 > main > .contenedor > .perfil-nav > form > label {*/
     color: var(--n-color-dos);
     background-color: var(--n-color-uno-uno);
     font-size: 1.10em;
     border: none;
     padding: 1em;
     border-radius: 50% 50% 50% 0.20em;
+    cursor: pointer;
 }
+/*.n-grid > .area-1 > main > .contenedor > .perfil-nav > button {
+    color: var(--n-color-dos);
+    background-color: var(--n-color-uno-uno);
+    font-size: 1.10em;
+    border: none;
+    padding: 1em;
+    border-radius: 50% 50% 50% 0.20em;
+}*/
 /*
     Cuadricula 2
 */

@@ -86,6 +86,3 @@ function inicionDePaginacion() {
     entradaDePaginacion.value + 4 <= maximo ? anterior.style.visibility = 'hidden' : anterior.style.visibility = 'visible';
     entradaDePaginacion.value >= maximo - 4 ? siguiente.style.visibility = 'hidden' : siguiente.style.visibility = 'visible';
 }
-
-
-
