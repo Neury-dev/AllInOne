@@ -2,6 +2,20 @@ var jsonObject;
 /*
     * GustaSi 
  */
+class RePublicar {
+    static
+    datos() {
+        fetch('../../sql/red-social/PublicacionInicio.php').then(function (response) {
+            return response.json();
+        }).then(function (json) {
+            jsonObject = json;
+
+            Obtener.publicacion();
+        }).catch(function (err) {
+            console.log('Fetch problem: ' + err.message);
+        });
+    }
+}
 function 
 gustaSI(id) {
     const gustaSi = document.querySelector("#gusta-si"+id);
@@ -20,16 +34,15 @@ gustaSI(id) {
         fetch('../../sql/red-social/GustaSi.php', {
             method: 'POST',
             body: datos
-        })
-          .then(function (response) {
-              if (response.ok) {
-                  return response.text();
-              } else {
-                  throw "Error en la llamada";
-              }
-          }).then(function (texto) {
+        }).then(function (response) {
+            if (response.ok) {
+                return response.text();
+            } else {
+                throw "Error en la llamada";
+            }
+        }).then(function (texto) {
             Obtener.publicacion();
-  
+            RePublicar.datos();
             console.log(publicacionSi + "" + texto);
         }).catch(function (error) {
             console.log(error);
@@ -57,88 +70,56 @@ gustaNo(id) {
         fetch('../../sql/red-social/GustaNo.php', {
             method: 'POST',
             body: datos
-        })
-          .then(function (response) {
-              if (response.ok) {
-                  return response.text();
-              } else {
-                  throw "Error en la llamada";
-              }
-          }).then(function (texto) {
-              console.log(publicacionNo + "" + texto);
+        }).then(function (response) {
+            if (response.ok) {
+                return response.text();
+            } else {
+                throw "Error en la llamada";
+            }
+        }).then(function (texto) {
+            Obtener.publicacion();
+            RePublicar.datos();
+            console.log(publicacionNo + "" + texto);
         }).catch(function (error) {
             console.log(error);
         });
     });
 }
+/*
+    * Compartir
+ */
+function 
+compartir(id) {
+    const compartir = document.querySelector("#compartir"+id);
+    
+    compartir.addEventListener('submit', function (e) {
+        e.preventDefault();
 
-//var botonGusta = document.querySelector("#gusta-si-icono");
+        let compartido      = document.forms["compartir"+id]["compartido"].value;
+        let usuario         = document.forms["compartir"+id]["usuario"].value;
+        let compartirBoton  = document.forms["compartir"+id]["compartir-boton"].value;
+        
+        let datos = new FormData(compartir);
 
-//function 
-//gustas() {
-//    fetch('../../sql/red-social/Gustas.php', {
-//        method: 'GET'
-//    }).then(function (response) {
-//        if(response.ok) { return response.json(); } 
-//        else { console.log("..........................................."); }
-//    }).then(function (json) {
-//        jsonObject = json;
-//
-//        console.log(jsonObject);
-//
-//        let salida = "";
-//
-//        for (let i in jsonObject) {;
-//            salida += `<span>${jsonObject[i].gustaSi}</span>`;
-//        }
-//
-//        document.querySelectorAll(".gustas").innerHTML = salida;
-//    }).catch(function (err) {
-//        console.log('Fetch problem: ' + err.message);
-//    });
-//}
-//gustas();
-
-
-
-
-
-
-//var botonGusta = document.querySelector("#gusta-si-icono");
-
-//function 
-//amistad() {
-//fetch('../../sql/red-social/Gusta.php', {
-//    method: 'GET'
-//}).then(function (response) {
-//    if(response.ok) { return response.json(); } 
-//    else { console.log("..........................................."); }
-//}).then(function (json) {
-//    console.log(json);
-//     
-//    jsonObject = json;
-//    
-//    console.log(jsonObject);
-//    
-////    let salida = "";
-//
-////    for (let i in jsonObject) {
-////        console.log(jsonObject);
-//
-////        salida += `<i id="gusta-si-icono" class='fas fa-star'></i>`;
-////
-////        if (jsonObject[i].id == 'Conocido') {
-////            salida += `<i style='color=green' id="gusta-si-icono" class='fas fa-star'></i>`;
-////        } else if (json[0].amigos == 'Amigo') {
-////            salida += `<i style='color=red' id="gusta-si-icono" class='fas fa-star'></i>`;
-////        } else if (json[0].amigos == '') {
-////            salida += `<i style='color=#1c1d22' id="gusta-si-icono" class='fas fa-star'></i>`;
-////        }
-////    }
-//        
-////    document.querySelector("#gusta-si-boton").innerHTML = salida;
-//}).catch(function (err) {
-//    console.log('Fetch problem: ' + err.message);
-//});
-////}
-////amistad();
+        datos.append('compartido', compartido);
+        datos.append('usuario', usuario);
+        datos.append('compartir-boton', compartirBoton);
+        
+        fetch('../../sql/red-social/Compartir.php', {
+            method: 'POST',
+            body: datos
+        }).then(function (response) {
+            if (response.ok) {
+                return response.text();
+            } else {
+                throw "Error en la llamada";
+            }
+        }).then(function (texto) {
+            Obtener.publicacion();
+            RePublicar.datos();
+            console.log(compartido + " " + usuario + " " + texto);
+        }).catch(function (error) {
+            console.log(error);
+        });
+    });
+}

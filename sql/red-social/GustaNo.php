@@ -8,32 +8,83 @@ require_once "../Conexion.php";
  */
 class GustaNo {
     private $sql;
-    private $resultado;
-    
+    private $sqlGusta;
+    private $ok;
+
     public function 
     no() {
         if(isset($_POST["gusta-no-boton"])) {
-            $publicacionNo = $_POST["publicacion-no"];
-
-            $this->sql = $GLOBALS["base"]->conexion->
+            $this->ok  = $_POST["publicacion-no"];
+   
+            $sqlGustaNo = $GLOBALS["base"]->conexion->
             query("SELECT `usuarioNo`, `publicacionNo` FROM `Gusta` "
-                . "WHERE usuarioNo = '".$_SESSION['johnDoe']."' AND publicacionNo = '".$publicacionNO."'");
+                . "WHERE usuarioNo = '".$_SESSION['johnDoe']."' AND publicacionNo = '".$this->ok."'");
 
-            $this->resultado = $this->sql->fetch_all(MYSQLI_ASSOC);
+            $gustaNo = $sqlGustaNo->fetch_all(MYSQLI_ASSOC);
+            
+            $sqlGustaSi = $GLOBALS["base"]->conexion->
+            query("SELECT `usuarioSi`, `publicacionSi` FROM `Gusta` "
+                . "WHERE usuarioSi = '".$_SESSION['johnDoe']."' AND publicacionSi = '".$this->ok."'");
 
-            if ($this->resultado) {
-                $this->sql = $GLOBALS["base"]->conexion->
-                query("DELETE FROM `Gusta` "
-                    . "WHERE  usuarioNo = '".$_SESSION['johnDoe']."' AND publicacionNo = '".$publicacionNo."'");
+            $gustaSi = $sqlGustaSi->fetch_all(MYSQLI_ASSOC);
 
-                echo !empty($this->sql) ? "Se ha borrado correctamente" : "<span>No se ha borrado.</span>";
-            } else {
+            if($gustaNo and $gustaSi) {
+                $this->sqlGusta = $GLOBALS["base"]->conexion->
+                query("UPDATE `Gusta` SET "
+                    . "`usuarioNo`= NULL, "
+                    . "`publicacionNo`= NULL, "
+                    . "`fechaNOFinalizada`= NOW() "
+                    . "WHERE usuarioSi = '".$_SESSION['johnDoe']."' AND publicacionSi = '".$this->ok."'");
+
+                echo !empty($this->sqlGusta) ? "Actualizado en blanco" : "No actualizado en blanco.";
+                
                 $this->sql = $GLOBALS["base"]->conexion-> 
-                query("INSERT INTO `Gusta`(`usuarioNo`, `publicacionNo`, `fechaNoIniciada`) "
-                    . "VALUES ('".$_SESSION['johnDoe']."', '".$publicacionNo."', NOW())");                 
+                query("UPDATE `Publicaciones` SET `gustaNo` = `gustaNo` - 1 "
+                    . "WHERE id = '".$this->ok."'");  
 
-                echo !empty($this->sql) ? "Creado con exito." : "<span>No se ha creado.</span>";
-            } 
+                echo !empty($this->sql) ? "Gusta Si acutalizado." : "Gusta Si no actualizado.";
+            } elseif (!$gustaNo and $gustaSi) {
+                $this->sqlGusta = $GLOBALS["base"]->conexion->
+                query("UPDATE `Gusta` SET "
+                    . "`usuarioNo` = '".$_SESSION['johnDoe']."', "
+                    . "`publicacionNo` = '".$this->ok."', "
+                    . "`fechaNoIniciada` = NOW() "
+                    . "WHERE usuarioSi = '".$_SESSION['johnDoe']."' AND publicacionSi = '".$this->ok."'");
+
+                echo !empty($this->sqlGusta) ? "Se ha actualizado" : "No se ha actualizado."; 
+                
+                $this->sql = $GLOBALS["base"]->conexion-> 
+                query("UPDATE `Publicaciones` SET `gustaNo` = `gustaNo` + 1 "
+                    . "WHERE id = '".$this->ok."'");  
+
+                echo !empty($this->sql) ? "Gusta Si acutalizado." : "Gusta Si no actualizado.";
+            } elseif($gustaNo and !$gustaSi) {
+                $this->sql = $GLOBALS["base"]->conexion-> 
+                query("UPDATE `Publicaciones` SET `gustaNo` = `gustaNo` - 1 "
+                    . "WHERE id = '".$this->ok."'");  
+
+                echo !empty($this->sql) ? "Gusta Si acutalizado." : "Gusta Si no actualizado.";
+                
+                $this->sqlGusta = $GLOBALS["base"]->conexion->
+                query("DELETE FROM `Gusta` "
+                    . "WHERE  usuarioNo = '".$_SESSION['johnDoe']."' AND publicacionNo = '".$this->ok."'");
+                
+                echo !empty($this->sqlGusta) ? "Se ha borrado correctamente" : "No se ha borrado."; 
+            } elseif(!$gustaNo and !$gustaSi) {
+                $this->sqlGusta = $GLOBALS["base"]->conexion-> 
+                query("INSERT INTO `Gusta`(`usuarioNo`, `publicacionNo`, `fechaNoIniciada`) "
+                    . "VALUES ('".$_SESSION['johnDoe']."', '".$this->ok."', NOW())");  
+                
+                echo !empty($this->sqlGusta) ? "Creado con exito." : "No se ha creado.";
+
+                $this->sql = $GLOBALS["base"]->conexion-> 
+                query("UPDATE `Publicaciones` SET `gustaNo` = `gustaNo` + 1 "
+                    . "WHERE id = '".$this->ok."'");  
+
+                echo !empty($this->sql) ? "Gusta Si acutalizado." : "Gusta Si no actualizado.";
+            }
+        } else {
+            echo 'Se ha producido un error';
         }
     }
 } 

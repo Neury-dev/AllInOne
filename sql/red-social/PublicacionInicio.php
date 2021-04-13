@@ -35,7 +35,9 @@ class PublicacionInicio {
                         "publicacion"   => $valor["publicacion"],
                         "imagen"        => $imagen["imagen"],
                         "fecha"         => $fecha->format('d M Y'),
-                        "gustaSi"       => $valor["gustaSi"]
+                        "gustaSi"       => $valor["gustaSi"],
+                        "gustaNo"       => $valor["gustaNo"],
+                        "compartida"    => $valor["compartida"]
                     ));
                 }
             }
