@@ -14,7 +14,8 @@ class GustaSi {
         if(isset($_POST["gusta-si-boton"])) {
             $publicacionSi  = $_POST["publicacion-si"];
             $gustaSiTotal   = $_POST["gusta-si-total"];
-
+//            $siTotal = intval(preg_replace('/[*0-9+]/', '', $gustaSiTotal), 10);
+            
             $sqlGustaSi = $GLOBALS["base"]->conexion->
             query("SELECT `usuarioSi`, `publicacionSi` FROM `Gusta` "
                 . "WHERE usuarioSi = '".$_SESSION['johnDoe']."' AND publicacionSi = '".$publicacionSi."'");
@@ -38,7 +39,7 @@ class GustaSi {
                 echo !empty($sqlActualizarEliminar ) ? "Actualizado en blanco" : "<span>No actualizado en blanco.</span>";
                 
                 $actualizarEliminar = $GLOBALS["base"]->conexion-> 
-                query("UPDATE `Publicaciones` SET `gustaSi`= '".($gustaSiTotal)."' - 1) "
+                query("UPDATE `Publicaciones` SET `gustaSi`= `gustaSi` - 1 "
                     . "WHERE id = '".$publicacionSi."'");  
 
                 echo !empty($actualizarEliminar) ? "Gusta Si acutalizado." : "<span>Gusta Si no actualizado.</span>";
@@ -59,7 +60,7 @@ class GustaSi {
                 echo !empty($acualizarInsertar) ? "Gusta Si acutalizado." : "<span>Gusta Si no actualizado.</span>";
             } elseif($gustaSi and !$gustaNo) {
                 $eliminar = $GLOBALS["base"]->conexion-> 
-                query("UPDATE `Publicaciones` SET `gustaSi`= '". is_numeric($gustaSiTotal - 1)."' "
+                query("UPDATE `Publicaciones` SET `gustaSi`= `gustaSi` - 1 "
                     . "WHERE id = '".$publicacionSi."'");  
 
                 echo !empty($eliminar) ? "Gusta Si acutalizado." : "<span>Gusta Si no actualizado.</span>";
@@ -82,6 +83,7 @@ class GustaSi {
 
                 echo !empty($acualizar) ? "Gusta Si acutalizado." : "<span>Gusta Si no actualizado.</span>";
             }
+            
         } else {
             echo 'Se ha producido un error';
         }

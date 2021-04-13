@@ -28,7 +28,9 @@ gustaSI(id) {
                   throw "Error en la llamada";
               }
           }).then(function (texto) {
-              console.log(publicacionSi + "" + texto);
+            Obtener.publicacion();
+  
+            console.log(publicacionSi + "" + texto);
         }).catch(function (error) {
             console.log(error);
         });
@@ -72,30 +74,30 @@ gustaNo(id) {
 
 //var botonGusta = document.querySelector("#gusta-si-icono");
 
-function 
-gustas() {
-    fetch('../../sql/red-social/Gustas.php', {
-        method: 'GET'
-    }).then(function (response) {
-        if(response.ok) { return response.json(); } 
-        else { console.log("..........................................."); }
-    }).then(function (json) {
-        jsonObject = json;
-
-        console.log(jsonObject);
-
-        let salida = "";
-
-        for (let i in jsonObject) {;
-            salida += `<span>${jsonObject[i].gustaSi}</span>`;
-        }
-
-        document.querySelectorAll(".gustas").innerHTML = salida;
-    }).catch(function (err) {
-        console.log('Fetch problem: ' + err.message);
-    });
-}
-gustas();
+//function 
+//gustas() {
+//    fetch('../../sql/red-social/Gustas.php', {
+//        method: 'GET'
+//    }).then(function (response) {
+//        if(response.ok) { return response.json(); } 
+//        else { console.log("..........................................."); }
+//    }).then(function (json) {
+//        jsonObject = json;
+//
+//        console.log(jsonObject);
+//
+//        let salida = "";
+//
+//        for (let i in jsonObject) {;
+//            salida += `<span>${jsonObject[i].gustaSi}</span>`;
+//        }
+//
+//        document.querySelectorAll(".gustas").innerHTML = salida;
+//    }).catch(function (err) {
+//        console.log('Fetch problem: ' + err.message);
+//    });
+//}
+//gustas();
 
 
 

@@ -46,7 +46,7 @@ class Obtener {
     </form>
 </section>
 <section class="gustas">
-    <!--span class="gustas"></span-->
+    <span class="gustas">${jsonObject[i].gustaSi}</span>
 </section>
 <section>
      <form action="" method="POST" name="gusta-no${jsonObject[i].id}" id="gusta-no${jsonObject[i].id}">
