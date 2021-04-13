@@ -79,21 +79,22 @@
                 <section class="contenedor">
                     <img class="foto" alt=""/>
                     <section class="perfil-nav">
-<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="amigo" id="amigo">
-    <input type="text" value="" hidden="" name="yo" id="yo">
-    <input type="text" value="" hidden="" name="usuario" id="usuario">
-    <input type="text" value="" hidden="" name="amigos" id="amigos">
-<!--    <label for="amigos"><i class='fas fa-user-alt'></i></label>
-    <input type="submit" name="amigos" id="amigos" value="" hidden="">-->
-    <button type="submit" name="" id="amigo-boton" value="">
-        <i id="amistad-icono" class=''></i>
-    </button>
-</form>
-<!--                        
-<button style='font-size:24px'>Button <i class='fas fa-user-alt'></i></button>
-<button style='font-size:24px'>Button <i class='fas fa-user-check'></i></button>
-<button><i class='fas fa-user-friends'></i></button>
-                        <button><i class='fas fa-comments'></i></button>-->
+                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="amigo" id="amigo">
+                            <input type="text" value="" hidden="" name="yo" id="yo">
+                            <input type="text" value="" hidden="" name="usuario" id="usuario">
+                            <input type="text" value="" hidden="" name="amigos" id="amigos">
+                            <button type="submit" name="" id="amigo-boton" value="">
+                                <i id="amistad-icono" class=''></i>
+                            </button>
+                        </form>
+                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="" id="">
+                            <input type="text" value="" hidden="" name="" id="">
+                            <input type="text" value="" hidden="" name="" id="">
+                            <input type="text" value="" hidden="" name="" id="">
+                            <button type="submit" name="" id="" value="">
+                                <i id="" class='fas fa-comments'></i>
+                            </button>
+                        </form>
                     </section>
                 </section>
             </main>

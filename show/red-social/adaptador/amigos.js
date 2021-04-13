@@ -31,17 +31,6 @@ amigo.addEventListener('submit', function(e) {
     });
 });
 
-//function 
-//amistad() {
-//    if (jsonObject[0].amigos == 'Conocido') {
-//        botonAmistad.className =  'fas fa-user-check';
-//    } else if (jsonObject[0].amigos == 'Amigo') {
-//        botonAmistad.className =  'fas fa-user-friends';
-//    } else if (jsonObject[0].amigos == '') {
-//        botonAmistad.className = 'fas fa-user-alt';
-//    } 
-//}
-//var botonAmigo = document.querySelector('#amigo-boton').addEventListener('load', amistad());
 var botonAmistad = document.querySelector("#amistad-icono");
 
 function 

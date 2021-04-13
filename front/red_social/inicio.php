@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../front-css/red-social/header.css">
     <link rel="stylesheet" href="../../front-css/red-social/nav.css"/>
     <link rel="stylesheet" href="../../front-css/red-social/main.css"/>
+    <!--<link rel="stylesheet" href="../../front-css/red-social/article.css"/>-->
     <link rel="stylesheet" href="../../front-css/red-social/article.css"/>
     <link rel="stylesheet" href="../../front-css/red-social/aside.css"/>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -149,8 +150,8 @@
                 </div>
             </main>
             <article>
-                <section>
-                    <section class="articulo-head">
+                <section class="publicacion">
+<!--                    <section class="articulo-head">
                         <section>
                             <img src="../../front-multimedia/red-social/imagen/mist.jpg" class="portada" alt="alt"/>
                             <section>
@@ -178,7 +179,7 @@
                         <section><button><i class='fas fa-thumbs-down'></i></button></section><section><span class="">100</span></section>
                         <section><button><i class='fas fa-comments'></i></button></section><section><span class="">100</span></section>
                         <section><button><i class='fas fa-share'></i></button></section><section><span class="">100</span></section>
-                    </section>
+                    </section>-->
                 </section>
             </article>
         </section>
@@ -206,5 +207,7 @@
     </section>
 <script src="../../show/red-social/header.js" async=""></script>
 <script src="../../show/red-social/main.js" defer=""></script>
+<script src="../../show/red-social/adaptador/publicacionInicio.js" defer=""></script>
+<script src="../../show/red-social/adaptador/gusta.js" defer=""></script>
 </body>
 </html> 
