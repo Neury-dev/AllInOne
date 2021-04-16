@@ -97,12 +97,16 @@ compartir(id) {
 
         let compartido      = document.forms["compartir"+id]["compartido"].value;
         let usuario         = document.forms["compartir"+id]["usuario"].value;
+        let articulo        = document.forms["compartir"+id]["articulo"].value;
+        let imagen          = document.forms["compartir"+id]["imagen"].value;
         let compartirBoton  = document.forms["compartir"+id]["compartir-boton"].value;
         
         let datos = new FormData(compartir);
 
         datos.append('compartido', compartido);
         datos.append('usuario', usuario);
+        datos.append('articulo', articulo);
+        datos.append('imagen', imagen);
         datos.append('compartir-boton', compartirBoton);
         
         fetch('../../sql/red-social/Compartir.php', {

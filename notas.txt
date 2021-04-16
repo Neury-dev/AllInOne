@@ -6,7 +6,6 @@ https://www.php-fig.org/
         https://www.youtube.com/playlist?list=PLEcGx73Bpko0BZidkP7pgZsAsL1pPG2RU    - 19 - fin
         https://www.youtube.com/playlist?list=PLEcGx73Bpko0GMYaPMG4gMWz-2hzYnwUP    - 1
         https://www.youtube.com/playlist?list=PLFE4xF86y6sCsYfTud5DfDPWAH10u7Jhu    - 
-        https://www.youtube.com/playlist?list=PL6gAhYl_ttxaa0HDD-CSyqr1JHwPLw7Sc    - 
     - Iniciar o Registro
         https://www.w3schools.com/howto/howto_css_social_login.asp
         https://www.w3schools.com/howto/howto_css_form_icon.asp

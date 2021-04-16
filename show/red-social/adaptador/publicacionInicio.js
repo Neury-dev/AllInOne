@@ -60,11 +60,23 @@ class Obtener {
 <section>
     <span>${jsonObject[i].gustaNo}</span>
 </section>
-                    <!--section><button><i class='fas fa-comments'></i></button></section><section><span class="">100</span></section-->
+<section>
+    <form action="" method="POST" name="gusta-no${jsonObject[i].id}" id="gusta-no${jsonObject[i].id}">
+        <input type="text" value="${jsonObject[i].id}" hidden="" name="publicacion-no">
+        <button type="submit" name="gusta-no-boton" value="No" onclick="gustaNo(${jsonObject[i].id})">
+            <i id="gusta-no-icono" class='fas fa-comments'></i>
+        </button>
+    </form>
+</section>
+<section>
+    <span>100</span>
+</section>
 <section>
     <form action="" method="POST" name="compartir${jsonObject[i].id}" id="compartir${jsonObject[i].id}">
         <input type="text" hidden="" name="compartido" value="${jsonObject[i].id}">
         <input type="text" hidden="" name="usuario" value="${jsonObject[i].idUsuario}">
+        <input type="text" hidden="" name="articulo" value="${jsonObject[i].publicacion}">
+        <input type="text" hidden="" name="imagen" value="${jsonObject[i].imagen}">
         <button type="submit" name="compartir-boton" value="No" onclick="compartir(${jsonObject[i].id})">
             <i id="compartir-icono" class='fas fa-share'></i>
         </button>

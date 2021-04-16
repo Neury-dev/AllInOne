@@ -208,6 +208,6 @@
 <script src="../../show/red-social/header.js" async=""></script>
 <script src="../../show/red-social/main.js" defer=""></script>
 <script src="../../show/red-social/adaptador/publicacionInicio.js" defer=""></script>
-<script src="../../show/red-social/adaptador/gusta.js" defer=""></script>
+<script src="../../show/red-social/adaptador/publicacionMenuInicio.js" defer=""></script>
 </body>
 </html> 

@@ -44,23 +44,7 @@ class PublicacionInicio {
         }
         
         exit(json_encode($this->obtenidos));
-        
-//        if ($this->obtenidos) {
-//            exit(json_encode($resultado)); 
-//        } else {
-//            exit(json_encode([array(
-//                        "id"            => '',
-//                        "idUsuario"     => '',
-//                        "id"            => '',
-//                        "nombre"        => '',
-//                        "foto"          => '',
-//                        "publicacion"   => '',
-//                        "imagen"        => '',
-//                        "fecha"         => ''
-//                    )]));
-//        }
     }
-
 }
 
 $publicacion = new PublicacionInicio();
