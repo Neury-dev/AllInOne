@@ -28,6 +28,8 @@ class PublicacionInicio {
                     $fecha = DateTime::createFromFormat('Y-m-d H:i:s', $valor['fecha']);
                     array_push($this->obtenidos, array(
                         "id"            => $valor["id"],
+                        "por"           => $valor["por"],
+                        "autor"         => $valor["autor"],
 //                        "idUsuario"     => $valor["idUsuario"],
                         "idUsuario"     => $usuario["id"],
                         "nombre"        => $usuario["nombre"],

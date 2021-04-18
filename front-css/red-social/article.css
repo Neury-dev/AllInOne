@@ -41,6 +41,10 @@
     font-size: 0.90em;
     font-weight: bold;
 }
+.n-grid > .area-2 > article > section > article > .articulo-head > section > h2 > span {
+    color: var(--n-color-dos-uno);
+    font-weight: normal;
+}
 /*.n-grid > .area-2 > article > section > article > .articulo-head > section > span {
     color: var(--n-color-dos);
     font-family: var(--n-fuente-dos);
@@ -74,11 +78,14 @@
     flex-direction: row;
     justify-content: flex-end;  
 }
-.n-grid > .area-2 > article > section > article > .articulo-footer  > section {
-    /*width: 2em;*/
+.n-grid > .area-2 > article > section > article > .articulo-footer  > section > button {
+    color: var(--n-color-dos);
+    background-color: var(--n-color);
+    font-size: 1.30em;
+    border: none;
 }
 .n-grid > .area-2 > article > section > article > .articulo-footer  > section > form > button {
-    /*color: var(--n-color-dos);*/
+    color: var(--n-color-dos);
     background-color: var(--n-color);
     font-size: 1.30em;
     border: none;

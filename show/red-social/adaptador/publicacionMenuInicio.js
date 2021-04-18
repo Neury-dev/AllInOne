@@ -1,4 +1,5 @@
 var jsonObject;
+//var jsonComentado;
 /*
     * GustaSi 
  */
@@ -86,6 +87,108 @@ gustaNo(id) {
     });
 }
 /*
+    * Comentar
+ */
+function 
+comentado(id) {
+    const form = document.querySelector("#comentario"+id);
+    var x = document.getElementById("comentario-"+id);
+    
+//    if (x.className.indexOf("display") == -1) {
+//        x.className = x.className.replace("display", "");
+//    } else {
+//        x.className += " display";
+//    }
+    
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        let usuario         = document.forms["comentario"+id]["usuario"].value;
+        let publicacion     = document.forms["comentario"+id]["publicacion"].value;
+        let comentario      = document.forms["comentario"+id]["comentario"].value;
+        let comentar        = document.forms["comentario"+id]["comentar"].value;
+        
+        let datos = new FormData(form);
+
+        datos.append('usuario', usuario);
+        datos.append('publicacion', publicacion);
+        datos.append('comentario', comentario);
+        datos.append('comentar', comentar);
+        
+        fetch('../../sql/red-social/Comentar.php', {
+            method: 'POST',
+            body: datos
+        }).then(function (response) {
+            if (response.ok) {
+                return response.text();
+            } else {
+                throw "Error en la llamada";
+            }
+        }).then(function (texto) {
+            Obtener.publicacion();
+            RePublicar.datos();
+            console.log(usuario + " " + texto);
+        }).catch(function (error) {
+            console.log(error);
+        });
+    });
+}
+//function 
+//comentados(id) {
+//    const comentados = document.querySelector("#comentados" + id);
+//  
+//    comentados.addEventListener('submit', function (e) {
+//        e.preventDefault();
+//        
+//        let publicacion = document.forms["comentados" + id]["publicacion"].value;
+//        let comentar = document.forms["comentados" + id]["comentar"].value;
+//    
+//        let datos = new FormData(comentados);
+//    
+//        datos.append('publicacion', publicacion);
+//        datos.append('comentar', comentar);
+//    
+//        fetch('../../sql/red-social/ComentariosInicio.php', {
+//            method: 'POST',
+//            body: datos
+//        }).then(function (response) {
+//            if (response.ok) {
+//                return response.json();
+//            } else {
+//                throw "Error en la llamada";
+//            }
+//        }).then(function (texto) {
+////            Obtener.publicacion();
+////            RePublicar.datos();
+//
+//            jsonComentado = json;
+//    
+//            let salida = "";
+//        
+//            for (let i in jsonComentado) {
+//                console.log(jsonComentado);
+////            console.log("id-" + jsonObject[i].id + "idU-" + jsonObject[i].idUsuario);
+//    salida += `
+//                <!-- 
+//                    Comentarios 
+//                -->
+//
+//                <div class="comentario">
+//                    <img src="../../front-multimedia/red-social/imagen/avatar3.png" alt="Avatar" style="width:100%;">
+//                    <p>${jsonComentado[i].comentario}</p>
+//                    <span class="time-right">${jsonComentado[i].fecha}</span>
+//                </div>
+//                            `;
+//    //        document.querySelector("#comentado-"+jsonObject[i].id).innerHTML = salida;
+//            }
+//  document.querySelector("#comentado-"+publicacion).innerHTML = salida;
+//
+//        }).catch(function (error) {
+//            console.log(error);
+//        });
+//    });
+//}
+/*
     * Compartir
  */
 function 
@@ -96,6 +199,7 @@ compartir(id) {
         e.preventDefault();
 
         let compartido      = document.forms["compartir"+id]["compartido"].value;
+        let nombre          = document.forms["compartir"+id]["nombre"].value;
         let usuario         = document.forms["compartir"+id]["usuario"].value;
         let articulo        = document.forms["compartir"+id]["articulo"].value;
         let imagen          = document.forms["compartir"+id]["imagen"].value;
@@ -104,6 +208,7 @@ compartir(id) {
         let datos = new FormData(compartir);
 
         datos.append('compartido', compartido);
+        datos.append('nombre', nombre);
         datos.append('usuario', usuario);
         datos.append('articulo', articulo);
         datos.append('imagen', imagen);
@@ -119,8 +224,9 @@ compartir(id) {
                 throw "Error en la llamada";
             }
         }).then(function (texto) {
-            Obtener.publicacion();
-            RePublicar.datos();
+//            Obtener.publicacion();
+//            RePublicar.datos();
+
             console.log(compartido + " " + usuario + " " + texto);
         }).catch(function (error) {
             console.log(error);

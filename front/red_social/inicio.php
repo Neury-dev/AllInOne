@@ -12,7 +12,91 @@
     <link rel="stylesheet" href="../../front-css/red-social/aside.css"/>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <style>
+        .w3-hide {display:none!important}
+        .w3-show {display:block!important}
+        .display {display:block!important}
+        .w3-container {padding:0.01em 16px}
+        .w3-container:after,.w3-container:before{content:"";display:table;clear:both}
+        /*.w3-theme-d1 {color:#fff !important; background-color:#57707d !important}*/
        
+        /*
+            Comentarios
+        */
+        .comentario {
+            border: 2px solid #dedede;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .darker {
+            border-color: #ccc;
+            background-color: #ddd;
+        }
+
+        .comentario::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .comentario > img {
+            float: left;
+            max-width: 60px;
+            width: 100%;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+
+        .comentario > img.right {
+            float: right;
+            margin-left: 20px;
+            margin-right:0;
+        }
+
+        .time-right {
+            float: right;
+            color: #aaa;
+        }
+
+        .time-left {
+            float: left;
+            color: #999;
+        }
+        /*
+            Comentar
+        */
+        textarea {
+            color: var(--n-color);
+            background-color: var(--n-color-tres);
+            width: 100%;
+            border: none;
+            border-radius: 0.40em;
+            padding: 0.625em;
+            resize: none;
+        }
+        textarea:focus {
+            outline: none;
+        }
+        #comentar {
+            color: var(--n-color);
+            background-color: var(--n-color-dos);
+            font-family: var(--n-fuente);
+            font-size: 0.90em;
+            width: 100%;
+            margin-top: 0.50em;
+            border: none;
+            border-radius: 0.50em;
+            padding: 0.50em;
+            outline: none;
+            cursor: pointer;
+        }
+        #comentar:hover {
+            color: var(--n-color);
+            background-color: var(--n-color);
+            text-shadow: var(--n-sombra-de-texto-dos);
+        }
     </style>
 </head>
 <body>
@@ -100,7 +184,7 @@
     - Opción para remplazar el JS.
     https://www.w3schools.com/cssref/sel_target.asp
 -->
-                <p>Publicar?</p>
+<!--                <p>Publicar?</p>
                 <section class="main-nav">
                     <button class="tablinks" onclick="openCity(event, 'n-articulo')"><i class='fas fa-file-alt'></i></button>
                     <button class="tablinks" onclick="openCity(event, 'n-imagen')"><i class='fas fa-images'></i></button>
@@ -147,7 +231,7 @@
                         <input type="text" disabled="">
                         <button type="submit" name="subir-archivo" id="subir-archivo" value="Video">Subir</button>
                     </form>
-                </div>
+                </div>-->
             </main>
             <article>
                 <section class="publicacion">
@@ -209,5 +293,6 @@
 <script src="../../show/red-social/main.js" defer=""></script>
 <script src="../../show/red-social/adaptador/publicacionInicio.js" defer=""></script>
 <script src="../../show/red-social/adaptador/publicacionMenuInicio.js" defer=""></script>
+<!--<script src="../../show/red-social/adaptador/comentariosInicio.js" defer=""></script>-->
 </body>
 </html> 

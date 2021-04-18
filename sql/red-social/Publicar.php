@@ -64,8 +64,8 @@ if(isset($_POST["subir"])) {
             
             if ($_FILES['imagen']['tmp_name']) {
                 $sql = $GLOBALS["base"]->conexion-> 
-                query("INSERT INTO `Publicaciones`(`idUsuario`, `publicacion`, `fecha`, `gustaSi`, `gustaNo`, `compartida`) "
-                    . "VALUES ('".$_SESSION["johnDoe"]."', '".$descripcion."', NOW(), '0', '0', '0')"); 
+                query("INSERT INTO `Publicaciones`(`idUsuario`, `publicacion`, `fecha`, `gustaSi`, `gustaNo`, `compartida`, `por`, `autor`) "
+                    . "VALUES ('".$_SESSION["johnDoe"]."', '".$descripcion."', NOW(), '0', '0', '0', ' ', ' ')"); 
 
                 if ($sql === true) {
                     $sql3 = $GLOBALS["base"]->conexion-> 

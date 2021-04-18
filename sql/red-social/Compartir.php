@@ -16,6 +16,7 @@ class Compartir {
     publicacion() {
         if(isset($_POST["compartir-boton"])) {
             $this->ok   = $_POST["compartido"];
+            $nombre     = $_POST["nombre"];
             $usuario    = $_POST["usuario"];
             $articulo   = $_POST["articulo"];
             $imagen     = $_POST["imagen"];
@@ -50,8 +51,8 @@ class Compartir {
                 }
             } elseif(empty($compartida)) {
                 $sqlCompartir = $GLOBALS["base"]->conexion-> 
-                query("INSERT INTO `Publicaciones`(`idUsuario`, `publicacion`, `fecha`, `gustaSi`, `gustaNo`, `compartida`) "
-                    . "VALUES ('".$_SESSION["johnDoe"]."', '".$articulo."', NOW(), '0', '0', '0')");
+                query("INSERT INTO `Publicaciones`(`idUsuario`, `publicacion`, `fecha`, `gustaSi`, `gustaNo`, `compartida`, `por`, `autor`) "
+                    . "VALUES ('".$_SESSION["johnDoe"]."', '".$articulo."', NOW(), '0', '0', '0', 'por', '".$nombre."')");
 
                 $this->ok2 = $GLOBALS["base"]->conexion->insert_id;
                 
