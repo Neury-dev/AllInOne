@@ -3,46 +3,66 @@ session_start();
 require_once '../Conexion.php';
 
 class PublicacionInicio {
-
     private $sql;
     private $resultado;
     private $obtenidos;
+    private $comentariosObtenidos;
 
     public function
     publicada() {
         $this->obtenidos = array();
+        $this->comentariosObtenidos = array();
         
-        $this->sql = $GLOBALS["base"]->conexion->
-        query("SELECT Publicaciones.*, Imagenes.imagen FROM Publicaciones RIGHT JOIN Imagenes "
-            . "ON Publicaciones.id = Imagenes.publicacion ORDER BY Publicaciones.id DESC");
-        
+        $this->sql = $GLOBALS["base"]->conexion->query("SELECT * FROM `Publicaciones` ORDER BY id DESC");
         $this->resultado = $this->sql->fetch_all(MYSQLI_ASSOC);
 
         foreach ($this->resultado as $valor) {
-//            $this->sql = $GLOBALS["base"]->conexion->query("SELECT imagen FROM `Imagenes` WHERE idPublicacion = '" . $valor["Publicaciones.id"] . "'");
-//            $this->resultado = $this->sql->fetch_all(MYSQLI_ASSOC);
-//
-//            foreach ($this->resultado as $imagen) {
-                $fecha = DateTime::createFromFormat('Y-m-d H:i:s', $valor['Publicaciones.fecha']);
-                
-                array_push($this->obtenidos, array(
-                    "id"            => $valor["Publicaciones.id"],
-                    "por"           => $valor["Publicaciones.por"],
-                    "autor"         => $valor["Publicaciones.autor"],
-                    "idUsuario"     => $valor["Publicaciones.idUsuario"],
-//                        "idUsuario"     => $usuario["Usuarios.id"],
-//                    "nombre"        => $usuario["Usuarios.nombre"],
-//                    "foto"          => $usuario["Usuarios.foto"],
-                    "publicacion"   => $valor["Publicaciones.publicacion"],
-                    "imagen"        => $valor["Imagenes.imagen"],
-                    "fecha"         => $fecha->format('d M Y'),
-                    "gustaSi"       => $valor["Publicaciones.gustaSi"],
-                    "gustaNo"       => $valor["Publicaciones.gustaNo"],
-//                    "comentarios"   => $valor["Publicaciones.comentarios"],
-                    "compartida"    => $valor["Publicaciones.compartida"]
+            
+            
+            $this->sql = $GLOBALS["base"]->conexion->query("SELECT id, nombre, foto FROM `Usuarios` WHERE id = '" . $valor["idUsuario"] . "'");
+            $this->resultado = $this->sql->fetch_all(MYSQLI_ASSOC);
+
+        foreach ($this->resultado as $usuario) {
+            $this->sql = $GLOBALS["base"]->conexion->query("SELECT imagen FROM `Imagenes` WHERE idPublicacion = '" . $valor["id"] . "'");
+            $this->resultado = $this->sql->fetch_all(MYSQLI_ASSOC);
+
+        foreach ($this->resultado as $imagen) {
+            
+            $sqlComentarios = $GLOBALS["base"]->conexion->
+            query("SELECT * FROM `Comentarios` WHERE `publicacion` = '".$valor["id"]."'");
+            $comentarios = $sqlComentarios->fetch_all(MYSQLI_ASSOC);
+            
+            foreach ($comentarios as $comentario) {
+                array_push($this->comentariosObtenidos, array(
+                    "yo"            => $comentario["yo"],
+                    "publicacion"   => $comentario["publicacion"],
+                    "comentario"    => $comentario["comentario"],
+                    "fecha"         => $comentario["fecha"],
                 ));
-//            }
+            }
+            
+            $fecha = DateTime::createFromFormat('Y-m-d H:i:s', $valor['fecha']);
+
+            array_push($this->obtenidos, array(
+                "id"            => $valor["id"],
+                "por"           => $valor["por"],
+                "autor"         => $valor["autor"],
+//                        "idUsuario"     => $valor["idUsuario"],
+                "idUsuario"     => $usuario["id"],
+                "nombre"        => $usuario["nombre"],
+                "foto"          => $usuario["foto"],
+                "publicacion"   => $valor["publicacion"], 
+                    "comentario" => array($this->comentariosObtenidos),
+                "imagen"        => $imagen["imagen"],
+                "fecha"         => $fecha->format('d M Y'),
+                "gustaSi"       => $valor["gustaSi"],
+                "gustaNo"       => $valor["gustaNo"],
+                "compartida"    => $valor["compartida"]
+            ));
         }
+        }
+        }
+        
         exit(json_encode($this->obtenidos));
     }
 }
