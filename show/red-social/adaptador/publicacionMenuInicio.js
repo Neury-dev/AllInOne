@@ -6,7 +6,7 @@ var jsonObject;
 class RePublicar {
     static
     datos() {
-        fetch('../../sql/red-social/PublicacionInicio.php').then(function (response) {
+        fetch('../../sql/red-social/PublicacionInicio_1.php').then(function (response) {
             return response.json();
         }).then(function (json) {
             jsonObject = json;
@@ -17,6 +17,9 @@ class RePublicar {
         });
     }
 }
+/*
+    * GustaSi 
+ */
 function 
 gustaSI(id) {
     const gustaSi = document.querySelector("#gusta-si"+id);
@@ -92,7 +95,7 @@ gustaNo(id) {
 function 
 comentado(id) {
     const form = document.querySelector("#comentario"+id);
-    var x = document.getElementById("comentario-"+id);
+//    var x = document.getElementById("comentario-"+id);
     
 //    if (x.className.indexOf("display") == -1) {
 //        x.className = x.className.replace("display", "");
@@ -224,9 +227,8 @@ compartir(id) {
                 throw "Error en la llamada";
             }
         }).then(function (texto) {
-//            Obtener.publicacion();
-//            RePublicar.datos();
-
+            Obtener.publicacion();
+            RePublicar.datos();
             console.log(compartido + " " + usuario + " " + texto);
         }).catch(function (error) {
             console.log(error);

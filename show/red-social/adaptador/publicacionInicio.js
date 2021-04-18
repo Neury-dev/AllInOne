@@ -5,7 +5,7 @@ fetch('../../sql/red-social/PublicacionInicio_1.php').then(function (response) {
     return response.json();
 }).then(function (json) {
     console.log(json);
-    console.log("Cero: " + json[0].comentario[0][0].comentario);
+//    console.log("Cero: " + json[0].comentario[0][0].comentario);
     jsonObject = json;
 
     Obtener.publicacion();
@@ -38,8 +38,8 @@ class Obtener {
             salida += "<section class='articulo-head'>";
                 salida += "<section>";
                     salida += "<img src='../../front-multimedia/red-social/imagen/"+jsonObject[i].foto + "'class='foto' alt='alt'/>";
-                    salida += "<span>" + jsonObject[i].fecha + "De</span>";
-                    salida += "<h2>" + jsonObject[i].nombre + "<span>" + jsonObject[i].por + "</span>" + jsonObject[i].autor + "</h2>";
+                    salida += "<span>" + jsonObject[i].fecha + "De </span>";
+                    salida += "<h2>" + jsonObject[i].nombre + "<span> " + jsonObject[i].por + " </span>" + jsonObject[i].autor + "</h2>";
                 salida += "</section>";  
                 salida += "<section>";
                     salida += "<button><i class='fas fa-ellipsis-v'></i></button>";
@@ -53,7 +53,7 @@ class Obtener {
             salida += "<hr>";
             salida += "<section class='articulo-footer'>";
             salida += "<section>";
-                salida += "<form action='' method='POST' name='gusta-si"+jsonObject[i].id +  "id='gusta-si"+jsonObject[i].id + "'>";
+                salida += "<form action='' method='POST' name='gusta-si"+jsonObject[i].id + "'id='gusta-si"+jsonObject[i].id + "'>";
                     salida += "<input type='text' value='" + jsonObject[i].id + "' hidden='' name='publicacion-si'>";
                     salida += "<button type='submit' name='gusta-si-boton' value='Si' onclick='gustaSI(" + jsonObject[i].id + ")'>";
                         salida += "<i id='gusta-si-icono' class='fas fa-star'></i>";
@@ -83,7 +83,7 @@ class Obtener {
 //                salida += "</form>";
             salida += "</section>";
             salida += "<section>";
-                salida += "<span>100</span>";
+                salida += "<span>" + jsonObject[i].comentarios + "</span>";
             salida += "</section>";
             salida += "<section>";
                 salida += "<form action='' method='POST' name='compartir" + jsonObject[i].id + "' id='compartir" + jsonObject[i].id + "'>";
@@ -105,7 +105,14 @@ class Obtener {
 salida += "<!-- Comentarios -->";
         salida += "<div class='w3-card w3-round'>";
             salida += "<div class='w3-white'>";
-                salida += "<div id='comentario-" + jsonObject[i].id + "' class='w3-hide w3-container'>";
+            
+
+/*
+    * style='display: block' o class='w3-hide'
+*/
+            
+            
+                salida += "<div id='comentario-" + jsonObject[i].id + "' class='w3-container'>";
                     salida += "<section id='comentado-" + jsonObject[i].id + "' class='comentado-" + jsonObject[i].id + "'>";
 for (let ii in jsonObject[i].comentario) {
 console.log("Dentro: " + jsonObject[i].comentario[ii]);
