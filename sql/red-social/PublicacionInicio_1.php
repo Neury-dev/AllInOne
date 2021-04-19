@@ -29,12 +29,20 @@ class PublicacionInicio {
             $comentarios = $sqlComentarios->fetch_all(MYSQLI_ASSOC);
             
             foreach ($comentarios as $comentario) {
+                $sqlComentarioImgs = $GLOBALS["base"]->conexion->query("SELECT foto FROM `Usuarios` WHERE id = '" . $comentario["yo"] . "'");
+                $comentarioImgs = $sqlComentarioImgs->fetch_all(MYSQLI_ASSOC);
+
+            foreach ($comentarioImgs as $comentarioImg) {
+                $fechaDeComentario = DateTime::createFromFormat('Y-m-d H:i:s', $comentario["fecha"]);
+                
                 array_push($this->comentariosObtenidos, array(
                     "yo"            => $comentario["yo"],
                     "publicacion"   => $comentario["publicacion"],
                     "comentario"    => $comentario["comentario"],
-                    "fecha"         => $comentario["fecha"],
+                    "foto"        => $comentarioImg["foto"],
+                    "fecha"         => $fechaDeComentario->format('d M Y')
                 ));
+            }
             }
             
             $fecha = DateTime::createFromFormat('Y-m-d H:i:s', $valor['fecha']);

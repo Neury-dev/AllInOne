@@ -1,5 +1,4 @@
-var jsonObject;
-//var jsonComentado;
+var jsonObject, comentados;
 /*
     * GustaSi 
  */
@@ -10,7 +9,7 @@ class RePublicar {
             return response.json();
         }).then(function (json) {
             jsonObject = json;
-
+    
             Obtener.publicacion();
         }).catch(function (err) {
             console.log('Fetch problem: ' + err.message);
@@ -45,7 +44,7 @@ gustaSI(id) {
                 throw "Error en la llamada";
             }
         }).then(function (texto) {
-            Obtener.publicacion();
+//            Obtener.publicacion();
             RePublicar.datos();
             console.log(publicacionSi + "" + texto);
         }).catch(function (error) {
@@ -81,7 +80,7 @@ gustaNo(id) {
                 throw "Error en la llamada";
             }
         }).then(function (texto) {
-            Obtener.publicacion();
+//            Obtener.publicacion();
             RePublicar.datos();
             console.log(publicacionNo + "" + texto);
         }).catch(function (error) {
@@ -93,15 +92,15 @@ gustaNo(id) {
     * Comentar
  */
 function 
+comentar(id) {
+    comentados = document.getElementById("comentarios-"+id);
+
+    if (comentados.className.indexOf("mostrar") == -1) { comentados.className += " mostrar"; } 
+    else { comentados.className = comentados.className.replace("mostrar", ""); }
+}
+function 
 comentado(id) {
     const form = document.querySelector("#comentario"+id);
-//    var x = document.getElementById("comentario-"+id);
-    
-//    if (x.className.indexOf("display") == -1) {
-//        x.className = x.className.replace("display", "");
-//    } else {
-//        x.className += " display";
-//    }
     
     form.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -128,9 +127,17 @@ comentado(id) {
                 throw "Error en la llamada";
             }
         }).then(function (texto) {
-            Obtener.publicacion();
+//            Obtener.publicacion();
             RePublicar.datos();
-            console.log(usuario + " " + texto);
+//            setTimeout(function(){ 
+//                RePublicar.datos(); 
+//            }, 100);
+            setTimeout(function(){ 
+                comentados = document.getElementById("comentarios-"+publicacion);
+                
+                if (comentados.className.indexOf("mostrar") == -1) { comentados.className += " mostrar"; } 
+                else { comentados.className = comentados.className.replace("mostrar", ""); }
+            }, 100);
         }).catch(function (error) {
             console.log(error);
         });

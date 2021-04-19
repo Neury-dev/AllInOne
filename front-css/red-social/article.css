@@ -95,3 +95,64 @@
     font-size: 0.90em;
     margin: 0em 0.70em 0em 0em;
 }
+/*
+    Comentarios
+*/
+.ocultar {display:none}
+.mostrar {display:block!important}
+.comentario {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+.comentario::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.comentario > img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+.time-right {
+    float: right;
+    color: #aaa;
+}
+/*
+    Comentar
+*/
+textarea {
+    color: var(--n-color);
+    background-color: var(--n-color-tres);
+    width: 100%;
+    border: none;
+    border-radius: 0.40em;
+    padding: 0.625em;
+    resize: none;
+}
+textarea:focus {
+    outline: none;
+}
+#comentar {
+    color: var(--n-color);
+    background-color: var(--n-color-dos);
+    font-family: var(--n-fuente);
+    font-size: 0.90em;
+    width: 100%;
+    margin-top: 0.50em;
+    border: none;
+    border-radius: 0.50em;
+    padding: 0.50em;
+    outline: none;
+    cursor: pointer;
+}
+#comentar:hover {
+    color: var(--n-color);
+    background-color: var(--n-color);
+    text-shadow: var(--n-sombra-de-texto-dos);
+}
