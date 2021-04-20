@@ -1,0 +1,121 @@
+@import url("http://localhost/AllInOne/front-css/root.css");
+/* 
+    Created on : 20 abr. 2021, 14:39:58
+    Author     : desarrollador
+*/
+/*
+    * mensajes
+*/
+.container {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.darker {
+    border-color: #ccc;
+    background-color: #ddd;
+}
+
+.form-container::after, .container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.container img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.container img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+}
+
+.time-right {
+    float: right;
+    color: #aaa;
+}
+
+.time-left {
+    float: left;
+    color: #999;
+}
+/*
+    * formulario
+*/
+.person > section {
+    display: flex;
+    flex-direction: column;
+/*    flex-wrap: wrap;
+    align-content: space-around;*/
+}
+.form-container {
+    z-index: 4;
+    background-color: var(--n-color);
+    width: 100%;
+    border-radius: 0.50em;
+    padding: 10px;
+    /*box-shadow: var(--n-sombra-caja-dos);*/
+}
+.form-container label {
+    color: var(--n-color-dos);
+    font-family: var(--n-fuente);
+    font-size: 0.80em;
+}
+/* Full-width textarea */
+.form-container textarea {
+    color: var(--n-color-dos);
+    background: var(--n-color-tres-uno);
+    font-family: var(--n-fuente-dos);
+    font-size: 0.80em;
+    width: 100%;
+    /*min-height: 200px;*/
+    margin: 5px 0 22px 0;
+    border: none;
+    border-radius: 0.50em;
+    padding: 15px;
+    resize: none;
+}
+.form-container textarea:focus {
+    color: var(--n-color);
+    background-color: var(--n-color-tres);
+    outline: none;
+}
+/* Set a style for the submit/send button */
+.form-container .btn {
+    font-family: var(--n-fuente);
+    font-size: 0.80em;
+    width: 100%;
+    margin-bottom: 0.50em;
+    border: none;
+    border-radius: 0.50em;
+    padding: 0.40em;
+}
+.form-container .send {
+    color: var(--n-color);
+    background-color: var(--n-color-verde);
+}
+.form-container .send:hover {
+    color: var(--n-color-verde);
+    background-color: var(--n-color);
+    text-shadow: var(--n-sombra-verde);
+    box-shadow: var(--n-sombra-caja-verde);
+}
+.form-container .cancel {
+    color: var(--n-color);
+    background-color: var(--n-color-rojo);
+}
+.form-container .cancel:hover {
+    color: var(--n-color-rojo);
+    background-color: var(--n-color);
+    text-shadow: var(--n-sombra-roja);
+    box-shadow: var(--n-sombra-caja-roja);
+}

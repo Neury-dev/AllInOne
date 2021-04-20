@@ -4,6 +4,7 @@ require_once 'Conexion.php';
 
 session_start();
 session_unset();
+session_destroy();
 
 class CerrarSesion extends Conexion {
 

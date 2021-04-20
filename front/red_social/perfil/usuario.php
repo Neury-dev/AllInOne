@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../front-css/red-social/header.css">
     <link rel="stylesheet" href="../../../front-css/red-social/perfil/perfil.css"/>
+    <link rel="stylesheet" href="../../../front-css/red-social/perfil/chat.css" />
     <link rel="stylesheet" href="../../../front-css/red-social/perfil/nav.css"/>
     <link rel="stylesheet" href="../../../front-css/red-social/perfil/publicar.css"/>
     <link rel="stylesheet" href="../../../front-css/red-social/perfil/article.css"/>
@@ -87,18 +88,31 @@
                                 <i id="amistad-icono" class=''></i>
                             </button>
                         </form>
-                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="" id="">
+<!--                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="" id="">
                             <input type="text" value="" hidden="" name="" id="">
                             <input type="text" value="" hidden="" name="" id="">
-                            <input type="text" value="" hidden="" name="" id="">
-                            <button type="submit" name="" id="" value="">
+                            <input type="text" value="" hidden="" name="" id="">-->
+                            <button onclick="openForm()">
                                 <i id="" class='fas fa-comments'></i>
                             </button>
-                        </form>
+                        <!--</form>-->
                     </section>
                 </section>
             </main>
         </section>
+<!--
+    chat 
+-->
+        <div class="chat-popup" id="myForm">
+            <form action="" method="POST" name="chat" id="chat" class="form-container">
+                <label for="mensaje"><b>Mensaje</b></label>
+                <textarea placeholder="Mensaje.." name="mensaje" required></textarea>
+                <!--<input type="hidden" id="usuario" name="usuario">-->
+                <button type="submit" name="chat-boton" class="btn send" onclick="Chat.mensaje()">Send</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+            <!--<p id="chat-responde"></p>-->
+        </div>
 <!--
     nav 
 -->
@@ -259,6 +273,7 @@
 <!--<script src="../../show/red-social/main.js" defer=""></script>-->
 <script src="../../../show/red-social/adaptador/publicacionDeUsuario.js" defer=""></script>
 <script src="../../../show/red-social/adaptador/amigos.js" defer=""></script>
+<script src="../../../show/red-social/adaptador/chat.js" defer=""></script>
 <script>
 
 </script>

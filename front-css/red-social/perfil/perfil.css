@@ -62,7 +62,8 @@
     /*left: -8em;*/
     z-index: 1;
 }
-.n-grid > .area-1 > main > .contenedor > .perfil-nav > form > button[type="submit"] {
+.n-grid > .area-1 > main > .contenedor > .perfil-nav > form > button[type="submit"],
+.n-grid > .area-1 > main > .contenedor > .perfil-nav > button {
     float: left;
     color: var(--n-color-dos);
     background-color: var(--n-color-uno-uno);

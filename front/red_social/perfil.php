@@ -94,7 +94,7 @@
                 <ul>
                     <li><a href="#">Perfil</a></li>
                     <li><a href="#">Amigos</a></li>
-                    <li><a href="perfil/chat.php">Chat</a></li>
+                    <li><a href="perfil/chats.php">Chats</a></li>
                     <li><a href="perfil/fotos.php">Fotos</a></li>
                     <li><a href="#">Audios</a></li>
                     <li><a href="#">Videos</a></li>

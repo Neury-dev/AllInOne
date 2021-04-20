@@ -60,7 +60,7 @@ section.n-grid-area-4 > article {
     caret-color: var(--n-color-verde);
 }
 .n-carrito-resultado > section.procesar > form > button {
-    color: white;
+    color: var(--n-color);
     background-color: var(--n-color-verde);
     font-family: var(--n-fuente);
     font-size: 0.80em;

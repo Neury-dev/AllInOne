@@ -14,7 +14,9 @@ final class Iniciar extends Globales {
             $correo = self::probarEntrada($_POST["correo"]);
             $codigo = self::probarEntrada($_POST["codigo"]);
 
-            $this->sql = $GLOBALS["base"]->conexion->query("SELECT id, correo, codigo FROM `Usuarios` WHERE correo = '".$correo."' AND codigo = '".$codigo."'");
+            $this->sql = $GLOBALS["base"]->conexion->
+            query("SELECT id, correo, codigo FROM `Usuarios` "
+                . "WHERE correo = '".$correo."' AND codigo = '".$codigo."' LIMIT 1");
             $this->resultado = $this->sql->fetch_all(MYSQLI_ASSOC);
         
             if($this->resultado) {

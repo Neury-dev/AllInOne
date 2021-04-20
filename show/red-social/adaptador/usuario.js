@@ -1,5 +1,6 @@
-var nombre, apellido, nacimiento, correo, codigo, numero, sexo, estado, pais, ciudad, fecha, foto;
+var id, nombre, apellido, nacimiento, correo, codigo, numero, sexo, estado, pais, ciudad, fecha, foto;
 
+//id          = document.querySelector("input#usuarioChat");
 nombre      = document.querySelector(".nombre");
 apellido    = document.querySelector(".apellido");
 nacimiento  = document.querySelector(".nacimiento");
@@ -23,6 +24,7 @@ fetch('../../../sql/red-social/Usuario.php', {
     if(response.ok) { return response.json(); } 
     else { console.log("..........................................."); }
 }).then(function (json) {//console.log("Directo: " + json[0].correo);
+//    id.value                = json[0].id;
     nombre.innerHTML        = json[0].nombre + " " + json[0].apellido;
     nacimiento.innerHTML    = json[0].nacimiento;
 //    apellido.innerHTML  = json[0].apellido;
