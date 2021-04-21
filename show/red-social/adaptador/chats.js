@@ -23,13 +23,13 @@ class Obtener {
         for (let i in jsonObject) {
             if (jsonObject[i].de === '5') {
                 salida += "<div class='container'>";
-                    salida += "<img src='../../../front-multimedia/red-social/imagen/app.jpg' alt='Avatar' style='width:100%;'>";
+                    salida += "<img src='../../../front-multimedia/red-social/imagen/" + jsonObject[i].foto + "' alt='Avatar' style='width:100%;'>";
                     salida += "<p>" + jsonObject[i].mensaje + "</p>";
                     salida += "<span class='time-right'>" + jsonObject[i].fecha + "</span>";
                 salida += "</div>";
             } else if (jsonObject[i].de === '1') {
                 salida += "<div class='container darker'>";
-                    salida += "<img src='../../../front-multimedia/red-social/imagen/app.jpg' alt='Avatar' class='right' style='width:100%;'>";
+                    salida += "<img src='../../../front-multimedia/red-social/imagen/" + jsonObject[i].foto + "' alt='Avatar' class='right' style='width:100%;'>";
                     salida += "<p>" + jsonObject[i].mensaje + "</p>";
                     salida += "<span class='time-left'>" + jsonObject[i].fecha + "</span>";
                 salida += "</div>";

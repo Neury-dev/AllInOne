@@ -81,8 +81,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif;}
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom w3-large"><img src="https://www.w3schools.com/images/w3schools.png" style="width:60%;"></a>
     <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" 
        class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
-    <div id="" class="w3-animate-left">
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('Borge');w3_close();" id="firstTab">
+    <div id="contactados" class="w3-animate-left">
+<!--        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('Borge');w3_close();" id="firstTab">
             <div class="w3-container">
                 <img class="w3-round w3-margin-right" src="/w3images/avatar3.png" style="width:15%;"><span class="w3-opacity w3-large">Borge Refsnes</span>
                 <h6>Subject: Remember Me</h6>
@@ -100,7 +100,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif;}
                 <img class="w3-round w3-margin-right" src="/w3images/avatar2.png" style="width:15%;"><span class="w3-opacity w3-large">John Doe</span>
                 <p>Welcome!</p>
             </div>
-        </a>
+        </a>-->
     </div>
 </nav>
 
@@ -190,5 +190,6 @@ openTab.click();
 </script>
 <script src="../../../show/red-social/header.js" async=""></script>
 <script src="../../../show/red-social/adaptador/chats.js"></script>
+<script src="../../../show/red-social/adaptador/contactados.js"></script>
 </body>
 </html>
