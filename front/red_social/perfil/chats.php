@@ -79,7 +79,6 @@
     </section>
     <section class="area-3 chat-formulario">
          <form action="" method="POST" name="chat-para" id="chat-para" class="form-container">
-            <!--<label for="mensaje"><b>Mensaje</b></label>-->
             <textarea rows="3" placeholder="Mensaje.." name="re-mensaje" required></textarea>
             <input type="hidden" id="chat-con" name="chat-con">
             <button type="submit" name="chat-boton" class="btn send" onclick="ChatCon.reMensaje()">Send</button>
@@ -88,6 +87,6 @@
 </section>
 <script src="../../../show/red-social/header.js" async=""></script>
 <script src="../../../show/red-social/adaptador/chats.js"></script>
-<script src="../../../show/red-social/adaptador/contactados.js"></script>
+<!--<script src="../../../show/red-social/adaptador/contactados.js"></script>-->
 </body>
 </html>

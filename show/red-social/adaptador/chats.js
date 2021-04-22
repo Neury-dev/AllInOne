@@ -1,35 +1,4 @@
-var jsonObject, de;
-/*
-    * Chat 
- */
-//fetch('../../../sql/red-social/Chats.php', {
-//    method: 'GET'
-//}).then(function (response) {
-//    return response.json();
-//}).then(function (json) {console.log(json);
-//    jsonObject = json;
-//
-//    Conseguir.chat();
-//}).catch(function (err) {
-//    console.log('Ha ocurrido un error: ' + err.message);
-//});
-//class Chat {
-//    static
-//      reChatateado() {
-//        fetch('../../../sql/red-social/Chats.php', {
-//            method: 'GET'
-//        }).then(function (response) {
-//            return response.json();
-//        }).then(function (json) {
-//            console.log(json);
-//            jsonObject = json;
-//            chat();
-////            Conseguir.chat();
-//        }).catch(function (err) {
-//            console.log('Ha ocurrido un error: ' + err.message);
-//        });
-//    }
-//}
+var jsonContactados, jsonObject, de;
 /*
     * john Doe 
  */
@@ -43,29 +12,32 @@ fetch('../../../sql/red-social/Sesion.php', {
 }).catch(function (err) {
     console.log('Fetch problem: ' + err.message);
 });
-//class Conseguir {
-//    static
-//    function chat() {
-//        let salida = "";
-//
-//        for (let i in jsonObject) {
-//            if (jsonObject[i].de === de) {
-//                salida += "<div class='container darker'>";
-//                    salida += "<img src='../../../front-multimedia/red-social/imagen/" + jsonObject[i].foto + "' alt='Avatar' class='right' style='width:100%;'>";
-//                    salida += "<p>" + jsonObject[i].mensaje + "</p>";
-//                    salida += "<span class='time-left'>" + jsonObject[i].fecha + "</span>";
-//                salida += "</div>";
-//            } else {
-//                salida += "<div class='container'>";
-//                    salida += "<img src='../../../front-multimedia/red-social/imagen/" + jsonObject[i].foto + "' alt='Avatar' style='width:100%;'>";
-//                    salida += "<p>" + jsonObject[i].mensaje + "</p>";
-//                    salida += "<span class='time-right'>" + jsonObject[i].fecha + "</span>";
-//                salida += "</div>";
-//            } 
-//        }
-//        document.querySelector(".chat").innerHTML = salida;
-//    }
-//}
+/*
+    * Chat 
+*/
+class Conseguir {
+    static
+    chat() {
+        let salida = "";
+
+        for (let i in jsonObject) {
+            if (jsonObject[i].de === de) {
+                salida += "<div class='container darker'>";
+                    salida += "<img src='../../../front-multimedia/red-social/imagen/" + jsonObject[i].foto + "' alt='Avatar' class='right' style='width:100%;'>";
+                    salida += "<p>" + jsonObject[i].mensaje + "</p>";
+                    salida += "<span class='time-left'>" + jsonObject[i].fecha + "</span>";
+                salida += "</div>";
+            } else {
+                salida += "<div class='container'>";
+                    salida += "<img src='../../../front-multimedia/red-social/imagen/" + jsonObject[i].foto + "' alt='Avatar' style='width:100%;'>";
+                    salida += "<p>" + jsonObject[i].mensaje + "</p>";
+                    salida += "<span class='time-right'>" + jsonObject[i].fecha + "</span>";
+                salida += "</div>";
+            } 
+        }
+        document.querySelector(".chat").innerHTML = salida;
+    }
+}
 class Chats {
     static
     mensajes(id) {
@@ -91,25 +63,7 @@ class Chats {
                 }
             }).then(function (json) {console.log("Chats.mensajes > " + json);
                 jsonObject = json;
-
-                let salida = "";
-
-                for (let i in jsonObject) {
-                    if (jsonObject[i].de === de) {
-                        salida += "<div class='container darker'>";
-                        salida += "<img src='../../../front-multimedia/red-social/imagen/" + jsonObject[i].foto + "' alt='Avatar' class='right' style='width:100%;'>";
-                        salida += "<p>" + jsonObject[i].mensaje + "</p>";
-                        salida += "<span class='time-left'>" + jsonObject[i].fecha + "</span>";
-                        salida += "</div>";
-                    } else {
-                        salida += "<div class='container'>";
-                        salida += "<img src='../../../front-multimedia/red-social/imagen/" + jsonObject[i].foto + "' alt='Avatar' style='width:100%;'>";
-                        salida += "<p>" + jsonObject[i].mensaje + "</p>";
-                        salida += "<span class='time-right'>" + jsonObject[i].fecha + "</span>";
-                        salida += "</div>";
-                    }
-                }
-                document.querySelector(".chat").innerHTML = salida;
+                Conseguir.chat();
                 document.querySelector(".n-grid > .area-3").style.display = "block";
                 document.querySelector("input#chat-con").value = id;
             }).catch(function (error) {
@@ -148,31 +102,66 @@ class ChatCon {
                 }
             }).then(function (json) { console.log("con > " + chatCon + " Mas: " + json);
                 jsonObject = json;
-
-                let salida = "";
-
-                for (let i in jsonObject) {
-                    if (jsonObject[i].de === de) {
-                        salida += "<div class='container darker'>";
-                        salida += "<img src='../../../front-multimedia/red-social/imagen/" + jsonObject[i].foto + "' alt='Avatar' class='right' style='width:100%;'>";
-                        salida += "<p>" + jsonObject[i].mensaje + "</p>";
-                        salida += "<span class='time-left'>" + jsonObject[i].fecha + "</span>";
-                        salida += "</div>";
-                    } else {
-                        salida += "<div class='container'>";
-                        salida += "<img src='../../../front-multimedia/red-social/imagen/" + jsonObject[i].foto + "' alt='Avatar' style='width:100%;'>";
-                        salida += "<p>" + jsonObject[i].mensaje + "</p>";
-                        salida += "<span class='time-right'>" + jsonObject[i].fecha + "</span>";
-                        salida += "</div>";
-                    }
-                }
-                document.querySelector(".chat").innerHTML = salida;
-//                document.querySelector(".n-grid > .area-3").style.display = "block";
+                Conseguir.chat();
                 document.querySelector("input#chat-con").value = chatCon;
                 chatPara.reset();
+                ReGetChatCon.usuario();
             }).catch(function (error) {
                 console.log(error);
             });
         });
+    }
+}
+/*
+    * Chats en contacto 
+ */
+class ReGetChatCon {
+    static
+      usuario() {
+        fetch('../../../sql/red-social/Contactados.php').then(function (response) {
+            return response.json();
+        }).then(function (json) {
+            console.log(json);
+            jsonContactados = json;
+//    setTimeout(function(){
+            GetContactados.publicar();
+//    }, 1000);
+        }).catch(function (err) {
+            console.log('Ha ocurrido un error: ' + err.message);
+        });
+    }
+}
+fetch('../../../sql/red-social/Contactados.php').then(function (response) {
+    return response.json();
+}).then(function (json) {
+    console.log(json);
+    jsonContactados = json;
+//    setTimeout(function(){
+        GetContactados.publicar();
+//    }, 1000);
+}).catch(function (err) {
+    console.log('Ha ocurrido un error: ' + err.message);
+});
+
+class GetContactados {
+    static
+    publicar() {
+        let salida = "";
+
+        for (let i in jsonContactados) {
+            salida += "<div class='w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey'>";
+                salida += "<div class='w3-container'>";
+                    salida += "<img class='w3-round w3-margin-right' style='width:15%;'"; 
+                        salida += "src='../../../front-multimedia/red-social/imagen/" + jsonContactados[i].foto + "'>";
+                    salida += "<form action='' method='POST' name='contactado-"+jsonContactados[i].ok+"' id='contactado-"+jsonContactados[i].ok+"'>";
+                        salida += "<input type='hidden' id='chat-contactado' name='chat-contactado' value='" + jsonContactados[i].ok + "'>";
+                        salida += "<button type='submit' onclick='Chats.mensajes("+jsonContactados[i].ok+")'>"+jsonContactados[i].nombre+"</button>";
+                    salida += "</form>";
+                    salida += "<h6>Subject: " + jsonContactados[i].nombre + "</h6>";
+                    salida += "<p>Chat con: " + jsonContactados[i].ok + "</p>";
+                salida += "</div>";
+            salida += "</div>";
+        }
+        document.querySelector("#contactados").innerHTML = salida;
     }
 }

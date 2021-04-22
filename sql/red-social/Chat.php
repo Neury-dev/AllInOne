@@ -17,7 +17,7 @@ class Chat {
             $sqlChatDePara = $GLOBALS["base"]->conexion-> 
             query("SELECT `de`, `para` FROM `ChatDePara` "
                 . "WHERE `de` = '".$this->de."' AND `para` = '".$this->para."' "
-                . "OR `de` = '".$_SESSION['usuario']."' AND `para` = '".$this->de."' LIMIT 1 ");
+                . "OR `de` = '".$_SESSION['usuario']."' AND `para` = '".$this->de."'");
             $chatDePara  = $sqlChatDePara->fetch_all(MYSQLI_ASSOC);
             
             if (empty($chatDePara)) {

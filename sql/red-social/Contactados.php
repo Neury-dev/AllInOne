@@ -14,7 +14,7 @@ class Contactados {
         
         $this->sql = $GLOBALS["base"]->conexion->
         query("SELECT `de`, `para` FROM `ChatDePara` "
-            . "WHERE `de` = '".$_SESSION['johnDoe']."' OR `para` = '".$_SESSION['johnDoe']."' ORDER BY id DESC");
+            . "WHERE `de` = '".$_SESSION['johnDoe']."' OR `para` = '".$_SESSION['johnDoe']."' ORDER BY `fechaFinalizada` DESC");
         $this->resultado = $this->sql->fetch_all(MYSQLI_ASSOC);
 
         foreach ($this->resultado as $valor) {
@@ -22,7 +22,7 @@ class Contactados {
             else if ($valor["para"] === $_SESSION['johnDoe']) { $this->ok = $valor["de"]; }
             
             $this->sql = $GLOBALS["base"]->conexion->
-            query("SELECT DISTINCT `nombre`, `foto` FROM `Usuarios` WHERE `id` = '".$this->ok."' ORDER BY id DESC");
+            query("SELECT DISTINCT `nombre`, `foto` FROM `Usuarios` WHERE `id` = '".$this->ok."'");
             $this->resultado = $this->sql->fetch_all(MYSQLI_ASSOC);
 
         foreach ($this->resultado as $usuario) {

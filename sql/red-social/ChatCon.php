@@ -14,17 +14,28 @@ class ChatCon {
     reMensaje() {
         $this->obtenidos = array();
         
-        if (isset($_POST["chat-con"]) and !empty($_POST["chat-con"])) {
+        if (isset($_POST["chat-con"]) and !empty($_POST["re-mensaje"])) {
             $this->de   = $_SESSION['johnDoe'];
             $this->para = $_POST["chat-con"]; 
             $mensaje    = $_POST["re-mensaje"];
-
-            $this->sql = $GLOBALS["base"]->conexion-> 
-            query("INSERT INTO `Chats`(`de`, `para`, `mensaje`, `fecha`) "
-                . "VALUES ('".$this->de."', '".$this->para."', '".$mensaje."', NOW())");
             
-            if($this->sql) {
-                $this->ok = $_POST["chat-con"];
+            $this->sql = $GLOBALS["base"]->conexion->
+            query("SELECT * FROM `Chats` "
+                . "WHERE mensaje = '".$mensaje."' AND `fecha` = NOW() OR `de` = '".$this->de."' AND `fecha` = NOW()");
+            $this->resultado = $this->sql->fetch_all(MYSQLI_ASSOC);
+                
+            if(empty($this->resultado)) {
+                $sqlChat = $GLOBALS["base"]->conexion-> 
+                query("INSERT INTO `Chats`(`de`, `para`, `mensaje`, `fecha`) "
+                    . "VALUES ('".$this->de."', '".$this->para."', '".$mensaje."', NOW())");
+                
+                $this->sql = $GLOBALS["base"]->conexion->query("UPDATE `ChatDePara` SET `fechaFinalizada`= NOW() "
+                    . "WHERE `de` = '".$this->de."' AND `para` = '".$this->para."' "
+                    . "OR `de` = '".$this->para."' AND `para` = '".$this->de."' LIMIT 1 ");
+            }
+            
+            if($sqlChat) {
+                $this->ok = $this->para;
 
                 $this->sql = $GLOBALS["base"]->conexion->
                 query("SELECT * FROM `Chats` WHERE `de` = '".$_SESSION['johnDoe']."' AND `para` = '".$this->ok."' "
@@ -61,6 +72,6 @@ class ChatCon {
         }    
     }
 }
-$ejecutarChatActivo = new ChatCon();
-$chatActivo = $ejecutarChatActivo->reMensaje();
+$ejecutarChatCon = new ChatCon();
+$chatCon = $ejecutarChatCon->reMensaje();
 ?>
