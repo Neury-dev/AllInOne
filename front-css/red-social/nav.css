@@ -8,11 +8,11 @@
 */
 .n-grid {
     display: grid;
-    grid-template-columns: 20em auto 20em;
+    grid-template-columns: 20em auto;
     grid-gap: 0.10em;  
     
     position: absolute;
-    top: 6em;
+    top: 10em;
     left: 2em;
     width: calc(100% - 4em);
 }

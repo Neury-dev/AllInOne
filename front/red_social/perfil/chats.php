@@ -5,24 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../front-css/red-social/header.css">
     <link rel="stylesheet" href="../../../front-css/red-social/perfil/chats.css"/>
-    <!--<link rel="stylesheet" href="../../../front-css/red-social/perfil/nav.css"/>-->
-    <!--<link rel="stylesheet" href="../../../front-css/red-social/perfil/editar.css"/>-->
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link href='https://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-    @import url("http://localhost/AllInOne/front-css/root.css");
-html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif;}
-.w3-bar-block .w3-bar-item{padding:16px}
-</style>
+    
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-
 </head>
 <body>
 <!-- 
     header
 -->
-<!--    <header id="n-header" class="n-grid-header">
+    <header id="n-header" class="n-grid-header">
         <section class="area-1">
             <h1><a href="http://localhost/AllInOne/index.php" style="display: block;">AllInOne</a></h1>
         </section>
@@ -66,7 +56,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif;}
     <div id="n-header-nav" class="n-header-nav-contenedor">
         <a href="../../front/red_social/perfil/editar.php">Editar</a>
         <a href="#">Salir</a>
-    </div>-->
+    </div>
 <!--    <nav></nav>
     <aside></aside>
     <main></main>
@@ -76,74 +66,26 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif;}
 <!-- 
     Chats 
 -->
-<!-- Side Navigation -->
-<nav class="w3-sidebar w3-bar-block w3-collapse w3-white w3-animate-left w3-card" style="z-index:3;width:320px;" id="mySidebar">
-    <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" 
-       class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
-    <div id="contactados" class="w3-animate-left">
-        
-    </div>
-</nav>
+<section class="n-grid">
+    <section class="area-1">
+        <nav id="contactados">
 
-<!-- Overlay effect when opening the side navigation on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="Close Sidemenu" id="myOverlay"></div>
+        </nav>
+    </section>
+    <section class="area-2">
+        <main class="chat">
 
-<!-- Page content -->
-<div class="w3-main" style="margin-left:320px;">
-    <i class="fa fa-bars w3-button w3-white w3-hide-large w3-xlarge w3-margin-top" onclick="w3_open()"></i>
-    <a href="javascript:void(0)" class="w3-hide-large w3-red w3-button w3-right w3-margin-top w3-margin-right" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-pencil"></i></a>
-
-    <div id="Borge" class="w3-container person" style="margin-top: 100px;">
-        
-        <section class="chat">
-            
-        </section>
-        <section class="chat-formulario">
-             <form action="" method="POST" name="chat-para" id="chat-para" class="form-container">
-                <!--<label for="mensaje"><b>Mensaje</b></label>-->
-                <textarea rows="3" placeholder="Mensaje.." name="re-mensaje" required></textarea>
-                <input type="hidden" id="chat-con" name="chat-con">
-                <button type="submit" name="chat-boton" class="btn send" onclick="ChatCon.reMensaje()">Send</button>
-            </form>
-        </section>
-    </div>
-</div>
-
-<script>
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
-
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
-
-//openMail("Borge")
-//function openMail(personName) {
-//    var i;
-//    var x = document.getElementsByClassName("person");
-//  
-//    for (i = 0; i < x.length; i++) {
-//        x[i].style.display = "none";
-//    }
-//  
-//    x = document.getElementsByClassName("test");
-//  
-//    for (i = 0; i < x.length; i++) {
-//        x[i].className = x[i].className.replace(" w3-light-grey", "");
-//    }
-//  
-//    document.getElementById(personName).style.display = "block";
-//    event.currentTarget.className += " w3-light-grey";
-//}
-</script>
-
-<script>
-//var openTab = document.getElementById("firstTab");
-//openTab.click();
-</script>
+        </main>
+    </section>
+    <section class="area-3 chat-formulario">
+         <form action="" method="POST" name="chat-para" id="chat-para" class="form-container">
+            <!--<label for="mensaje"><b>Mensaje</b></label>-->
+            <textarea rows="3" placeholder="Mensaje.." name="re-mensaje" required></textarea>
+            <input type="hidden" id="chat-con" name="chat-con">
+            <button type="submit" name="chat-boton" class="btn send" onclick="ChatCon.reMensaje()">Send</button>
+        </form>
+    </section>
+</section>
 <script src="../../../show/red-social/header.js" async=""></script>
 <script src="../../../show/red-social/adaptador/chats.js"></script>
 <script src="../../../show/red-social/adaptador/contactados.js"></script>
