@@ -3,22 +3,42 @@ session_start();
 require_once '../Conexion.php';
 
 class Chat {
+    private $sql;
+    private $de;
+    private $para;
+    
     public function 
     mensaje() {
-//        if (isset($_POST["mensaje"])) {
-//            $usuario        = $_POST["usuario"];
-            $mensaje        = $_POST["mensaje"];
-
-            $sql = $GLOBALS["base"]->conexion-> 
-            query("INSERT INTO `Chats`(`de`, `para`, `mensaje`, `fecha`) "
-                . "VALUES ('".$_SESSION["johnDoe"]."', '".$_SESSION["usuario"]."', '".$mensaje."', NOW())"); 
+        if (isset($_POST["mensaje"])) {
+            $this->de   = $_SESSION['johnDoe'];
+            $this->para = $_SESSION["usuario"]; 
+            $mensaje    = $_POST["mensaje"];
             
-            if ($sql === true) {
-                echo "Ha sido enviado. usuario No. ".$_SESSION["usuario"];
+            $sqlChatDePara = $GLOBALS["base"]->conexion-> 
+            query("SELECT `de`, `para` FROM `ChatDePara` "
+                . "WHERE `de` = '".$this->de."' AND `para` = '".$this->para."' "
+                . "OR `de` = '".$_SESSION['usuario']."' AND `para` = '".$this->de."' LIMIT 1 ");
+            $chatDePara  = $sqlChatDePara->fetch_all(MYSQLI_ASSOC);
+            
+            if (empty($chatDePara)) {
+                $sqlChat = $GLOBALS["base"]->conexion-> 
+                query("INSERT INTO `ChatDePara`(`de`, `para`, `fecha`) "
+                    . "VALUES ('".$this->de."', '".$this->para."', NOW())");
+                echo !empty($sqlChat) ? "Ha sido el primer Chat." : "No.. ha sido el primer Chat.";
+                
+                if ($sqlChat) {
+                    $this->sql = $GLOBALS["base"]->conexion-> 
+                    query("INSERT INTO `Chats`(`de`, `para`, `mensaje`, `fecha`) "
+                        . "VALUES ('".$this->de."', '".$this->para."', '".$mensaje."', NOW())");
+                    echo !empty($this->sql) ? "Ha sido enviado." : "No.. ha sido enviado.";
+                }
             } else {
-                echo "No................Yo > ".$_SESSION["johnDoe"].".........Usuario > ".$_SESSION["usuario"];
-            }
-//        }    
+                $this->sql = $GLOBALS["base"]->conexion-> 
+                query("INSERT INTO `Chats`(`de`, `para`, `mensaje`, `fecha`) "
+                    . "VALUES ('".$this->de."', '".$this->para."', '".$mensaje."', NOW())");
+                echo !empty($this->sql) ? "Ha sido enviado." : "No.. ha sido enviado.";
+            }   
+        }    
     }
 }
 $ejecutarChat = new Chat();

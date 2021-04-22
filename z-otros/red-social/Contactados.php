@@ -13,13 +13,22 @@ class Contactados {
         $this->obtenidos = array();
         
         $this->sql = $GLOBALS["base"]->conexion->
-        query("SELECT `de`, `para` FROM `ChatDePara` "
+        query("SELECT DISTINCT `de`, `para` FROM `Chats` "
             . "WHERE `de` = '".$_SESSION['johnDoe']."' OR `para` = '".$_SESSION['johnDoe']."' ORDER BY id DESC");
         $this->resultado = $this->sql->fetch_all(MYSQLI_ASSOC);
 
         foreach ($this->resultado as $valor) {
-            if ($valor["de"] === $_SESSION['johnDoe']) { $this->ok = $valor["para"]; } 
-            else if ($valor["para"] === $_SESSION['johnDoe']) { $this->ok = $valor["de"]; }
+            if ($valor["de"] != $_SESSION['johnDoe']) {
+                $this->ok = $valor["de"];
+            } else if ($valor["para"] != $_SESSION['johnDoe']) {
+                $this->ok = $valor["para"];
+            }
+            
+//            if ($valor["de"] === $_SESSION['johnDoe'] and $valor["para"] !== $_SESSION['johnDoe']) {
+//                $this->ok = $valor["para"];
+//            } else if ($valor["de"] !== $_SESSION['johnDoe'] and $valor["para"] === $_SESSION['johnDoe']) {
+//                $this->ok = $valor["de"];
+//            }
             
             $this->sql = $GLOBALS["base"]->conexion->
             query("SELECT DISTINCT `nombre`, `foto` FROM `Usuarios` WHERE `id` = '".$this->ok."' ORDER BY id DESC");
@@ -27,7 +36,8 @@ class Contactados {
 
         foreach ($this->resultado as $usuario) {
             array_push($this->obtenidos, array(
-                "ok"        => $this->ok,
+                "de"        => $valor["de"],
+                "para"      => $valor["para"],
                 "nombre"    => $usuario["nombre"],
                 "foto"      => $usuario["foto"]
                 

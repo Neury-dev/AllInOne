@@ -106,7 +106,7 @@
         <div class="chat-popup" id="myForm">
             <form action="" method="POST" name="chat" id="chat" class="form-container">
                 <label for="mensaje"><b>Mensaje</b></label>
-                <textarea placeholder="Mensaje.." name="mensaje" required></textarea>
+                <textarea placeholder="Mensaje.." name="mensaje"></textarea>
                 <!--<input type="hidden" id="usuario" name="usuario">-->
                 <button type="submit" name="chat-boton" class="btn send" onclick="Chat.mensaje()">Send</button>
                 <button type="button" class="btn cancel" onclick="closeForm()">Close</button>

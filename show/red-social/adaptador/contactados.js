@@ -18,16 +18,20 @@ class GetContactados {
         let salida = "";
 
         for (let i in jsonContactados) {
-            salida += "<a href='javascript:void(0)' class='w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey'"; 
-            salida += "onclick='openMail('Borge');w3_close();' id='firstTab'>";
+            salida += "<div class='w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey'"; 
+            salida += "onclick='w3_close();'>";
                 salida += "<div class='w3-container'>";
                     salida += "<img class='w3-round w3-margin-right' style='width:15%;'"; 
                         salida += "src='../../../front-multimedia/red-social/imagen/" + jsonContactados[i].foto + "'>";
-                    salida += "<span class='w3-opacity w3-large'>Borge Refsnes</span>";
+//                    salida += "<span class='w3-opacity w3-large'>Borge Refsnes</span>";
+                    salida += "<form action='' method='POST' name='contactado-" + jsonContactados[i].ok + "' id='contactado-" + jsonContactados[i].ok + "'>";
+                        salida += "<input type='hidden' id='chat-contactado' name='chat-contactado' value='" + jsonContactados[i].ok + "'>";
+                        salida += "<button type='submit' onclick='Chats.mensajes("+jsonContactados[i].ok+")'>"+jsonContactados[i].nombre+"</button>";
+                    salida += "</form>";
                     salida += "<h6>Subject: " + jsonContactados[i].nombre + "</h6>";
-                    salida += "<p>De: " + jsonContactados[i].de + ", Para: " + jsonContactados[i].para + "</p>";
+                    salida += "<p>Chat con: " + jsonContactados[i].ok + "</p>";
                 salida += "</div>";
-            salida += "</a>";
+            salida += "</div>";
         }
         document.querySelector("#contactados").innerHTML = salida;
     }

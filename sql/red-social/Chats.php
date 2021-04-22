@@ -12,34 +12,41 @@ class Chats {
     mensajes() {
         $this->obtenidos = array();
         
-        $this->sql = $GLOBALS["base"]->conexion->
-        query("SELECT * FROM `Chats` WHERE `de` = '5' AND `para` = '1' OR `de` = '1' AND `para` = '5' ");
-        $this->resultado = $this->sql->fetch_all(MYSQLI_ASSOC);
-
-        foreach ($this->resultado as $valor) {
-            if ($valor["de"] === $_SESSION['johnDoe'] and $valor["para"] !== $_SESSION['johnDoe']) {
-                $this->ok = $valor["de"];
-            } else if ($valor["de"] !== $_SESSION['johnDoe'] and $valor["para"] === $_SESSION['johnDoe']) {
-                $this->ok = $valor["de"];
-            }
+        if(isset($_POST["chat-contactado"])) {
+            $this->ok = $_POST["chat-contactado"];
             
             $this->sql = $GLOBALS["base"]->conexion->
-            query("SELECT * FROM `Usuarios` WHERE id = '" . $this->ok . "' ");
+            query("SELECT * FROM `Chats` WHERE `de` = '".$_SESSION['johnDoe']."' AND `para` = '".$this->ok."' "
+                . "OR `de` = '".$this->ok."' AND `para` = '".$_SESSION['johnDoe']."' ");
             $this->resultado = $this->sql->fetch_all(MYSQLI_ASSOC);
 
-        foreach ($this->resultado as $usuario) {
-            $fecha = DateTime::createFromFormat('Y-m-d H:i:s', $valor['fecha']);
+            foreach ($this->resultado as $valor) {
+                if ($valor["de"] === $_SESSION['johnDoe'] and $valor["para"] !== $_SESSION['johnDoe']) {
+                    $this->ok = $valor["de"];
+                } else if ($valor["de"] !== $_SESSION['johnDoe'] and $valor["para"] === $_SESSION['johnDoe']) {
+                    $this->ok = $valor["de"];
+                }
 
-            array_push($this->obtenidos, array(
-                "id"        => $valor["id"],
-                "de"        => $valor["de"],
-                "para"      => $valor["para"],
-                "mensaje"   => $valor["mensaje"],
-                "nombre"    => $usuario["nombre"],
-                "foto"      => $usuario["foto"],
-                "fecha"     => $fecha->format('d M Y')
-            ));
-        }
+                $this->sql = $GLOBALS["base"]->conexion->
+                query("SELECT * FROM `Usuarios` WHERE id = '" . $this->ok . "' ");
+                $this->resultado = $this->sql->fetch_all(MYSQLI_ASSOC);
+
+            foreach ($this->resultado as $usuario) {
+                $fecha = DateTime::createFromFormat('Y-m-d H:i:s', $valor['fecha']);
+
+                array_push($this->obtenidos, array(
+                    "id"        => $valor["id"],
+                    "de"        => $valor["de"],
+                    "para"      => $valor["para"],
+                    "mensaje"   => $valor["mensaje"],
+                    "nombre"    => $usuario["nombre"],
+                    "foto"      => $usuario["foto"],
+                    "fecha"     => $fecha->format('d M Y')
+                ));
+            }
+            }
+        } else {
+            
         }
         exit(json_encode($this->obtenidos));
     }

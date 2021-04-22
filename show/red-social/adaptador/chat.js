@@ -33,9 +33,9 @@ class Chat {
                 chat.reset();
                 
                 setTimeout(function(){
-                    document.querySelector("#chat-responde").innerHTML = texto;
-//                    document.forms["chat"]["mensaje"].value = texto;
-                }, 100);
+//                    document.querySelector("#chat-responde").innerHTML = texto;
+                    document.forms["chat"]["mensaje"].value = texto;
+                }, 500);
             }).catch(function (error) {
                 console.log(error);
             });

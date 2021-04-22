@@ -78,29 +78,10 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif;}
 -->
 <!-- Side Navigation -->
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-white w3-animate-left w3-card" style="z-index:3;width:320px;" id="mySidebar">
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom w3-large"><img src="https://www.w3schools.com/images/w3schools.png" style="width:60%;"></a>
     <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" 
        class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
     <div id="contactados" class="w3-animate-left">
-<!--        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('Borge');w3_close();" id="firstTab">
-            <div class="w3-container">
-                <img class="w3-round w3-margin-right" src="/w3images/avatar3.png" style="width:15%;"><span class="w3-opacity w3-large">Borge Refsnes</span>
-                <h6>Subject: Remember Me</h6>
-                <p>Hello, i just wanted to let you know that i'll be home at...</p>
-            </div>
-        </a>
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('Jane');w3_close();">
-            <div class="w3-container">
-                <img class="w3-round w3-margin-right" src="/w3images/avatar5.png" style="width:15%;"><span class="w3-opacity w3-large">Jane Doe</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-            </div>
-        </a>
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('John');w3_close();">
-            <div class="w3-container">
-                <img class="w3-round w3-margin-right" src="/w3images/avatar2.png" style="width:15%;"><span class="w3-opacity w3-large">John Doe</span>
-                <p>Welcome!</p>
-            </div>
-        </a>-->
+        
     </div>
 </nav>
 
@@ -117,40 +98,15 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif;}
         <section class="chat">
             
         </section>
-        <section>
-             <form action="" method="POST" name="chat" id="chat" class="form-container">
+        <section class="chat-formulario">
+             <form action="" method="POST" name="chat-para" id="chat-para" class="form-container">
                 <!--<label for="mensaje"><b>Mensaje</b></label>-->
-                <textarea rows="3" placeholder="Mensaje.." name="mensaje" required></textarea>
-                <!--<input type="hidden" id="usuario" name="usuario">-->
-                <button type="submit" name="chat-boton" class="btn send" onclick="Chat.mensaje()">Send</button>
-                <!--<button type="button" class="btn cancel" onclick="closeForm()">Close</button>-->
+                <textarea rows="3" placeholder="Mensaje.." name="re-mensaje" required></textarea>
+                <input type="hidden" id="chat-con" name="chat-con">
+                <button type="submit" name="chat-boton" class="btn send" onclick="ChatCon.reMensaje()">Send</button>
             </form>
         </section>
     </div>
-    <div id="Jane" class="w3-container person">
-        <br>
-        <img class="w3-round w3-animate-top" src="/w3images/avatar5.png" style="width:20%;">
-        <h5 class="w3-opacity">Subject: None</h5>
-        <h4><i class="fa fa-clock-o"></i> From Jane Doe, Sep 25, 2015.</h4>
-        <a class="w3-button">Reply<i class="w3-padding fa fa-mail-reply"></i></a>
-        <a class="w3-button">Forward<i class="w3-padding fa fa-arrow-right"></i></a>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p>Forever yours,<br>Jane</p>
-    </div>
-
-    <div id="John" class="w3-container person">
-        <br>
-        <img class="w3-round w3-animate-top" src="/w3images/avatar2.png" style="width:20%;">
-        <h5 class="w3-opacity">Subject: None</h5>
-        <h4><i class="fa fa-clock-o"></i> From John Doe, Sep 23, 2015.</h4>
-        <a class="w3-button">Reply<i class="w3-padding fa fa-mail-reply"></i></a>
-        <a class="w3-button">Forward<i class="w3-padding fa fa-arrow-right"></i></a>
-        <hr>
-        <p>Welcome.</p>
-        <p>That's it!</p>
-    </div>
-
 </div>
 
 <script>
@@ -164,29 +120,29 @@ function w3_close() {
     document.getElementById("myOverlay").style.display = "none";
 }
 
-openMail("Borge")
-function openMail(personName) {
-    var i;
-    var x = document.getElementsByClassName("person");
-  
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-  
-    x = document.getElementsByClassName("test");
-  
-    for (i = 0; i < x.length; i++) {
-        x[i].className = x[i].className.replace(" w3-light-grey", "");
-    }
-  
-    document.getElementById(personName).style.display = "block";
-    event.currentTarget.className += " w3-light-grey";
-}
+//openMail("Borge")
+//function openMail(personName) {
+//    var i;
+//    var x = document.getElementsByClassName("person");
+//  
+//    for (i = 0; i < x.length; i++) {
+//        x[i].style.display = "none";
+//    }
+//  
+//    x = document.getElementsByClassName("test");
+//  
+//    for (i = 0; i < x.length; i++) {
+//        x[i].className = x[i].className.replace(" w3-light-grey", "");
+//    }
+//  
+//    document.getElementById(personName).style.display = "block";
+//    event.currentTarget.className += " w3-light-grey";
+//}
 </script>
 
 <script>
-var openTab = document.getElementById("firstTab");
-openTab.click();
+//var openTab = document.getElementById("firstTab");
+//openTab.click();
 </script>
 <script src="../../../show/red-social/header.js" async=""></script>
 <script src="../../../show/red-social/adaptador/chats.js"></script>
