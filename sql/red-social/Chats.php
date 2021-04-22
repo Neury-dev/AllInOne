@@ -45,8 +45,6 @@ class Chats {
                 ));
             }
             }
-        } else {
-            
         }
         exit(json_encode($this->obtenidos));
     }
