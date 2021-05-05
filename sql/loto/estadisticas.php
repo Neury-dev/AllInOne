@@ -10,7 +10,7 @@ class Loto extends Conexion {
                            "31", "32", "33", "34", "35", "36", "37", "38");
         
         foreach ($lotoArray as $loto) {
-            $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%".$loto."%'");
+            $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%".$loto."%'");
             $this->resultado= $this->mySQLi->num_rows;
 ?>
             <tr>
@@ -23,118 +23,118 @@ class Loto extends Conexion {
     //Consultas para calcular los porcentajes
     public function 
     lotoCantidades() {
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%01%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%01%'");
         $this->resultadoUno = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%02%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%02%'");
         $this->resultadoDos = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%03%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%03%'");
         $this->resultadoTres = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%04%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%04%'");
         $this->resultadoCuatro = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%05%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%05%'");
         $this->resultadoCinco = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%06%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%06%'");
         $this->resultadoSeis = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%07%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%07%'");
         $this->resultadoSiete = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%08%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%08%'");
         $this->resultadoOcho = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%09%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%09%'");
         $this->resultadoNueve = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%10%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%10%'");
         $this->resultadoDies = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%11%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%11%'");
         $this->resultadoOnce = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%12%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%12%'");
         $this->resultadoDoce = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%13%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%13%'");
         $this->resultadoTrece = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%14%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%14%'");
         $this->resultadoCatorce = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%15%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%15%'");
         $this->resultadoQuince = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%16%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%16%'");
         $this->resultadoDieciseis = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%17%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%17%'");
         $this->resultadoDiecisiete = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%18%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%18%'");
         $this->resultadoDieciocho = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%19%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%19%'");
         $this->resultadoDiecinueve = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%20%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%20%'");
         $this->resultadoVeinte = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%21%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%21%'");
         $this->resultadoVeintiuno = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%22%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%22%'");
         $this->resultadoVeintidos = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%23%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%23%'");
         $this->resultadoVeintitres = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%24%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%24%'");
         $this->resultadoVeinticuatro = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%25%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%25%'");
         $this->resultadoVeinticinco = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%26%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%26%'");
         $this->resultadoVeintiseis = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%27%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%27%'");
         $this->resultadoVeintisiete = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%28%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%28%'");
         $this->resultadoVeintiocho = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%29%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%29%'");
         $this->resultadoVeintinueve = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%30%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%30%'");
         $this->resultadoTreinta = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%31%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%31%'");
         $this->resultadoTreintaiuno = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%32%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%32%'");
         $this->resultadoTreintaidos = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%33%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%33%'");
         $this->resultadoTreintaitres = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%34%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%34%'");
         $this->resultadoTreintaicuatro = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%35%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%35%'");
         $this->resultadoTreintaicinco = $this->mySQLi->num_rows;
  
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%36%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%36%'");
         $this->resultadoTreintaiseis = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%37%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%37%'");
         $this->resultadoTreintaisiete = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto LIKE '%38%'");
+        $this->mySQLi = $this->conexion->query("SELECT `loto` FROM `Historial` WHERE loto LIKE '%38%'");
         $this->resultadoTreintaiocho = $this->mySQLi->num_rows;
     }
     public function 
@@ -255,7 +255,7 @@ class LotoMas extends Conexion {
         $lotoMasArray = array("01", "02", "03", "04", "05", "06", "07", "08", "09", "10");
         
         foreach ($lotoMasArray as $lotoMas) {
-            $this->mySQLi = $this->conexion->query("SELECT `nLotoMas` FROM `nHistorial` WHERE nLotoMas = '".$lotoMas."'");
+            $this->mySQLi = $this->conexion->query("SELECT `lotoMas` FROM `Historial` WHERE lotoMas = '".$lotoMas."'");
             $this->resultado= $this->mySQLi->num_rows;      
 ?>
             <tr>
@@ -268,34 +268,34 @@ class LotoMas extends Conexion {
     //Consultas para calcular los porcentajes
     public function 
     lotoMasCantidades() {
-        $this->mySQLi = $this->conexion->query("SELECT `nLotoMas` FROM `nHistorial` WHERE nLotoMas = '01'");
+        $this->mySQLi = $this->conexion->query("SELECT `lotoMas` FROM `Historial` WHERE lotoMas = '01'");
         $this->resultadoUno = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLotoMas` FROM `nHistorial` WHERE nLotoMas = '02'");
+        $this->mySQLi = $this->conexion->query("SELECT `lotoMas` FROM `Historial` WHERE lotoMas = '02'");
         $this->resultadoDos = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLotoMas` FROM `nHistorial` WHERE nLotoMas = '03'");
+        $this->mySQLi = $this->conexion->query("SELECT `lotoMas` FROM `Historial` WHERE lotoMas = '03'");
         $this->resultadoTres = $this->mySQLi->num_rows;
    
-        $this->mySQLi = $this->conexion->query("SELECT `nLotoMas` FROM `nHistorial` WHERE nLotoMas = '04'");
+        $this->mySQLi = $this->conexion->query("SELECT `lotoMas` FROM `Historial` WHERE lotoMas = '04'");
         $this->resultadoCuatro = $this->mySQLi->num_rows;
   
-        $this->mySQLi = $this->conexion->query("SELECT `nLotoMas` FROM `nHistorial` WHERE nLotoMas = '05'");
+        $this->mySQLi = $this->conexion->query("SELECT `lotoMas` FROM `Historial` WHERE lotoMas = '05'");
         $this->resultadoCinco = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nLotoMas` FROM `nHistorial` WHERE nLotoMas = '06'");
+        $this->mySQLi = $this->conexion->query("SELECT `lotoMas` FROM `Historial` WHERE lotoMas = '06'");
         $this->resultadoSeis = $this->mySQLi->num_rows;
    
-        $this->mySQLi = $this->conexion->query("SELECT `nLotoMas` FROM `nHistorial` WHERE nLotoMas = '07'");
+        $this->mySQLi = $this->conexion->query("SELECT `lotoMas` FROM `Historial` WHERE lotoMas = '07'");
         $this->resultadoSiete = $this->mySQLi->num_rows;
    
-        $this->mySQLi = $this->conexion->query("SELECT `nLotoMas` FROM `nHistorial` WHERE nLotoMas = '08'");
+        $this->mySQLi = $this->conexion->query("SELECT `lotoMas` FROM `Historial` WHERE lotoMas = '08'");
         $this->resultadoOcho = $this->mySQLi->num_rows;
     
-        $this->mySQLi = $this->conexion->query("SELECT `nLotoMas` FROM `nHistorial` WHERE nLotoMas = '09'");
+        $this->mySQLi = $this->conexion->query("SELECT `lotoMas` FROM `Historial` WHERE lotoMas = '09'");
         $this->resultadoNueve = $this->mySQLi->num_rows;
    
-        $this->mySQLi = $this->conexion->query("SELECT `nLotoMas` FROM `nHistorial` WHERE nLotoMas = '10'");
+        $this->mySQLi = $this->conexion->query("SELECT `lotoMas` FROM `Historial` WHERE lotoMas = '10'");
         $this->resultadoDies = $this->mySQLi->num_rows;
     }
     public function 
@@ -360,7 +360,7 @@ class SuperMas extends Conexion {
         $superMasArray = array("01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15");
         
         foreach ($superMasArray as $superMas) {
-        $this->mySQLi = $this->conexion->query("SELECT `nSuperMas` FROM `nHistorial` WHERE nSuperMas = '".$superMas."'");
+        $this->mySQLi = $this->conexion->query("SELECT `superMas` FROM `Historial` WHERE superMas = '".$superMas."'");
         $this->resultado= $this->mySQLi->num_rows;
 ?>
             <tr>
@@ -373,49 +373,49 @@ class SuperMas extends Conexion {
     //Consultas para calcular los porcentajes
     public function 
     superMasCantidades() {
-        $this->mySQLi = $this->conexion->query("SELECT `nSuperMas` FROM `nHistorial` WHERE nSuperMas = '01'");
+        $this->mySQLi = $this->conexion->query("SELECT `superMas` FROM `Historial` WHERE superMas = '01'");
         $this->resultadoUno = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nSuperMas` FROM `nHistorial` WHERE nSuperMas = '02'");
+        $this->mySQLi = $this->conexion->query("SELECT `superMas` FROM `Historial` WHERE superMas = '02'");
         $this->resultadoDos = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nSuperMas` FROM `nHistorial` WHERE nSuperMas = '03'");
+        $this->mySQLi = $this->conexion->query("SELECT `superMas` FROM `Historial` WHERE superMas = '03'");
         $this->resultadoTres = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nSuperMas` FROM `nHistorial` WHERE nSuperMas = '04'");
+        $this->mySQLi = $this->conexion->query("SELECT `superMas` FROM `Historial` WHERE superMas = '04'");
         $this->resultadoCuatro = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nSuperMas` FROM `nHistorial` WHERE nSuperMas = '05'");
+        $this->mySQLi = $this->conexion->query("SELECT `superMas` FROM `Historial` WHERE superMas = '05'");
         $this->resultadoCinco = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nSuperMas` FROM `nHistorial` WHERE nSuperMas = '06'");
+        $this->mySQLi = $this->conexion->query("SELECT `superMas` FROM `Historial` WHERE superMas = '06'");
         $this->resultadoSeis = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nSuperMas` FROM `nHistorial` WHERE nSuperMas = '07'");
+        $this->mySQLi = $this->conexion->query("SELECT `superMas` FROM `Historial` WHERE superMas = '07'");
         $this->resultadoSiete = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nSuperMas` FROM `nHistorial` WHERE nSuperMas = '08'");
+        $this->mySQLi = $this->conexion->query("SELECT `superMas` FROM `Historial` WHERE superMas = '08'");
         $this->resultadoOcho = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nSuperMas` FROM `nHistorial` WHERE nSuperMas = '09'");
+        $this->mySQLi = $this->conexion->query("SELECT `superMas` FROM `Historial` WHERE superMas = '09'");
         $this->resultadoNueve = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nSuperMas` FROM `nHistorial` WHERE nSuperMas = '10'");
+        $this->mySQLi = $this->conexion->query("SELECT `superMas` FROM `Historial` WHERE superMas = '10'");
         $this->resultadoDies = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nSuperMas` FROM `nHistorial` WHERE nSuperMas = '11'");
+        $this->mySQLi = $this->conexion->query("SELECT `superMas` FROM `Historial` WHERE superMas = '11'");
         $this->resultadoOnce = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nSuperMas` FROM `nHistorial` WHERE nSuperMas = '12'");
+        $this->mySQLi = $this->conexion->query("SELECT `superMas` FROM `Historial` WHERE superMas = '12'");
         $this->resultadoDoce = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nSuperMas` FROM `nHistorial` WHERE nSuperMas = '13'");
+        $this->mySQLi = $this->conexion->query("SELECT `superMas` FROM `Historial` WHERE superMas = '13'");
         $this->resultadoTrece = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nSuperMas` FROM `nHistorial` WHERE nSuperMas = '14'");
+        $this->mySQLi = $this->conexion->query("SELECT `superMas` FROM `Historial` WHERE superMas = '14'");
         $this->resultadoCatorce = $this->mySQLi->num_rows;
 
-        $this->mySQLi = $this->conexion->query("SELECT `nSuperMas` FROM `nHistorial` WHERE nSuperMas = '15'");
+        $this->mySQLi = $this->conexion->query("SELECT `superMas` FROM `Historial` WHERE superMas = '15'");
         $this->resultadoQuince = $this->mySQLi->num_rows;
     }
     public function 

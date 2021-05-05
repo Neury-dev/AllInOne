@@ -4,7 +4,7 @@
     private     $host     = "localhost";
     private     $usuario  = "root";
     private     $codigo   = "";
-    private     $DB       = "nLoto";
+    private     $DB       = "all_in_one";
     private     $charset  = "utf8";
 
     public function 

@@ -21,7 +21,7 @@ class RegistroDeSorteo extends Conexion {
                 $superMas  = $this->conexion->real_escape_string($_POST['superMas']);
 
                 $this->mySQLiFecha = $this->conexion->  
-                    query("SELECT nFecha FROM nHistorial WHERE nFecha='$fecha'");
+                    query("SELECT fecha FROM Historial WHERE fecha='$fecha'");
                 $this->resultadoFecha = $this->mySQLiFecha->fetch_all(MYSQLI_ASSOC);
 
                 if($this->resultadoFecha) {
@@ -29,12 +29,12 @@ class RegistroDeSorteo extends Conexion {
                         echo '<meta http-equiv="refresh" content="1; url= ../../front/loto/insertar.php" />';  
                 } else {
                     $this->mySQLiLoto = $this->conexion->  
-                        query("SELECT `nLoto` FROM `nHistorial` WHERE nLoto='$loto'");
+                        query("SELECT `loto` FROM `Historial` WHERE loto='$loto'");
                     $this->resultadoLoto = $this->mySQLiLoto->fetch_all(MYSQLI_ASSOC);
                         
                     if ($this->resultadoLoto) {
                         $this->mySQLi = $this->conexion->
-                            query("INSERT INTO `nHistorial` (`nID`, `nFecha`, `nSorteo`, `nLoto`, `nLotoMas`, `nSuperMas`) "
+                            query("INSERT INTO `Historial` (`id`, `fecha`, `sorteo`, `loto`, `lotoMas`, `superMas`) "
                             . "VALUES (NULL, '$fecha', '$sorteo', '$loto', '$lotoMas', '$superMas')");
 
                         $this->ultimoID = $this->conexion->insert_id;
@@ -46,7 +46,7 @@ class RegistroDeSorteo extends Conexion {
                         echo "<script>alert('Sorteo (coincidente) registrado con Exito.')</script>";
                     } else {
                         $this->mySQLi = $this->conexion->
-                            query("INSERT INTO `nHistorial` (`nID`, `nFecha`, `nSorteo`, `nLoto`, `nLotoMas`, `nSuperMas`) "
+                            query("INSERT INTO `Historial` (`id`, `fecha`, `sorteo`, `loto`, `lotoMas`, `superMas`) "
                             . "VALUES (NULL, '$fecha', '$sorteo', '$loto', '$lotoMas', '$superMas')");
 
                         echo "<script>alert('Sorteo registrado con Exito.')</script>";
