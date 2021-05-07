@@ -1,42 +1,26 @@
-<?php 
-    require_once 'sql/Conexion.php';
-    require_once 'sql/tienda/Carrito.php';
+<?php
+    require_once '../../sql/tienda/Carrito.php';
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>AllInOne: Tienda</title>
+    <title>AllInOne: Tienda, Carrito</title>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <meta http-equiv="last-modified" content="Thu, 18 Nov 2020 19:11:42 GMT">
 <!--CSS-->
-    <link rel="stylesheet" href="i_css/tienda/CascadeStyleSheet.css">
-    <link rel="stylesheet" href="i_css/tienda/header.css">
-    <link rel="stylesheet" href="i_css/tienda/nav.css">
-    <link rel="stylesheet" href="i_css/tienda/main.css">
-    <link rel="stylesheet" href="i_css/tienda/article.css">
-    <link rel="stylesheet" href="i_css/tienda/footer.css">
-    <link rel="stylesheet" href="i_css/tienda/aside.css">
+    <link rel="stylesheet" href="../../i_css/tienda/CascadeStyleSheet.css">
+    <link rel="stylesheet" href="../../i_css/tienda/header.css">
+    <link rel="stylesheet" href="../../i_css/tienda/nav.css">
+    <link rel="stylesheet" href="../../i_css/tienda/carrito.css">
+    <link rel="stylesheet" href="../../i_css/tienda/footer.css">
+    <link rel="stylesheet" href="../../i_css/tienda/aside.css">
 <!--JavaScript-->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <style>
-        @import url("front-css/tienda/root.css");
-        @media screen and (max-width:  24.1099em) {
-            body {
-
-            }
+        main > h2, main > p {
+            font-family: 'Gadget', sans-serif;
         }
-        body {
-            /*overflow-x: hidden;*/
-        }
- 
-
-        
-
     </style>
-    <script type="text/javascript">
-//       function validateForm() { return false; }
-    </script>
 </head>
 <body class="n-grid">
 <!--
@@ -44,7 +28,7 @@
 -->
 <section class="n-grid-area-1">
     <header>
-        <h1><a href="http://localhost/AllInOne/index.php">All<span class="n-vertical">Tienda</span><span class="n-one">nOne</span></a></h1>
+        <h1><a href="#n-all-in-one">All<span class="n-vertical">Tienda</span><span class="n-one">nOne</span></a></h1>
             <section class="n-uno">
                 <button class="n-categoria" onmouseover="header(event, 'n-camisetas')" onclick="header2(event, 'n-camisetas')"> 
                     <span class="n-maximo">Camisetas</span><span class="n-minimo"><i class='fab fa-creative-commons-nd'></i></span>
@@ -84,9 +68,9 @@
 <section class="n-grid-area-2">
     <nav>
         <!--<h2 hidden=""><a href="">Tienda</a></h2>-->
-        <a href="tienda.php"><!--i class='fas fa-store-alt'></i--><i class='fas fa-home'></i></a> 
-        <a href="i/tienda/perfil.php">Perfil</a> 
-        <a href="i/tienda/carrito.php">Carrito</a>
+        <a href="http://localhost/AllInOne/index.php"><!--i class='fas fa-store-alt'></i--><i class='fas fa-home'></i></a> 
+        <a href="perfil.php">Perfil</a> 
+        <a href="carrito.php">Carrito</a>
         <a href="">Buscar</a>
     </nav>
 </section>
@@ -95,50 +79,79 @@
 -->
 <section class="n-grid-area-3">
     <main>
-        <div class="n-diapositivas n-desvanecerse">
-            <img src="i_img/tienda/diapositiva-1.jpg" alt="">
-            <!--<p class="n-texto">Colección, Recién llegados, Los recién llegados</p>-->
-        </div>
-        <div class="n-diapositivas n-desvanecerse">
-            <img src="i_img/tienda/diapositiva-2.jpg" alt="">
-            <!--<p class="n-texto">Caption Two</p>-->
-        </div>
-        <div class="n-diapositivas n-desvanecerse">
-            <img src="i_img/tienda/diapositiva-3.jpg" alt="">
-            <!--<p class="n-texto">Caption Three</p>-->
-        </div>
-        <div class="n-diapositivas n-desvanecerse">
-            <img src="i_img/tienda/diapositiva-4.jpg" alt="">
-            <!--<p class="n-texto">Caption Text</p>-->
-        </div>
-        <div class="n-diapositivas n-desvanecerse">
-            <img src="i_img/tienda/diapositiva-5.jpg" alt="">
-            <!--<p class="n-texto">Caption Text</p>-->
-        </div>
-        <div class="n-diapositivas n-desvanecerse">
-            <img src="i_img/tienda/diapositiva-6.jpg" alt="">
-            <!--<p class="n-texto">Caption Text</p>-->
-        </div>
-        <button class="n-anterior" onclick="mas(-1)">&#10094;</button>
-        <button class="n-siguiente" onclick="mas(1)">&#10095;</button>
-        <section class="n-puntos-contenedor">
-            <button class="n-punto" onclick="actual(1)"><span class="n-actual">1/6</span></button>
-            <button class="n-punto" onclick="actual(2)"><span class="n-actual">2/6</span></button>
-            <button class="n-punto" onclick="actual(3)"><span class="n-actual">3/6</span></button>
-            <button class="n-punto" onclick="actual(4)"><span class="n-actual">4/6</span></button>
-            <button class="n-punto" onclick="actual(5)"><span class="n-actual">5/6</span></button>
-            <button class="n-punto" onclick="actual(6)"><span class="n-actual">6/6</span></button>
-        </section>
+<?php
+require_once '../../sql/Conexion.php';
+
+    if(isset($_POST)) {
+        is_numeric($subtotal = NULL);
+        $correo = $_POST["correo"];
+        
+        foreach ($_SESSION["CARRITO"] as $indiceDeSesion => $datoDeSesion) {
+            $subtotal = $GLOBALS['base']->conexion-> 
+                real_escape_string($subtotal + ($datoDeSesion["PRECIO"] * $datoDeSesion["CANTIDAD"]));   
+        }
+        
+        require_once '../../sql/tienda/descuento.php';
+        
+//        $nMySQL = $GLOBALS['base']->conexion->
+//            query("INSERT INTO `ntablaventas` (`nID`, `nIDDeTransaccion`, `nIDDelCliente`, `nPayPalDatos`, `nTotal`, "
+//            . "`nCorreo`, `nEstado`, `nFecha`) VALUES (NULL, '', '', '', '$total', '$correo', 'Incompleta', NOW())");   
+    }
+?>
+        <h2>¡Último paso!</h2>
+        <p>Estás a punto de pagar con paypal el importe de: <b><?php echo number_format($total, 2); ?></b></p>
+    <!-- Set up a container element for the button -->
+        <div id="paypal-button-container"></div>
+    <!-- Include the PayPal JavaScript SDK -->
+        <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+    
+        <script>
+            // Render the PayPal button into #paypal-button-container
+            paypal.Buttons({
+                env: 'sandbox', // sandbox | production
+                //locale: 'en_US', //configuración regional //Predeterminado: en_US //https://developer.paypal.com/docs/integration/direct/rest/locale-codes/#supported-locale-codes
+        //        style: { // Especifique el estilo del botón.
+        //            label: 'buynow',
+        //            fundingicons: true, // optional
+        //            branding: true, // optional
+        //            size:  'medium', // small | medium | large | responsive
+        //            shape: 'pill',   // pill | rect
+        //            color: 'white'   // gold | blue | silver | black
+        //        },
+            // ID de clientes de PayPal: sustitúyalos por los suyos // Create a PayPal app: https://developer.paypal.com/developer/applications/create
+                client: {
+                    sandbox: 'AdJSRKpP6XeTgurC6KG9mkWTRhHEyblNiwJoAbrMWn4arZWqn7dMStRP7wFonTVsRzhDw5NpkgkWoI9y' //, production: '<insert production client id>'
+                },
+                // Set up the transaction
+                createOrder: function(data, actions) {
+                    return actions.order.create({
+                        purchase_units: [{
+                            amount: {
+                                value: '<?php echo number_format($total, 2); ?>'
+                            }
+                        }]
+                    });
+                },
+                // Finalize the transaction
+                onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                        // Show a success message to the buyer
+                        alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                        window.location = "Transaccion.php?paymentToken="+details.id+"&paymentID="+details.id;
+                    });
+                }
+            }).render('#paypal-button-container');
+        </script>
     </main>
 </section>
 <!--
     article
 -->
-<section class="n-grid-area-4">
+<!--<section class="n-grid-area-4">
     <article>
-        <?php // require_once 'sql/tienda/Articulos.php'; ?>
+  
     </article>
-</section>
+</section>-->
 <!--
     footer (1)
 -->
@@ -200,7 +213,101 @@
     footer (2)
 -->
 <section class="n-grid-area-6">
-
+    <footer id="n-all-in-one">
+        <section class="n-desarrollador">
+            <p>Desarrollado por <strong>Neury Eleasar Aguasvivas Lorenzo</strong> con:</p>
+            <hr>
+            <a href="https://www.w3.org/TR/html5/" title="HTML5" target="_blank"><i class="fab">&#xf13b;</i></a>
+            <a href="https://www.w3.org/TR/css-2017/" title="CSS3" target="_blank"><i class='fab'>&#xf38b;</i></a>
+            <a href="https://developer.mozilla.org/es/" title="JavaScipt" target="_blank"><i class='fab'>&#xf3b9;</i></a>
+            <a href="http://php.net/" title="PHP" target="_blank"><i class='fab'>&#xf457;</i></a>
+            <a href="https://www.mysql.com/" title="MySQL" target="_blank"><i class='fas'>&#xf1c0;</i></a>
+            <a href="https://netbeans.org/" title="NetBeans" target="_blank"><i class='fas'>&#xf1b2;</i></a>
+            <a href="https://www.apachefriends.org/es/index.html" title="XAMPP" target="_blank"><i class='fas'>&#xf233;</i></a>
+        </section>
+        <section class="n-desarrollos">
+            <article>
+                <h4><a href="http://localhost/AllInOne/index.php">Tienda</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </article>
+            <article>
+                <h4><a href="">Red Social</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </article>
+            <article>
+                <h4><a href="">Demo</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </article>
+            <article>
+                <h4><a href="">Demo</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </article>
+            <article>
+                <h4><a href="">Demo</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </article>
+            <article>
+                <h4><a href="">Demo</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </article>
+            <article>
+                <h4><a href="">Demo</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </article>
+            <article>
+                <h4><a href="">Demo</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </article>
+            <article>
+                <h4><a href="">Demo</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </article>
+            <article>
+                <h4><a href="">Demo</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </article>
+            <article>
+                <h4><a href="">Demo</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </article>
+            <article>
+                <h4><a href="">Demo</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </article>
+            <article>
+                <h4><a href="">Demo</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </article>
+            <article>
+                <h4><a href="">Demo</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </article>
+            <article>
+                <h4><a href="">Demo</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </article>
+            <article>
+                <h4><a href="">Demo</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </article>
+            <article>
+                <h4><a href="">Demo</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </article>
+            <article>
+                <h4><a href="">Demo</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </article>
+            <article>
+                <h4><a href="">Demo</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </article>
+            <article>
+                <h4><a href="">Demo</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </article>
+        </section>
+    </footer>
 </section>
 <!--
     aside
@@ -293,26 +400,12 @@
     </aside>
 </div>
 <div id="n-alerta-general"></div>
-<!--<a href="#" style="
-        position: fixed;
-        left: 50%;
-        bottom: 0.10em;
-        transform: translateY(-50%, 0em);
-        color: white;
-        background: #1c1d22;
-        font-size: 2em;
-        text-decoration: none;
-        padding: 0.10em 1.5em 0em 1.5em;
-        border-radius: 0.20em;
-        "><i class='fas fa-chevron-circle-up'></i></a>-->
-
-<script src="l/tienda/header.js" async=""></script>
-<script src="l/tienda/diapositiva.js" async=""></script>
-<script src="l/tienda/adaptador/articulos.js" async=""></script>
-<script src="l/tienda/adaptador/boletines.js" defer=""></script>
-<script src="l/tienda/adaptador/suscriptores.js" defer=""></script>
 <script>
 
 </script>
+<script src="../../l/tienda/header.js" async=""></script>
+<script src="../../l/tienda/adaptador/boletines.js" defer=""></script>
+<script src="../../l/tienda/adaptador/suscriptores.js" defer=""></script>
 </body>
 </html>
+

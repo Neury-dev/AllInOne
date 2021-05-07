@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="last-modified" content="Thu, 18 Nov 2020 19:11:42 GMT">
-    <link rel="stylesheet" href="front-css/sistema-PHP/sistema-PHP.css">
+    <link rel="stylesheet" href="i_css/sistema_php/sistema_PHP.css">
     <style>
         /*@import url("http://localhost/AllInOne/front-css/root.css");*/
 
@@ -115,8 +115,8 @@
             </div>
         </section>
     </section>
-<script src="show/sistema-PHP/crud.js" async=""></script>
-<script src="show/sistema-PHP/complementos.js" defer=""></script>
+<script src="l/sistema_PHP/crud.js" async=""></script>
+<script src="l/sistema_PHP/complementos.js" defer=""></script>
 <script>
 
 </script>

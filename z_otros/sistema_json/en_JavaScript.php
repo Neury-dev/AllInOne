@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sistema JSON</title>
+    <title>Sistema JSON en JavaScript</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="last-modified" content="Thu, 18 Nov 2020 19:11:42 GMT">
-    <link rel="stylesheet" href="i_css/sistema_json/sistema_JSON.css">
+    <link rel="stylesheet" href="../../i_css/sistema_json/sistema_JSON.css">
     <style>
         /*@import url("http://localhost/AllInOne/front-css/root.css");*/
 
@@ -17,12 +17,12 @@
     </header>
     <section class="n-grid">
         <section class="area-1">
-            <h2>Sistema JSON</h2>
+            <h2>Sistema JSON en JavaScript</h2>
             <hr>
             <section>
-                <a href="sistema_JSON.php">JSON</a>
-                <!--a href="front/sistema_JSON/en_JavaScript.php">JSON en JavaScript</a-->
-                <a href="i/sistema_json/en_PHP.php">JSON en PHP</a>
+                <a href="../../sistema_JSON.php">JSON</a>
+                <a href="">JSON en JavaScript</a>
+                <a href="en_PHP.php">JSON en PHP</a>
             </section>
             <hr>
             <div id="n-respuesta"></div>
@@ -43,13 +43,13 @@
                     <input type="text" name="nombre" id="nombre" placeholder="Nombre">
                 <label for="precio">Precio</label>
                     <input type="number" name="precio" id="precio" placeholder="1">
-                <input type="submit" name="crear" id="crear-envio" value="Crear">
+                <input type="submit" name="crud" id="crud" value="Crear">
             </form>
         </section>
         <section class="area-4">
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form-buscar" id="form-buscar">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="buscar" id="buscar">
                 <label for="buscar">Buscar:</label>
-                <input type="search" id="buscar" placeholder="Buscar...">
+                <input type="search" name="buscar" id="buscar" placeholder="Buscar...">
             </form>
         </section>
         <section class="area-5">
@@ -73,9 +73,9 @@
                 <tfoot>
                     <tr>
                         <td colspan="8">
-                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="cantidad" id="cantidad">
                                 <label for="cantidad">Cantidad</label>
-                                <select id="cantidad">
+                                <select id="cantidad" name="cantidad">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -88,7 +88,7 @@
                                     <option value="10">10</option>
                                 </select>
                             </form>
-                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form-por" id="form-por">
+                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="por" id="por">
                                 <label for="por">Por</label>
                                 <select id="por" name="por">
                                     <option value="id">ID</option>
@@ -99,15 +99,21 @@
                                     <option value="precio">Precio</option>
                                 </select>
                             </form>
-                            <button id="n-ordenar">Decendente</button>
+                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="ordenar" id="ordenar">
+                                <label for="ordenar">Ordenar</label>
+                                <select id="ordenar" name="ordenar">
+                                    <option value="ASC">Acendente</option>
+                                    <option value="DESC">Decendente</option>
+                                </select>
+                            </form>
                         </td>
                     </tr>
                      <tr>
                         <td colspan="8">
                             <button class="n-anterior">Anterior</button>
-                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" id="paginacion">
+                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="paginacion" id="paginacion">
                                 <label for="inicio-de-paginacion" hidden="">
-                                    <input type="number" id="inicio-de-paginacion" value="" min="0" >
+                                    <input type="number" name="inicio-de-paginacion" id="inicio-de-paginacion" value="" min="0" >
                                 </label>
                             </form>
                             <button class="n-siguiente">Siguiente</button>
@@ -118,9 +124,24 @@
             </div>
         </section>
     </section>
-<script src="l/sistema_JSON/crud.js" async=""></script>
+<script src="../../show/sistema-JSON/crud-en-js.js" async=""></script>
+<!--<script src="../../show/sistema-JSON/crud-en-js_1.js" defer=""></script>-->
 <script>
+    <!--<p><button onclick="clickCounter()" type="button">Click me!</button></p>-->
+<!--<div id="result"></div>-->
 
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
 </script>
 </body>
 </html>

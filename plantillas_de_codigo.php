@@ -4,7 +4,7 @@
     <title>TODO supply a title</title>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="front-css/plantillas-de-codigo/plantillas-de-codigo.css"/>
+    <link rel="stylesheet" href="i_css/plantillas_de_codigo/plantillas_de_codigo.css"/>
     <style>
 
     </style>
@@ -119,6 +119,6 @@
         </code>
     </pre>
 </div>-->
-<script src="show/plantillas-de-codigo/full-stack.js"></script>
+<script src="l/plantillas_de_codigo/full-stack.js"></script>
 </body>
 </html>

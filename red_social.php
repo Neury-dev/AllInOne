@@ -3,7 +3,7 @@
         <title>Red Social</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="front-css/red-social/red-social.css">
+        <link rel="stylesheet" href="i_css/red_social/red_social.css">
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <style>
      
@@ -23,7 +23,7 @@
 <!--                    <section class="hide-md-lg">
                     <p>Or sign in manually:</p>
                 </section>-->
-                <form action="sql/red-social/Iniciar.php" method="POST" autocomplete="">
+                <form action="s/red_social/Iniciar.php" method="POST" autocomplete="">
                     <h2>Iniciar</h2>
                     <section class="input-contenedor">
                         <input type="email" name="correo" placeholder="Correo" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" oninvalid="Globales.validarCorreo()">
@@ -35,7 +35,7 @@
                 </form>
             </section>
             <section class="columna">
-                <form action="sql/red-social/Registrar.php" method="POST" autocomplete=""> 
+                <form action="s/red_social/Registrar.php" method="POST" autocomplete=""> 
                     <h2>Registrarse</h2>
                     <section class="input-contenedor">
                         <i class="fas fa-envelope-open-text"></i>
@@ -60,6 +60,6 @@
             </section>
         </section>
     </section>-->
-<script src="show/globales.js"></script>
+<script src="l/globales.js"></script>
 </body>
 </html>

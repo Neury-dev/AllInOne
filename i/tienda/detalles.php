@@ -1,42 +1,24 @@
 <?php 
-    require_once 'sql/Conexion.php';
-    require_once 'sql/tienda/Carrito.php';
+    require_once '../../sql/tienda/Carrito.php';
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>AllInOne: Tienda</title>
+    <title>AllInOne: Tienda, Detalles</title>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <meta http-equiv="last-modified" content="Thu, 18 Nov 2020 19:11:42 GMT">
 <!--CSS-->
-    <link rel="stylesheet" href="i_css/tienda/CascadeStyleSheet.css">
-    <link rel="stylesheet" href="i_css/tienda/header.css">
-    <link rel="stylesheet" href="i_css/tienda/nav.css">
-    <link rel="stylesheet" href="i_css/tienda/main.css">
-    <link rel="stylesheet" href="i_css/tienda/article.css">
-    <link rel="stylesheet" href="i_css/tienda/footer.css">
-    <link rel="stylesheet" href="i_css/tienda/aside.css">
+    <link rel="stylesheet" href="../../i_css/tienda/CascadeStyleSheet.css">
+    <link rel="stylesheet" href="../../i_css/tienda/header.css">
+    <link rel="stylesheet" href="../../i_css/tienda/nav.css">
+    <link rel="stylesheet" href="../../i_css/tienda/detalles.css">
+    <link rel="stylesheet" href="../../i_css/tienda/footer.css">
+    <link rel="stylesheet" href="../../i_css/tienda/aside.css">
 <!--JavaScript-->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <style>
-        @import url("front-css/tienda/root.css");
-        @media screen and (max-width:  24.1099em) {
-            body {
-
-            }
-        }
-        body {
-            /*overflow-x: hidden;*/
-        }
- 
-
         
-
     </style>
-    <script type="text/javascript">
-//       function validateForm() { return false; }
-    </script>
 </head>
 <body class="n-grid">
 <!--
@@ -44,7 +26,7 @@
 -->
 <section class="n-grid-area-1">
     <header>
-        <h1><a href="http://localhost/AllInOne/index.php">All<span class="n-vertical">Tienda</span><span class="n-one">nOne</span></a></h1>
+        <h1><a href="#n-all-in-one">All<span class="n-vertical">Tienda</span><span class="n-one">nOne</span></a></h1>
             <section class="n-uno">
                 <button class="n-categoria" onmouseover="header(event, 'n-camisetas')" onclick="header2(event, 'n-camisetas')"> 
                     <span class="n-maximo">Camisetas</span><span class="n-minimo"><i class='fab fa-creative-commons-nd'></i></span>
@@ -84,9 +66,9 @@
 <section class="n-grid-area-2">
     <nav>
         <!--<h2 hidden=""><a href="">Tienda</a></h2>-->
-        <a href="tienda.php"><!--i class='fas fa-store-alt'></i--><i class='fas fa-home'></i></a> 
-        <a href="i/tienda/perfil.php">Perfil</a> 
-        <a href="i/tienda/carrito.php">Carrito</a>
+        <a href="http://localhost/AllInOne/index.php"><!--i class='fas fa-store-alt'></i--><i class='fas fa-home'></i></a> 
+        <a href="perfil.php">Perfil</a> 
+        <a href="carrito.php">Carrito</a>
         <a href="">Buscar</a>
     </nav>
 </section>
@@ -95,50 +77,17 @@
 -->
 <section class="n-grid-area-3">
     <main>
-        <div class="n-diapositivas n-desvanecerse">
-            <img src="i_img/tienda/diapositiva-1.jpg" alt="">
-            <!--<p class="n-texto">Colección, Recién llegados, Los recién llegados</p>-->
-        </div>
-        <div class="n-diapositivas n-desvanecerse">
-            <img src="i_img/tienda/diapositiva-2.jpg" alt="">
-            <!--<p class="n-texto">Caption Two</p>-->
-        </div>
-        <div class="n-diapositivas n-desvanecerse">
-            <img src="i_img/tienda/diapositiva-3.jpg" alt="">
-            <!--<p class="n-texto">Caption Three</p>-->
-        </div>
-        <div class="n-diapositivas n-desvanecerse">
-            <img src="i_img/tienda/diapositiva-4.jpg" alt="">
-            <!--<p class="n-texto">Caption Text</p>-->
-        </div>
-        <div class="n-diapositivas n-desvanecerse">
-            <img src="i_img/tienda/diapositiva-5.jpg" alt="">
-            <!--<p class="n-texto">Caption Text</p>-->
-        </div>
-        <div class="n-diapositivas n-desvanecerse">
-            <img src="i_img/tienda/diapositiva-6.jpg" alt="">
-            <!--<p class="n-texto">Caption Text</p>-->
-        </div>
-        <button class="n-anterior" onclick="mas(-1)">&#10094;</button>
-        <button class="n-siguiente" onclick="mas(1)">&#10095;</button>
-        <section class="n-puntos-contenedor">
-            <button class="n-punto" onclick="actual(1)"><span class="n-actual">1/6</span></button>
-            <button class="n-punto" onclick="actual(2)"><span class="n-actual">2/6</span></button>
-            <button class="n-punto" onclick="actual(3)"><span class="n-actual">3/6</span></button>
-            <button class="n-punto" onclick="actual(4)"><span class="n-actual">4/6</span></button>
-            <button class="n-punto" onclick="actual(5)"><span class="n-actual">5/6</span></button>
-            <button class="n-punto" onclick="actual(6)"><span class="n-actual">6/6</span></button>
-        </section>
+        <?php require_once '../../sql/tienda/Detalles.php'; ?>
     </main>
 </section>
 <!--
     article
 -->
-<section class="n-grid-area-4">
+<!--<section class="n-grid-area-4">
     <article>
-        <?php // require_once 'sql/tienda/Articulos.php'; ?>
+
     </article>
-</section>
+</section>-->
 <!--
     footer (1)
 -->
@@ -200,7 +149,7 @@
     footer (2)
 -->
 <section class="n-grid-area-6">
-
+    
 </section>
 <!--
     aside
@@ -293,26 +242,12 @@
     </aside>
 </div>
 <div id="n-alerta-general"></div>
-<!--<a href="#" style="
-        position: fixed;
-        left: 50%;
-        bottom: 0.10em;
-        transform: translateY(-50%, 0em);
-        color: white;
-        background: #1c1d22;
-        font-size: 2em;
-        text-decoration: none;
-        padding: 0.10em 1.5em 0em 1.5em;
-        border-radius: 0.20em;
-        "><i class='fas fa-chevron-circle-up'></i></a>-->
-
-<script src="l/tienda/header.js" async=""></script>
-<script src="l/tienda/diapositiva.js" async=""></script>
-<script src="l/tienda/adaptador/articulos.js" async=""></script>
-<script src="l/tienda/adaptador/boletines.js" defer=""></script>
-<script src="l/tienda/adaptador/suscriptores.js" defer=""></script>
 <script>
 
 </script>
+<script src="../../l/tienda/header.js" async=""></script>
+<script src="../../l/tienda/adaptador/detalles.js" async=""></script>
+<script src="../../l/tienda/adaptador/boletines.js" defer=""></script>
+<script src="../../l/tienda/adaptador/suscriptores.js" defer=""></script>
 </body>
 </html>
