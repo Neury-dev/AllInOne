@@ -10,53 +10,59 @@
 </head>
 <body>
 <section class="n-grid">
-<section class="area-1">   
-    <main>
+<section class="area-1">  
+    <header>
         <P>¡Hola!</p>
         <h1>Neury</h1>
         <h2>Full Stack Developer</h2> 
         <P>neury.eleasar@gmail.com</p>
-        <article>
-            <h3>Lenguajes y Herramientas</h3>
-                <h4>Frontend developer</h4>
-                    <p>HTML, CSS, JavaScript, Java...</p>
-                <h4>Backend developer</h4>
-                    <p>PHP, JavaScript, Java, JSON, SQL, NoSQL...</p>
-                <h4>Tools developer</h4>
-                    <p>NetBeans</p>
-        </article>
-    </main>
+    </header>
 </section>
 <section class="area-2">
-    <section class="n-desarrollos">
-        <h3>Desarrollos</h3>
-        <article>
-            <h4><a href="http://localhost/AllInOne/loto.php">Loto</a></h4>
-            <p>04/07/2020 - 13/09/2020</p>
-        </article>
-        <article>
-            <h4><a href="http://localhost/AllInOne/tienda.php">Tienda</a></h4>
-            <p>14/09/2020 - 29/11/2020</p>
-        </article>
-        <article>
-            <h4><a href="http://localhost/AllInOne/plantillas_de_codigo.php">Plantillas de código</a></h4>
-            <p>01/12/2020 - 01/12/2020</p>
-        </article>
-        <article>
-            <h4><a href="sistema_PHP.php">Sistema PHP</a></h4>
-            <p>01/12/2020 - 06/12/2020</p>
-        </article>
-        <article>
-            <h4><a href="sistema_JSON.php">Sistema JSON</a></h4>
-            <p>09/12/2020 - 16/12/2020</p>
-        </article>
-        <article>
-            <h4><a href="red_social.php">Red Social</a></h4>
-            <p>19/12/2020 - 22/04/2021</p>
-        </article>
-    </section>
+    <main>
+        <h3>Lenguajes y Herramientas</h3>
+            <h4>Frontend developer</h4>
+                <p>HTML, CSS, JavaScript, Java...</p>
+            <h4>Backend developer</h4>
+                <p>PHP, JavaScript, Java, JSON, SQL, NoSQL...</p>
+            <h4>Tools developer</h4>
+                <p>Apache NetBeans</p>
+    </main>
 </section>
 <section class="area-3">
+    <h3>Desarrollos</h3>
+    <article>
+        <h4>Loto</h4>
+        <p>04/07/2020 - 13/09/2020</p>
+        <a href="loto.php">http://localhost/AllInOne/loto.php</a>
+    </article>
+    <article>
+        <h4>Tienda</h4>
+        <p>14/09/2020 - 29/11/2020</p>
+        <a href="tienda.php">http://localhost/AllInOne/tienda.php</a>
+    </article>
+    <article>
+        <h4>Plantillas de código</h4>
+        <p>01/12/2020 - 01/12/2020</p>
+        <a href="plantillas_de_codigo.php">http://localhost/AllInOne/plantillas_de_codigo.php</a>
+    </article>
+    <article>
+        <h4>Sistema PHP</h4>
+        <p>01/12/2020 - 06/12/2020</p>
+        <a href="sistema_PHP.php">http://localhost/AllInOne/sistema_PHP.php</a>
+    </article>
+    <article>
+        <h4>Sistema JSON</h4>
+        <p>09/12/2020 - 16/12/2020</p>
+        <a href="sistema_JSON.php">http://localhost/AllInOne/sistema_JSON.php</a>
+    </article>
+    <article>
+        <h4>Red Social</h4>
+        <p>19/12/2020 - 22/04/2021</p>
+        <a href="red_social.php">http://localhost/AllInOne/red_social.php</a>
+    </article>
+</section>
+<section class="area-4">
     <aside>
         aside
     </aside>
