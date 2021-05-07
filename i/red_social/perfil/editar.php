@@ -204,7 +204,7 @@
         </section>
     </section>
 <script src="../../../l/red_social/header.js" async=""></script>
-<script src="../../../l/red_social/adaptador/editar.js" async=""></script>
+<script src="../../../l/red_social/l/editar.js" async=""></script>
 <script src="../../../l/red_social/perfil/editar.js" defer=""></script>
 <script>
    

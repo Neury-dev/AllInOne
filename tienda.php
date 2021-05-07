@@ -1,6 +1,6 @@
 <?php 
-    require_once 'sql/Conexion.php';
-    require_once 'sql/tienda/Carrito.php';
+    require_once 's/Conexion.php';
+    require_once 's/tienda/Carrito.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,23 +17,8 @@
     <link rel="stylesheet" href="i_css/tienda/article.css">
     <link rel="stylesheet" href="i_css/tienda/footer.css">
     <link rel="stylesheet" href="i_css/tienda/aside.css">
-<!--JavaScript-->
+<!-- Iconos: JavaScript-->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <style>
-        @import url("front-css/tienda/root.css");
-        @media screen and (max-width:  24.1099em) {
-            body {
-
-            }
-        }
-        body {
-            /*overflow-x: hidden;*/
-        }
- 
-
-        
-
-    </style>
     <script type="text/javascript">
 //       function validateForm() { return false; }
     </script>
@@ -96,27 +81,27 @@
 <section class="n-grid-area-3">
     <main>
         <div class="n-diapositivas n-desvanecerse">
-            <img src="i_img/tienda/diapositiva-1.jpg" alt="">
+            <img src="i_img/tienda/i/diapositiva-1.jpg" alt="">
             <!--<p class="n-texto">Colección, Recién llegados, Los recién llegados</p>-->
         </div>
         <div class="n-diapositivas n-desvanecerse">
-            <img src="i_img/tienda/diapositiva-2.jpg" alt="">
+            <img src="i_img/tienda/i/diapositiva-2.jpg" alt="">
             <!--<p class="n-texto">Caption Two</p>-->
         </div>
         <div class="n-diapositivas n-desvanecerse">
-            <img src="i_img/tienda/diapositiva-3.jpg" alt="">
+            <img src="i_img/tienda/i/diapositiva-3.jpg" alt="">
             <!--<p class="n-texto">Caption Three</p>-->
         </div>
         <div class="n-diapositivas n-desvanecerse">
-            <img src="i_img/tienda/diapositiva-4.jpg" alt="">
+            <img src="i_img/tienda/i/diapositiva-4.jpg" alt="">
             <!--<p class="n-texto">Caption Text</p>-->
         </div>
         <div class="n-diapositivas n-desvanecerse">
-            <img src="i_img/tienda/diapositiva-5.jpg" alt="">
+            <img src="i_img/tienda/i/diapositiva-5.jpg" alt="">
             <!--<p class="n-texto">Caption Text</p>-->
         </div>
         <div class="n-diapositivas n-desvanecerse">
-            <img src="i_img/tienda/diapositiva-6.jpg" alt="">
+            <img src="i_img/tienda/i/diapositiva-6.jpg" alt="">
             <!--<p class="n-texto">Caption Text</p>-->
         </div>
         <button class="n-anterior" onclick="mas(-1)">&#10094;</button>
@@ -308,9 +293,9 @@
 
 <script src="l/tienda/header.js" async=""></script>
 <script src="l/tienda/diapositiva.js" async=""></script>
-<script src="l/tienda/adaptador/articulos.js" async=""></script>
-<script src="l/tienda/adaptador/boletines.js" defer=""></script>
-<script src="l/tienda/adaptador/suscriptores.js" defer=""></script>
+<script src="l/tienda/l/articulos.js" async=""></script>
+<script src="l/tienda/l/boletines.js" defer=""></script>
+<script src="l/tienda/l/suscriptores.js" defer=""></script>
 <script>
 
 </script>

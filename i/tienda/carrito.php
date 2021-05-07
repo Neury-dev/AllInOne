@@ -247,9 +247,9 @@
 
 </script>
 <script src="../../l/tienda/header.js" async=""></script>
-<script src="../../l/tienda/adaptador/carrito.js" defer=""></script>
-<script src="../../l/tienda/adaptador/boletines.js" defer=""></script>
-<script src="../../l/tienda/adaptador/suscriptores.js" defer=""></script>
+<script src="../../l/tienda/l/carrito.js" defer=""></script>
+<script src="../../l/tienda/l/boletines.js" defer=""></script>
+<script src="../../l/tienda/l/suscriptores.js" defer=""></script>
 </body>
 </html>
 

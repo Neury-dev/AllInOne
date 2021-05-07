@@ -86,7 +86,7 @@
     </section>
 </section>
 <script src="../../../l/red_social/header.js" async=""></script>
-<script src="../../../l/red_social/adaptador/chats.js"></script>
+<script src="../../../l/red_social/l/chats.js"></script>
 <!--<script src="../../../show/red-social/adaptador/contactados.js"></script>-->
 </body>
 </html>

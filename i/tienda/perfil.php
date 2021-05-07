@@ -39,6 +39,6 @@
         </section>
     </section>
 </section>
-<script src="../../l/tienda/adaptador/perfil.js" defer=""></script>
+<script src="../../l/tienda/l/perfil.js" defer=""></script>
 </body>
 </html>

@@ -269,11 +269,11 @@
         </section>
     </section>
 <script src="../../../l/red_social/header.js" async=""></script>
-<script src="../../../l/red_social/adaptador/usuario.js" async=""></script>
+<script src="../../../l/red_social/l/usuario.js" async=""></script>
 <!--<script src="../../show/red-social/main.js" defer=""></script>-->
-<script src="../../../l/red_social/adaptador/publicacionDeUsuario.js" defer=""></script>
-<script src="../../../l/red_social/adaptador/amigos.js" defer=""></script>
-<script src="../../../l/red_social/adaptador/chat.js" defer=""></script>
+<script src="../../../l/red_social/l/publicacionDeUsuario.js" defer=""></script>
+<script src="../../../l/red_social/l/amigos.js" defer=""></script>
+<script src="../../../l/red_social/l/chat.js" defer=""></script>
 <script>
 
 </script>

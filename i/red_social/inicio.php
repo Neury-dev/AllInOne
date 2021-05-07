@@ -207,7 +207,7 @@
     </section>
 <script src="../../l/red_social/header.js" async=""></script>
 <!--<script src="../../show/red-social/main.js" defer=""></script>-->
-<script src="../../l/red_social/adaptador/publicacionInicio.js" defer=""></script>
-<script src="../../l/red_social/adaptador/publicacionMenuInicio.js" defer=""></script>
+<script src="../../l/red_social/l/publicacionInicio.js" defer=""></script>
+<script src="../../l/red_social/l/publicacionMenuInicio.js" defer=""></script>
 </body>
 </html> 

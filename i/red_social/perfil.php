@@ -208,9 +208,9 @@
         </section>
     </section>
 <script src="../../l/red_social/header.js" async=""></script>
-<script src="../../l/red_social/adaptador/perfil.js" async=""></script>
+<script src="../../l/red_social/l/perfil.js" async=""></script>
 <script src="../../l/red_social/main.js" defer=""></script>
-<script src="../../l/red_social/adaptador/publicacion.js" defer=""></script>
+<script src="../../l/red_social/l/publicacion.js" defer=""></script>
 <script>
 //var boton = document.querySelector(".n-img-perfil-header");
 //

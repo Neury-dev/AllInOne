@@ -153,7 +153,7 @@
         </section>
     </section>
 <script src="../../l/red_social/header.js" async=""></script>
-<script src="../../l/red_social/adaptador/usuarios.js" defer=""></script>
+<script src="../../l/red_social/l/usuarios.js" defer=""></script>
 <script src="../../l/red_social/perfil/editar.js"></script>
 </body>
 </html> 
