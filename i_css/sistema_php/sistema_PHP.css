@@ -1,7 +1,7 @@
-@import url("http://localhost/AllInOne/front-css/root.css");
+@import url("http://localhost/AllInOne/i_css/root.css");
 /* 
     Created on : 1 dic. 2020, 20:37:35
-    Author     : desarrollador
+    Author     : Neury-dev
 */
 *, *:before, *:after { 
     box-sizing: border-box;     
@@ -35,26 +35,19 @@ h2 {
     text-align: center;
 }
 #n-respuesta > span { color: var(--n-color-rojo); }
-/*@media screen and (min-width: 70em) {*/
-    .n-grid {
-        display: grid;
-        grid-template-columns: auto 80%;
-        grid-gap: 1.50em;
-        margin: 4em 3em 3em 3em;
-    }
-/*}*/
+.n-grid {
+    display: grid;
+    grid-template-columns: auto 80%;
+    grid-gap: 1.50em;
+    margin: 4em 3em 3em 3em;
+}
 /*.n-grid > section { background: red; }*/
 .n-grid > .area-1 { grid-area: 1 / 1 / span 1 / span 2; }
 .n-grid > .area-2 { grid-area: 2 / 1 / span 1 / span 1; }
 .n-grid > .area-3 { grid-area: 3 / 1 / span 1 / span 1; }
 .n-grid > .area-4 { grid-area: 2 / 2 / span 1 / span 1; }
 .n-grid > .area-5 { grid-area: 3 / 2 / span 1 / span 1; }
-/*@media screen and (max-width: 69.99em) {
-    .n-grid {
-        display: grid;
-        grid-template-columns: auto 90%;            
-    }
-}*/
+
 .n-grid > .area-2 > h3 {
     color: var(--n-color-dos);
     font-family: var(--n-fuente-dos);
@@ -63,14 +56,25 @@ h2 {
 }
 .n-grid > .area-3 { margin-top: -2em; }
 .n-grid > .area-3 > form > label, .n-grid > .area-3 > form > input { width: 100%; }
-/*.n-grid > .area-3 >*/ 
 form > label {
     color: var(--n-color-dos);
     font-family: var(--n-fuente-dos);
     font-size: 0.80em;
     font-weight: bold;
 }
-.n-grid > .area-3 > form > input { margin-bottom: 0.50em; }
+.n-grid > .area-3 > form > input, 
+.n-grid > .area-4 > form > input { 
+    margin-bottom: 0.50em; 
+    border: none;
+    border-radius: var(--n-radio);
+    padding: var(--n-relleno);
+}
+.n-grid > .area-3 > form > input:focus, 
+.n-grid > .area-4 > form > input:focus {
+    color: var(--n-color);
+    background-color: var(--n-color-tres);
+    outline: none;
+}
 .n-grid > .area-3 > form > input[type=submit] {
     color: var(--n-color);
     background-color: var(--n-color-dos);
@@ -78,8 +82,8 @@ form > label {
     font-size: 0.90em;
     width: 100%;
     border: none;
-    border-radius: 0.50em;
-    padding: 0.50em;
+    border-radius: var(--n-radio);
+    padding: var(--n-relleno);
     cursor: pointer;
 }
 .n-grid > .area-3 > form > input[type=submit]:hover {
@@ -93,9 +97,6 @@ form > label {
     margin: -2em 0em 0em 0em;
     padding: 0;
 }
-/*.n-grid > .area-5 > div {
-    width: 100%;
-}*/
 /*
     Tabla
 */
@@ -136,7 +137,7 @@ table > tbody > tr > td > button {
     color: var(--n-color-dos);
     background-color: var(--n-color);
     font-family: var(--n-fuente);
-    font-size: 0.90em;
+    font-size: var(--n-tamaño-de-texto);
     width: 100%;
     border: none;
     border-radius: 0.50em;
@@ -166,7 +167,7 @@ tfoot> tr > td > form  > label { color: var(--n-color); }
 tfoot> tr > td > form  > select {
     color: var(--n-color);
     background-color: var(--n-color-dos);
-    font-size: 0.90em;
+    font-size: var(--n-tamaño-de-texto);
     border: 0.10em solid var(--n-color) !important;
     border-radius: 0.30em;
     padding: 0.30em;
