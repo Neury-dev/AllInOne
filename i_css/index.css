@@ -23,6 +23,7 @@
 .area-2 { grid-area: 2 / span 3 / 3 / 4; }
 .area-3 { grid-area: 3 / 1 / 4 / 2; }
 .area-4 { grid-area: 3 / 2 / 4 / span 2; }
+.area-5 { grid-area: 4 / span 3 / 5 / 4; }
 /*
     ........................
 */
@@ -69,14 +70,74 @@ h1, h2, h3, h4 {
 /*
     Main
 */
+.n-svg-1 {
+    position: absolute;
+    right: -12em;
+    background-repeat: no-repeat;
+}
+/*.n-svg-footer {
+    position: absolute!important;
+    left: o;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    width: 100%;
+    clip-path: polygon(0 16%, 100% 59%, 100% 100%, 0% 100%);
+}*/
+.n-grid > .area-2 > main {
+    width: 500px;
+    /*background-color: var(--n-color-dos);*/
+}
+.n-grid > .area-2 > main > .circulo {
+    float: left;
+    background-color: var(--n-color);
+    width: 40%;
+    height: 200px;
+    margin: 1em;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+}
+.n-grid > .area-2 > main > .circulo > .foto {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+}
 .n-grid > .area-2 > main > h3, 
 .n-grid > .area-2 > main > h4, 
 .n-grid > .area-2 > main > p {
     margin: 0;
 }
+.n-grid > .area-2 > main > h3 {
+    color: var(--n-color);
+    margin-bottom: 1.50em;
+    text-shadow: var(--n-sombra-caja-dos);
+} 
+.n-grid > .area-2 > main > h4 {
+    color: var(--n-color-dos-uno);
+} 
+.n-grid > .area-2 > main > p {
+    color: var(--n-color-tres);
+    font-size: 0.80em;
+    margin-bottom: 1.50em;
+}
 /*
     Article
 */
+.n-grid > .area-3 > h3 {
+    color: var(--n-color);
+    margin-bottom: 1.50em;
+    text-shadow: var(--n-sombra-caja-dos);
+}
+.n-grid > .area-3 > .svg-desarrollos {
+    float: left;
+/*    background-color: var(--n-color);
+    width: 40%;
+    height: 200px;*/
+    /*margin: 1em;*/
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+}
 .n-grid > .area-3 > article {
     margin-bottom: 1em;
 }
@@ -86,6 +147,7 @@ h1, h2, h3, h4 {
     margin: 0;
 }
 .n-grid > .area-3 > article > :nth-child(1) {
+    color: var(--n-color-dos-uno);
     line-height: 130%;
 }
 .n-grid > .area-3 > article > :nth-child(2) {
@@ -97,3 +159,33 @@ h1, h2, h3, h4 {
     color: var(--n-color-tres);
     font-size: 0.70em;
 }
+
+
+
+
+
+
+
+
+
+
+
+/*.area-3 > img.slide-1,
+.area-3 > img.slide-2,
+.area-3 > img.slide-3 {
+    float: left;
+    width: 200px;
+    height: 200px;
+}
+.area-3 > img.slide-1 {
+    shape-outside: url(i_svg/blob-haikei-1.svg);
+    clip-path: url(i_svg/blob-haikei-1.svg);
+}
+.area-3 > img.slide-2 {
+    shape-outside: url(i_svg/blob-haikei-2.svg);
+    clip-path: url(i_svg/blob-haikei-2.svg);
+}
+.area-3 > img.slide-3 {
+    shape-outside: url(i_svg/blob-haikei-3.svg);
+    clip-path: url(i_svg/blob-haikei-3.svg);
+}*/

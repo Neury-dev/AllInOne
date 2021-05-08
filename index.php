@@ -6,9 +6,37 @@
     <meta http-equiv="last-modified" content="Thu, 18 Nov 2020 19:11:42 GMT">
     <link rel="stylesheet" href="i_css/index.css">
     <!-- Iconos: JavaScript-->
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!--<script src='https://kit.fontawesome.com/a076d05399.js'></script>-->
+    <style>
+        .mySlides {display: none;}
+        /*.mySlides > img {vertical-align: middle;}*/    
+
+.area-3 > img.slide-1 {
+    float: left;
+    width: 200px;
+    height: 200px;
+    shape-outside: url(i_svg/blob-haikei-1.svg);
+    clip-path: url(i_svg/blob-haikei-1.svg);
+}
+.area-3 > img.slide-2 {
+    float: left;
+    width: 200px;
+    height: 200px;
+    shape-outside: url(i_svg/blob-haikei-2.svg);
+    clip-path: url(i_svg/blob-haikei-2.svg);
+}
+.area-3 > img.slide-3 {
+    float: left;
+    width: 200px;
+    height: 200px;
+    shape-outside: url(i_svg/blob-haikei-3.svg);
+    clip-path: url(i_svg/blob-haikei-3.svg);
+}
+    </style>
 </head>
 <body>
+    <!--<img src="i_svg/body.svg" alt="svg" class="n-svg-body">-->
+<img src="i_svg/cool-background.svg" alt="svg" class="n-svg-1">
 <section class="n-grid">
 <section class="area-1">  
     <header>
@@ -20,16 +48,27 @@
 </section>
 <section class="area-2">
     <main>
+        <div class="circulo">
+            <img src="i_img/foto-avatar.png" alt="foto" class="foto">
+        </div>
         <h3>Lenguajes y Herramientas</h3>
             <h4>Frontend developer</h4>
                 <p>HTML, CSS, JavaScript, Java...</p>
             <h4>Backend developer</h4>
                 <p>PHP, JavaScript, Java, JSON, SQL, NoSQL...</p>
             <h4>Tools developer</h4>
-                <p>Apache NetBeans</p>
+                <p>Apache NetBeans...</p>
     </main>
 </section>
 <section class="area-3">
+    <img src="i_svg/desarrollos.svg" alt="svg" class="svg-desarrollos" width="200" height="200">
+   
+<!--            <img src="i_svg/blob-haikei-1.svg" class="mySlides slide-1">
+       
+            <img src="i_svg/blob-haikei-2.svg" class="mySlides slide-2">
+       
+            <img src="i_svg/blob-haikei-3.svg" class="mySlides slide-3">-->
+    
     <h3>Desarrollos</h3>
     <article>
         <h4>Loto</h4>
@@ -67,6 +106,33 @@
         aside
     </aside>
 </section>
+<section class="area-5">
+    <footer>
+       <!--<img src="i_svg/emoji.svg" alt="svg" class="">--> 
+    </footer>
 </section>
+</section>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+//  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1;}    
+//  for (i = 0; i < dots.length; i++) {
+////    dots[i].className = dots[i].className.replace(" active", "");
+//  }
+  slides[slideIndex-1].style.display = "block";  
+//  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
 </body>
 </html>

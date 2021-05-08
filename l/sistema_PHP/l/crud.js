@@ -15,7 +15,7 @@ enviar  = document.querySelector("#crear-envio");
 //leer();
 function 
 leer(busqueda) {
-    fetch("sql/sistema-PHP/Leer.php", {
+    fetch("s/sistema_php/Leer.php", {
         method: "POST",
         body: busqueda
     }).then(function(response) {
@@ -42,7 +42,7 @@ crear.addEventListener('submit', function(e) {
     datos.append('precio', precio);
     datos.append('crear-envio', crearEnvio);
 
-    fetch('sql/sistema-PHP/Crear.php', {
+    fetch('s/sistema_php/Crear.php', {
         method: 'POST',
         body: datos
     }).then(function(response) {
@@ -59,7 +59,7 @@ crear.addEventListener('submit', function(e) {
 });
 function 
 actualizar(editarID) {
-    fetch("sql/sistema-PHP/Actualizar.php", {
+    fetch("s/sistema_php/Actualizar.php", {
         method: "POST",
         body: editarID
     }).then(function (response) {
@@ -79,7 +79,7 @@ actualizar(editarID) {
 }
 function 
 borrar(borrarID) {
-    fetch("sql/sistema-PHP/Borrar.php", {
+    fetch("s/sistema_php/Borrar.php", {
         method: "POST",
         body: borrarID
     }).then(function(response) {

@@ -57,7 +57,7 @@ ordenar.addEventListener('input', function() {
     *Paginación 
 */
 var maximo;
-fetch("sql/sistema-PHP/CantidadDeFilas.php").then(function (response) {
+fetch("s/sistema_php/CantidadDeFilas.php").then(function (response) {
     if (response.ok) { return response.json(); } 
     else { throw "Error en la llamada"; }
 }).then(function (json) {

@@ -49,6 +49,9 @@ encabezado HTTP: como solicitar la ultima version del fichero (last-modified)
 - Font Awesome: Iconos individuales
 https://fontello.com/
 
+- SVG
+https://getwaves.io/
+
 - Animacion
 http://localhost:8383/JavaScriptCanvas/html/animacion4.html
 http://localhost:8383/JavaScriptCanvas/html/animacion.html

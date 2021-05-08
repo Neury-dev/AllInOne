@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="last-modified" content="Thu, 18 Nov 2020 19:11:42 GMT">
     <link rel="stylesheet" href="i_css/sistema_php/sistema_PHP.css">
-    <style>
-        /*@import url("http://localhost/AllInOne/front-css/root.css");*/
-
-    </style>
 </head>
 <body>
     <header>
@@ -29,18 +25,18 @@
                     <input type="text" name="id" id="id" value="">
                 </label>
                 <label for="marca">Marca</label>
-                    <input type="text" name="marca" id="marca" placeholder="Marca">
+                    <input type="text" name="marca" id="marca" placeholder="Ingresar marca">
                 <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingresar nombre">
                 <label for="precio">Precio</label>
-                    <input type="number" name="precio" id="precio" placeholder="1">
+                    <input type="number" name="precio" id="precio" placeholder="Ingresar precio">
                 <input type="submit" name="crear-envio" id="crear-envio" value="Crear">
             </form>
         </section>
         <section class="area-4">
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="buscar" id="buscar">
                 <label for="buscar">Buscar:</label>
-                <input type="search" name="buscar" id="buscar" placeholder="Buscar...">
+                <input type="search" name="buscar" id="buscar" placeholder="Ingresar termino de busqueda...">
             </form>
         </section>
         <section class="area-5">
@@ -115,10 +111,7 @@
             </div>
         </section>
     </section>
-<script src="l/sistema_PHP/crud.js" async=""></script>
-<script src="l/sistema_PHP/complementos.js" defer=""></script>
-<script>
-
-</script>
+<script src="l/sistema_PHP/l/crud.js" async=""></script>
+<script src="l/sistema_PHP/l/complementos.js" defer=""></script>
 </body>
 </html>
