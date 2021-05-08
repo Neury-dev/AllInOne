@@ -6,33 +6,7 @@
     <meta http-equiv="last-modified" content="Thu, 18 Nov 2020 19:11:42 GMT">
     <link rel="stylesheet" href="i_css/index.css">
     <!-- Iconos: JavaScript-->
-    <!--<script src='https://kit.fontawesome.com/a076d05399.js'></script>-->
-    <style>
-        .mySlides {display: none;}
-        /*.mySlides > img {vertical-align: middle;}*/    
-
-.area-3 > img.slide-1 {
-    float: left;
-    width: 200px;
-    height: 200px;
-    shape-outside: url(i_svg/blob-haikei-1.svg);
-    clip-path: url(i_svg/blob-haikei-1.svg);
-}
-.area-3 > img.slide-2 {
-    float: left;
-    width: 200px;
-    height: 200px;
-    shape-outside: url(i_svg/blob-haikei-2.svg);
-    clip-path: url(i_svg/blob-haikei-2.svg);
-}
-.area-3 > img.slide-3 {
-    float: left;
-    width: 200px;
-    height: 200px;
-    shape-outside: url(i_svg/blob-haikei-3.svg);
-    clip-path: url(i_svg/blob-haikei-3.svg);
-}
-    </style>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
     <!--<img src="i_svg/body.svg" alt="svg" class="n-svg-body">-->
@@ -49,7 +23,7 @@
 <section class="area-2">
     <main>
         <div class="circulo">
-            <img src="i_img/foto-avatar.png" alt="foto" class="foto">
+            <img src="i_img/i/foto-avatar.png" alt="foto" class="foto">
         </div>
         <h3>Lenguajes y Herramientas</h3>
             <h4>Frontend developer</h4>
@@ -61,14 +35,8 @@
     </main>
 </section>
 <section class="area-3">
-    <img src="i_svg/desarrollos.svg" alt="svg" class="svg-desarrollos" width="200" height="200">
-   
-<!--            <img src="i_svg/blob-haikei-1.svg" class="mySlides slide-1">
-       
-            <img src="i_svg/blob-haikei-2.svg" class="mySlides slide-2">
-       
-            <img src="i_svg/blob-haikei-3.svg" class="mySlides slide-3">-->
-    
+    <img src="i_svg/desarrollos.svg" alt="desarrollos" class="svg-desarrollos">
+
     <h3>Desarrollos</h3>
     <article>
         <h4>Loto</h4>
@@ -80,11 +48,42 @@
         <p>14/09/2020 - 29/11/2020</p>
         <a href="tienda.php">http://localhost/AllInOne/tienda.php</a>
     </article>
+    
+    <img src="i_img/i/blob-1.png" class="formas slide-1">
+<img src="i_img/i/blob-2.png" class="formas slide-2">
+<img src="i_img/i/blob-3.png" class="formas slide-3">
+<img src="i_img/i/blob-4.png" class="formas slide-4">
+<!--<img src="i_img/i/blob-5.png" class="formas slide-5">-->
+<!--<img src="i_img/i/blob-6.png" class="formas slide-6">-->
+<!--<img src="i_img/i/blob-7.png" class="formas slide-7">-->
+<!--<img src="i_img/i/blob-8.png" class="formas slide-8">-->
+<!--<img src="i_img/i/blob-9.png" class="formas slide-9">-->
+<!--<img src="i_img/i/blob-10.png" class="formas slide-10">-->
+    <div class="iconos">
+        <i class='fab fa-html5 icono'></i>
+        <i class='fab fa-css3-alt icono'></i>
+        <i class='fab fa-js-square icono'></i>
+        
+        <i class='fab fa-node icono'></i>
+        <!--<i class='fab fa-node-js icono'></i>-->
+        <!--<i class='fab fa-npm icono'></i>-->
+        <!--<i class='fab fa-linux icono'></i>-->
+        
+        <!--<i class='fa fa-code icono'></i>-->
+        <!--<i class='fas fa-database icono'></i>-->
+        
+        <!--<i class='fab fa-css3 icono'></i>-->
+        
+    </div>
+
     <article>
         <h4>Plantillas de código</h4>
         <p>01/12/2020 - 01/12/2020</p>
         <a href="plantillas_de_codigo.php">http://localhost/AllInOne/plantillas_de_codigo.php</a>
     </article>
+    
+    
+    
     <article>
         <h4>Sistema PHP</h4>
         <p>01/12/2020 - 06/12/2020</p>
@@ -118,20 +117,25 @@ var slideIndex = 0;
 showSlides();
 
 function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-//  var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1;}    
+    var i;
+    var slides    = document.getElementsByClassName("formas");
+    var iconos    = document.getElementsByClassName("icono");
+  
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+        iconos[i].style.display = "none"; 
+    }
+    
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1;}    
 //  for (i = 0; i < dots.length; i++) {
-////    dots[i].className = dots[i].className.replace(" active", "");
+//    document.querySelector("slide-"+slides[i]).style.clipPath = "circle(50%)";
+//    document.querySelector("slide-"+slides[i]).style..shapeOutside = "circle(50%)";
 //  }
-  slides[slideIndex-1].style.display = "block";  
+    slides[slideIndex-1].style.display = "block"; 
+    iconos[slideIndex-1].style.display = "block"; 
 //  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 </script>
 </body>
