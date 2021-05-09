@@ -76,7 +76,7 @@
         
     </div>
 
-    <article>
+<article class="trasladar">
         <h4>Plantillas de código</h4>
         <p>01/12/2020 - 01/12/2020</p>
         <a href="plantillas_de_codigo.php">http://localhost/AllInOne/plantillas_de_codigo.php</a>
@@ -84,17 +84,17 @@
     
     
     
-    <article>
+    <article class="trasladar">
         <h4>Sistema PHP</h4>
         <p>01/12/2020 - 06/12/2020</p>
         <a href="sistema_PHP.php">http://localhost/AllInOne/sistema_PHP.php</a>
     </article>
-    <article>
+    <article class="trasladar">
         <h4>Sistema JSON</h4>
         <p>09/12/2020 - 16/12/2020</p>
         <a href="sistema_JSON.php">http://localhost/AllInOne/sistema_JSON.php</a>
     </article>
-    <article>
+    <article class="trasladar">
         <h4>Red Social</h4>
         <p>19/12/2020 - 22/04/2021</p>
         <a href="red_social.php">http://localhost/AllInOne/red_social.php</a>
@@ -112,31 +112,6 @@
 </section>
 </section>
 
-<script>
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides    = document.getElementsByClassName("formas");
-    var iconos    = document.getElementsByClassName("icono");
-  
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-        iconos[i].style.display = "none"; 
-    }
-    
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1;}    
-//  for (i = 0; i < dots.length; i++) {
-//    document.querySelector("slide-"+slides[i]).style.clipPath = "circle(50%)";
-//    document.querySelector("slide-"+slides[i]).style..shapeOutside = "circle(50%)";
-//  }
-    slides[slideIndex-1].style.display = "block"; 
-    iconos[slideIndex-1].style.display = "block"; 
-//  dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-</script>
+<script src="l/i/index.js" async=""></script>
 </body>
 </html>

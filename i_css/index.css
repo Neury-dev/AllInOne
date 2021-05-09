@@ -77,7 +77,6 @@ h1, h2, h3, h4 {
 }
 .n-grid > .area-2 > main {
     width: 500px;
-    /*background-color: var(--n-color-dos);*/
 }
 .n-grid > .area-2 > main > .circulo {
     float: left;
@@ -127,6 +126,7 @@ h1, h2, h3, h4 {
     float: left;
     width: 170px;
     height: 170px;
+    margin: 0;
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
 }
@@ -136,8 +136,7 @@ h1, h2, h3, h4 {
 .n-grid > .area-3 > article > :nth-child(1), 
 .n-grid > .area-3 > article > :nth-child(2), 
 .n-grid > .area-3 > article > :nth-child(3) {
-    /*margin: 0;*/
-    margin: 0em 0em 0em 2em!important;
+    margin: 0;
 }
 .n-grid > .area-3 > article > :nth-child(1) {
     color: var(--n-color-dos-uno);
@@ -150,7 +149,10 @@ h1, h2, h3, h4 {
 }
 .n-grid > .area-3 > article > :nth-child(3) {
     color: var(--n-color-tres);
-    font-size: 0.70em;
+    font-size: 0.70em;margin: 0;
+}
+.n-grid > .area-3 > article.trasladar {
+    transform: translate(1em, 0em);
 }
 /*
     Diapositiva
@@ -159,13 +161,8 @@ h1, h2, h3, h4 {
     position: absolute;
     top: 56em;
     left: 7em;
-    /*z-index: 4;*/
 }
 .icono {
-    position: relative;
-/*    top: 50em;
-    left: 10em;*/
-    z-index: 4;
     color: var(--n-color-dos-uno);
     font-size: 7em;
 }
@@ -184,13 +181,10 @@ h1, h2, h3, h4 {
 .area-3 > img.slide-8,
 .area-3 > img.slide-9,
 .area-3 > img.slide-10 {
-    position: relative;
-    z-index: 0;
     float: left;
     width: 250px;
     height: 250px;
-    /*margin-right: 2em;*/
-    /*opacity: 0.5;*/
+    margin-right: 4em;
     filter: grayscale(100%);
 }
 .area-3 > img.slide-1 {
