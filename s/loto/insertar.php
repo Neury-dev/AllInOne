@@ -26,7 +26,7 @@ class RegistroDeSorteo extends Conexion {
 
                 if($this->resultadoFecha) {
                         echo "<script>alert('Este Sorteo ya Esta Registrado.')</script>";
-                        echo '<meta http-equiv="refresh" content="1; url= ../../front/loto/insertar.php" />';  
+                        echo '<meta http-equiv="refresh" content="1; url= ../../i/loto/insertar.php" />';  
                 } else {
                     $this->mySQLiLoto = $this->conexion->  
                         query("SELECT `loto` FROM `Historial` WHERE loto='$loto'");
@@ -50,12 +50,12 @@ class RegistroDeSorteo extends Conexion {
                             . "VALUES (NULL, '$fecha', '$sorteo', '$loto', '$lotoMas', '$superMas')");
 
                         echo "<script>alert('Sorteo registrado con Exito.')</script>";
-                        echo '<meta http-equiv="refresh" content="1; url= ../../front/loto/historial.php" />';
+                        echo '<meta http-equiv="refresh" content="1; url= ../../i/loto/historial.php" />';
                     }
                 }
             } else {
                 echo "<script>alert('Se ha producido un Error.')</script>";
-                echo '<meta http-equiv="refresh" content="1; url= ../../front/loto/insertar.php" />';
+                echo '<meta http-equiv="refresh" content="1; url= ../../i/loto/insertar.php" />';
             }
         }
     }

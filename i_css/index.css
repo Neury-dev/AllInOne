@@ -157,35 +157,35 @@ h1, h2, h3, h4 {
 /*
     Diapositiva
 */
-.iconos {
-    position: absolute;
+.n-grid > .area-3 > h3 > span.iconos {
+    display: inline-block;
+    vertical-align: middle;
+/*    position: absolute;
     top: 56em;
-    left: 7em;
+    left: 7em;*/
 }
-.icono {
-    color: var(--n-color-dos-uno);
-    font-size: 7em;
+.n-grid > .area-3 > h3 > span.iconos > .icono {
+    /*color: var(--n-color-dos-uno);*/
+    font-size: 1.50em;
 }
-.formas, 
-.icono {
+.n-grid > .area-3 > .formas, 
+.n-grid > .area-3 > .iconos > .icono {
     display: none;
-}
-/*.mySlides > img {vertical-align: middle;}*/    
-.area-3 > img.slide-1,
-.area-3 > img.slide-2,
-.area-3 > img.slide-3,
-.area-3 > img.slide-4,
-.area-3 > img.slide-5,
-.area-3 > img.slide-6,
-.area-3 > img.slide-7,
-.area-3 > img.slide-8,
-.area-3 > img.slide-9,
-.area-3 > img.slide-10 {
+} 
+.n-grid > .area-3 > img.slide-1,
+.n-grid > .area-3 > img.slide-2,
+.n-grid > .area-3 > img.slide-3,
+.n-grid > .area-3 > img.slide-4,
+.n-grid > .area-3 > img.slide-5,
+.n-grid > .area-3 > img.slide-6,
+.n-grid > .area-3 > img.slide-7,
+.n-grid > .area-3 > img.slide-8,
+.n-grid > .area-3 > img.slide-9,
+.n-grid > .area-3 > img.slide-10 {
     float: left;
     width: 250px;
     height: 250px;
     margin-right: 4em;
-    filter: grayscale(100%);
 }
 .area-3 > img.slide-1 {
     shape-outside: url(i_img/i/blob-1.png);
@@ -230,5 +230,85 @@ h1, h2, h3, h4 {
 
 
 
+/*
+
+    Aside
 
 
+    SVG................................................................................
+
+
+
+
+*/
+aside {
+    background-image: url(i_img/i/blob-1.php);
+    background-size: 100%, 100%;
+    background-repeat:no-repeat;
+}
+
+
+rect#rect10 {
+    opacity:1;
+    vector-effect:none;
+    fill:#c57885;
+    fill-opacity:1;
+    fill-rule:evenodd;
+    stroke:#000000;
+    stroke-width:5.29513884;
+    stroke-linecap:butt;
+    stroke-linejoin:miter;
+    stroke-miterlimit:4;
+    stroke-dasharray:none;
+    stroke-dashoffset:0;
+    stroke-opacity:1;
+}
+rect#rect10:hover {
+    opacity:1;
+    vector-effect:none;
+    fill: var(--n-color);
+    fill-opacity:1;
+    fill-rule:evenodd;
+    stroke: var(--n-color-dos);
+    stroke-width:5.29513884;
+    stroke-linecap:butt;
+    stroke-linejoin:miter;
+    stroke-miterlimit:4;
+    stroke-opacity:1;
+    /*stroke-dashoffset: 1000;*/
+    stroke-dasharray: 1000;
+    animation-name: nHoverStroke;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes nHoverStroke {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+
+path#path815 {
+    fill:none;
+    stroke:#ff0000;
+    stroke-width:1.465;
+    stroke-linecap:butt;
+    stroke-linejoin:miter;
+    stroke-opacity:1;
+    stroke-miterlimit:4;
+    stroke-dasharray:none;
+}
+path#path815:hover {
+    fill:none;
+    stroke: #000000;
+    stroke-width:4.465;
+    stroke-linecap:butt;
+    stroke-linejoin:miter;
+    stroke-opacity:1;
+    stroke-miterlimit:4;
+    stroke-dasharray: 1000;
+}

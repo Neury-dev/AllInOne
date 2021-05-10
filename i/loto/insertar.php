@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../i_css/loto/insertar.css">
 </head>
 <body>
-    <?php require_once '../../sql/loto/header_nav.php'; ?>
+    <?php require_once '../../s/loto/header_nav.php'; ?>
     
     <form action="../../s/loto/insertar.php" method="post" enctype="multipart/form-data">
         <p><input type="date" name="fecha" required="" style="width: 94%;" required=""></p>

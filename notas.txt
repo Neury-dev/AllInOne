@@ -53,15 +53,3 @@ https://fontello.com/
 https://getwaves.io/
 
 - Animacion
-http://localhost:8383/JavaScriptCanvas/html/animacion4.html
-http://localhost:8383/JavaScriptCanvas/html/animacion.html
-http://localhost:8383/JavaScriptCanvas/html/transform.html
-http://localhost:8383/JavaScriptCanvas/html/grafico_lineal.html
-http://localhost:8383/JavaScriptCanvas/html/setLineDash.html
-http://localhost:8383/JavaScriptCanvas/html/lineWidth.html
-http://localhost:8383/JavaScriptCanvas/html/globalAlpha.html
-http://localhost:8383/JavaScriptCanvas/html/moveTo.html
-http://localhost:8383/JavaScript/html/canvas6.html
-http://localhost:8383/JavaScript/html/bouncing_balls.html
-http://localhost:8383/JavaScript/html/util-eventtarget.html
-http://localhost:8383/JavaScript/html/random-canvas-circles.html
