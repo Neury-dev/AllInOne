@@ -106,106 +106,18 @@
     </article>
 </section>
 <section class="area-4">
+    <div class="aside-img">
+        <img src="i_img/i/aside.png" width="500" height="500" alt="aside"/>
+    </div>
     <aside>
+        <svg width="20" height="50" id="izquierda">
+            <text class="fas n-hacer" x="0" y="40">¿</text>
+        </svg>
+        
+        <p class=""></p>
 
-<!--        <style>
-path {
-    fill:none;
-    stroke:#ff0000;
-    stroke-width:1.465;
-    stroke-linecap:butt;
-    stroke-linejoin:miter;
-    stroke-opacity:1;
-    stroke-miterlimit:4;
-    stroke-dasharray:none;
-}
-path:hover, circle:hover {
-    fill:none;
-    stroke: #000000;
-    stroke-width:4.465;
-    stroke-linecap:butt;
-    stroke-linejoin:miter;
-    stroke-opacity:1;
-    stroke-miterlimit:4;
-    stroke-dasharray: 1000;
-}
-</style>
-<svg height="400" width="450">
-<path id="lineAB" d="M 100 350 l 150 -300" stroke="red" stroke-width="3" fill="none" />
-  Mark relevant points 
-  <g stroke="black" stroke-width="3" fill="black">
-    <circle id="pointA" cx="100" cy="350" r="20" />
-    <circle id="pointB" cx="250" cy="50" r="30" />
-    <circle id="pointC" cx="400" cy="350" r="40" />
-  </g>
-   Label the points 
-  <g font-size="30" font-family="sans-serif" fill="black" stroke="none" text-anchor="middle">
-    <text x="100" y="350" dx="-30">A</text>
-    <text x="250" y="50" dy="-10">B</text>
-    <text x="400" y="350" dx="30">C</text>
-  </g>
-  Sorry, your browser does not support inline SVG.
-</svg>
-<svg width="1000" height="1000">
-   <rect
-       y="14.006736"
-       x="7.2924504"
-       height="48.159157"
-       width="57.230576"
-       id="rect10"
-       />
-</svg>
-<svg height="297mm"
-   width="210mm">
-
-</svg>-->
-
-
-        <svg width="710" height="810">
-        <style>
-            .n-quieres { 
-                display: none;
-                font-size: 40px;
-                
-            }
-            svg:hover > .n-quieres { 
-                display: block;
-                fill: rgba(255, 255, 255, 0.0);
-                stroke: #c7beb8;
-                
-                stroke-dasharray: 1000;
-                 /*transform: translateX(10em);*/
-                animation-name:quieres;
-                animation-duration: 5s;
-                animation-timing-function: ease-in-out;
-            }
-            @keyframes quieres {
-                from {
-                    transform: translateX(10em);
-                    stroke-dashoffset: 1000;
-                }
-                to {
-                    transform: translateX(0em);
-                    stroke-dashoffset: 0;
-                }
-            }
-            .n-hacer { font-size: 90px}
-            
-
-            svg > text.n-hacer:hover {
-                /*fill: #ffffff;*/
-                fill: rgba(255, 255, 255, 0.0);
-                stroke: #c7beb8;
-                stroke-dashoffset: 1000;
-                stroke-dasharray: 1000;
-                animation-name: nHoverStroke;
-                animation-duration: 5s;
-                animation-timing-function: ease-in-out;
-            }
-            @keyframes nHoverStroke {to {stroke-dashoffset: 0;}}
-        </style>
-            <text class="fas n-quieres" fill="#8f7d70" font-family="Verdana" x="17" y="84">Y tu que quieres hacer</text>
-            <text class="fas n-hacer" fill="#8f7d70" font-family="Verdana" x="600" y="84">?</text>
+        <svg width="20" height="50" id="derecha">
+            <text class="fas n-hacer" x="0" y="40">?</text>
         </svg>
     </aside>
 </section>
