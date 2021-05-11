@@ -9,7 +9,6 @@
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
-    <!--<img src="i_svg/body.svg" alt="svg" class="n-svg-body">-->
 <img src="i_svg/cool-background.svg" alt="svg" class="n-svg-1">
 <section class="n-grid">
 <section class="area-1">  
@@ -69,11 +68,6 @@
 <!--<img src="i_img/i/blob-9.png" class="formas slide-9">-->
 <!--<img src="i_img/i/blob-10.png" class="formas slide-10">-->
     <div class="iconos">
-<!--        <i class='fab fa-html5 icono'></i>
-        <i class='fab fa-css3-alt icono'></i>
-        <i class='fab fa-js-square icono'></i>
-        <i class='fab fa-php icono'></i>
-        <i class='fab fa-node icono'></i>-->
         <!--<i class='fab fa-node-js icono'></i>-->
         <!--<i class='fab fa-npm icono'></i>-->
         <!--<i class='fab fa-linux icono'></i>-->
@@ -106,24 +100,24 @@
     </article>
 </section>
 <section class="area-4">
-    <div class="aside-img">
+<!--    <div class="aside-img">
         <img src="i_img/i/aside.png" width="500" height="500" alt="aside"/>
-    </div>
+    </div>-->
     <aside>
         <svg width="20" height="50" id="izquierda">
             <text class="fas n-hacer" x="0" y="40">¿</text>
         </svg>
-        
-        <p class=""></p>
-
         <svg width="20" height="50" id="derecha">
             <text class="fas n-hacer" x="0" y="40">?</text>
         </svg>
+        <p class="pregunta" id="pregunta"></p>
+        <p class="respuesta" id="respuesta">Web</p>
     </aside>
 </section>
 <section class="area-5">
     <footer>
-       <!--<img src="i_svg/emoji.svg" alt="svg" class="">--> 
+        <hr>
+        <p>Desarrollador por Neury</p>
     </footer>
 </section>
 </section>

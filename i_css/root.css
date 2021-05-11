@@ -3,7 +3,11 @@
     Author     : desarrollador
 */
 *, *:before, *:after { box-sizing: border-box; }
-body { margin: 0; font-size: 100%; }
+body { 
+    margin: 0;
+    font-size: 100%;
+    overflow-x: hidden;
+}
 a { text-decoration: none; }
 a, button { cursor: pointer; }
 /*html {
