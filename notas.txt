@@ -1,6 +1,11 @@
 -PSRs (PHP Standards Recommendations)
 https://www.php-fig.org/
 
+- Github:
+https://docs.github.com/es/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+https://github.com/Neury-dev/JavaScript.git
+
 - Red Social
     - Tutoriales
         https://www.youtube.com/playlist?list=PLEcGx73Bpko0BZidkP7pgZsAsL1pPG2RU    - 19 - fin

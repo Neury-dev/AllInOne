@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="last-modified" content="Thu, 18 Nov 2020 19:11:42 GMT">
     <link rel="stylesheet" href="i_css/sistema_php/sistema_PHP.css">
+    <link rel="stylesheet" href="i_css/i/flechas.css">
 </head>
 <body>
     <header>
-        <h1><a href="http://localhost/AllInOne/index.php">AllInOne</a></h1>
+        <p title="Atras"><a href="http://localhost/AllInOne/index.php"><i class="flecha left"></i>Neury-dev</a></p>
     </header>
     <section class="n-grid">
         <section class="area-1">
@@ -42,7 +43,7 @@
         <section class="area-5">
             <div>
             <table>
-                <caption>Salida de datos</caption>
+                <!--<caption>Salida de datos</caption>-->
                 <thead>
                     <tr>
                         <th>ID</th>

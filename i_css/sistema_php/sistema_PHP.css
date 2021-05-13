@@ -1,45 +1,25 @@
-@import url("http://localhost/AllInOne/i_css/root.css");
+@import url("http://localhost/AllInOne/i_css/i/root.css");
 /* 
     Created on : 1 dic. 2020, 20:37:35
     Author     : Neury-dev
 */
-*, *:before, *:after { 
-    box-sizing: border-box;     
+header { padding: 1em 0em 1em 3em; }
+header > p:hover { text-decoration: underline; }
+header p i.flecha {
+    border-style: solid;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
 }
-body { margin: 0; }
-h1 > a  {
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    color: var(--n-color-dos);
-    background-color: var(--n-color-dos);
-    font-family: var(--n-fuente-tres);
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    width: auto;
-    padding: 0.20em 1em 0.20em 1em;
-    border-radius: 0.40em;
-    text-shadow: var(--n-sombra-de-texto);
-    letter-spacing: -0.145em;
-}
-h1 > a:hover { color: var(--n-color-tres); }
-h2 {
-    color: var(--n-color-dos);
-    font-family: var(--n-fuente);
-    text-align: center;
-}
-#n-respuesta {
-    color: var(--n-color-verde);
-    font-family: var(--n-fuente-dos);
-    text-align: center;
-}
-#n-respuesta > span { color: var(--n-color-rojo); }
+header p:hover i.flecha { color: var(--n-color-rojo); }
+/*
+    Maquetado
+*/
 .n-grid {
     display: grid;
     grid-template-columns: auto 80%;
     grid-gap: 1.50em;
-    margin: 4em 3em 3em 3em;
+    margin: 0em 3em 3em 3em;
 }
 /*.n-grid > section { background: red; }*/
 .n-grid > .area-1 { grid-area: 1 / 1 / span 1 / span 2; }
@@ -48,19 +28,17 @@ h2 {
 .n-grid > .area-4 { grid-area: 2 / 2 / span 1 / span 1; }
 .n-grid > .area-5 { grid-area: 3 / 2 / span 1 / span 1; }
 
-.n-grid > .area-2 > h3 {
-    color: var(--n-color-dos);
-    font-family: var(--n-fuente-dos);
-    text-align: center;
-    font-weight: bold;
-}
+.n-grid > .area-1 > h2 { text-align: center; }
+.n-grid > .area-1 > #n-respuesta { color: var(--n-color-verde); text-align: center; }
+.n-grid > .area-1 > #n-respuesta > span { color: var(--n-color-rojo); }
+/*
+    Formulario
+*/
+.n-grid > .area-2 > h3 { text-align: center; font-weight: bold; }
 .n-grid > .area-3 { margin-top: -2em; }
-.n-grid > .area-3 > form > label, .n-grid > .area-3 > form > input { width: 100%; }
-form > label {
-    color: var(--n-color-dos);
-    font-family: var(--n-fuente-dos);
-    font-size: 0.80em;
-    font-weight: bold;
+.n-grid > .area-3 > form > label, 
+.n-grid > .area-3 > form > input { 
+    width: 100%; 
 }
 .n-grid > .area-3 > form > input, 
 .n-grid > .area-4 > form > input { 
@@ -75,11 +53,10 @@ form > label {
     background-color: var(--n-color-tres);
     outline: none;
 }
-.n-grid > .area-3 > form > input[type=submit] {
+.n-grid > .area-3 > form > input[type='submit'] {
     color: var(--n-color);
     background-color: var(--n-color-dos);
-    font-family: var(--n-fuente);
-    font-size: 0.90em;
+    font-weight: bold;
     width: 100%;
     border: none;
     border-radius: var(--n-radio);
@@ -102,48 +79,39 @@ form > label {
 */
 table {
     table-layout: fixed;
-    font-family: var(--n-fuente-dos);
     width: 100%;
-    border: 1px solid #f2f2f2;
+    border: 0.0625em solid #f2f2f2;
     border-collapse: collapse;
 }
-caption {
-    color: var(--n-color-dos);
-    font-family: var(--n-fuente-dos);
-    font-size: 1.20em;
-    text-align: center;
-    font-weight: bold;
-}
+/*caption { text-align: center; font-weight: bold; }*/
 th {
     color: var(--n-color);
     background-color: var(--n-color-dos);
-    font-size: 0.90em;
     height: 2.50em;
-    border: 1px solid var(--n-color-dos);
+    border: 0.0625em solid var(--n-color-dos);
     vertical-align: middle;
 }
-th, td { padding: 0.50em; }
+th, td { padding: var(--n-relleno); }
 tr:nth-child(even) { background-color: #f2f2f2; }
 tr:hover { color: var(--n-color); background-color: var(--n-color-tres); }
 td {
-    font-size: 0.80em;
     text-align: center;
     vertical-align: middle;
     height: 2em;
 }
-td:nth-child(4), td:nth-child(5) { text-align: left; } 
+td:nth-child(4), 
+td:nth-child(5) {
+    text-align: left; 
+} 
 td:nth-child(6) { text-align: right; }
 table > tbody > tr > td > button {
-    color: var(--n-color-dos);
     background-color: var(--n-color);
-    font-family: var(--n-fuente);
-    font-size: var(--n-tamaño-de-texto);
+    font-weight: bold;
     width: 100%;
     border: none;
-    border-radius: 0.50em;
     border: 0.10em solid var(--n-color);
-    padding: 0.50em;
-    cursor: pointer;
+    border-radius: var(--n-radio);
+    padding: var(--n-relleno);
 }
 table > tbody > tr > td > button:hover {
     color: var(--n-color-dos);
@@ -159,7 +127,6 @@ tfoot > tr > td {
 tfoot> tr > td { height: 3em; border-top: 0.10em solid var(--n-color); }
 tfoot> tr > td > form {
     display: inline-block;
-    font-family: var(--n-fuente-dos);
     vertical-align: middle;
     padding: 0.50em 0em 0.50em 0em;
 }
@@ -167,24 +134,21 @@ tfoot> tr > td > form  > label { color: var(--n-color); }
 tfoot> tr > td > form  > select {
     color: var(--n-color);
     background-color: var(--n-color-dos);
-    font-size: var(--n-tamaño-de-texto);
     border: 0.10em solid var(--n-color) !important;
-    border-radius: 0.30em;
-    padding: 0.30em;
+    border-radius: var(--n-radio);
+    padding: var(--n-relleno);
 }
 tfoot> tr > td > button {
     display: inline-block;
-    color: var(--n-color-dos);
     background-color: var(--n-color);
-    font-family: var(--n-fuente);
-    font-size: 0.90em;
+    font-weight: bold;
+    margin: 0.30em 0em 0.30em 0em;
     border: none;
     border: 0.10em solid var(--n-color-dos);
-    border-radius: 0.50em;
-    padding: 0.30em 0.50em 0.30 0.50em;
-    cursor: pointer;
+    border-radius: var(--n-radio);
+    padding: var(--n-relleno);
 }
-form#re-ordenar > button:hover {
+tfoot> tr > td > button:hover {
     color: var(--n-color);
     background-color: var(--n-color-tres);
     border: 0.10em solid var(--n-color);

@@ -1,21 +1,28 @@
 /* 
     Created on : 14 sept. 2020, 4:16:08
-    Author     : desarrollador
+    Author     : neury-dev
 */
 *, *:before, *:after { box-sizing: border-box; }
 body { 
     margin: 0;
     font-size: 100%;
+    color: #1c1d22;
+    font: 0.80em "Verdana", Helvetica, Tahoma, sans-serif;
     overflow-x: hidden;
 }
 a { text-decoration: none; }
-a, button { cursor: pointer; }
+a, 
+button, 
+select { 
+    cursor: pointer; 
+}
+label { font-weight: bold; }
 /*html {
     scroll-behavior: smooth;
 }*/
 :root {
-    --n-fuente:                 'Arial Black', sans-serif;/*'Arial', Gadget, sans-serif*/
-    --n-fuente-dos:             'Gadget', sans-serif;/*'Arial', Helvetica, sans-serif*/
+    --n-fuente:                 "Georgia", Garamond, serif;/*'Arial Black', Arial, Gadget, sans-serif*/
+    /*--n-fuente-dos:             'Verdana', Helvetica, Tahoma, sans-serif;*/
     --n-fuente-tres:            'Comic Sans MS', Comic Sans, cursive;
     
     --n-color:                  white;/*rgb(255, 255, 255), hsl(0, 0%, 100%)*/
@@ -31,7 +38,6 @@ a, button { cursor: pointer; }
     
     --n-transicion:             all 0.8s ease-in-out;/*Admin...............................................................*/
     
-    --n-tamaño-de-texto:        0.90em;
     --n-radio:                  0.50em;
     --n-relleno:                0.50em;
     

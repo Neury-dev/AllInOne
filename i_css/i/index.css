@@ -1,4 +1,4 @@
-@import url("http://localhost/AllInOne/i_css/root.css");
+@import url("http://localhost/AllInOne/i_css/i/root.css");
 /* 
     Created on : 5 may. 2021, 7:00:03 p. m.
     Author     : neury-dev
@@ -32,9 +32,9 @@
 h1, h2, h3, h4 {
     font-family: var(--n-fuente);
 }
-*:not(h1), *:not(h2), *:not(h3), *:not(h4) {
+/**:not(h1), *:not(h2), *:not(h3), *:not(h4) {
     font-family: var(--n-fuente-dos);
-}
+}*/
 .n-grid > .area-1 > main  > article {
     padding: 2em 0em 0em 0em; 
 }
