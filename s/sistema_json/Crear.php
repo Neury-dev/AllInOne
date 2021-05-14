@@ -1,7 +1,7 @@
 <?php
 
 class Crear {
-    private const ARCHIVO = "../../show-json/sistema-JSON/sistema-JSON.json";
+    private const ARCHIVO = "../../s_json/sistema_json/sistema_JSON.json";
     private $archivo;
     private $descodificar;
     private $codificar;

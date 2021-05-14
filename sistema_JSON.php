@@ -29,16 +29,16 @@
         <section class="area-3">
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="crear" id="crear">
                 <label for="id">
-                    <input type="text" name="id" id="id" value="">
+                    <input type="text" name="id" id="id" value="" required="">
                 </label>
                 <label for="fecha">Fecha</label>
-                    <input type="date" name="fecha" id="fecha">
+                    <input type="date" name="fecha" id="fecha" required="">
                 <label for="marca">Marca</label>
-                    <input type="text" name="marca" id="marca" placeholder="Ingresar marca">
+                    <input type="text" name="marca" id="marca" placeholder="Ingresar marca" required="">
                 <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Ingresar nombre">
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingresar nombre" required="">
                 <label for="precio">Precio</label>
-                    <input type="number" name="precio" id="precio" placeholder="Ingresar precio">
+                    <input type="number" name="precio" id="precio" placeholder="Ingresar precio" required="">
                 <input type="submit" name="crear" id="crear-envio" value="Crear">
             </form>
         </section>
@@ -115,6 +115,6 @@
             </div>
         </section>
     </section>
-<script src="l/sistema_json/l/crud.js" async=""></script>
+<script src="l/sistema_json/l/crud.js" defer=""></script>
 </body>
 </html>

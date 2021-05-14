@@ -41,33 +41,34 @@ leer(busqueda) {
 function 
 lectura() {
     salida = "";
-
-    for(let i in jsonObject) {
-        const date      = new Date(jsonObject[i].FECHA);
+    
+    let jsonCantidad = jsonObject.slice(0, 4);
+    
+    for(let i in jsonCantidad) {
+        const date      = new Date(jsonCantidad[i].FECHA);
         const opciones  = { hour: 'numeric', minute: 'numeric', second: 'numeric' };
-//        const opciones = {
-//            year: 'numeric', month: 'numeric', day: 'numeric',
-//            hour: 'numeric', minute: 'numeric', second: 'numeric'
-//        };
+        
         salida += `
             <tr>
-                <td>${jsonObject[i].ID}</td>
+                <tr>
+                <td>${jsonCantidad[i].ID}</td>
                 <td>${new Intl.DateTimeFormat('es-DO').format(date)}</td>
                 <td>${new Intl.DateTimeFormat('es-DO', opciones).format(date)}</td>
-                <td>${jsonObject[i].MARCA}</td>
-                <td>${jsonObject[i].NOMBRE}</td>
-                <td>${jsonObject[i].PRECIO}</td>
+                <td>${jsonCantidad[i].MARCA}</td>
+                <td>${jsonCantidad[i].NOMBRE}</td>
+                <td>${jsonCantidad[i].PRECIO}</td>
                 <td>
-                    <button type='submit' onclick=actualizar(${jsonObject[i].ID})>Editar</button>
+                    <button type='submit' onclick=actualizar(${jsonCantidad[i].ID})>Editar</button>
                 </td> 
                 <td>
-                    <button type='button' onclick=borrar(${jsonObject[i].ID})>Borrar</button>
+                    <button type='button' onclick=borrar(${jsonCantidad[i].ID})>Borrar</button>
                 </td>  
             </tr>
         `;   
     }
-      
-    leerDatos.innerHTML= salida;
+   
+    leerDatos.innerHTML = salida;
+
 }
 crear.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -88,12 +89,12 @@ crear.addEventListener('submit', function(e) {
     datos.append('precio', precio);
     datos.append('crear', crearEnvio);
 
-    fetch('sql/sistema-JSON/Crear.php', {
+    fetch('s/sistema_json/Crear.php', {
         method: 'POST',
         body: datos
     }).then(function(response) {
         if(response.ok) { return response.text(); } 
-        else { throw "Error en la llamada"; }
+        else { throw "Error con la respuesta."; }
     }).then(function(texto) {//console.log(texto);
         enviar.value = "Crear";
         crear.reset();
@@ -105,12 +106,12 @@ crear.addEventListener('submit', function(e) {
 });
 function 
 actualizar(idU) {
-    fetch("sql/sistema-JSON/Editar.php", {
+    fetch("s/sistema_json/Actualizar.php", {
         method: "POST",
         body: idU
     }).then(function (response) {
         if(response.ok) { return response.json(); } 
-        else { throw "Error en la llamada"; }
+        else { throw "Error con la respuesta."; }
     }).then(function (json) {
         id.value        = json.ID;
         fecha.value     = json.FECHA;
@@ -126,12 +127,12 @@ actualizar(idU) {
 }
 function 
 borrar(borrarID) {
-    fetch("sql/sistema-JSON/Borrar.php", {
+    fetch("s/sistema_json/Borrar.php", {
         method: "POST",
         body: borrarID
     }).then(function(response) {
         if(response.ok) { return response.text(); } 
-        else { throw "Error en la llamada"; }
+        else { throw "Error con la respuesta."; }
     }).then(function(texto) {
         leer();
         leerResponde.innerHTML = texto;
@@ -181,13 +182,16 @@ cantidad.addEventListener('input', function() {
 
     salida = "";
     
-    for(let i in jsonCantidad) {//console.log(jsonCantidad);
+    for(let i in jsonCantidad) {
+        const date      = new Date(jsonCantidad[i].FECHA);
+        const opciones  = { hour: 'numeric', minute: 'numeric', second: 'numeric' };
+        
         salida += `
             <tr>
                 <tr>
                 <td>${jsonCantidad[i].ID}</td>
-                <td>${jsonCantidad[i].FECHA}</td>
-                <td>${jsonCantidad[i].FECHA}</td>
+                <td>${new Intl.DateTimeFormat('es-DO').format(date)}</td>
+                <td>${new Intl.DateTimeFormat('es-DO', opciones).format(date)}</td>
                 <td>${jsonCantidad[i].MARCA}</td>
                 <td>${jsonCantidad[i].NOMBRE}</td>
                 <td>${jsonCantidad[i].PRECIO}</td>
@@ -244,22 +248,29 @@ por.addEventListener('input', function() {
     } else if(por.value === "precio") {
         jsonObject.sort(function(a, b) { return a.PRECIO - b.PRECIO; });
     }
+
+    salida = "";
     
-    for(let i in jsonObject) {
+    let jsonCantidad = jsonObject.slice(0, 4);
+    
+    for(let i in jsonCantidad) {
+        const date      = new Date(jsonCantidad[i].FECHA);
+        const opciones  = { hour: 'numeric', minute: 'numeric', second: 'numeric' };
+        
         salida += `
             <tr>
                 <tr>
-                <td>${jsonObject[i].ID}</td>
-                <td>${jsonObject[i].FECHA}</td>
-                <td>${jsonObject[i].FECHA}</td>
-                <td>${jsonObject[i].MARCA}</td>
-                <td>${jsonObject[i].NOMBRE}</td>
-                <td>${jsonObject[i].PRECIO}</td>
+                <td>${jsonCantidad[i].ID}</td>
+                <td>${new Intl.DateTimeFormat('es-DO').format(date)}</td>
+                <td>${new Intl.DateTimeFormat('es-DO', opciones).format(date)}</td>
+                <td>${jsonCantidad[i].MARCA}</td>
+                <td>${jsonCantidad[i].NOMBRE}</td>
+                <td>${jsonCantidad[i].PRECIO}</td>
                 <td>
-                    <button type='submit' onclick=actualizar(${jsonObject[i].ID})>Editar</button>
+                    <button type='submit' onclick=actualizar(${jsonCantidad[i].ID})>Editar</button>
                 </td> 
                 <td>
-                    <button type='button' onclick=borrar(${jsonObject[i].ID})>Borrar</button>
+                    <button type='button' onclick=borrar(${jsonCantidad[i].ID})>Borrar</button>
                 </td>  
             </tr>
         `;   
@@ -274,36 +285,45 @@ ordenar.onclick = function(e)  {
     salida = "";
     jsonObject.reverse();
     
-    for(let i in jsonObject) {
+    let jsonCantidad = jsonObject.slice(0, 4);
+    
+    for(let i in jsonCantidad) {
+        const date      = new Date(jsonCantidad[i].FECHA);
+        const opciones  = { hour: 'numeric', minute: 'numeric', second: 'numeric' };
+        
         salida += `
             <tr>
-                <td>${jsonObject[i].ID}</td>
-                <td>${jsonObject[i].FECHA}</td>
-                <td>${jsonObject[i].FECHA}</td>
-                <td>${jsonObject[i].MARCA}</td>
-                <td>${jsonObject[i].NOMBRE}</td>
-                <td>${jsonObject[i].PRECIO}</td>
+                <tr>
+                <td>${jsonCantidad[i].ID}</td>
+                <td>${new Intl.DateTimeFormat('es-DO').format(date)}</td>
+                <td>${new Intl.DateTimeFormat('es-DO', opciones).format(date)}</td>
+                <td>${jsonCantidad[i].MARCA}</td>
+                <td>${jsonCantidad[i].NOMBRE}</td>
+                <td>${jsonCantidad[i].PRECIO}</td>
                 <td>
-                    <button type='submit' onclick=actualizar(${jsonObject[i].ID})>Editar</button>
+                    <button type='submit' onclick=actualizar(${jsonCantidad[i].ID})>Editar</button>
                 </td> 
                 <td>
-                    <button type='button' onclick=borrar(${jsonObject[i].ID})>Borrar</button>
+                    <button type='button' onclick=borrar(${jsonCantidad[i].ID})>Borrar</button>
                 </td>  
             </tr>
         `;   
     }
-
-    leerDatos.innerHTML= salida;
+   
+    leerDatos.innerHTML = salida;
     
     ordenar.innerHTML === "Decendente" ? ordenar.innerHTML = "Acendente" : ordenar.innerHTML = "Decendente";
 };
 /*
     *Paginación
  */
-fetch("show-json/sistema-JSON/sistema-JSON.json").then(function (response) {
+fetch("s_json/sistema_json/sistema_JSON.json").then(function (response) {
     if (response.ok) { return response.json(); } 
     else { throw "Error en la llamada"; }
-}).then(function (json) { maximo = json.length; });
+}).then(function (json) { 
+    maximo = json.length; 
+});
+
 anterior.onclick = function () {
     entradaDePaginacion.stepDown(4);
     inicionDePaginacion();
@@ -321,13 +341,16 @@ inicionDePaginacion() {
 
     salida = "";
     
-    for(let i in jsonCantidad) {//console.log(jsonCantidad);
+    for(let i in jsonCantidad) {
+        const date      = new Date(jsonCantidad[i].FECHA);
+        const opciones  = { hour: 'numeric', minute: 'numeric', second: 'numeric' };
+        
         salida += `
             <tr>
                 <tr>
                 <td>${jsonCantidad[i].ID}</td>
-                <td>${jsonCantidad[i].FECHA}</td>
-                <td>${jsonCantidad[i].FECHA}</td>
+                <td>${new Intl.DateTimeFormat('es-DO').format(date)}</td>
+                <td>${new Intl.DateTimeFormat('es-DO', opciones).format(date)}</td>
                 <td>${jsonCantidad[i].MARCA}</td>
                 <td>${jsonCantidad[i].NOMBRE}</td>
                 <td>${jsonCantidad[i].PRECIO}</td>

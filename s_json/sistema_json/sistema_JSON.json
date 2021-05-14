@@ -21,13 +21,6 @@
         "PRECIO": "4"
     },
     {
-        "ID": "4",
-        "FECHA": "2020-12-15",
-        "MARCA": "D",
-        "NOMBRE": "W",
-        "PRECIO": "3"
-    },
-    {
         "ID": "5",
         "FECHA": "2020-12-15",
         "MARCA": "E",
@@ -68,5 +61,19 @@
         "MARCA": "J",
         "NOMBRE": "Q",
         "PRECIO": "9"
+    },
+    {
+        "ID": "11",
+        "FECHA": "2021-05-14",
+        "MARCA": "B",
+        "NOMBRE": "W",
+        "PRECIO": "11"
+    },
+    {
+        "ID": "12",
+        "FECHA": "2021-05-14",
+        "MARCA": "Y",
+        "NOMBRE": "Y",
+        "PRECIO": "1"
     }
 ]

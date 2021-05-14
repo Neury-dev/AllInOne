@@ -1,16 +1,30 @@
 <?php
-require_once 'EnPHP.php';
 
 class Actualizar {
-    public $indiceDeSesion;
+    private const ARCHIVO = "../../s_json/sistema_json/sistema_JSON.json";
     
-    public function fila() {//if (isset($_SESSION["JSONenPHP"])) {
-        foreach ($_SESSION["JSONenPHP"] as $this->indiceDeSesion => $datoDeSesion) {
-            if ($datoDeSesion["ID"] == $_POST["id"]) {
-                exit(json_encode($_SESSION["JSONenPHP"]));
+    public function 
+    datos() {
+        $id           = file_get_contents("php://input");
+        $archivo      = file_get_contents(self::ARCHIVO);
+        $descodificar = json_decode($archivo, true);
+        
+        foreach ($descodificar as $valor) {
+            if ($valor["ID"] == $id) {
+                $editar = array(
+                    "ID"     => $valor["ID"],
+                    "FECHA"  => $valor["FECHA"],
+                    "MARCA"  => $valor["MARCA"],
+                    "NOMBRE" => $valor["NOMBRE"],
+                    "PRECIO" => $valor["PRECIO"]
+                );
+
+                exit(json_encode($editar));
             }
-        }//} 
+        }
     }
 }
-$ejecutarActualizar = new Actualizar();
-$fila = $ejecutarActualizar->fila();
+
+$ejecutarEditar = new Actualizar();
+$editar = $ejecutarEditar->datos();
+?>

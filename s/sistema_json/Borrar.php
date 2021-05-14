@@ -1,7 +1,7 @@
 <?php
 
 class Borrar {
-    private const ARCHIVO = "../../show-json/sistema-JSON/sistema-JSON.json";
+    private const ARCHIVO = "../../s_json/sistema_json/sistema_JSON.json";
     
     public function 
     datos() {
@@ -10,7 +10,9 @@ class Borrar {
         $descodificar = json_decode($archivo, true);
 
         foreach ($descodificar as $llave => $valor) {
-            if ($valor["ID"] == $id) { array_splice($descodificar, $llave, 1); }     
+            if ($valor["ID"] == $id) { 
+                array_splice($descodificar, $llave, 1);
+            }     
         }
 
         $codificar  = json_encode($descodificar, JSON_PRETTY_PRINT);
