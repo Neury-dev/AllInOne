@@ -42,6 +42,7 @@ class Leer {
 }
 $ejecutarLeer = new Leer();
 $leer = $ejecutarLeer->datos();
+
 foreach ($leer as $dato) {
     $fecha  = date_create($dato['fecha']);
     $hora   = DateTime::createFromFormat('H:i:s', $dato['hora']);

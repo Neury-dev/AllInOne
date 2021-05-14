@@ -57,7 +57,10 @@ ordenar.addEventListener('input', function() {
     *Paginación 
 */
 var maximo;
-fetch("s/sistema_php/CantidadDeFilas.php").then(function (response) {
+
+fetch(
+    "s/sistema_php/CantidadDeFilas.php"
+).then(function (response) {
     if (response.ok) { return response.json(); } 
     else { throw "Error en la llamada"; }
 }).then(function (json) {
@@ -74,7 +77,8 @@ siguiente.onclick = function () {
 inicioDePaginacion.oninput = function () {
     inicionDePaginacion();
 };
-function inicionDePaginacion() {
+function 
+inicionDePaginacion() {
     let valor           = document.forms["paginacion"]["inicio-de-paginacion"].value;
     let reOrdenarDato   = new FormData(inicioDePaginacion);
    

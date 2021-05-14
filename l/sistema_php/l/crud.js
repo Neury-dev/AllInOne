@@ -20,7 +20,7 @@ leer(busqueda) {
         body: busqueda
     }).then(function(response) {
         if(response.ok) { return response.text(); } 
-        else { throw "Error en la llamada"; }
+        else { throw "Error con la respuesta."; }
     }).then(function(texto) {
         leerDatos.innerHTML = texto;
     });
@@ -47,7 +47,7 @@ crear.addEventListener('submit', function(e) {
         body: datos
     }).then(function(response) {
         if(response.ok) { return response.text(); } 
-        else { throw "Error en la llamada"; }
+        else { throw "Error con la respuesta."; }
     }).then(function(texto) {
         enviar.value = "Crear";
         crear.reset();
@@ -64,7 +64,7 @@ actualizar(editarID) {
         body: editarID
     }).then(function (response) {
         if(response.ok) { return response.json(); } 
-        else { throw "Error en la llamada"; }
+        else { throw "Error con la respuesta."; }
     }).then(function (json) {
         id.value        = json[0].id;
         marca.value     = json[0].marca;
@@ -84,7 +84,7 @@ borrar(borrarID) {
         body: borrarID
     }).then(function(response) {
         if(response.ok) { return response.text(); } 
-        else { throw "Error en la llamada"; }
+        else { throw "Error con la respuesta."; }
     }).then(function(texto) {
         leer();
         leerResponde.innerHTML = texto;

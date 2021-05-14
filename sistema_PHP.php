@@ -112,7 +112,7 @@
             </div>
         </section>
     </section>
-<script src="l/sistema_PHP/l/crud.js" async=""></script>
-<script src="l/sistema_PHP/l/complementos.js" defer=""></script>
+<script src="l/sistema_php/l/crud.js" async=""></script>
+<script src="l/sistema_php/l/complementos.js" defer=""></script>
 </body>
 </html>
