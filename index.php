@@ -9,7 +9,7 @@
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
-<img src="i_svg/cool-background.svg" alt="svg" class="n-svg-1">
+<!--<img src="i_svg/cool-background.svg" alt="svg" class="n-svg-1">-->
 <section class="n-grid">
 <section class="area-1">  
     <header>
@@ -47,27 +47,21 @@
         se hace!
     </h3>
     <article>
-        <h4>Loto</h4>
-        <p>04/07/2020 - 13/09/2020</p>
-        <a href="loto.php">http://localhost/AllInOne/loto.php</a>
+        <h4>Red Social</h4>
+        <p>19/12/2020 - 22/04/2021</p>
+        <a href="red_social.php">http://localhost/AllInOne/red_social.php</a>
     </article>
     <article>
         <h4>Tienda</h4>
         <p>14/09/2020 - 29/11/2020</p>
         <a href="tienda.php">http://localhost/AllInOne/tienda.php</a>
     </article>
-    
+    <br>
     <img src="i_img/i/blob-1.png" class="formas slide-1">
     <img src="i_img/i/blob-2.png" class="formas slide-2">
     <img src="i_img/i/blob-3.png" class="formas slide-3">
     <img src="i_img/i/blob-4.png" class="formas slide-4">
     <img src="i_img/i/blob-5.png" class="formas slide-5">
-    
-    <article class="trasladar">
-        <h4>Plantillas de código</h4>
-        <p>01/12/2020 - 01/12/2020</p>
-        <a href="plantillas_de_codigo.php">http://localhost/AllInOne/plantillas_de_codigo.php</a>
-    </article> 
     <article class="trasladar">
         <h4>Sistema PHP</h4>
         <p>01/12/2020 - 06/12/2020</p>
@@ -79,9 +73,14 @@
         <a href="sistema_JSON.php">http://localhost/AllInOne/sistema_JSON.php</a>
     </article>
     <article class="trasladar">
-        <h4>Red Social</h4>
-        <p>19/12/2020 - 22/04/2021</p>
-        <a href="red_social.php">http://localhost/AllInOne/red_social.php</a>
+        <h4>Plantillas de código</h4>
+        <p>01/12/2020 - 01/12/2020</p>
+        <a href="plantillas_de_codigo.php">http://localhost/AllInOne/plantillas_de_codigo.php</a>
+    </article> 
+    <article class="trasladar">
+        <h4>Loto</h4>
+        <p>04/07/2020 - 13/09/2020</p>
+        <a href="loto.php">http://localhost/AllInOne/loto.php</a>
     </article>
 </section>
 <section class="area-4">
@@ -106,7 +105,7 @@
     </footer>
 </section>
 </section>
-
+<img src="i_svg/bottom-1.svg" alt="svg" class="bottom">
 <script src="l/i/index.js" async=""></script>
 </body>
 </html>

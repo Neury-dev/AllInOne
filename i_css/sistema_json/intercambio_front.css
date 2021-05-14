@@ -1,0 +1,18 @@
+/* 
+    Created on : 14 may. 2021, 6:04:12 p. m.
+    Author     : neury-dev
+*/
+table > tbody > tr > td > form > button {
+    background-color: var(--n-color);
+    font-weight: bold;
+    width: 100%;
+    border: none;
+    border: 0.10em solid var(--n-color);
+    border-radius: var(--n-radio);
+    padding: var(--n-relleno);
+}
+table > tbody > tr > td > form > button:hover {
+    color: var(--n-color-dos);
+    background-color: var(--n-color-tres);
+    text-shadow: var(--n-sombra-de-texto);
+}

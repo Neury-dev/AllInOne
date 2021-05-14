@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="last-modified" content="Thu, 18 Nov 2020 19:11:42 GMT">
     <link rel="stylesheet" href="../../i_css/sistema_json/sistema_JSON.css">
+    <link rel="stylesheet" href="../../i_css/sistema_json/intercambio_front.css">
     <link rel="stylesheet" href="../../i_css/i/flechas.css">
 </head>
 <body>
