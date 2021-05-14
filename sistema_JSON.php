@@ -6,14 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="last-modified" content="Thu, 18 Nov 2020 19:11:42 GMT">
     <link rel="stylesheet" href="i_css/sistema_json/sistema_JSON.css">
-    <style>
-        /*@import url("http://localhost/AllInOne/front-css/root.css");*/
-
-    </style>
+    <link rel="stylesheet" href="i_css/i/flechas.css">
 </head>
 <body>
-    <header>
-        <h1><a href="http://localhost/AllInOne/index.php">AllInOne</a></h1>
+     <header>
+        <p title="Atras"><a href="http://localhost/AllInOne/index.php"><i class="flecha left"></i>Neury-dev</a></p>
     </header>
     <section class="n-grid">
         <section class="area-1">
@@ -21,7 +18,6 @@
             <hr>
             <section>
                 <a href="sistema_JSON.php">JSON</a>
-                <!--a href="front/sistema_JSON/en_JavaScript.php">JSON en JavaScript</a-->
                 <a href="i/sistema_json/en_PHP.php">JSON en PHP</a>
             </section>
             <hr>
@@ -38,24 +34,24 @@
                 <label for="fecha">Fecha</label>
                     <input type="date" name="fecha" id="fecha">
                 <label for="marca">Marca</label>
-                    <input type="text" name="marca" id="marca" placeholder="Marca">
+                    <input type="text" name="marca" id="marca" placeholder="Ingresar marca">
                 <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingresar nombre">
                 <label for="precio">Precio</label>
-                    <input type="number" name="precio" id="precio" placeholder="1">
+                    <input type="number" name="precio" id="precio" placeholder="Ingresar precio">
                 <input type="submit" name="crear" id="crear-envio" value="Crear">
             </form>
         </section>
         <section class="area-4">
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form-buscar" id="form-buscar">
                 <label for="buscar">Buscar:</label>
-                <input type="search" id="buscar" placeholder="Buscar...">
+                <input type="search" id="buscar" placeholder="Ingresar termino de busqueda...">
             </form>
         </section>
         <section class="area-5">
             <div>
             <table>
-                <caption>Salida de datos</caption>
+                <!--<caption>Salida de datos</caption>-->
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -99,6 +95,7 @@
                                     <option value="precio">Precio</option>
                                 </select>
                             </form>
+                            <label for="">Ordenar</label>
                             <button id="n-ordenar">Decendente</button>
                         </td>
                     </tr>
@@ -118,9 +115,6 @@
             </div>
         </section>
     </section>
-<script src="l/sistema_JSON/crud.js" async=""></script>
-<script>
-
-</script>
+<script src="l/sistema_json/l/crud.js" async=""></script>
 </body>
 </html>

@@ -26,7 +26,7 @@ entradaDePaginacion = document.querySelector("#inicio-de-paginacion");
  */
 function 
 leer(busqueda) {
-    fetch("show-json/sistema-JSON/sistema-JSON.json", {
+    fetch("s_json/sistema_json/sistema_JSON.json", {
         method: "POST",
         body: busqueda
     }).then(function(response) {
