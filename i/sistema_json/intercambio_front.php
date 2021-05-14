@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sistema JSON en PHP</title>
+    <title>Intercambio Front</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="last-modified" content="Thu, 18 Nov 2020 19:11:42 GMT">
@@ -14,12 +14,11 @@
     </header>
     <section class="n-grid">
         <section class="area-1">
-            <h2>Sistema JSON en PHP</h2>
+            <h2>Intercambio Front</h2>
             <hr>
             <section>
                 <a href="../../sistema_JSON.php">JSON</a>
-                <!--a href="en_JavaScript.php">JSON en JavaScript</a-->
-                <a href="">JSON en PHP</a>
+                <a href="">Intercambio Front</a>
             </section>
             <hr>
             <div id="n-respuesta"></div>
@@ -30,16 +29,16 @@
         <section class="area-3">
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="crear" id="crear">
                 <label for="id">
-                    <input type="text" name="id" id="id" value="">
+                    <input type="text" name="id" id="id" value="" required="">
                 </label>
                 <label for="fecha">Fecha</label>
-                    <input type="date" name="fecha" id="fecha">
+                    <input type="date" name="fecha" id="fecha" required="">
                 <label for="marca">Marca</label>
-                    <input type="text" name="marca" id="marca" placeholder="Marca">
+                    <input type="text" name="marca" id="marca" placeholder="Ingresar marca" required="">
                 <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingresar nombre" required="">
                 <label for="precio">Precio</label>
-                    <input type="number" name="precio" id="precio" placeholder="1">
+                    <input type="number" name="precio" id="precio" placeholder="Ingresar precio" required="">
                 <input type="submit" name="crud" id="crud" value="Crear">
             </form>
         </section>
@@ -78,10 +77,6 @@
             </div>
         </section>
     </section>
-<script src="../../l/sistema_JSON/crud-en-php.js" async=""></script>
-<!--<script src="show/sistema-PHP/complementos.js" defer=""></script>-->
-<script>
-
-</script>
+<script src="../../l/sistema_json/l/crud_de_intercambio_front.js" defer=""></script>
 </body>
 </html>

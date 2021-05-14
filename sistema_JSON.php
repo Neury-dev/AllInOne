@@ -18,7 +18,7 @@
             <hr>
             <section>
                 <a href="sistema_JSON.php">JSON</a>
-                <a href="i/sistema_json/en_PHP.php">JSON en PHP</a>
+                <a href="i/sistema_json/intercambio_front.php">Intercambio Front</a>
             </section>
             <hr>
             <div id="n-respuesta"></div>
@@ -115,6 +115,6 @@
             </div>
         </section>
     </section>
-<script src="l/sistema_json/l/crud.js" defer=""></script>
+<script src="l/sistema_json/l/sistema_json.js" defer=""></script>
 </body>
 </html>

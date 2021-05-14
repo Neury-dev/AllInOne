@@ -70,39 +70,23 @@ var filtros     = document.querySelectorAll(".n-grid > .area-4 > aside > p.pregu
 
 for (var i = 0; i < filtros.length; i++) {
     filtros[i].onclick = function (evento) {
-        
-        if(respuesta.style.innerHTML === 'Web') {
-            respuesta.style.innerHTML = "A";
-        } else {
-            respuesta.style.innerHTML = "Desktop";
-        }
-        
         evento.target.style.color = color();
         evento.target.style.textShadow = sombra();
-        evento.target.style.opacity = '1';
-        
-        respuesta.style.color = "white";
-        respuesta.style.textShadow = sombra(); 
+        evento.target.style.opacity = '1'; 
         
         responder();
     };
 }
 function
 responder() {
-    if(respuesta.style.innerHTML === 'Web') {
-        respuesta.style.innerHTML = "A";
-    } else {
-        respuesta.style.innerHTML = "Desktop";
-    }
-};
-
-const pre = document.getElementById("#pregunta");
-const res = document.getElementById("#respuesta");
-
-pre.onclick = function() {
-    if(res.style.innerHTML === 'Web') {
-        res.style.innerHTML = "A";
-    } else {
-        res.style.innerHTML = "Desktop";
-    }
+    respuesta.style.color = "white";
+    respuesta.style.textShadow = sombra();
+    
+    if (respuesta.innerHTML === "Web")              { respuesta.innerHTML = 'Web page'; } 
+    else if(respuesta.innerHTML === 'Web page')     { respuesta.innerHTML = "Website";  } 
+    else if(respuesta.innerHTML === 'Website')      { respuesta.innerHTML = 'App Web';  } 
+    else if(respuesta.innerHTML === 'App Web')      { respuesta.innerHTML = 'App Móvil';} 
+    else if(respuesta.innerHTML === 'App Móvil')    { respuesta.innerHTML = "Software"; } 
+    else if(respuesta.innerHTML === 'Software')     { respuesta.innerHTML = 'Tell me';  } 
+    else                                            { respuesta.innerHTML = 'Web page'; }
 };

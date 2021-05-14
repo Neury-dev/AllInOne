@@ -62,22 +62,7 @@
     <img src="i_img/i/blob-3.png" class="formas slide-3">
     <img src="i_img/i/blob-4.png" class="formas slide-4">
     <img src="i_img/i/blob-5.png" class="formas slide-5">
-<!--<img src="i_img/i/blob-6.png" class="formas slide-6">-->
-<!--<img src="i_img/i/blob-7.png" class="formas slide-7">-->
-<!--<img src="i_img/i/blob-8.png" class="formas slide-8">-->
-<!--<img src="i_img/i/blob-9.png" class="formas slide-9">-->
-<!--<img src="i_img/i/blob-10.png" class="formas slide-10">-->
-    <div class="iconos">
-        <!--<i class='fab fa-node-js icono'></i>-->
-        <!--<i class='fab fa-npm icono'></i>-->
-        <!--<i class='fab fa-linux icono'></i>-->
-        
-        <!--<i class='fa fa-code icono'></i>-->
-        <!--<i class='fas fa-database icono'></i>-->
-        
-        <!--<i class='fab fa-css3 icono'></i>-->
-        
-    </div>
+    
     <article class="trasladar">
         <h4>Plantillas de código</h4>
         <p>01/12/2020 - 01/12/2020</p>

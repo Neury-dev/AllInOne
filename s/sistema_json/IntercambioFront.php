@@ -2,14 +2,14 @@
 
 @session_start();
 
-class EnPHP {
+class IntercambioFront {
     public $sesionArticulos;
     public $idArticulos;
     public $articulosContados;
     public $indiceDeSesion;
 
     public function
-    itercambioJSON() {
+    deDatos() {
         if (isset($_POST["crud"])) {
             switch ($_POST["crud"]) {
                 case "Crear":
@@ -82,6 +82,6 @@ class EnPHP {
     }
 }
 
-$ejecutarEnPHP = new EnPHP();
-$enPHP = $ejecutarEnPHP->itercambioJSON();
+$ejecutarIntercambioFront = new IntercambioFront();
+$intercambioFront = $ejecutarIntercambioFront->deDatos();
 ?>

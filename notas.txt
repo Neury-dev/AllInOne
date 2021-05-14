@@ -58,3 +58,14 @@ https://fontello.com/
 https://getwaves.io/
 
 - Animacion
+<div class="iconos">
+        <!--<i class='fab fa-node-js icono'></i>-->
+        <!--<i class='fab fa-npm icono'></i>-->
+        <!--<i class='fab fa-linux icono'></i>-->
+        
+        <!--<i class='fa fa-code icono'></i>-->
+        <!--<i class='fas fa-database icono'></i>-->
+        
+        <!--<i class='fab fa-css3 icono'></i>-->
+        
+    </div>

@@ -11,23 +11,22 @@ nombre  = document.querySelector("#nombre");
 precio  = document.querySelector("#precio");
 enviar  = document.querySelector("#crud");
 /*
-    *leer (creados, leer, actualizaciones, borrados) 
+    * CRUD
  */
 function 
 leer(busqueda) {
-    fetch("../../sql/sistema-JSON/EnPHP.php", {
+    fetch("../../s/sistema_json/IntercambioFront.php", {
         method: "POST",
         body: busqueda
     }).then(function(response) {
         if(response.ok) { return response.json(); } 
-        else { throw "Error en la llamada"; }
+        else { throw "Error con la respuesta."; }
     }).then(function(json) {
         jsonObject = json;
 
         let salida = "";
-//        console.log(jsonObject);
+
         for(let i in jsonObject) {
-//        console.log(jsonObject);
             salida +=  `
                 <tr>
                     <td>${jsonObject[i].ID}</td>
@@ -40,7 +39,7 @@ leer(busqueda) {
                         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST"
                         name="actualizar${jsonObject[i].ID}" id="actualizar${jsonObject[i].ID}">
                             <input type="hidden" name="id" value="${jsonObject[i].ID}">
-                            <button type="submit" name="crud" value="Editar" onclick="actualizar(${jsonObject[i].ID})">
+                            <button type="submit" name="crud" value="Editar" onclick="editar(${jsonObject[i].ID})">
                                 Editar
                             </button>
                         </form>
@@ -57,42 +56,10 @@ leer(busqueda) {
                 </tr>
             `;
         }
+        
         leerDatos.innerHTML = salida;
-//        lectura();
     });
 }
-//function 
-//lectura() {
-//    let salida = "";
-//    
-//        jsonObject.forEach(function(element) {
-////            console.log("--" + element.id + " : " + element.ID + + " : " + element.FECHA + "--");
-//        
-//            salida +=  `
-//                <tr>
-//                    <td>${element.ID}</td>
-//                    <td>${element.FECHA}</td>
-//                    <td>${element.FECHA}</td>
-//                    <td>${element.MARCA}</td>
-//                    <td>${element.NOMBRE}</td>
-//                    <td>${element.PRECIO}</td>
-//                    <td>
-//                        <button type='submit' onclick=actualizar(${element.ID})>Editar</button>
-//                    </td> 
-//                    <td>
-//                        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" 
-//                        name="borrar${element.ID}" id="borrar${element.ID}">
-//                            <input type="hidden" name="id" value="${element.ID}">
-//                            <button type="submit" name="crud" value="Borrar" onclick="borrar(${element.ID})">
-//                                Borrar
-//                            </button>
-//                        </form>
-//                    </td>  
-//                </tr>
-//            `;
-//        });
-//    leerDatos.innerHTML= salida;
-//}
 
 crear.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -113,12 +80,12 @@ crear.addEventListener('submit', function(e) {
     datos.append('precio', precio);
     datos.append('crud', crearEnvio);
 
-    fetch('../../sql/sistema-JSON/EnPHP.php', {
+    fetch('../../s/sistema_json/IntercambioFront.php', {
         method: 'POST',
         body: datos
     }).then(function(response) {
         if(response.ok) { return response.text(); } 
-        else { throw "Error en la llamada"; }
+        else { throw "Error con la respuesta."; }
     }).then(function(texto) {
         enviar.value = "Crear";
         crear.reset();
@@ -129,7 +96,7 @@ crear.addEventListener('submit', function(e) {
     });
 });
 function 
-actualizar(idU) {
+editar(idU) {
     const formCRUD = document.querySelector("#actualizar" + idU);
 
     formCRUD.addEventListener('submit', function (e) {
@@ -143,15 +110,13 @@ actualizar(idU) {
         datos.append('id', idEntrante);
         datos.append('crud', editar);
 
-        fetch('../../sql/sistema-JSON/Actualizar.php', {
+        fetch('../../s/sistema_json/Editar.php', {
             method: 'POST',
             body: datos
         }).then(function (response) {
             if (response.ok) { return response.json(); } 
-            else { throw "Error en la llamada"; }
+            else { throw "Error con la respuesta."; }
         }).then(function (json) {
-            //console.log(json);console.log(json.ID);
-            
             id.value        = json.ID;
             fecha.value     = json.FECHA;
             marca.value     = json.MARCA;
@@ -172,21 +137,21 @@ borrar(idD) {
     formCRUD.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        let id = document.forms["borrar" + idD]["id"].value;
-        let escogerArticulo = document.forms["borrar" + idD]["crud"].value;
+        let id      = document.forms["borrar" + idD]["id"].value;
+        let escoger = document.forms["borrar" + idD]["crud"].value;
 
         datos = new FormData(formCRUD);
 
         datos.append('id', id);
-        datos.append('crud', escogerArticulo);
+        datos.append('crud', escoger);
 
-        fetch('../../sql/sistema-JSON/EnPHP.php', {
+        fetch('../../s/sistema_json/IntercambioFront.php', {
             method: 'POST',
             body: datos
         }).then(function (response) {
             if (response.ok) { return response.text(); } 
-            else { throw "Error en la llamada"; }
-        }).then(function (texto) {//console.log(texto);
+            else { throw "Error con la respuesta."; }
+        }).then(function (texto) {
             leer();
             leerResponde.innerHTML = "Se ha borrado correctamente";
         }).catch(function (error) {
