@@ -47,13 +47,11 @@
 }
 .n-grid > .area-1 > header > :nth-child(1) {
     color: var(--n-color);
-    /*font-family: var(--n-fuente-tres);*/
     font-size: 1.50em;
     text-shadow: -1px 0 #373538, 0 1px #373538, 1px 0 #373538, 0 -1px #373538;
     opacity: 0.5;
 }
 .n-grid > .area-1 > header > :nth-child(2) {
-    /*color: var(--n-color-dos-uno);*/
     font-size: 3em;
 }
 .n-grid > .area-1 > header > :nth-child(3) {
@@ -61,7 +59,6 @@
     font-size: 2.10em;
 }
 .n-grid > .area-1 > header > :nth-child(4) {
-    /*color: var(--n-color-dos-uno);*/
     font-size: 1.10em;
 }
 /*
@@ -126,36 +123,9 @@
     float: left;
     width: 170px;
     height: 170px;
-    /*margin: 0;*/
-    /*margin: 1em;*/
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
 }
-/*.n-grid > .area-3 > article {
-    float: none;
-    margin-bottom: 1em;
-}
-.n-grid > .area-3 > article > :nth-child(1), 
-.n-grid > .area-3 > article > :nth-child(2), 
-.n-grid > .area-3 > article > :nth-child(3) {
-    margin: 0;
-}
-.n-grid > .area-3 > article > :nth-child(1) {
-    color: var(--n-color-dos-uno);
-    line-height: 130%;
-}
-.n-grid > .area-3 > article > :nth-child(2) {
-    color: var(--n-color-tres);
-    font-size: 0.50em;
-    line-height: 130%;
-}
-.n-grid > .area-3 > article > :nth-child(3) {
-    color: var(--n-color-tres);
-    font-size: 0.70em;margin: 0;
-}
-.n-grid > .area-3 > article.trasladar {
-    transform: translate(1em, 0em);
-}*/
 .n-grid > .area-3 > article {
     float: none;
 /*    color: var(--n-color);
@@ -260,24 +230,18 @@
 .n-grid > .area-4 {
     color: var(--n-color);
     background-color: var(--n-color-dos);
+    margin-right: 3em;
     border-radius: var(--n-radio);
 }
-/*.n-grid > .area-4 > div.aside-img {
-    position: absolute;
-}*/
 .n-grid > .area-4 > aside {
-    width: 100%;
-    height: 450px;
-    /*background-color: var(--n-color-tres-uno);*/
-    /*border: 0.10em solid var(--n-color-dos);*/
-    /*border-radius: var(--n-radio);*/
+    width: 550px;
 }
 .n-grid > .area-4 > aside > p.pregunta {
     position: relative;
-    top: -2em;
+    /*top: -2em;*/
     z-index: 1;
-    color: var(--n-color-tres);
-    /*font-family: var(--n-fuente);*/
+    transform: translateY(4em);
+    color: var(--n-color);
     font-size: 2em;
     text-align: center;
     text-decoration: underline;
@@ -288,39 +252,31 @@
 }
 .n-grid > .area-4 > aside > p.respuesta {
     position: relative;
-    top: -2em;
     z-index: 1;
-    color: var(--n-color);
-    /*font-family: var(--n-fuente-dos);*/
+    transform: translateY(1em);
+    color: var(--n-color-dos);
     font-size: 4em;
     font-weight: bold;
     text-align: center;
-    text-shadow: var(--n-sombra-caja-dos);
-    opacity: 0.1;
+    text-shadow: var(--n-sombra);
 }
 svg#izquierda {
     position: absolute;
     z-index: 0;
-    /*background-color: #c7beb8;*/
-    transform: translate(5.50em, 11em);
-
+    transform: translate(8.70em, 6.50em);
 }
 svg#derecha {
     position: absolute;
     z-index: 0;
-    /*background-color: #c7beb8;*/
-    transform: translate(29.80em, 11.50em);
+    transform: translate(33.10em, 6.70em);
 }
 svg > text.n-hacer {
-    /*display: none;*/
-    fill: var(--n-color);
-    font-family: var(--n-fuente-dos);
+    fill: var(--n-color-dos);
+    /*font-family: var(--n-fuente-dos);*/
     font-size: 2em;
 }
 aside:hover svg > text.n-hacer { 
-    display: block;
-    fill: var(--n-color);
-    stroke: var(--n-color-dos-uno);
+    stroke: var(--n-color);
     transition: all 2.8s ease-in-out;
     animation-name:quieres;
     animation-duration: 3s;
@@ -330,28 +286,29 @@ aside:hover svg > text.n-hacer {
     from {
         stroke-dashoffset: 1000;
         stroke-dasharray: 1000;
-        fill: var(--n-color-tres-uno);
+        fill: var(--n-color);
     }
     to {
         stroke-dashoffset: 0;
         stroke-dasharray: 0;
-/*        fill: var(--n-color-tres-uno);*/
+        fill: var(--n-color-dos);
     }
 }
 /*
     Footer
 */
 footer {
-
+    position: relative;
+    z-index: 1;
+    margin-top: 18em;
 }
 footer > hr {
     width: 70%;
     opacity: 0.1;
 }
 footer > p {
-    color: var(--n-color-dos-uno);
-    /*font-family: var(--n-fuente-dos);*/
-    font-size: 0.70em;
+    color: var(--n-color);
+    font-size: 70%;
     text-align: center;
 }
 /*
@@ -359,7 +316,7 @@ footer > p {
 */
 .n-svg-1 {
     position: absolute;
-    top: -12em;
+    top: -4.50em;
     right: 0;
     z-index: 0;
     background-repeat: no-repeat;
@@ -368,7 +325,9 @@ footer > p {
 .n-svg-2 {
     position: absolute;
     top: 41.70em;
-    right: 0;
+    left: 0;
+    /*right: 0;*/
     background-repeat: no-repeat;
+    width: 100%;
     overflow: hidden;
 }

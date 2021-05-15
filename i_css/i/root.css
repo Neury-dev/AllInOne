@@ -11,7 +11,7 @@ body {
     font-size: 100% !important;
     font: 0.80em "Verdana", Helvetica, Tahoma, sans-serif !important;
     margin: 0 !important;
-    /*overflow-x: hidden !important;*/
+    overflow-x: hidden !important;
 }
 a { text-decoration: none; }
 a, 
