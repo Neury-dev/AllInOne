@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TODO supply a title</title>
+    <title>Plantillas de Codigo</title>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="i_css/plantillas_de_codigo/plantillas_de_codigo.css"/>
-    <style>
-
-    </style>
+    <link rel="stylesheet" href="i_css/i/flechas.css">
 </head>
 <body>
-    <h1><a href="http://localhost/AllInOne/index.php#n-all-in-one">AllInOne</a></h1>
+    <header>
+        <p title="Atras"><a href="http://localhost/AllInOne/index.php"><i class="flecha left"></i>Neury-dev</a></p>
+    </header>
     <h2>form</h2> 
 
 <div class="n-full-stack" id="n-form" style="height: 9em;">
@@ -119,6 +119,6 @@
         </code>
     </pre>
 </div>-->
-<script src="l/plantillas_de_codigo/full-stack.js"></script>
+<script src="l/plantillas_de_codigo/full_stack.js"></script>
 </body>
 </html>

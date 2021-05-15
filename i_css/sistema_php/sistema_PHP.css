@@ -4,14 +4,15 @@
     Author     : Neury-dev
 */
 header { padding: 1em 0em 1em 3em; }
-header > p:hover { text-decoration: underline; }
-header p i.flecha {
+header > p > a { color: var(--n-color-dos); }
+header > p > a:hover { text-decoration: underline; }
+header > p > a > i.flecha {
     border-style: solid;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
 }
-header p:hover i.flecha { color: var(--n-color-rojo); }
+header > p:hover > a > i.flecha { color: var(--n-color-rojo); }
 /*
     Maquetado
 */

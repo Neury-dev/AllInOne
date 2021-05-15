@@ -1,35 +1,23 @@
-@import url("http://localhost/AllInOne/front-css/root.css");
+@import url("http://localhost/AllInOne/i_css/i/root.css");
 /* 
     Created on : 1 dic. 2020, 15:58:45
-    Author     : desarrollador
+    Author     : neury-dev
 */
-*, *:before, *:after { 
-    box-sizing: border-box;     
-}
 body {
     background-color: var(--n-color-dos);
-    margin: 0;
-    overflow-x: hidden;
 }
-h1 > a  {
-    position: fixed;
-    top: 0;
-    color: var(--n-color-dos);
-    background-color: var(--n-color-tres);
-    font-family: var(--n-fuente-tres);
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    width: auto;
-    padding: 0.20em 1em 0.20em 1em;
-    border-radius: 0.40em;
-    text-shadow: var(--n-sombra-de-texto-dos);
-    letter-spacing: -0.145em;
+header { padding: 1em 0em 1em 3em; }
+header > p > a { color: var(--n-color); }
+header > p > a:hover { text-decoration: underline; }
+header > p > a > i.flecha {
+    border-style: solid;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
 }
-h1 > a:hover { color: var(--n-color-tres); }
+header > p:hover > a > i.flecha { color: var(--n-color-rojo); }
 h2 {
     color: var(--n-color);
-    font-family: var(--n-fuente);
     margin-top: 4em;
     margin-left: 2em;
 }

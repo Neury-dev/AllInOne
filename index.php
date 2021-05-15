@@ -9,7 +9,8 @@
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
-<!--<img src="i_svg/cool-background.svg" alt="svg" class="n-svg-1">-->
+<!--<img src="i_svg/11.svg" alt="svg" class="n-svg-1">-->
+<!--<img src="i_svg/2.svg" alt="svg" class="n-svg-2">--
 <section class="n-grid">
 <section class="area-1">  
     <header>
@@ -105,7 +106,7 @@
     </footer>
 </section>
 </section>
-<img src="i_svg/bottom-1.svg" alt="svg" class="bottom">
+<!--<img src="i_svg/bottom-1.svg" alt="svg" class="bottom">-->
 <script src="l/i/index.js" async=""></script>
 </body>
 </html>

@@ -27,14 +27,9 @@
 .n-grid > .area-4 { grid-area: 3 / span 2 / 4 / 5; }
 .n-grid > .area-5 { grid-area: 4 / span 4 / 5 / 5; }
 /*
-    ........................
+    Areas
 */
-h1, h2, h3, h4 {
-    /*font-family: var(--n-fuente);*/
-}
-/**:not(h1), *:not(h2), *:not(h3), *:not(h4) {
-    font-family: var(--n-fuente-dos);
-}*/
+
 .n-grid > .area-1 > main  > article {
     padding: 2em 0em 0em 0em; 
 }
@@ -58,25 +53,24 @@ h1, h2, h3, h4 {
     opacity: 0.5;
 }
 .n-grid > .area-1 > header > :nth-child(2) {
-    color: var(--n-color-dos-uno);
+    /*color: var(--n-color-dos-uno);*/
     font-size: 3em;
 }
 .n-grid > .area-1 > header > :nth-child(3) {
-    color: var(--n-color-tres-uno);
+    color: var(--n-color-tres);
     font-size: 2.10em;
 }
 .n-grid > .area-1 > header > :nth-child(4) {
-    color: var(--n-color-dos-uno);
+    /*color: var(--n-color-dos-uno);*/
     font-size: 1.10em;
 }
 /*
     Main
 */
-.n-svg-1 {
-    position: absolute;
-    right: -12em;
-    background-repeat: no-repeat;
-    overflow: hidden;
+.n-grid > .area-2 {
+/*    color: var(--n-color);
+    background-color: var(--n-color-dos);
+    border-radius: var(--n-radio);*/
 }
 .n-grid > .area-2 > main {
     width: 500px;
@@ -84,15 +78,15 @@ h1, h2, h3, h4 {
 .n-grid > .area-2 > main > .circulo {
     float: left;
     background-color: var(--n-color);
-    width: 40%;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     margin: 1em;
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
 }
 .n-grid > .area-2 > main > .circulo > .foto {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     filter: grayscale(100%);
 }
@@ -107,7 +101,7 @@ h1, h2, h3, h4 {
     text-shadow: var(--n-sombra-caja-dos);
 } 
 .n-grid > .area-2 > main > h4 {
-    color: var(--n-color-dos-uno);
+    /*color: var(--n-color-dos-uno);*/
 } 
 .n-grid > .area-2 > main > p {
     color: var(--n-color-tres);
@@ -118,8 +112,10 @@ h1, h2, h3, h4 {
     Article
 */
 .n-grid > .area-3 {
-    margin-top: 4em;
-    /*padding: 0em auto auto 0em;*/
+    /*margin-top: 4em;*/
+/*    color: var(--n-color);
+    background-color: var(--n-color-dos);
+    border-radius: var(--n-radio);*/
 }
 .n-grid > .area-3 > h3 {
     color: var(--n-color);
@@ -130,11 +126,12 @@ h1, h2, h3, h4 {
     float: left;
     width: 170px;
     height: 170px;
-    margin: 0;
+    /*margin: 0;*/
+    /*margin: 1em;*/
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
 }
-.n-grid > .area-3 > article {
+/*.n-grid > .area-3 > article {
     float: none;
     margin-bottom: 1em;
 }
@@ -148,7 +145,35 @@ h1, h2, h3, h4 {
     line-height: 130%;
 }
 .n-grid > .area-3 > article > :nth-child(2) {
-    color: var(--n-color-tres-uno);
+    color: var(--n-color-tres);
+    font-size: 0.50em;
+    line-height: 130%;
+}
+.n-grid > .area-3 > article > :nth-child(3) {
+    color: var(--n-color-tres);
+    font-size: 0.70em;margin: 0;
+}
+.n-grid > .area-3 > article.trasladar {
+    transform: translate(1em, 0em);
+}*/
+.n-grid > .area-3 > article {
+    float: none;
+/*    color: var(--n-color);
+    background-color: var(--n-color-dos);*/
+    margin-bottom: 1em;
+    
+}
+.n-grid > .area-3 > article > :nth-child(1), 
+.n-grid > .area-3 > article > :nth-child(2), 
+.n-grid > .area-3 > article > :nth-child(3) {
+    margin: 0;
+}
+.n-grid > .area-3 > article > :nth-child(1) {
+    /*color: var(--n-color-dos-uno);*/
+    line-height: 130%;
+}
+.n-grid > .area-3 > article > :nth-child(2) {
+    color: var(--n-color-tres);
     font-size: 0.50em;
     line-height: 130%;
 }
@@ -233,7 +258,9 @@ h1, h2, h3, h4 {
     Aside.......................................................................
 */
 .n-grid > .area-4 {
-    margin-top: 4em;
+    color: var(--n-color);
+    background-color: var(--n-color-dos);
+    border-radius: var(--n-radio);
 }
 /*.n-grid > .area-4 > div.aside-img {
     position: absolute;
@@ -247,7 +274,7 @@ h1, h2, h3, h4 {
 }
 .n-grid > .area-4 > aside > p.pregunta {
     position: relative;
-    top: 6em;
+    top: -2em;
     z-index: 1;
     color: var(--n-color-tres);
     /*font-family: var(--n-fuente);*/
@@ -261,13 +288,14 @@ h1, h2, h3, h4 {
 }
 .n-grid > .area-4 > aside > p.respuesta {
     position: relative;
-    top: 2em;
+    top: -2em;
     z-index: 1;
-    color: var(--n-color-tres);
+    color: var(--n-color);
     /*font-family: var(--n-fuente-dos);*/
     font-size: 4em;
     font-weight: bold;
     text-align: center;
+    text-shadow: var(--n-sombra-caja-dos);
     opacity: 0.1;
 }
 svg#izquierda {
@@ -326,14 +354,21 @@ footer > p {
     font-size: 0.70em;
     text-align: center;
 }
-
-/*.bottom {
+/*
+    SVG
+*/
+.n-svg-1 {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: -2em;
-    bottom: 50em;
+    top: -12em;
+    right: 0;
     z-index: 0;
-    width: 50%;
-    height: 20em;
-}*/
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.n-svg-2 {
+    position: absolute;
+    top: 41.70em;
+    right: 0;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}

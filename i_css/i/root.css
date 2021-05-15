@@ -7,11 +7,11 @@
     box-sizing: border-box; 
 }
 body { 
-    margin: 0;
-    font-size: 100%;
-    color: #1c1d22;
-    font: 0.80em "Verdana", Helvetica, Tahoma, sans-serif;
-    /*overflow-x: hidden;*/
+    color: #1c1d22 !important;
+    font-size: 100% !important;
+    font: 0.80em "Verdana", Helvetica, Tahoma, sans-serif !important;
+    margin: 0 !important;
+    /*overflow-x: hidden !important;*/
 }
 a { text-decoration: none; }
 a, 
