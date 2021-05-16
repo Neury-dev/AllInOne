@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <meta http-equiv="last-modified" content="Thu, 18 Nov 2020 19:11:42 GMT">
+    <link rel="icon" href="i_img/i/neury-dev.jpg" type="image/jpg" sizes="16x16">
     <link rel="stylesheet" href="i_css/i/index.css">
     <!-- Iconos: JavaScript-->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>

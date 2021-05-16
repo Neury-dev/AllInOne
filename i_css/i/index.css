@@ -9,9 +9,8 @@
 .n-grid {
     display: grid;
     grid-template-columns: 25% 25% 25% auto;
-    grid-gap: 10px;
+    grid-gap:0.625em;
     /*background-color: #2196F3;*/
-    padding: 10px;
 }
 .n-grid > .area-1,
 .n-grid > .area-2,
@@ -19,7 +18,6 @@
 .n-grid > .area-4
 {
     /*background-color: var(--n-color);*/
-    padding: 2em;
 }
 .n-grid > .area-1 { grid-area: 1 / span 4 / 2 / 5; }
 .n-grid > .area-2 { grid-area: 2 / span 4 / 3 / 5; }
@@ -37,8 +35,16 @@
     /*padding: 0em 0em 0em 2em;*/ 
 }
 /*
-    Header
+    Header......................................................................
 */
+.n-grid > .area-1 > header {
+    position: relative;
+    z-index: 1;
+    font-size: 1em;
+    text-shadow: var(--n-sombra-de-texto);
+    padding: 3em 0em 0em 3em;
+    transition: var(--n-transicion);
+}
 .n-grid > .area-1 > header > :nth-child(1), 
 .n-grid > .area-1 > header > :nth-child(2), 
 .n-grid > .area-1 > header > :nth-child(3), 
@@ -48,18 +54,22 @@
 .n-grid > .area-1 > header > :nth-child(1) {
     color: var(--n-color);
     font-size: 1.50em;
-    text-shadow: -1px 0 #373538, 0 1px #373538, 1px 0 #373538, 0 -1px #373538;
+    text-shadow: var(--n-sombra-de-texto-tres);
     opacity: 0.5;
 }
-.n-grid > .area-1 > header > :nth-child(2) {
-    font-size: 3em;
-}
-.n-grid > .area-1 > header > :nth-child(3) {
-    color: var(--n-color-tres);
-    font-size: 2.10em;
-}
+.n-grid > .area-1 > header > :nth-child(2) { font-size: 3em; }
+.n-grid > .area-1 > header > :nth-child(3) { color: var(--n-color-tres); font-size: 2.10em; }
 .n-grid > .area-1 > header > :nth-child(4) {
+    color: var(--n-color-tres);
     font-size: 1.10em;
+    font-style: italic;
+}
+@media screen and (max-width: 400px) {
+    .n-grid > .area-1 > header {
+        font-size: 0.80em;
+        padding: 1.50em 0em 0em 1.50em;
+    }
+    .n-grid > .area-1 > header > :nth-child(4) { text-shadow: none; }
 }
 /*
     Main
