@@ -11,8 +11,10 @@
 </head>
 <body>
 <img src="i_svg/1.svg" alt="svg" class="n-svg-1">
-<!--<img src="i_svg/2.svg" alt="svg" class="n-svg-2">-->
 <section class="n-grid">
+<!--
+    header.......................................................................
+-->
 <section class="area-1">  
     <header>
         <P>¡Hola!</p>
@@ -21,6 +23,9 @@
         <P>neury.eleasar@gmail.com</p>
     </header>
 </section>
+<!--
+    main.........................................................................
+-->
 <section class="area-2">
     <main>
         <div class="circulo">
@@ -35,6 +40,9 @@
                 <p>Apache NetBeans...</p>
     </main>
 </section>
+<!--
+    section.......................................................................
+-->
 <section class="area-3">
     <img src="i_svg/desarrollos.svg" alt="desarrollos" class="svg-desarrollos">
 
@@ -94,10 +102,10 @@
         <a href="loto.php">http://localhost/AllInOne/loto.php</a>
     </article>
 </section>
+<!--
+    aside.......................................................................
+-->
 <section class="area-4">
-<!--    <div class="aside-img">
-        <img src="i_img/i/aside.png" width="500" height="500" alt="aside"/>
-    </div>-->
     <aside>
         <svg width="20" height="50" id="izquierda">
             <text class="fas n-hacer" x="0" y="40">¿</text>
@@ -109,14 +117,23 @@
         <p class="respuesta" id="respuesta">Web</p>
     </aside>
 </section>
+<!--
+    footer.......................................................................
+-->
 <section class="area-5">
     <footer>
         <hr>
         <p>Desarrollado por Neury</p>
     </footer>
+    <img src="i_svg/footer.svg" alt="svg" class="svg-footer">
 </section>
 </section>
+<div class="n-resolucion">
+    <img src="i_img/i/neury-dev.jpg" alt="foto" class="foto">
+    <p class="no-apta">Resolución no apta.</p>
+    <P><span class="no-apta">Para mas información:</span> neury.eleasar@gmail.com</p>
+</div>
 
-<script src="l/i/index.js" async=""></script>
+<script src="l/i/index.js"></script>
 </body>
 </html>
