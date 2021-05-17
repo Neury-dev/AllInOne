@@ -24,9 +24,9 @@ label { font-weight: bold; }
     scroll-behavior: smooth;
 }*/
 :root {
-    --n-fuente:                 "Georgia", Garamond, serif;/*'Arial Black', Arial, Gadget, sans-serif*/
-    --n-fuente-dos:             'Verdana', Helvetica, Tahoma, sans-serif;
-    --n-fuente-tres:            'Comic Sans MS', Comic Sans, cursive;
+    --n-fuente:                 "Georgia", Garamond, serif;
+    --n-fuente-dos:             "Verdana", Helvetica, Tahoma, sans-serif;
+    --n-fuente-tres:            "Lucida Console", Courier, monospace;
     
     --n-color:                  white;/*rgb(255, 255, 255), hsl(0, 0%, 100%)*/
     --n-color-uno-uno:          rgba(255, 255, 255, 0.5);

@@ -11,7 +11,7 @@
 </head>
 <body>
 <img src="i_svg/1.svg" alt="svg" class="n-svg-1">
-<img src="i_svg/2.svg" alt="svg" class="n-svg-2">
+<!--<img src="i_svg/2.svg" alt="svg" class="n-svg-2">-->
 <section class="n-grid">
 <section class="area-1">  
     <header>
@@ -58,12 +58,21 @@
         <p>14/09/2020 - 29/11/2020</p>
         <a href="tienda.php">http://localhost/AllInOne/tienda.php</a>
     </article>
-    <br>
     <img src="i_img/i/blob-1.png" class="formas slide-1">
     <img src="i_img/i/blob-2.png" class="formas slide-2">
     <img src="i_img/i/blob-3.png" class="formas slide-3">
     <img src="i_img/i/blob-4.png" class="formas slide-4">
     <img src="i_img/i/blob-5.png" class="formas slide-5">
+    <article class="trasladar">
+        <h4>JavaScript</h4>
+        <p>01/12/2020 - 06/12/2020</p>
+        <a href="https://github.com/Neury-dev/JavaScript.git">https://github.com/Neury-dev/JavaScript.git</a>
+    </article>
+    <article class="trasladar">
+        <h4>Java</h4>
+        <p>09/12/2020 - 16/12/2020</p>
+        <a href="https://github.com/Neury-dev/IteradorMatematico.git">https://github.com/Neury-dev/IteradorMatematico.git</a>
+    </article>
     <article class="trasladar">
         <h4>Sistema PHP</h4>
         <p>01/12/2020 - 06/12/2020</p>
