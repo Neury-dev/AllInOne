@@ -10,7 +10,7 @@
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
-<img src="i_svg/1.svg" alt="svg" class="n-svg-1">
+<img src="i_svg/i/1.svg" alt="svg" class="n-svg-1">
 <section class="n-grid">
 <!--
     header.......................................................................
@@ -44,7 +44,7 @@
     section.......................................................................
 -->
 <section class="area-3">
-    <img src="i_svg/desarrollos.svg" alt="desarrollos" class="svg-desarrollos">
+    <img src="i_svg/i/desarrollos.svg" alt="desarrollos" class="svg-desarrollos">
 
     <h3>¡Con 
         <span class="iconos">
@@ -125,7 +125,7 @@
         <hr>
         <p>Desarrollado por Neury</p>
     </footer>
-    <img src="i_svg/footer.svg" alt="svg" class="svg-footer">
+    <img src="i_svg/i/footer.svg" alt="svg" class="svg-footer">
 </section>
 </section>
 <div class="n-resolucion">
