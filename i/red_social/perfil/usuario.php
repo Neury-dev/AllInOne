@@ -1,4 +1,4 @@
-<?php require_once '../../../sql/red-social/SesionIniciada.php'; ?>
+<?php require_once '../../../s/red-social/s/SesionIniciada.php'; ?>
 <html>
 <head>
     <title>Usuario</title>
@@ -11,10 +11,6 @@
     <link rel="stylesheet" href="../../../i_css/red_social/perfil/publicar.css"/>
     <link rel="stylesheet" href="../../../i_css/red_social/perfil/article.css"/>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <style>
-@import url("http://localhost/AllInOne/front-css/root.css");
-
-    </style>
 </head>
 <body>
 <!-- 

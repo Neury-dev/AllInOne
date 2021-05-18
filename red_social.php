@@ -3,6 +3,7 @@
         <title>Red Social</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="i_img/i/neury-dev.jpg" type="image/jpg" sizes="16x16">
         <link rel="stylesheet" href="i_css/red_social/red_social.css">
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <style>
@@ -23,7 +24,7 @@
 <!--                    <section class="hide-md-lg">
                     <p>Or sign in manually:</p>
                 </section>-->
-                <form action="s/red_social/Iniciar.php" method="POST" autocomplete="">
+                <form action="s/red_social/s/Iniciar.php" method="POST" autocomplete="">
                     <h2>Iniciar</h2>
                     <section class="input-contenedor">
                         <input type="email" name="correo" placeholder="Correo" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" oninvalid="Globales.validarCorreo()">

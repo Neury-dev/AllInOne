@@ -13,7 +13,7 @@ ciudad      = document.querySelector(".ciudad");
 fecha       = document.querySelector(".fecha");
 foto        = document.querySelector("img.foto");
 
-fetch('../../sql/red-social/Sesion.php', {
+fetch('../../s/red_social/l/Sesion.php', {
     method: 'GET'
 }).then(function (response) {
     if(response.ok) { return response.json(); } 
@@ -30,7 +30,7 @@ fetch('../../sql/red-social/Sesion.php', {
     pais.innerHTML          = json[0].pais;
     ciudad.innerHTML        = json[0].ciudad;
 //    fecha.innerHTML         = json[0].fecha;
-    foto.src                = '../../front-multimedia/red-social/imagen/' + json[0].foto;
+    foto.src                = '../../i_img/red_social/i/' + json[0].foto;
 }).catch(function (err) {
     console.log('Fetch problem: ' + err.message);
 });

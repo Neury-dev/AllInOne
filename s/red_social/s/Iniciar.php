@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once "../Conexion.php";
-require_once '../Globales.php';
+require_once "../../Conexion.php";
+require_once '../../Globales.php';
 
 final class Iniciar extends Globales {
     private $sql;
@@ -24,7 +24,7 @@ final class Iniciar extends Globales {
                    if($correo === $this->johnDoe['correo'] and $codigo === $this->johnDoe['codigo']) {		
                        $_SESSION['johnDoe'] = $this->johnDoe['id'];
                        
-                       header("location: ../../front/red_social/inicio.php");
+                       header("location: ../../../i/red_social/inicio.php");
                    }
                 endforeach;
             } else {

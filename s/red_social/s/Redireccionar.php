@@ -6,7 +6,7 @@ class Redireccionar {
     usuarion() {
         $_SESSION["usuario"] = $_POST["usuario"];
 
-        header("location: ../../front/red_social/perfil/usuario.php");
+        header("location: ../../../i/red_social/perfil/usuario.php");
     }
 }
 

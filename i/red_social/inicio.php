@@ -1,4 +1,4 @@
-<?php require_once '../../sql/red-social/SesionIniciada.php'; ?>
+<?php require_once '../../s/red_social/s/SesionIniciada.php'; ?>
 <html>
 <head>
     <title>Inicio</title>
@@ -58,8 +58,8 @@
             </section>-->
             <!--<a href="javascript:void(0);" class="n-icono-minimo n-header-maximo-oculto" onclick="header()">&#9776;</a>-->
             <section>
-                <img src="../../i_multimedia/red_social/img/mist.jpg" class="n-img-portada-header"alt="alt"/>
-                <img src="../../i_multimedia/red_social/img/firefoxos.png" class="n-img-perfil-header" onclick="headerNav()" alt="alt"/>
+                <img src="../../i_img/red_social/i/mist.jpg" class="n-img-portada-header"alt="alt"/>
+                <img src="../../i_img/red_social/i/firefoxos.png" class="n-img-perfil-header" onclick="headerNav()" alt="alt"/>
             </section>
         </section>
     </header>
@@ -69,7 +69,7 @@
         <a href="../../s/CerrarSesion.php">Salir</a>
     </div>
 <!-- 
-    nav
+    nav.........................................................................
 -->
     <section class="n-grid">
         <section class="area-1">
@@ -187,7 +187,7 @@
             <aside>
                 <h4>Solicitudes de amistad</h4>
                 <section>
-                    <img src="../../i_multimedia/red_social/img/avatar3.png" alt="alt"/>
+                    <img src="../../i_img/red_social/i/avatar3.png" alt="alt"/>
                     <h5>Jonh Doe</h5>
                     <section>
                         <button class="aceptar"><i class='fas fa-user-friends'></i></button>
@@ -195,7 +195,7 @@
                     </section>
                 </section>
                 <section>
-                    <img src="../../i_multimedia/red_social/img/avatar3.png" alt="alt"/>
+                    <img src="../../i_img/red_social/i/avatar3.png" alt="alt"/>
                     <h5>Jonh Doe</h5>
                     <section>
                         <button class="aceptar"><i class='fas fa-user-friends'></i></button>
@@ -205,7 +205,7 @@
             </aside>
         </section>
     </section>
-<script src="../../l/red_social/header.js" async=""></script>
+<script src="../../l/red_social/i/header.js" async=""></script>
 <!--<script src="../../show/red-social/main.js" defer=""></script>-->
 <script src="../../l/red_social/l/publicacionInicio.js" defer=""></script>
 <script src="../../l/red_social/l/publicacionMenuInicio.js" defer=""></script>

@@ -1,6 +1,6 @@
 var jsonObject;
 
-fetch('../../sql/red-social/Usuarios.php', {
+fetch('../../s/red_social/l/Usuarios.php', {
     method: 'GET'
 }).then(function (response) {
     if(response.ok) { return response.json(); } 
@@ -21,8 +21,8 @@ class Obtener {
         for (let i in jsonObject) {
             salida += `
             <section class="contenedor">
-                <img src="../../front-multimedia/red-social/imagen/${jsonObject[i].foto}" alt="">
-                <form action="../../sql/red-social/Redireccionar.php" method="POST">
+                <img src="../../i_img/red_social/i/${jsonObject[i].foto}" alt="">
+                <form action="../../s/red_social/s/Redireccionar.php" method="POST">
                     <button type="submit" name="usuario" value="${jsonObject[i].id}">${jsonObject[i].nombre + " " + jsonObject[i].apellido}</button>
                 </form>
                 <p>John Doe saved us from a web disaster.</p>

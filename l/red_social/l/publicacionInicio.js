@@ -1,7 +1,7 @@
 var jsonObject;
 var jsonComentado;
 
-fetch('../../sql/red-social/PublicacionInicio_1.php').then(function (response) {
+fetch('../../s/red_social/l/PublicacionInicio_1.php').then(function (response) {
     return response.json();
 }).then(function (json) {
     console.log(json);
@@ -43,7 +43,7 @@ class Obtener {
             salida += "<article>";
             salida += "<section class='articulo-head'>";
                 salida += "<section>";
-                    salida += "<img src='../../front-multimedia/red-social/imagen/"+jsonObject[i].foto + "'class='foto' alt='alt'/>";
+                    salida += "<img src='../../i_img/red_social/i/"+jsonObject[i].foto + "'class='foto' alt='alt'/>";
                     salida += "<span>" + jsonObject[i].fecha + ", De </span>";
                     salida += "<h2>" + jsonObject[i].nombre + "<span> " + jsonObject[i].por + " </span>" + jsonObject[i].autor + "</h2>";
                 salida += "</section>";  
@@ -54,7 +54,7 @@ class Obtener {
             salida += "<hr>";
             salida += "<section class='articulo-body'>";
                 salida += "<p>" + jsonObject[i].publicacion + "</p>";
-                salida += "<img src='../../front-multimedia/red-social/imagen/"+jsonObject[i].imagen + "'alt='' style='width: 100%;'/>";
+                salida += "<img src='../../i_img/red_social/l/"+jsonObject[i].imagen + "'alt='' style='width: 100%;'/>";
             salida += "</section>";
             salida += "<hr>";
             salida += "<section class='articulo-footer'>";
@@ -119,7 +119,7 @@ salida += "<!-- Comentarios -->";
 
                             if(jsonObject[i].id == jsonObject[i].comentario[ii][iii].publicacion) {
                                 salida += "<div class='comentario'>";
-                                    salida += "<img src='../../front-multimedia/red-social/imagen/"+jsonObject[i].comentario[ii][iii].foto+"'";                                      salida += "alt='Avatar' style='width:100%;'>";
+                                    salida += "<img src='../../i_img/red_social/i/"+jsonObject[i].comentario[ii][iii].foto+"'";                                      salida += "alt='Avatar' style='width:100%;'>";
                                     salida += "<p>" + jsonObject[i].comentario[ii][iii].comentario + "</p>";
                                     salida += "<span class='time-right'>" + jsonObject[i].comentario[ii][iii].fecha + "</span>";
                                 salida += "</div>";

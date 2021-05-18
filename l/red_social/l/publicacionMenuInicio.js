@@ -5,7 +5,7 @@ var jsonObject, comentados;
 class RePublicar {
     static
     datos() {
-        fetch('../../sql/red-social/PublicacionInicio_1.php').then(function (response) {
+        fetch('../../s/red_social/l/PublicacionInicio_1.php').then(function (response) {
             return response.json();
         }).then(function (json) {
             jsonObject = json;
@@ -34,7 +34,7 @@ gustaSI(id) {
         datos.append('publicacion-si', publicacionSi);
         datos.append('gusta-si-boton', gustaSiBoton);
 
-        fetch('../../sql/red-social/GustaSi.php', {
+        fetch('../../s/red_social/s/GustaSi.php', {
             method: 'POST',
             body: datos
         }).then(function (response) {
@@ -70,7 +70,7 @@ gustaNo(id) {
         datos.append('publicacion-no', publicacionNo);
         datos.append('gusta-no-boton', gustaNoBoton);
         
-        fetch('../../sql/red-social/GustaNo.php', {
+        fetch('../../s/red_social/s/GustaNo.php', {
             method: 'POST',
             body: datos
         }).then(function (response) {
@@ -117,7 +117,7 @@ comentado(id) {
         datos.append('comentario', comentario);
         datos.append('comentar', comentar);
         
-        fetch('../../sql/red-social/Comentar.php', {
+        fetch('../../s/red_social/s/Comentar.php', {
             method: 'POST',
             body: datos
         }).then(function (response) {
@@ -224,7 +224,7 @@ compartir(id) {
         datos.append('imagen', imagen);
         datos.append('compartir-boton', compartirBoton);
         
-        fetch('../../sql/red-social/Compartir.php', {
+        fetch('../../s/red_social/s/Compartir.php', {
             method: 'POST',
             body: datos
         }).then(function (response) {

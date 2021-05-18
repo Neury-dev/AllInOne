@@ -18,7 +18,7 @@ foto        = document.querySelector("img.foto");
  */
 let usuario = document.querySelector("#usuario");
 
-fetch('../../../sql/red-social/Usuario.php', {
+fetch('../../../s/red_social/l/Usuario.php', {
     method: 'GET'
 }).then(function (response) {
     if(response.ok) { return response.json(); } 
@@ -36,7 +36,7 @@ fetch('../../../sql/red-social/Usuario.php', {
     pais.innerHTML          = json[0].pais;
     ciudad.innerHTML        = json[0].ciudad;
 //    fecha.innerHTML         = json[0].fecha;
-    foto.src                = '../../../front-multimedia/red-social/imagen/' + json[0].foto;
+    foto.src                = '../../../i_img/red_social/i/' + json[0].foto;
     /*
      * Amigos
      */
@@ -49,7 +49,7 @@ fetch('../../../sql/red-social/Usuario.php', {
  */
 let johnDoe = document.querySelector("#yo");
 
-fetch('../../../sql/red-social/Sesion.php', {
+fetch('../../../s/red_social/l/Sesion.php', {
     method: 'GET'
 }).then(function (response) {
     if(response.ok) { return response.json(); } 
