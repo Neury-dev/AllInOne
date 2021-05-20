@@ -1,4 +1,4 @@
-<?php require_once '../../../s/red-social/s/SesionIniciada.php'; ?>
+<?php require_once '../../../s/red_social/s/SesionIniciada.php'; ?>
 <html>
 <head>
     <title>Usuario</title>
@@ -56,8 +56,8 @@
             </section>-->
             <!--<a href="javascript:void(0);" class="n-icono-minimo n-header-maximo-oculto" onclick="header()">&#9776;</a>-->
             <section class="dropdown" style="z-index: 9;">
-                <img src="../../front-multimedia/red-social/imagen/mist.jpg" class="n-img-portada-header"alt="alt"/>
-                <img src="../../front-multimedia/red-social/imagen/firefoxos.png" class="n-img-perfil-header" onclick="headerNav()" alt="alt"/>
+                <img src="../../../i_img/red_social/i/mist.jpg" class="n-img-portada-header"alt="alt"/>
+                <img src="../../../i_img/red_social/i/firefoxos.png" class="n-img-perfil-header" onclick="headerNav()" alt="alt"/>
             </section>
         </section>
     </header>
@@ -72,7 +72,7 @@
 -->
         <section class="area-1">
             <main>
-                <img src="../../../i_multimedia/red_social/img/app.jpg" class="portada" alt="alt"/>
+                <img src="../../../i_img/red_social/i/app.jpg" class="portada" alt="alt"/>
                 <section class="contenedor">
                     <img class="foto" alt=""/>
                     <section class="perfil-nav">

@@ -73,13 +73,17 @@
     <img src="i_img/i/blob-5.png" class="formas slide-5">
     <article class="trasladar">
         <h4>JavaScript</h4>
-        <p>01/12/2020 - 06/12/2020</p>
-        <a href="https://github.com/Neury-dev/JavaScript.git">https://github.com/Neury-dev/JavaScript.git</a>
+        <p>11/05/2021 - 00/00/0000</p>
+        <a href="https://github.com/Neury-dev/JavaScript.git" target="_blank">
+            https://github.com/Neury-dev/JavaScript.git
+        </a>
     </article>
     <article class="trasladar">
-        <h4>Java</h4>
-        <p>09/12/2020 - 16/12/2020</p>
-        <a href="https://github.com/Neury-dev/IteradorMatematico.git">https://github.com/Neury-dev/IteradorMatematico.git</a>
+        <h4>IteradorMatematico</h4>
+        <p>07/10/2019 - 12/01/2020</p>
+        <a href="https://github.com/Neury-dev/IteradorMatematico.git" target="_blank">
+            https://github.com/Neury-dev/IteradorMatematico.git
+        </a>
     </article>
     <article class="trasladar">
         <h4>Sistema PHP</h4>

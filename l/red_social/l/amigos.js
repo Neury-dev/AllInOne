@@ -16,7 +16,7 @@ amigo.addEventListener('submit', function(e) {
     datos.append('usuario', usuario);
     datos.append('amigos ', amigos);
 
-    fetch('../../../sql/red-social/Amigos.php', {
+    fetch('../../../s/red_social/s/Amigos.php', {
         method: 'POST',
         body: datos
     })
@@ -35,7 +35,7 @@ var botonAmistad = document.querySelector("#amistad-icono");
 
 function 
 amistad() {
-fetch('../../../sql/red-social/Amigo.php', {
+fetch('../../../s/red_social/l/Amigo.php', {
     method: 'GET'
 }).then(function (response) {
     if(response.ok) { return response.json(); } 

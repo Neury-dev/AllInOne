@@ -1,6 +1,6 @@
 var jsonObject;
 
-fetch('../../../sql/red-social/PublicacionDeUsuario.php').then(function (response) {
+fetch('../../../s/red_social/l/PublicacionDeUsuario.php').then(function (response) {
     return response.json();
 }).then(function (json) {
 //    console.log(json.vacio);
@@ -25,7 +25,7 @@ class Obtener {
             <article>
                 <section class="articulo-head">
                     <section>
-                        <img src="../../../front-multimedia/red-social/imagen/${jsonObject[i].foto}" class="foto" alt="alt"/>
+                        <img src="../../../i_img/red_social/i/${jsonObject[i].foto}" class="foto" alt="alt"/>
                         <span class="">${jsonObject[i].fecha}, Por</span>
                         <h2>${jsonObject[i].nombre}</h2>
                     </section>  
@@ -36,7 +36,7 @@ class Obtener {
                 <hr>
                 <section class="articulo-body">
                     <p>${jsonObject[i].publicacion}</p>
-                    <img src="../../../front-multimedia/red-social/imagen/${jsonObject[i].imagen}" alt="" style="width: 100%;"/>
+                    <img src="../../../i_img/red_social/l/${jsonObject[i].imagen}" alt="" style="width: 100%;"/>
                 </section>
                 <hr>
                 <section class="articulo-footer">
