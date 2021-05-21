@@ -27,7 +27,7 @@ ciudadForm      = document.querySelector("#ciudad");
 fechaForm       = document.querySelector("#fecha");
 //foto        = document.querySelector("img#foto");
 
-fetch('../../../sql/red-social/Sesion.php', {
+fetch('../../../s/red_social/l/Sesion.php', {
     method: 'GET'
 }).then(function (response) {
     if(response.ok) { return response.json(); } 
@@ -44,7 +44,7 @@ fetch('../../../sql/red-social/Sesion.php', {
     pais.innerHTML          = json[0].pais;
     ciudad.innerHTML        = json[0].ciudad;
 //    fecha.innerHTML         = json[0].fecha;
-    foto.src                = '../../../front-multimedia/red-social/imagen/' + json[0].foto;
+    foto.src                = '../../../i_img/red_social/i/' + json[0].foto;
     
     nombreForm.value        = json[0].nombre;
     apellidoForm.value      = json[0].apellido;

@@ -1,4 +1,4 @@
-<?php require_once '../../sql/Sesion.php'; ?>
+<?php require_once '../../s/Sesion.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -163,7 +163,7 @@
         <a href="../../s/CerrarSesion.php">Aceptar</a>
     </div>
     <div id="n-subir-responde">Tiene que rellenar todos los campos.</div>
-<script src="../../l_admin/tienda/interior.js" async=""></script>
-<script src="../../l_admin/tienda/adaptador/subir.js" defer=""></script>
+<script src="../../l_admin/tienda/i/interior.js" async=""></script>
+<script src="../../l_admin/tienda/l/subir.js" defer=""></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-    require_once '../../sql/tienda/Carrito.php';
+    require_once '../../s/tienda/Carrito.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -86,7 +86,7 @@
 -->
 <section class="n-grid-area-4">
     <article>
-        <?php require_once '../../sql/tienda/carrito.php'; ?>
+        <?php require_once '../../s/tienda/carrito.php'; ?>
     </article>
 </section>
 <!--

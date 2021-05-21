@@ -264,7 +264,7 @@
             </section>
         </section>
     </section>
-<script src="../../../l/red_social/header.js" async=""></script>
+<script src="../../../l/red_social/i/header.js" async=""></script>
 <script src="../../../l/red_social/l/usuario.js" async=""></script>
 <!--<script src="../../show/red-social/main.js" defer=""></script>-->
 <script src="../../../l/red_social/l/publicacionDeUsuario.js" defer=""></script>

@@ -1,4 +1,5 @@
 var slideIndex = 0;
+var detener;
 
 showSlides();
 
@@ -24,7 +25,7 @@ showSlides() {
     slides[slideIndex - 1].style.display = "block";
     iconos[slideIndex - 1].style.display = "block";
     
-    setTimeout(showSlides, 4000);
+    detener = setTimeout(showSlides, 4000);
 }
 //
     // Aside

@@ -21,7 +21,7 @@
     <section class="n-contenedor" style="background-image: url('jeans.jpg')">
         <section class="n-contenido">
             <section>
-                <img src="../../i_img/tienda/avatar2.png" alt="" loading="lazy">
+                <img src="../../i_img/tienda/i/avatar2.png" alt="" loading="lazy">
             </section>
             <section>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"

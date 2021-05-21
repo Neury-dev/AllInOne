@@ -11,7 +11,7 @@ perfil.addEventListener('submit', function(e) {
     datos.append('correo', correo);
     datos.append('suscriptor', suscriptor);
 
-    fetch('../../sql/tienda/Perfil.php', {
+    fetch('../../s/tienda/Perfil.php', {
         method: 'POST',
         body: datos
     })

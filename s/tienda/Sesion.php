@@ -16,10 +16,10 @@ class Sesion {
 
         if (!empty($administrador)) {
             $_SESSION['sesion'] = $correo;
-            header("location: ../../front/tienda/interior.php");
+            header("location: ../../i/tienda/interior.php");
         } elseif (empty($administrador)) {
             echo "No tiene permiso.";
-            echo '<meta http-equiv="refresh" content="3; url= ../../front/tienda/perfil.php" />';
+            echo '<meta http-equiv="refresh" content="3; url= ../../i/tienda/perfil.php" />';
         } else {
             echo "Erro----------------------";
         }

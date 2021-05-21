@@ -29,7 +29,7 @@
         </section>
         <section class="area-3">
             <section class="sesion-1">
-                <a href="http://localhost/AllInOne/front/red_social/inicio.php"><i class='fas fa-home'></i></a>
+                <a href="http://localhost/AllInOne/i/red_social/inicio.php"><i class='fas fa-home'></i></a>
                 <a href="" class="n-header-maximo-oculto"><i class='fas fa-chalkboard-teacher'></i></a>
                 <a href="" class="n-header-maximo-oculto"><i class="fas fa-envelope-open"></i></a>
                 <a href="" class="n-header-maximo-oculto"><i class="fas fa-bell-slash"></i></a>
@@ -62,7 +62,7 @@
     </header>
     <div id="n-header-nav" class="n-header-nav-contenedor">
         <a href="#">Perfil</a>
-        <a href="red_social/i/perfil/editar.php">Editar</a>
+        <a href="perfil/editar.php">Editar</a>
         <a href="../../s/CerrarSesion.php">Salir</a>
     </div>
     <section class="n-grid">

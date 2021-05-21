@@ -48,13 +48,13 @@
             </section>
             <a href="javascript:void(0);" class="n-icono-minimo n-header-maximo-oculto" onclick="header()">&#9776;</a>
             <section class="dropdown" style="z-index: 9;">
-                <img src="../../../i_multimedia/red_social/img/mist.jpg" class="n-img-portada-header"alt="alt"/>
-                <img src="../../../i_multimedia/red_social/img/firefoxos.png" class="n-img-perfil-header" onclick="headerNav()" alt="alt"/>
+                <img src="../../../i_img/red_social/i/mist.jpg" class="n-img-portada-header"alt="alt"/>
+                <img src="../../../i_img/red_social/i/firefoxos.png" class="n-img-perfil-header" onclick="headerNav()" alt="alt"/>
             </section>
         </section>
     </header>
     <div id="n-header-nav" class="n-header-nav-contenedor">
-        <a href="../../front/red_social/perfil/editar.php">Editar</a>
+        <a href="../../i/red_social/perfil/editar.php">Editar</a>
         <a href="#">Salir</a>
     </div>
 <!--    <nav></nav>
@@ -85,7 +85,7 @@
         </form>
     </section>
 </section>
-<script src="../../../l/red_social/header.js" async=""></script>
+<script src="../../../l/red_social/i/header.js" async=""></script>
 <script src="../../../l/red_social/l/chats.js"></script>
 <!--<script src="../../../show/red-social/adaptador/contactados.js"></script>-->
 </body>

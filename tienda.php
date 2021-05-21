@@ -291,8 +291,8 @@
         border-radius: 0.20em;
         "><i class='fas fa-chevron-circle-up'></i></a>-->
 
-<script src="l/tienda/header.js" async=""></script>
-<script src="l/tienda/diapositiva.js" async=""></script>
+<script src="l/tienda/i/header.js" async=""></script>
+<script src="l/tienda/i/diapositiva.js" async=""></script>
 <script src="l/tienda/l/articulos.js" async=""></script>
 <script src="l/tienda/l/boletines.js" defer=""></script>
 <script src="l/tienda/l/suscriptores.js" defer=""></script>

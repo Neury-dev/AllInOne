@@ -2,7 +2,7 @@ var jsonContactados, jsonObject, de;
 /*
     * john Doe 
  */
-fetch('../../../sql/red-social/Sesion.php', {
+fetch('../../../s/red_social/l/Sesion.php', {
     method: 'GET'
 }).then(function (response) {
     if(response.ok) { return response.json(); } 
@@ -23,13 +23,13 @@ class Conseguir {
         for (let i in jsonObject) {
             if (jsonObject[i].de === de) {
                 salida += "<div class='container darker'>";
-                    salida += "<img src='../../../front-multimedia/red-social/imagen/" + jsonObject[i].foto + "' alt='Avatar' class='right' style='width:100%;'>";
+                    salida += "<img src='../../../i_img/red_social/i/" + jsonObject[i].foto + "' alt='Avatar' class='right' style='width:100%;'>";
                     salida += "<p>" + jsonObject[i].mensaje + "</p>";
                     salida += "<span class='time-left'>" + jsonObject[i].fecha + "</span>";
                 salida += "</div>";
             } else {
                 salida += "<div class='container'>";
-                    salida += "<img src='../../../front-multimedia/red-social/imagen/" + jsonObject[i].foto + "' alt='Avatar' style='width:100%;'>";
+                    salida += "<img src='../../../i_img/red_social/i/" + jsonObject[i].foto + "' alt='Avatar' style='width:100%;'>";
                     salida += "<p>" + jsonObject[i].mensaje + "</p>";
                     salida += "<span class='time-right'>" + jsonObject[i].fecha + "</span>";
                 salida += "</div>";
@@ -52,7 +52,7 @@ class Chats {
 
             datos.append('chat-contactado', chat);
 
-            fetch('../../../sql/red-social/Chats.php', {
+            fetch('../../../s/red_social/l/Chats.php', {
                 method: 'POST',
                 body: datos
             }).then(function (response) {
@@ -91,7 +91,7 @@ class ChatCon {
             datos.append('chat-con', chatCon);
             datos.append('re-mensaje', reMensaje);
 
-            fetch('../../../sql/red-social/ChatCon.php', {
+            fetch('../../../s/red_social/l/ChatCon.php', {
                 method: 'POST',
                 body: datos
             }).then(function (response) {
@@ -118,7 +118,7 @@ class ChatCon {
 class ReGetChatCon {
     static
       usuario() {
-        fetch('../../../sql/red-social/Contactados.php').then(function (response) {
+        fetch('../../../s/red_social/l/Contactados.php').then(function (response) {
             return response.json();
         }).then(function (json) {
             console.log(json);
@@ -131,7 +131,7 @@ class ReGetChatCon {
         });
     }
 }
-fetch('../../../sql/red-social/Contactados.php').then(function (response) {
+fetch('../../../s/red_social/l/Contactados.php').then(function (response) {
     return response.json();
 }).then(function (json) {
     console.log(json);
@@ -152,7 +152,7 @@ class GetContactados {
             salida += "<div class='w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey'>";
                 salida += "<div class='w3-container'>";
                     salida += "<img class='w3-round w3-margin-right' style='width:15%;'"; 
-                        salida += "src='../../../front-multimedia/red-social/imagen/" + jsonContactados[i].foto + "'>";
+                        salida += "src='../../../i_img/red_social/i/" + jsonContactados[i].foto + "'>";
                     salida += "<form action='' method='POST' name='contactado-"+jsonContactados[i].ok+"' id='contactado-"+jsonContactados[i].ok+"'>";
                         salida += "<input type='hidden' id='chat-contactado' name='chat-contactado' value='" + jsonContactados[i].ok + "'>";
                         salida += "<button type='submit' onclick='Chats.mensajes("+jsonContactados[i].ok+")'>"+jsonContactados[i].nombre+"</button>";

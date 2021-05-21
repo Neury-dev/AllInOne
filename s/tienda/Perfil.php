@@ -11,7 +11,7 @@ class Perfil {
         $this->buscar = htmlspecialchars($_REQUEST["correo"]);
         
         if(isset($_POST["suscriptor"]) and  $this->buscar === 'eleasar0991@gmail.com') {
-            echo "<form action='../../sql/tienda/Sesion.php' method='POST' class='n-perfilado'>
+            echo "<form action='../../s/tienda/Sesion.php' method='POST' class='n-perfilado'>
                     <input type='email' name='correo' value='".$this->buscar."'required hidden>
                     <input type='password' name='codigo' value='admin'>
                     <button type='submit' name='administrador'>&#10095;</button>

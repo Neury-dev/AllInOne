@@ -1,5 +1,5 @@
 <?php
-require_once '../../sql/Conexion.php';
+require_once '../../s/Conexion.php';
 
 class Detalles {
 
@@ -17,10 +17,10 @@ $detalles = $ejecutarDetalles->detalle();
 
 foreach ($detalles as $detalle) {
 ?>
-<img src="../../i_img/tienda/detalles.jpg" alt="" loading="lazy">
+<img src="../../i_img/tienda/i/detalles.jpg" alt="" loading="lazy">
 <section>
     <section>
-        <img src="../../front-multimedia/tienda/img/<?php echo $detalle['imagen']; ?>" alt="">
+        <img src="../../i_img/tienda/l/<?php echo $detalle['imagen']; ?>" alt="">
         <div class="n-total">
             <input id="n-total" type="text" value="<?php echo $detalle["precio"]; ?>" disabled="">
         </div>

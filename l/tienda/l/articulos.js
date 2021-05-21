@@ -21,39 +21,14 @@ responder() {
     let output = "";
     
     for(let i in jsonObject) {
-////        output += ;
-//output += "<section>";
-//    output += "<img src='multi/tienda/img/"+jsonObject[i].imagen+"' alt='' />";
-//    output += "<div class='n-articulo-contenedor'>";
-//        output +="<h3 class='n-marca'>"+jsonObject[i].marca+"</h3>";
-//        output +="<p class='n-nombre'>"+jsonObject[i].nombre+"</p>";
-//        output +="<p class='n-detalles'>";
-//            output +="<a href='front/tienda/detalles.php?id="+jsonObject[i].id+"'>Detalles <i class='fas fa-cart-plus'></i></a>";
-//        output +="</p>";
-//        output +="<form action='' method='POST' name='articulo' id='escoger-form'>";
-//            output +="<input type='hidden' name='id' value="+jsonObject[i].id+">";
-//            output +="<input type='hidden' name='marca' value="+jsonObject[i].marca+">";
-//            output +="<input type='hidden' name='nombre' value="+jsonObject[i].nombre+">";
-//            output +="<input type='hidden' name='color' value="+jsonObject[i].color+">";
-//            output +="<input type='hidden' name='talla' value="+jsonObject[i].talla+">";
-//            output +="<input type='hidden' name='descripcion' value="+jsonObject[i].descripcion+">";
-//            output +="<label for='mas' hidden=''><input type='number' name='mas' id='mas' value='1'></label>";
-//            output +="<input type='hidden' name='cantidad' value='1'>";
-//            output +="<input type='hidden' name='precio' value="+jsonObject[i].precio+">";
-//            output +="<button type='submit' id='n-escoger' name='escoger' value='Escoger'>";
-//                output +="Escoger <i class='fa fa-shopping-cart'></i>";
-//            output +="</button>";
-//        output +="</form>";
-//    output +="</div>"; 
-//output +="</section>";
         output += `
 <section>
-    <img src="multi/tienda/img/${jsonObject[i].imagen}" alt="" />
+    <img src="i_img/tienda/l/${jsonObject[i].imagen}" alt="" />
     <div class="n-articulo-contenedor">
         <h3 class="n-marca">${jsonObject[i].marca}</h3>
         <p class="n-nombre">${jsonObject[i].nombre}</p>
         <p class="n-detalles">
-            <a href="front/tienda/detalles.php?id=${jsonObject[i].id}&marca=${jsonObject[i].marca}">
+            <a href="i/tienda/detalles.php?id=${jsonObject[i].id}&marca=${jsonObject[i].marca}">
                 Detalles <i class='fas fa-cart-plus'></i>
             </a>
         </p>
