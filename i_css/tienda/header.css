@@ -1,7 +1,7 @@
 @import url("http://localhost/AllInOne/i_css/i/root.css");
 /* 
     Created on : 14 sept. 2020, 16:27:03
-    Author     : desarrollador
+    Author     : neury-dev
 */
 /*@import url("root.css");*/
 header {
@@ -9,13 +9,11 @@ header {
     width: 20%;
     height: 100%;
     overflow-y: auto;
-    /*overflow-x: hidden;*/
 }
 header > h1 > a {
     color: var(--n-color-dos);
     font-family: var(--n-fuente-tres);
     font-size: 2.125em;
-    text-decoration: none;
     width: auto;
     margin: -1.50em 0em 0em 0em;
     padding: 0em 0em 0em 0.70em;
@@ -51,9 +49,7 @@ header > section.n-uno {
     margin: 4em 0 0 0em;
 }
 header > section.n-uno > button {
-    color: var(--n-color-dos);
     background-color: var(--n-color);
-    font-family: var(--n-fuente-dos);
     font-size: 1em;
     text-align: left;
     margin: 0em auto 0em 3em;
@@ -65,7 +61,6 @@ header > section.n-uno > button {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    font-family: 'Arial Black', Gadget, sans-serif;
     font-size: 15vmin;
 }
 .n-categoria-contenido {
@@ -111,17 +106,14 @@ header > section.n-dos {
     flex-direction: column;
     position: absolute;
     bottom: 8.50em;
-    /*width: auto;*/
 }
 header > section.n-dos > a, header > section.n-dos > button {
-    color: var(--n-color-dos);
-    font-family: var(--n-fuente-dos);
     font-size: 0.75em;
     text-align: left;
     padding: 0.50em 0em 0em 4.50em;
 }
 header > section.n-dos > a {
-    text-decoration: none;
+    color: var(--n-color-dos);
 }
 header > section.n-dos > button {
     background-color: var(--n-color);
@@ -166,9 +158,7 @@ header > section.n-dos > a:hover
         margin: 0em;
     }
     header > section.n-uno > button {
-        color: var(--n-color-dos);
         background-color: var(--n-color);
-        font-family: var(--n-fuente-dos);
         font-size: 1.40em;
         margin: 0em auto 0em 0.50em;
         border: none;

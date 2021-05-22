@@ -29,15 +29,13 @@ div#n-pantalones > aside > section {
     padding: 7.50em 3em 0em 0em;
 }
 div#n-pantalones > aside > section > h2 {
-    color: var(--n-color-dos);
-    font-family: var(--n-fuente);
+    font-weight: bold;
     font-size: 1.20em;
 }
 div#n-pantalones > aside > section > h3 > a {
     color: var(--n-color-dos);
-    font-family: var(--n-fuente);
+    font-weight: bold;
     font-size: 0.80em;
-    text-decoration: none;
 }
 div#n-pantalones > aside > section > h3 > a:hover {
     color: var(--n-color);
@@ -49,19 +47,14 @@ div#n-pantalones > aside > section > ol {
 }
 div#n-pantalones > aside > section > ol > li > a {
     color: var(--n-color-dos);
-    font-family: var(--n-fuente-dos);
     font-size: 0.90em;
-    text-decoration: none;
 }
 div#n-pantalones > aside > section > ol > li > a:hover {
     color: var(--n-color-tres);
     font-weight: bold;
 }
-/*
-    boletín informativo
-    y
-    suscribir
-*/
+/* boletín informativo y suscribir
+-------------------------------------------------------------------------------*/
 div#n-boletin, div#n-subscribir {
     background-image: url("front-img/tienda/img_snow_wide.jpg");
     background-image: linear-gradient(to right, var(--n-color), var(--n-color), var(--n-color-dos));
@@ -80,20 +73,16 @@ div#n-boletin > aside, div#n-subscribir > aside {
     overflow: auto;
 }
 div#n-boletin > aside > h2, div#n-subscribir > aside > h2 {
-    color: var(--n-color-dos);
-    font-family: var(--n-fuente);
+    font-weight: bold;
     font-size: 1.20em;
 }
 div#n-boletin > aside > p, div#n-subscribir > aside > p {
-    color: var(--n-color-dos);
-    font-family: var(--n-fuente-dos);
     font-size: 0.80em;
     text-decoration: none;
     width: 24em;
 }
 div#n-boletin > aside > form > p > input, div#n-subscribir > aside > form > p > input { 
     caret-color: var(--n-color-dos); 
-    font-family: var(--n-fuente-dos);
     font-size: 0.80em;
     width: 24em;
     border: 0.10em solid var(--n-color-dos);
@@ -115,7 +104,7 @@ div#n-boletin > aside > form > p > input:invalid, div#n-subscribir > aside > for
 div#n-boletin > aside > form > button, div#n-subscribir > aside > form > button {
     color: var(--n-color);
     background-color: var(--n-color-dos);
-    font-family: var(--n-fuente);
+    font-weight: bold;
     font-size: 0.90em;
     width: 21.28em;
     border: none;

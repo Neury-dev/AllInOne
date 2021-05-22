@@ -37,7 +37,6 @@ section.n-grid-area-4 > article > section > div.n-articulo-contenedor {
     background-color: var(--n-color-uno-uno);
     width: 14em;
     height: 15.9375em;
-    /*margin: -15.92em 0em 0em 0em;*/
     border: 0.10em solid var(--n-color-dos);
     border-radius: 1em;
     padding: 1em;
@@ -46,25 +45,21 @@ section.n-grid-area-4 > article > section:hover .n-articulo-contenedor {
     display: block;
 }
 div.n-articulo-contenedor > h3.n-marca {
-    color: var(--n-color-dos);
-    font-family: var(--n-fuente);
+    font-weight: bold;
     font-size: 0.90em;
 }
 div.n-articulo-contenedor > p.n-nombre {
-    color: var(--n-color-dos);
-    font-family: var(--n-fuente-dos);
     font-size: 0.90em;
     margin-top: -1em;
 }
 div.n-articulo-contenedor > p.n-detalles > a {
     position: absolute;
-    bottom: 3em;
+    bottom: 3.50em;
     color: var(--n-color);
     background-color: var(--n-color-dos);
-    font-family: var(--n-fuente);
-    font-size: 0.90em;
+    font-weight: bold;
+    font-size: 0.80em;
     text-align: center;
-    text-decoration: none;
     width: 85%;
     border-radius: 0.50em;
     padding: 0.50em 0.50em 0.50em 0.50em;
@@ -82,7 +77,7 @@ div.n-articulo-contenedor > form > button#n-escoger {
     bottom: 0.40em;
     color: var(--n-color);
     background-color: var(--n-color-dos);
-    font-family: var(--n-fuente);
+    font-weight: bold;
     font-size: 0.90em;
     width: 85%;
     border: none;

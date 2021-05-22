@@ -4,7 +4,6 @@ nav             = document.querySelector("nav");
 main            = document.querySelector("main");
 article         = document.querySelector("article");
 footer          = document.querySelector("footer");
-footerAllInOne  = document.querySelector("footer#n-all-in-one");
 contacto        = document.querySelector("a.n-contacto");
 
 function
@@ -30,7 +29,6 @@ header(evt, ids) {
     main.style.display = "none";
     article.style.display = "none";
     footer.style.display = "none";
-    footerAllInOne.style.display = "none";
     contacto.style.visibility = "hidden";
 //    document.querySelector("nav").style.display = "none";
 //    document.querySelector("main").style.display = "none";

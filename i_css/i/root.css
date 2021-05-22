@@ -20,7 +20,8 @@ a { text-decoration: none; }
 a, 
 button, 
 select { 
-    cursor: pointer; 
+    cursor: pointer;
+    outline: none;
 }
 label { font-weight: bold; }
 

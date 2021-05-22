@@ -1,9 +1,8 @@
 @import url("http://localhost/AllInOne/i_css/i/root.css");
 /* 
     Created on : 14 sept. 2020, 17:09:22
-    Author     : desarrollador
+    Author     : neury-dev
 */
-/*@import url("root.css");*/
 nav {
     display: flex;
     justify-content: flex-end;
@@ -18,8 +17,7 @@ nav {
 nav > a  {
     color: var(--n-color-dos);
     text-shadow: var(--n-sombra-de-texto);
-    font-family: var(--n-fuente);
-    text-decoration: none;
+    font-weight: bold;
     padding-left: 1.50em;
     transition: var(--n-transicion); 
 }

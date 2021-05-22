@@ -1,16 +1,8 @@
 @import url("http://localhost/AllInOne/i_css/i/root.css");
 /* 
     Created on : 14 sept. 2020, 1:50:09
-    Author     : desarrollador
+    Author     : neury-dev
 */
-
-html {
-    scroll-behavior: smooth;
-}
-button, a { 
-    cursor: pointer; 
-    outline: none;
-}
 @media screen and (min-width: 70em) {
     .n-grid {
         display: grid;
@@ -23,7 +15,6 @@ button, a {
 .n-grid-area-3 { grid-area: 2 / 2 / span 1 / span 1; }
 .n-grid-area-4 { grid-area: 3 / 2 / span 1 / span 1; }
 .n-grid-area-5 { grid-area: 4 / 2 / span 1 / span 1; }
-.n-grid-area-6 { grid-area: 5 / 2 / span 1 / span 1; }
 @media screen and (max-width: 69.99em) {
     .n-grid {
         display: grid;

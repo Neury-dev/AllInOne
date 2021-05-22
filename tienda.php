@@ -182,12 +182,6 @@
     </footer>
 </section>
 <!--
-    footer (2)
--->
-<section class="n-grid-area-6">
-
-</section>
-<!--
     aside
 -->
 <div id="n-camisetas" class="n-categoria-contenido"><h2>Capisetas</h2></div>
