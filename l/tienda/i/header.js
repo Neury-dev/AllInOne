@@ -1,8 +1,8 @@
-var nav, main, article, footer, footerAllInOne, contacto;
+var nav, main, article, footer, contacto;
 
 nav             = document.querySelector("nav");
 main            = document.querySelector("main");
-article         = document.querySelector("article");
+article         = document.querySelector(".n-grid > n-grid-area-4 > div");
 footer          = document.querySelector("footer");
 contacto        = document.querySelector("a.n-contacto");
 
@@ -34,7 +34,6 @@ header(evt, ids) {
 //    document.querySelector("main").style.display = "none";
 //    document.querySelector("article").style.display = "none";
 //    document.querySelector("footer").style.display = "none";
-//    document.querySelector("footer#n-all-in-one").style.display = "none";
 //    document.querySelector("a.n-contacto").style.visibility = "hidden";
 }
 
@@ -61,13 +60,11 @@ header2(evt, ids) {
   main.style.display = "block";
   article.style.display = "flex";
   footer.style.display = "grid";
-  footerAllInOne.style.display = "block";
   contacto.style.visibility = "visible";
 //  document.querySelector("nav").style.display = "flex";
 //  document.querySelector("main").style.display = "block";
 //  document.querySelector("article").style.display = "flex";
 //  document.querySelector("footer.n-footer").style.display = "grid";
-//  document.querySelector("footer#n-all-in-one").style.display = "block";
 //  document.querySelector("a.n-contacto").style.visibility = "visible";
 }
 

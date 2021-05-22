@@ -22,7 +22,7 @@ responder() {
     
     for(let i in jsonObject) {
         output += `
-<section>
+<article>
     <img src="i_img/tienda/l/${jsonObject[i].imagen}" alt="" />
     <div class="n-articulo-contenedor">
         <h3 class="n-marca">${jsonObject[i].marca}</h3>
@@ -49,10 +49,10 @@ responder() {
             </button>
         </form>
     </div> 
-</section>
+</article>
         `;
     }
-    document.querySelector(".n-grid-area-4 > article").innerHTML = output;
+    document.querySelector(".n-grid-area-4 > div").innerHTML = output;
 }
 
 

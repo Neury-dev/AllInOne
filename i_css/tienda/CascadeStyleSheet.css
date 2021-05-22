@@ -26,24 +26,21 @@
         display: none;           
     }
 }
-/*
-    Alerta General +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-*/
+/* Alerta General
+--------------------------------------------------------------------------------*/
 #n-alerta-general {
     visibility: hidden;
     position: fixed;
     z-index: 10;
     left: 50%;
     bottom: 30px;
-    color: white;
-    background-color: #373538;
-    font-family: var(--n-fuente-dos);
-    font-size: 0.80em;
+    color: var(--n-color);
+    background-color: var(--n-color-tres);
     text-align: center;
     min-width: 250px;
     margin-left: -125px;
-    border-radius: 1em;
-    padding: 16px;
+    border-radius: var(--n-radio);
+    padding: var(--n-relleno);
 }
 #n-alerta-general.n-mostrar {
     visibility: visible;

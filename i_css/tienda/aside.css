@@ -1,14 +1,39 @@
 @import url("http://localhost/AllInOne/i_css/i/root.css");
 /* 
     Created on : 26 sept. 2020, 17:34:26
-    Author     : desarrollador
+    Author     : neury-dev
 */
-/*@import url("root.css");*/
-/*
-    pantalones
-*/
+aside { font-size: 0.90em; }
+/* Sin contenido
+--------------------------------------------------------------------------------*/
+#n-camisetas > h2, 
+#n-vestidos > h2, 
+#n-chaquetas> h2, 
+#n-deportivas> h2, 
+#n-zapatos > h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 15vmin;
+}
+.n-categoria-contenido {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 20%;
+    width: 80%;
+    height: 100%;
+    background: var(--n-color);
+}
+.n-categoria-contenido > img {
+    width: 100%;
+    height: 100%;
+}
+/* pantalones
+--------------------------------------------------------------------------------*/
 div#n-pantalones {
-    background-image: url("front-img/tienda/img_snow_wide.jpg");
+    background-image: url(i_img/tienda/i/jeans.jpg);
     background-image: linear-gradient(to right, var(--n-color), var(--n-color), var(--n-color-dos));
     background-repeat: no-repeat;
     /*background-size: 100% 100%;*/
@@ -24,35 +49,13 @@ div#n-pantalones > aside {
     height: 100%;
     overflow: auto;
 }
-div#n-pantalones > aside > section {
-    width: 12.80em;
-    padding: 7.50em 3em 0em 0em;
-}
-div#n-pantalones > aside > section > h2 {
-    font-weight: bold;
-    font-size: 1.20em;
-}
-div#n-pantalones > aside > section > h3 > a {
-    color: var(--n-color-dos);
-    font-weight: bold;
-    font-size: 0.80em;
-}
-div#n-pantalones > aside > section > h3 > a:hover {
-    color: var(--n-color);
-    text-shadow: var(--n-sombra-de-texto-dos);
-}
-div#n-pantalones > aside > section > ol {
-    list-style: none;
-    padding: 0;
-}
-div#n-pantalones > aside > section > ol > li > a {
-    color: var(--n-color-dos);
-    font-size: 0.90em;
-}
-div#n-pantalones > aside > section > ol > li > a:hover {
-    color: var(--n-color-tres);
-    font-weight: bold;
-}
+div#n-pantalones > aside > section { width: 12.80em; padding: 7.50em 3em 0em 0em; }
+div#n-pantalones > aside > section > h2 { font-weight: bold; }
+div#n-pantalones > aside > section > h3 > a { color: var(--n-color-dos); font-weight: bold; }
+div#n-pantalones > aside > section > h3 > a:hover { color: var(--n-color); text-shadow: var(--n-sombra-de-texto-dos); }
+div#n-pantalones > aside > section > ol { list-style: none; padding: 0; }
+div#n-pantalones > aside > section > ol > li > a { color: var(--n-color-dos); }
+div#n-pantalones > aside > section > ol > li > a:hover { color: var(--n-color-tres); font-weight: bold; }
 /* boletín informativo y suscribir
 -------------------------------------------------------------------------------*/
 div#n-boletin, div#n-subscribir {
@@ -62,7 +65,8 @@ div#n-boletin, div#n-subscribir {
     /*background-size: 100% 100%;*/
     background-size: cover;
 }
-div#n-boletin > aside, div#n-subscribir > aside {
+div#n-boletin > aside, 
+div#n-subscribir > aside {
     position: absolute;
     top: 50%;
     /*left: 50%;*/
@@ -72,47 +76,55 @@ div#n-boletin > aside, div#n-subscribir > aside {
     /*height: 100%;*/
     overflow: auto;
 }
-div#n-boletin > aside > h2, div#n-subscribir > aside > h2 {
+div#n-boletin > aside > h2, 
+div#n-subscribir > aside > h2 {
     font-weight: bold;
-    font-size: 1.20em;
 }
-div#n-boletin > aside > p, div#n-subscribir > aside > p {
-    font-size: 0.80em;
-    text-decoration: none;
+div#n-boletin > aside > p, 
+div#n-subscribir > aside > p {
     width: 24em;
 }
-div#n-boletin > aside > form > p > input, div#n-subscribir > aside > form > p > input { 
+div#n-boletin > aside > form > p > input, 
+div#n-subscribir > aside > form > p > input { 
     caret-color: var(--n-color-dos); 
-    font-size: 0.80em;
     width: 24em;
     border: 0.10em solid var(--n-color-dos);
-    border-radius: 0.50em;
-    padding: 0.60em;
-    outline: none;
+    border-radius: var(--n-radio);
+    padding: var(--n-relleno);
 }
-::placeholder { 
-    color: var(--n-color-tres);
-}
-div#n-boletin > aside > form > p > input:valid, div#n-subscribir > aside > form > p > input:valid {
+::placeholder { color: var(--n-color-tres); }
+div#n-boletin > aside > form > p > input:valid, 
+div#n-subscribir > aside > form > p > input:valid {
     color: var(--n-color);
     background: var(--n-color-dos);
 }
-div#n-boletin > aside > form > p > input:invalid, div#n-subscribir > aside > form > p > input:invalid {
+div#n-boletin > aside > form > p > input:invalid, 
+div#n-subscribir > aside > form > p > input:invalid {
     color: var(--n-color-rojo);
     background: var(--n-color);
 }
-div#n-boletin > aside > form > button, div#n-subscribir > aside > form > button {
+div#n-boletin > aside > form > button,
+div#n-subscribir > aside > form > button {
     color: var(--n-color);
     background-color: var(--n-color-dos);
     font-weight: bold;
-    font-size: 0.90em;
     width: 21.28em;
     border: none;
-    border-radius: 0.50em;
-    padding: 0.50em;
+    border-radius: var(--n-radio);
+    padding: var(--n-relleno);
 }
-div#n-boletin > aside > form > button:hover, div#n-subscribir > aside > form > button:hover {
+div#n-boletin > aside > form > button:hover, 
+div#n-subscribir > aside > form > button:hover {
     color: var(--n-color-dos);
     background-color: var(--n-color-tres);
     text-shadow: var(--n-sombra-de-texto);
+}
+@media screen and (max-width: 69.99em) {
+/* aside
+--------------------------------------------------------------------------------*/   
+    .n-categoria-contenido {
+        left: 10%;
+        width: 90%;
+    }
+    aside { margin-left: 0.50em;}
 }

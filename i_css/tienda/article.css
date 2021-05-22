@@ -1,68 +1,68 @@
 @import url("http://localhost/AllInOne/i_css/i/root.css");
 /* 
     Created on : 15 sept. 2020, 13:46:17
-    Author     : desarrollador
+    Author     : neury-dev
 */
-/*@import url("root.css");*/
-section.n-grid-area-4 > article {
+section.n-grid-area-4 > div {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     width: 100%;
     padding: 0em 3em 3em 0em;
 }
-section.n-grid-area-4 > article > section {
+section.n-grid-area-4 > div > article {
     content: "";
     clear: both;
     display: table;
     position: relative;
+    font-size: 0.90em;
     width: 14em;
     height: 15.9375em;
     margin: 0em 0em 1em 0em;
     border: 0.10em solid #1c1d22;
-    border-radius: 1em;
+    border-radius: var(--n-radio);
 }
-section.n-grid-area-4 > article > section > img {
-    /*position: relative;*/
+section.n-grid-area-4 > div > article > img {
+    position: relative;
     width:100%;
     height: 15.9375em;
-    border-radius: 1em;
+    border-radius: var(--n-radio);
     vertical-align:middle;
     object-fit: cover;
 }
-section.n-grid-area-4 > article > section > div.n-articulo-contenedor {
+section.n-grid-area-4 > div > article > div.n-articulo-contenedor {
     display: none;
     position: absolute;
     top: 0;
     background-color: var(--n-color-uno-uno);
     width: 14em;
-    height: 15.9375em;
+    height: 16.0375em;
     border: 0.10em solid var(--n-color-dos);
-    border-radius: 1em;
-    padding: 1em;
+    border-radius: var(--n-radio);
+    padding: var(--n-relleno);
 }
-section.n-grid-area-4 > article > section:hover .n-articulo-contenedor {
+section.n-grid-area-4 > div > article:hover 
+.n-articulo-contenedor {
     display: block;
 }
-div.n-articulo-contenedor > h3.n-marca {
-    font-weight: bold;
-    font-size: 0.90em;
+div.n-articulo-contenedor > h3.n-marca,
+div.n-articulo-contenedor > p.n-nombre,
+div.n-articulo-contenedor > form > button#n-escoger {
+    font-size: 0.80em;
 }
-div.n-articulo-contenedor > p.n-nombre {
-    font-size: 0.90em;
-    margin-top: -1em;
-}
+div.n-articulo-contenedor > h3.n-marca { font-weight: bold; }
+div.n-articulo-contenedor > p.n-nombre { margin-top: -1em; }
 div.n-articulo-contenedor > p.n-detalles > a {
     position: absolute;
     bottom: 3.50em;
     color: var(--n-color);
     background-color: var(--n-color-dos);
+    font-size: 0.70em;
     font-weight: bold;
-    font-size: 0.80em;
     text-align: center;
-    width: 85%;
-    border-radius: 0.50em;
-    padding: 0.50em 0.50em 0.50em 0.50em;
+    width: 90%;
+    border-radius: var(--n-radio);
+    padding: 0.55em;
 }
 div.n-articulo-contenedor > p.n-detalles:hover a:after {
     /*content: "\>";*/
@@ -78,11 +78,10 @@ div.n-articulo-contenedor > form > button#n-escoger {
     color: var(--n-color);
     background-color: var(--n-color-dos);
     font-weight: bold;
-    font-size: 0.90em;
-    width: 85%;
+    width: 90%;
     border: none;
-    border-radius: 0.50em;
-    padding: 0.50em;
+    border-radius: var(--n-radio);
+    padding: var(--n-relleno);
 }
 div.n-articulo-contenedor > form > button#n-escoger:hover {
     color: var(--n-color-dos);

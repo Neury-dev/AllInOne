@@ -3,7 +3,6 @@
     Created on : 14 sept. 2020, 16:27:03
     Author     : neury-dev
 */
-/*@import url("root.css");*/
 header {
     position: fixed;
     width: 20%;
@@ -50,37 +49,16 @@ header > section.n-uno {
 }
 header > section.n-uno > button {
     background-color: var(--n-color);
-    font-size: 1em;
     text-align: left;
     margin: 0em auto 0em 3em;
     border: none;
     padding: 1.50em 0em 0em 0em;
 }
-#n-camisetas > h2, #n-vestidos > h2, #n-chaquetas> h2, #n-deportivas> h2, #n-zapatos > h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 15vmin;
-}
-.n-categoria-contenido {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 20%;
-    width: 80%;
-    height: 100%;
-    background: var(--n-color);
-}
-.n-categoria-contenido > img {
-    width: 100%;
-    height: 100%;
-}
+
 header > section.n-uno > button.n-categoria:hover {
     color: var(--n-color-tres);
     font-weight: bold;
 }
-/*header > section.n-uno >*/ 
 button.n-categoria-activa {
     color: var(--n-color-tres);
     font-weight: bold;
@@ -88,26 +66,17 @@ button.n-categoria-activa {
 button.n-categoria-activa:before {
     content: '\2717';/*2573, 2613, 2612, 2715, 2716, 2717, 2718*/
     color: var(--n-color-rojo);
-    font-size: 1.40em;
 }
-/*button.n-categoria-activa:before {
-    content: '\¿';
-    color: var(--n-color-rojo);
-}*/
-/*button.n-categoria-activa:after {
-    content: '\?';
-    color: var(--n-color-rojo);
-}*/
-/*
-    header (2)
-*/
+/* header section (2)
+--------------------------------------------------------------------------------*/
 header > section.n-dos {
     display: flex;
     flex-direction: column;
     position: absolute;
     bottom: 8.50em;
 }
-header > section.n-dos > a, header > section.n-dos > button {
+header > section.n-dos > a, 
+header > section.n-dos > button {
     font-size: 0.75em;
     text-align: left;
     padding: 0.50em 0em 0em 4.50em;
@@ -119,15 +88,12 @@ header > section.n-dos > button {
     background-color: var(--n-color);
     border: none;
 }
-/*header > section.n-dos > button:hover,*/ 
-header > section.n-dos > a:hover 
-{
+header > section.n-dos > a:hover {
     color: var(--n-color-tres);
     font-weight: bold;
 }
-/*
-    media query
-*/
+/* media query
+--------------------------------------------------------------------------------*/
 @media screen and (min-width: 70em) {
     .n-maximo {
         display: block;
@@ -159,20 +125,20 @@ header > section.n-dos > a:hover
     }
     header > section.n-uno > button {
         background-color: var(--n-color);
-        font-size: 1.40em;
+        font-size: 1.30em;
         margin: 0em auto 0em 0.50em;
         border: none;
         padding: 0.50em 0em 0em 0em;
     }
-    /*
-        header (2)
-    */
+/* header section (2)
+--------------------------------------------------------------------------------*/
     header > section.n-dos {
         top: 25em;
         width: auto;
     }
-    header > section.n-dos > a, header > section.n-dos > button {
-        font-size: 1.40em;
+    header > section.n-dos > a, 
+    header > section.n-dos > button {
+        font-size: 1.30em;
         padding: 0.40em 0em 0em 0.50em;
     }
 }

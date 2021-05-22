@@ -1,24 +1,21 @@
 @import url("http://localhost/AllInOne/i_css/i/root.css");
 /* 
     Created on : 14 sept. 2020, 17:09:54
-    Author     : desarrollador
+    Author     : neury-dev
 */
-/*@import url("root.css");*/
-main {
-    width: 100%;
-    padding: 0em 3em 3em 0em;
-}
+main { width: 100%; padding: 0em 3em 3em 0em; }
 main > div.n-diapositivas { display: none; }
 main > div > img {
     width: 100%;
     height: 35em;
     vertical-align: middle;
-    border-radius: 1em;
+    border-radius: var(--n-radio);
     object-fit: cover;
 }
-main > button.n-anterior, main > button.n-siguiente {
+main > button.n-anterior,
+main > button.n-siguiente {
     position: absolute;
-    top: 13.34em;
+    top: 13.25em;
     color: var(--n-color);
     background: transparent;
     font-size: 2.50em;
@@ -27,13 +24,10 @@ main > button.n-anterior, main > button.n-siguiente {
     transition: var(--n-transicion);
     text-shadow: var(--n-sombra-de-texto-dos);
 }
-main > button.n-anterior {
-    right: 8.50em;
-}
-main > button.n-siguiente {
-    right: 2.10em;
-}
-main > button.n-anterior:hover, main > button.n-siguiente:hover {
+main > button.n-anterior { right: 8.40em; }
+main > button.n-siguiente { right: 2.10em; }
+main > button.n-anterior:hover, 
+main > button.n-siguiente:hover {
     transform: scale(1.60,2);
 }
 main > section.n-puntos-contenedor {
@@ -45,18 +39,16 @@ main > section.n-puntos-contenedor > button.n-punto {
     color: transparent;
     background-color: var(--n-color-dos-uno);
     font-family: var(--n-fuente-tres);
-    font-size: 0.75em;
+    font-size: 0.70em;
     border: none;
     border-radius: 7em;
     padding: 0.80em 0.60em 0.80em 0.60em;
     transition: var(--n-transicion);
 }
-main > section.n-puntos-contenedor > button.n-punto > span.n-actual {
-    transition: all 2s ease-in-out;
-}
-.n-activo, main > section.n-puntos-contenedor > button.n-punto:hover {
+main > section.n-puntos-contenedor > button.n-punto > span.n-actual { transition: all 2s ease-in-out; }
+.n-activo, 
+main > section.n-puntos-contenedor > button.n-punto:hover {
     color: var(--n-color);
-    /*background-color: var(--n-color-dos);*/
 }
 /*main > section > div > p.n-texto {
     position: absolute;
@@ -75,39 +67,29 @@ main > div.n-desvanecerse {
     animation-duration: 1.5s;
 }
 @-webkit-keyframes desvanecerse {
-    from {opacity: .4} 
-    to {opacity: 1}
+    from {
+        opacity: .4
+    } to {
+        opacity: 1
+    }
 }
 @keyframes desvanecerse {
-    from {opacity: .4} 
-    to {opacity: 1}
+    from {
+        opacity: .4
+    } to {
+        opacity: 1
+    }
 }
-/*@media only screen and (max-width: 300px) {
-    main > section > button.n-anterior, main > section > button.n-siguiente, 
-    main > section > div > p.n-texto { font-size: 11px; }
-}*/
 @media screen and (max-width: 69.99em) {
-    main {
-        padding: 0em 0.50em 0.50em 0.50em;
-    }
-    main > div > img {
-        height: 30em;
-    }
-    main > button.n-anterior, main > button.n-siguiente {
+    main { padding: 0em 0.50em 0.50em 0.50em; }
+    main > div > img { height: 30em; }
+    main > button.n-anterior, 
+    main > button.n-siguiente { 
         top: 15.46em;
         font-size: 1.90em;
     }
-    main > button.n-anterior {
-        right: 7.70em;
-    }
-    main > button.n-siguiente {
-        right: 0.90em;
-    }
-    main > section.n-puntos-contenedor {
-        top: 29.70em;
-        right: 4em;
-    }
-    main > section.n-puntos-contenedor > button.n-punto {
-        font-size: 0.50em;
-    }
+    main > button.n-anterior { right: 7.70em; }
+    main > button.n-siguiente { right: 0.90em; }
+    main > section.n-puntos-contenedor { top: 29.70em; right: 4em; }
+    main > section.n-puntos-contenedor > button.n-punto { font-size: 0.50em; }
 }

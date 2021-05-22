@@ -24,9 +24,9 @@
     </script>
 </head>
 <body class="n-grid">
-<!--
-    header
--->
+<!------------------------------------------------------------------------------
+header
+------------------------------------------------------------------------------->
 <section class="n-grid-area-1">
     <header>
         <h1><a href="http://localhost/AllInOne/index.php">All<span class="n-vertical">Tienda</span><span class="n-one">nOne</span></a></h1>
@@ -63,21 +63,20 @@
             </section>
     </header>
 </section>
-<!--
-    nav
--->
+<!------------------------------------------------------------------------------
+nav
+------------------------------------------------------------------------------->
 <section class="n-grid-area-2">
     <nav>
-        <!--<h2 hidden=""><a href="">Tienda</a></h2>-->
         <a href="tienda.php"><!--i class='fas fa-store-alt'></i--><i class='fas fa-home'></i></a> 
         <a href="i/tienda/perfil.php">Perfil</a> 
         <a href="i/tienda/carrito.php">Carrito</a>
         <a href="">Buscar</a>
     </nav>
 </section>
-<!--
-    main
--->
+<!------------------------------------------------------------------------------
+main
+------------------------------------------------------------------------------->
 <section class="n-grid-area-3">
     <main>
         <div class="n-diapositivas n-desvanecerse">
@@ -105,7 +104,6 @@
             <!--<p class="n-texto">Caption Text</p>-->
         </div>
         <button class="n-anterior" onclick="mas(-1)">&#10094;</button>
-        <button class="n-siguiente" onclick="mas(1)">&#10095;</button>
         <section class="n-puntos-contenedor">
             <button class="n-punto" onclick="actual(1)"><span class="n-actual">1/6</span></button>
             <button class="n-punto" onclick="actual(2)"><span class="n-actual">2/6</span></button>
@@ -114,19 +112,20 @@
             <button class="n-punto" onclick="actual(5)"><span class="n-actual">5/6</span></button>
             <button class="n-punto" onclick="actual(6)"><span class="n-actual">6/6</span></button>
         </section>
+        <button class="n-siguiente" onclick="mas(1)">&#10095;</button>
     </main>
 </section>
-<!--
-    article
--->
+<!------------------------------------------------------------------------------
+article
+------------------------------------------------------------------------------->
 <section class="n-grid-area-4">
-    <article>
-        <?php // require_once 'sql/tienda/Articulos.php'; ?>
-    </article>
+    <div>
+        
+    </div>
 </section>
-<!--
-    footer (1)
--->
+<!------------------------------------------------------------------------------
+footer
+------------------------------------------------------------------------------->
 <section class="n-grid-area-5">
     <hr>
     <footer class="n-footer">
@@ -181,9 +180,9 @@
         </section>
     </footer>
 </section>
-<!--
-    aside
--->
+<!------------------------------------------------------------------------------
+aside
+------------------------------------------------------------------------------->
 <div id="n-camisetas" class="n-categoria-contenido"><h2>Capisetas</h2></div>
 <div id="n-vestidos" class="n-categoria-contenido"><h2>Vestidos</h2></div>
 <div id="n-pantalones" class="n-categoria-contenido">

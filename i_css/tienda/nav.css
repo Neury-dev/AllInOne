@@ -10,10 +10,6 @@ nav {
     height: 2.50em;
     padding: 1.10em 4em 0.10em 0em;
 }
-/*nav > h2 {
-    float: left;
-    font-family: var(--n-fuente-dos);
-}*/
 nav > a  {
     color: var(--n-color-dos);
     text-shadow: var(--n-sombra-de-texto);

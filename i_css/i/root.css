@@ -6,13 +6,14 @@
 *:after { 
     box-sizing: border-box; 
 }
-/*html {
+html {
     scroll-behavior: smooth;
-}*/
+}
 body { 
     color: #1c1d22 !important;
     font-size: 100% !important;
     font: 0.80em "Verdana", Helvetica, Tahoma, sans-serif !important;
+    line-height: 1em;
     margin: 0 !important;
     overflow-x: hidden !important;
 }
@@ -24,6 +25,10 @@ select {
     outline: none;
 }
 label { font-weight: bold; }
+input,
+textArea { 
+    outline: none; 
+}
 
 :root {
     --n-fuente:                 "Georgia", Garamond, serif;
