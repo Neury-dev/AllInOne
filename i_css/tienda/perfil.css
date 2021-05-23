@@ -1,25 +1,20 @@
 @import url("http://localhost/AllInOne/i_css/i/root.css");
 /* 
     Created on : 14 oct. 2020, 12:35:12
-    Author     : desarrollador
+    Author     : neury-dev
 */
 body > section {
     max-width: 1200px;
     height: auto;
     margin: auto;
 }
-nav {
-    padding: 1.10em 1em 0.10em 0em;
-}
-:not(nav) {
-    font-family: var(--n-fuente-dos);
-}
+nav { padding: 1.10em 1em 0.10em 0em; }
 section.n-contenedor {
     background-image: url("../../font-img/tienda/jeans.jpg");
     background-size: auto;
     vertical-align: middle;
     object-fit: cover;
-    border-radius: 1em;
+    border-radius: var(--n-radio);
     height: 31.25em;
     margin: 0em auto;
 }
@@ -27,15 +22,12 @@ section.n-contenedor > section.n-contenido {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--n-color-dos);
     background-color: var( --n-color-uno-uno);
     width: 100%;
     height: 100%;
-    border-radius: 1em;
+    border-radius: var(--n-radio);
 }
-section.n-contenedor > section.n-contenido > section {
-    margin: 1em 0em 0em 0em;
-}
+section.n-contenedor > section.n-contenido > section { margin: 1em 0em 0em 0em; }
 section.n-contenedor > section.n-contenido > section > img {
     width: 8em;
     height: 8em;
@@ -43,9 +35,8 @@ section.n-contenedor > section.n-contenido > section > img {
     border-radius: 50%;
     filter: grayscale(100%);
 }
-/*
-    buscar
-*/
+/* buscar
+--------------------------------------------------------------------------------*/
 form.n-perfilado > input[type=email], form.n-perfilado > input[type=password] {
     float: left;
     width: 18em;
@@ -53,12 +44,14 @@ form.n-perfilado > input[type=email], form.n-perfilado > input[type=password] {
     border: 0.10em solid var(--n-color-dos);
     border-radius: 1em 0em 0em 1em;
 }
-form.n-perfilado > input[type=email]:valid, form.n-perfilado > input[type=password]:valid {
+form.n-perfilado > input[type=email]:valid, 
+form.n-perfilado > input[type=password]:valid {
     color: var(--n-color);
     background: var(--n-color-dos);
     caret-color: var(--n-color);
 }
-form.n-perfilado > input[type=email]:invalid, form.n-perfilado > input[type=password]:invalid {
+form.n-perfilado > input[type=email]:invalid, 
+form.n-perfilado > input[type=password]:invalid {
     color: var(--n-color-rojo);
     background-color: transparent;
 }
@@ -71,16 +64,9 @@ form.n-perfilado > button  {
 }
 form.n-perfilado > button:hover {
     color: var(--n-color-dos);
-    /*background-color: var(--n-color-tres);*/
     text-shadow: var(--n-sombra-de-texto);
 }
-/*form.n-perfilado > button::before {
-    content: "-";
-    clear: both;
-    display: table;
-    color: white;
-}*/
-@media screen and (max-width: 24.10em) {
+@media screen and (max-width: 319px) {
     * {
         display: none;           
     }

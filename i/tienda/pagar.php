@@ -7,6 +7,7 @@
     <title>AllInOne: Tienda, Carrito</title>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" href="i_img/i/neury-dev.jpg" type="image/jpg" sizes="16x16">
 <!--CSS-->
     <link rel="stylesheet" href="../../i_css/tienda/CascadeStyleSheet.css">
     <link rel="stylesheet" href="../../i_css/tienda/header.css">

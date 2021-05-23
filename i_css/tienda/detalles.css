@@ -1,7 +1,7 @@
 @import url("http://localhost/AllInOne/i_css/i/root.css");
 /* 
     Created on : 22 nov. 2020, 23:43:05
-    Author     : desarrollador
+    Author     : neury-dev
 */
 main {
     position: relative;
@@ -42,19 +42,17 @@ main > section > section.n-etiqueta {
 main > section > section.n-etiqueta > span {
     color: var(--n-color);
     background-color: var(--n-color-dos);
-    font-family: var(--n-fuente-dos);
     font-size: 0.80em;
     margin: 0.50em auto 0.50em 0em;
-    border-radius: 0.50em;
-    padding: 0.50em;
+    border-radius: var(--n-radio);
+    padding: var(--n-relleno);
 }
 main > section > section > form {
-    color: var(--n-color-dos);
-    font-family: var(--n-fuente-dos);
     font-size: 0.80em;
     text-align: center;
 }
-main > section > section > button.n-menos, main > section > section > button.n-mas {
+main > section > section > button.n-menos, 
+main > section > section > button.n-mas {
     float: left;
     color: var(--n-color);
     background-color: var(--n-color-dos);
@@ -62,6 +60,7 @@ main > section > section > button.n-menos, main > section > section > button.n-m
     width: 2em;
     height: 2em;
     border: none;
+    padding: var(--n-relleno);
 }
 main > section > section > button.n-menos {
     border-radius: 0.50em 0em 0em 0.50em;
@@ -77,26 +76,26 @@ input[type=number] {
 }
 form#detalles > input#mas {
     text-align: center;
-    width: 12em;
+    width: 10.10em;
     border: 0.10em solid var(--n-color-dos);
-    padding: 0.35em 0em 0.35em 0em;
+    padding: 0.30em 0em 0.30em 0em;
 }
 main > section > section > div > button#escogiendo {
     color: var(--n-color);
     background-color: var(--n-color-dos);
-    font-family: var(--n-fuente);
+    font-weight: bold;
     font-size: 0.80em;
     width: 18.40em;
     margin-top: 0.50em;
     border: none;
-    border-radius: 0.50em;
-    padding: 0.50em;
+    border-radius: var(--n-radio);
+    padding: var(--n-relleno);
 }
 main > section > section > div.n-total {
     position: absolute; 
     margin-top: -3em;
 }
-main > section > section > div.n-total > input#n-total {text-align: center; width: 21.80em; }
+main > section > section > div.n-total > input#n-total { text-align: center; width: 100%; }
 @media screen and (max-width: 69.99em) {
     main {
         width: calc(100% - 1em);
@@ -128,13 +127,7 @@ main > section > section > div.n-total > input#n-total {text-align: center; widt
         flex-flow: row wrap;
     }
     main > section > section.n-etiqueta > span {
-        color: var(--n-color);
-        background-color: var(-color-dos);
-        font-family: var(--n-fuente-dos);
-        font-size: 0.80em;
         margin: 0em auto 0.50em 0.50em;
-        border-radius: 0.50em;
-        padding: 0.50em;
     }
-    main > section > section > div.n-total > input#n-total { width: 10.90em; }
+    main > section > section > div.n-total > input#n-total { width: 9.60em; }
 }

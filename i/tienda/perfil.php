@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tienda: Perfil</title>
+    <title>AllInOne | Tienda | Perfil</title>
     <meta charset="UTF-8">
     <meta name="viewport" n-contenido="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="i_img/i/neury-dev.jpg" type="image/jpg" sizes="16x16">
     <link rel="stylesheet" href="../../i_css/tienda/CascadeStyleSheet.css">
     <link rel="stylesheet" href="../../i_css/tienda/nav.css">
     <link rel="stylesheet" href="../../i_css/tienda/perfil.css">

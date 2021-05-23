@@ -5,10 +5,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>AllInOne: Tienda</title>
+    <title>AllInOne | Tienda</title>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <meta http-equiv="last-modified" content="Thu, 18 Nov 2020 19:11:42 GMT">
+    <link rel="icon" href="i_img/i/neury-dev.jpg" type="image/jpg" sizes="16x16">
 <!--CSS-->
     <link rel="stylesheet" href="i_css/tienda/CascadeStyleSheet.css">
     <link rel="stylesheet" href="i_css/tienda/header.css">
@@ -19,9 +19,6 @@
     <link rel="stylesheet" href="i_css/tienda/aside.css">
 <!-- Iconos: JavaScript-->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <script type="text/javascript">
-//       function validateForm() { return false; }
-    </script>
 </head>
 <body class="n-grid">
 <!------------------------------------------------------------------------------
@@ -289,8 +286,5 @@ aside
 <script src="l/tienda/l/articulos.js" async=""></script>
 <script src="l/tienda/l/boletines.js" defer=""></script>
 <script src="l/tienda/l/suscriptores.js" defer=""></script>
-<script>
-
-</script>
 </body>
 </html>

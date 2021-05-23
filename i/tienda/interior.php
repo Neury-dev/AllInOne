@@ -5,6 +5,7 @@
     <title>Tienda: Interior</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="i_img/i/neury-dev.jpg" type="image/jpg" sizes="16x16">
     <link rel="stylesheet" href="../../i_css/tienda/CascadeStyleSheet.css">
     <link rel="stylesheet" href="../../i_css/tienda/interior.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

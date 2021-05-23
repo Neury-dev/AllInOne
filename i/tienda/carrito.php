@@ -4,9 +4,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>AllInOne: Tienda, Carrito</title>
+    <title>AllInOne | Tienda | Carrito</title>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" href="i_img/i/neury-dev.jpg" type="image/jpg" sizes="16x16">
 <!--CSS-->
     <link rel="stylesheet" href="../../i_css/tienda/CascadeStyleSheet.css">
     <link rel="stylesheet" href="../../i_css/tienda/header.css">
@@ -17,14 +18,11 @@
     <link rel="stylesheet" href="../../front-css/tienda/fontello-embedded.css">
 <!--JavaScript-->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <style>
-
-    </style>
 </head>
 <body class="n-grid">
-<!--
-    header
--->
+<!------------------------------------------------------------------------------
+header
+------------------------------------------------------------------------------->
 <section class="n-grid-area-1">
     <header>
         <h1><a href="http://localhost/AllInOne/index.php">All<span class="n-vertical">Tienda</span><span class="n-one">nOne</span></a></h1>
@@ -61,9 +59,9 @@
             </section>
     </header>
 </section>
-<!--
-    nav
--->
+<!------------------------------------------------------------------------------
+nav
+------------------------------------------------------------------------------->
 <section class="n-grid-area-2">
     <nav>
         <!--<h2 hidden=""><a href="">Tienda</a></h2>-->
@@ -73,25 +71,25 @@
         <a href="">Buscar</a>
     </nav>
 </section>
-<!--
-    main
--->
+<!------------------------------------------------------------------------------
+main
+------------------------------------------------------------------------------->
 <!--<section class="n-grid-area-3">
     <main>
 
     </main>
 </section>-->
-<!--
-    article
--->
+<!------------------------------------------------------------------------------
+article
+------------------------------------------------------------------------------->
 <section class="n-grid-area-4">
     <article>
         <?php require_once '../../s/tienda/carrito.php'; ?>
     </article>
 </section>
-<!--
-    footer (1)
--->
+<!------------------------------------------------------------------------------
+footer
+------------------------------------------------------------------------------->
 <section class="n-grid-area-5">
     <hr>
     <footer class="n-footer">
@@ -146,15 +144,9 @@
         </section>
     </footer>
 </section>
-<!--
-    footer (2)
--->
-<section class="n-grid-area-6">
-  
-</section>
-<!--
-    aside
--->
+<!------------------------------------------------------------------------------
+aside
+------------------------------------------------------------------------------->
 <div id="n-camisetas" class="n-categoria-contenido"><h2>Capisetas</h2></div>
 <div id="n-vestidos" class="n-categoria-contenido"><h2>Vestidos</h2></div>
 <div id="n-pantalones" class="n-categoria-contenido">
@@ -243,9 +235,6 @@
     </aside>
 </div>
 <div id="n-alerta-general"></div>
-<script>
-
-</script>
 <script src="../../l/tienda/header.js" async=""></script>
 <script src="../../l/tienda/l/carrito.js" defer=""></script>
 <script src="../../l/tienda/l/boletines.js" defer=""></script>

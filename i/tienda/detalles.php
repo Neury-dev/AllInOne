@@ -4,9 +4,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>AllInOne: Tienda, Detalles</title>
+    <title>AllInOne | Tienda | Detalles</title>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" href="i_img/i/neury-dev.jpg" type="image/jpg" sizes="16x16">
 <!--CSS-->
     <link rel="stylesheet" href="../../i_css/tienda/CascadeStyleSheet.css">
     <link rel="stylesheet" href="../../i_css/tienda/header.css">
@@ -21,9 +22,9 @@
     </style>
 </head>
 <body class="n-grid">
-<!--
-    header
--->
+<!------------------------------------------------------------------------------
+header
+------------------------------------------------------------------------------->
 <section class="n-grid-area-1">
     <header>
         <h1><a href="#n-all-in-one">All<span class="n-vertical">Tienda</span><span class="n-one">nOne</span></a></h1>
@@ -60,9 +61,9 @@
             </section>
     </header>
 </section>
-<!--
-    nav
--->
+<!------------------------------------------------------------------------------
+nav
+------------------------------------------------------------------------------->
 <section class="n-grid-area-2">
     <nav>
         <!--<h2 hidden=""><a href="">Tienda</a></h2>-->
@@ -72,25 +73,25 @@
         <a href="">Buscar</a>
     </nav>
 </section>
-<!--
-    main
--->
+<!------------------------------------------------------------------------------
+main
+------------------------------------------------------------------------------->
 <section class="n-grid-area-3">
     <main>
         <?php require_once '../../s/tienda/Detalles.php'; ?>
     </main>
 </section>
-<!--
-    article
--->
+<!------------------------------------------------------------------------------
+article
+------------------------------------------------------------------------------->
 <!--<section class="n-grid-area-4">
     <article>
 
     </article>
 </section>-->
-<!--
-    footer (1)
--->
+<!------------------------------------------------------------------------------
+footer
+------------------------------------------------------------------------------->
 <section class="n-grid-area-5">
     <hr>
     <footer class="n-footer">
@@ -145,15 +146,9 @@
         </section>
     </footer>
 </section>
-<!--
-    footer (2)
--->
-<section class="n-grid-area-6">
-    
-</section>
-<!--
-    aside
--->
+<!------------------------------------------------------------------------------
+aside
+------------------------------------------------------------------------------->
 <div id="n-camisetas" class="n-categoria-contenido"><h2>Capisetas</h2></div>
 <div id="n-vestidos" class="n-categoria-contenido"><h2>Vestidos</h2></div>
 <div id="n-pantalones" class="n-categoria-contenido">
