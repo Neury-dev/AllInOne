@@ -22,14 +22,15 @@ a,
 button, 
 select { 
     cursor: pointer;
-    outline: none;
 }
 label { font-weight: bold; }
+button,
 input,
 textArea { 
+    border: none;
     outline: none; 
 }
-
+.titulo { transform: scaleY(1.7); letter-spacing: -0.08em; }
 :root {
     --n-fuente:                 "Georgia", Garamond, serif;
     --n-fuente-dos:             "Verdana", Helvetica, Tahoma, sans-serif;

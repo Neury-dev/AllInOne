@@ -44,8 +44,10 @@ class Obtener {
             salida += "<section class='articulo-head'>";
                 salida += "<section>";
                     salida += "<img src='../../i_img/red_social/i/"+jsonObject[i].foto + "'class='foto' alt='alt'/>";
-                    salida += "<span>" + jsonObject[i].fecha + ", De </span>";
-                    salida += "<h2>" + jsonObject[i].nombre + "<span> " + jsonObject[i].por + " </span>" + jsonObject[i].autor + "</h2>";
+                    salida += "<div>";
+                        salida += "<span>" + jsonObject[i].fecha + ", De </span>";
+                        salida += "<h6 class='titulo'>" + jsonObject[i].nombre + "<span> " + jsonObject[i].por + " </span>" + jsonObject[i].autor + "</h6>";
+                    salida += "</div>";
                 salida += "</section>";  
                 salida += "<section>";
                     salida += "<button><i class='fas fa-ellipsis-v'></i></button>";

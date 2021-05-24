@@ -1,11 +1,9 @@
-@import url("http://localhost/AllInOne/i_css/i/root.css");
 /* 
     Created on : 20 dic. 2020, 19:09:10
     Author     : neury-dev
 */
-/*
-    Cuadricula Principal
-*/
+/* Maquetado
+--------------------------------------------------------------------------------*/
 .n-grid {
     display: grid;
     grid-template-columns: 20em auto;
@@ -30,8 +28,6 @@
 }
 .n-grid > .area-1 > nav > .principal > a {
     color: var(--n-color-dos);
-    font-family: var(--n-fuente);
-    font-size: 0.90em;
     margin-bottom: 0.50em;
 }
 .n-grid > .area-1 > nav > .principal > a:hover { color: var(--n-color-dos-uno); }
@@ -44,7 +40,6 @@
 }
 .n-grid > .area-1 > nav > .segundario > ul > li {
     display: inline;
-    font-family: var(--n-fuente-dos);
     font-size: 0.70em;
 }
 .n-grid > .area-1 > nav > .segundario > ul > li + li:before {
@@ -54,7 +49,6 @@
 }
 .n-grid > .area-1 > nav > .segundario > ul > li a {
     color: var(--n-color-tres);
-    text-decoration: none;
 }
 .n-grid > .area-1 > nav > .segundario > ul > li a:hover {
     color: var(--n-color-dos);

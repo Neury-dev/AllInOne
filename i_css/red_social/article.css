@@ -1,4 +1,3 @@
-@import url("http://localhost/AllInOne/i_css/i/root.css");
 /* 
     Created on : 26 dic. 2020, 17:07:31
     Author     : neury-dev
@@ -24,26 +23,25 @@
     margin-right: 0.10em;
     border-radius: 50%;
 }
-.n-grid > .area-2 > article > section > article > .articulo-head > section > span {
+.n-grid > .area-2 > article > section > article > .articulo-head > section > div {
     float: left;
     position: relative;
-    top: 1.40em;
+    top: 0.50em;
+}
+.n-grid > .area-2 > article > section > article > .articulo-head > section > div > span {
+    float: left;
     color: var(--n-color-dos-uno);
-    font-family: var(--n-fuente-dos);
     font-size: 0.70em;
 }
-.n-grid > .area-2 > article > section > article > .articulo-head > section > h2 {
-    /*float: left;*/
-    position: relative;
-    top: 1.20em;
-    color: var(--n-color-dos);
-    font-family: var(--n-fuente-tres);
-    font-size: 0.90em;
-    font-weight: bold;
+.n-grid > .area-2 > article > section > article > .articulo-head > section > div > h6 {
+    margin: 0;
 }
-.n-grid > .area-2 > article > section > article > .articulo-head > section > h2 > span {
+.n-grid > .area-2 > article > section > article > .articulo-head > section > div > h6 > span {
     color: var(--n-color-dos-uno);
     font-weight: normal;
+    font-size: 0.70em;
+    transform: scaleY(0); 
+    letter-spacing: normal;
 }
 /*.n-grid > .area-2 > article > section > article > .articulo-head > section > span {
     color: var(--n-color-dos);
@@ -51,27 +49,16 @@
     font-size: 0.70em;
 }*/
 .n-grid > .area-2 > article > section > article > .articulo-head > section > button {
-    color: var(--n-color-dos);
     background-color: var(--n-color);
-    font-size: 0.90em;
-    border: none;
 }
 .n-grid > .area-2 > article > section > article > .articulo-body {
     margin: 0em 0em 1em 0em;
 }
-.n-grid > .area-2 > article > section > article > .articulo-body > h3 {
-    color: var(--n-color-dos);
-    font-family: var(--n-fuente-dos);
-    font-size: 0.90em;
-    font-weight: bold;
-}
 .n-grid > .area-2 > article > section > article > .articulo-body > p {
-    color: var(--n-color-dos);
-    font-family: var(--n-fuente-dos);
-    font-size: 0.90em;
+    /*font-size: 0.90em;*/
 }
 .n-grid > .area-2 > article > section > article > .articulo-body > img {
-    /*margin: 0em 0em 1em 0em;*/
+    border-radius: var(--n-radio);
 }
 .n-grid > .area-2 > article > section > article > .articulo-footer {
     display: flex;
@@ -79,25 +66,16 @@
     justify-content: flex-end;  
 }
 .n-grid > .area-2 > article > section > article > .articulo-footer  > section > button {
-    color: var(--n-color-dos);
     background-color: var(--n-color);
-    font-size: 1.30em;
-    border: none;
 }
 .n-grid > .area-2 > article > section > article > .articulo-footer  > section > form > button {
-    color: var(--n-color-dos);
     background-color: var(--n-color);
-    font-size: 1.30em;
-    border: none;
 }
 .n-grid > .area-2 > article > section > article > .articulo-footer  > section > span {
-    color: var(--n-color-dos);
-    font-size: 0.90em;
     margin: 0em 0.70em 0em 0em;
 }
-/*
-    Comentarios
-*/
+/* Comentarios
+--------------------------------------------------------------------------------*/
 .ocultar {display:none}
 .mostrar {display:block!important}
 .comentario {
@@ -131,7 +109,7 @@ textarea {
     background-color: var(--n-color-tres);
     width: 100%;
     border: none;
-    border-radius: 0.40em;
+    border-radius: var(--n-radio);
     padding: 0.625em;
     resize: none;
 }
@@ -146,8 +124,8 @@ textarea:focus {
     width: 100%;
     margin-top: 0.50em;
     border: none;
-    border-radius: 0.50em;
-    padding: 0.50em;
+    border-radius: var(--n-radio);
+    padding: var(--n-relleno);
     outline: none;
     cursor: pointer;
 }

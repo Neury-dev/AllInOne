@@ -1,14 +1,18 @@
 <?php require_once '../../s/red_social/s/SesionIniciada.php'; ?>
 <html>
 <head>
-    <title>Perfil</title>
+    <title>AllInOne | Red Social | Perfil</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="http://localhost/AllInOne/i_img/i/neury-dev.jpg" type="image/jpg" sizes="16x16">
+    <!--CSS-->
+    <link rel="stylesheet" href="http://localhost/AllInOne/i_css/i/root.css" />
     <link rel="stylesheet" href="../../i_css/red_social/header.css">
     <link rel="stylesheet" href="../../i_css/red_social/perfil/perfil.css"/>
     <link rel="stylesheet" href="../../i_css/red_social/perfil/nav.css"/>
     <link rel="stylesheet" href="../../i_css/red_social/perfil/publicar.css"/>
     <link rel="stylesheet" href="../../i_css/red_social/perfil/article.css"/>
+    <!--Iconos-->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
@@ -104,6 +108,10 @@
         <section class="area-3">
             <section>
                 <p>Publicar?</p>
+                <!--
+                    - Opción para remplazar el JS.
+                    https://www.w3schools.com/cssref/sel_target.asp
+                -->
                 <section class="section-nav">
                     <button class="tablinks" onclick="openCity(event, 'n-articulo')"><i class='fas fa-file-alt'></i></button>
                     <button class="tablinks" onclick="openCity(event, 'n-imagen')"><i class='fas fa-images'></i></button>
