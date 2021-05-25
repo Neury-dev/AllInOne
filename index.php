@@ -17,8 +17,8 @@
 <section class="area-1">  
     <header>
         <P>¡Hola!</p>
-        <h1>Neury</h1>
-        <h2>Full Stack Developer</h2> 
+        <h1 class="titulo">Neury</h1>
+        <h2 class="titulo">Full Stack Developer</h2> 
         <P>neury.eleasar@gmail.com</p>
     </header>
 </section>
@@ -30,7 +30,7 @@
         <div class="circulo">
             <img src="i_img/i/foto-avatar.png" alt="foto" class="foto">
         </div>
-        <h3>Lenguajes y Herramientas</h3>
+        <h3 class="titulo">Lenguajes y Herramientas</h3>
             <h4>Frontend developer</h4>
                 <p>HTML, CSS, JavaScript, Java...</p>
             <h4>Backend developer</h4>
@@ -45,7 +45,7 @@
 <section class="area-3">
     <img src="i_svg/i/desarrollos.svg" alt="desarrollos" class="svg-desarrollos">
 
-    <h3>¡Con 
+    <h3 class="titulo">¡Con 
         <span class="iconos">
             <i class='fab fa-html5 icono' title="HTML"></i>
             <i class='fab fa-css3-alt icono' title="CSS"></i>
@@ -126,7 +126,7 @@
 <section class="area-5">
     <footer>
         <hr>
-        <p>Desarrollado por Neury</p>
+        <p>2021 Desarrollado por Neury</p>
     </footer>
     <img src="i_svg/i/footer.svg" alt="svg" class="svg-footer">
 </section>

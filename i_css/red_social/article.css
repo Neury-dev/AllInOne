@@ -5,73 +5,73 @@
 /*.n-grid > .area-2 > article > :nth-child(2) {
     margin-top: 3em;
 }*/
-.n-grid > .area-2 > article {
+.n-grid > .area-3 > div {
     margin: 3em 6em 0em 6em;
 }
-.n-grid > .area-2 > article > section > article {
+.n-grid > .area-3 > div > article {
     margin-top: 3em;
 }
-.n-grid > .area-2 > article > section > article > .articulo-head {
+.n-grid > .area-3 > div > article > .articulo-head {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.n-grid > .area-2 > article > section > article > .articulo-head > section > img.foto {
+.n-grid > .area-3 > div > article > .articulo-head > section > img.foto {
     float: left;
     width: 3em;
     height: 3em;
     margin-right: 0.10em;
     border-radius: 50%;
 }
-.n-grid > .area-2 > article > section > article > .articulo-head > section > div {
+.n-grid > .area-3 > div > article > .articulo-head > section > div {
     float: left;
     position: relative;
     top: 0.50em;
 }
-.n-grid > .area-2 > article > section > article > .articulo-head > section > div > span {
+.n-grid > .area-3 > div > article > .articulo-head > section > div > span {
     float: left;
     color: var(--n-color-dos-uno);
     font-size: 0.70em;
 }
-.n-grid > .area-2 > article > section > article > .articulo-head > section > div > h6 {
+.n-grid > .area-3 > div > article > .articulo-head > section > div > h6 {
     margin: 0;
 }
-.n-grid > .area-2 > article > section > article > .articulo-head > section > div > h6 > span {
+.n-grid > .area-3 > div > article > .articulo-head > section > div > h6 > span {
     color: var(--n-color-dos-uno);
     font-weight: normal;
     font-size: 0.70em;
     transform: scaleY(0); 
     letter-spacing: normal;
 }
-/*.n-grid > .area-2 > article > section > article > .articulo-head > section > span {
+/*.n-grid > .area-3 > div > article > .articulo-head > section > span {
     color: var(--n-color-dos);
     font-family: var(--n-fuente-dos);
     font-size: 0.70em;
 }*/
-.n-grid > .area-2 > article > section > article > .articulo-head > section > button {
+.n-grid > .area-3 > div > article > .articulo-head > section > button {
     background-color: var(--n-color);
 }
-.n-grid > .area-2 > article > section > article > .articulo-body {
+.n-grid > .area-3 > div > article > .articulo-body {
     margin: 0em 0em 1em 0em;
 }
-.n-grid > .area-2 > article > section > article > .articulo-body > p {
+.n-grid > .area-3 > div > article > .articulo-body > p {
     /*font-size: 0.90em;*/
 }
-.n-grid > .area-2 > article > section > article > .articulo-body > img {
+.n-grid > .area-3 > div > article > .articulo-body > img {
     border-radius: var(--n-radio);
 }
-.n-grid > .area-2 > article > section > article > .articulo-footer {
+.n-grid > .area-3 > div > article > .articulo-footer {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;  
 }
-.n-grid > .area-2 > article > section > article > .articulo-footer  > section > button {
+.n-grid > .area-3 > div > article > .articulo-footer  > section > button {
     background-color: var(--n-color);
 }
-.n-grid > .area-2 > article > section > article > .articulo-footer  > section > form > button {
+.n-grid > .area-3 > div > article > .articulo-footer  > section > form > button {
     background-color: var(--n-color);
 }
-.n-grid > .area-2 > article > section > article > .articulo-footer  > section > span {
+.n-grid > .area-3 > div > article > .articulo-footer  > section > span {
     margin: 0em 0.70em 0em 0em;
 }
 /* Comentarios

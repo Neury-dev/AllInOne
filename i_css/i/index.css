@@ -33,7 +33,7 @@
     transition: var(--n-transicion);
 }
 .n-grid > .area-1 > header > :nth-child(1), 
-.n-grid > .area-1 > header > :nth-child(2), 
+/*.n-grid > .area-1 > header > :nth-child(2),*/ 
 .n-grid > .area-1 > header > :nth-child(3), 
 .n-grid > .area-1 > header > :nth-child(4) {
     margin: 0;
@@ -44,7 +44,11 @@
     text-shadow: var(--n-sombra-de-texto-tres);
     opacity: 0.5;
 }
-.n-grid > .area-1 > header > :nth-child(2) { font-size: 3em; }
+.n-grid > .area-1 > header > :nth-child(2) { 
+    font-size: 3em;
+    margin-top: 0.17em;
+    margin-bottom: 0.17em;
+}
 .n-grid > .area-1 > header > :nth-child(3) { color: var(--n-color-tres); font-size: 2.10em; }
 .n-grid > .area-1 > header > :nth-child(4) {
     color: var(--n-color-tres);

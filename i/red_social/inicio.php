@@ -104,16 +104,16 @@ main
     https://www.w3schools.com/cssref/sel_target.asp
 -->
             </main>
+        </section>
 <!------------------------------------------------------------------------------
 article: publicaciones
 ------------------------------------------------------------------------------->
-            <article>
-                <section class="publicacion">
-
-                </section>
-            </article>
-        </section>
         <section class="area-3">
+            <div class="publicacion">
+
+            </div>
+        </section>
+        <section class="area-4">
             <aside>
                 <h4 class="titulo">Solicitudes de amistad</h4>
                 <section>

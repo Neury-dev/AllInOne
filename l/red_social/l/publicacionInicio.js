@@ -142,7 +142,7 @@ salida += "<!-- Comentarios -->";
             salida += "</div>";
             salida += "<br>";
         }
-        document.querySelector(".n-grid > .area-2 > article > section.publicacion").innerHTML = salida;
+        document.querySelector(".n-grid > .area-3 > div.publicacion").innerHTML = salida;
     }
 }
 //function 
