@@ -3,36 +3,13 @@ var jsonComentado;
 
 fetch('../../s/red_social/l/PublicacionInicio_1.php').then(function (response) {
     return response.json();
-}).then(function (json) {
-    console.log(json);
-//    console.log("Cero: " + json[0].comentario[0][0].comentario);
+}).then(function (json) {// console.log("Cero: " + json[0].comentario[0][0].comentario);
     jsonObject = json;
 
     Obtener.publicacion();
 }).catch(function (err) {
     console.log('Fetch problem: ' + err.message);
 });
-//fetch('../../sql/red-social/Comentarios.php').then(function (response) {
-//    return response.text();
-//}).then(function (texto) {
-//    console.log(texto);
-//    
-//    document.querySelector("#"+texto).style.display = 'block!important';
-//}).catch(function (err) {
-//    console.log('Fetch problem: ' + err.message);
-//});
-//function 
-//comentar(id) {
-//    var x = document.getElementById(id);
-//    
-//    if (x.className.indexOf("w3-show") == -1) {
-//        x.className += " w3-show";
-//        x.previousElementSibling.className += " w3-theme-d1";
-//    } else {
-//        x.className = x.className.replace("w3-show", "");
-//        x.previousElementSibling.className = x.previousElementSibling.className.replace(" w3-theme-d1", "");
-//    }
-//}
 
 class Obtener {
     static
@@ -45,7 +22,7 @@ class Obtener {
                 salida += "<section>";
                     salida += "<img src='../../i_img/red_social/i/"+jsonObject[i].foto + "'class='foto' alt='alt'/>";
                     salida += "<div>";
-                        salida += "<span>" + jsonObject[i].fecha + ", De </span>";
+                        salida += "<span>" + jsonObject[i].fecha + ", Por </span>";
                         salida += "<h6 class='titulo'>" + jsonObject[i].nombre + "<span> " + jsonObject[i].por + " </span>" + jsonObject[i].autor + "</h6>";
                     salida += "</div>";
                 salida += "</section>";  
@@ -83,14 +60,9 @@ class Obtener {
                 salida += "<span>" + jsonObject[i].gustaNo + "</span>"
             salida += "</section>";
             salida += "<section>";
-//                salida += "<form>";
-//                salida += "<form action='' method='POST' name='comentados" + jsonObject[i].id + "' id='comentados" + jsonObject[i].id + "'>";
-//                salida += "<input type='text' value='comentarios-" + jsonObject[i].id + "' hidden='' name='comentarios' id='comentarios'>";
-                    salida += "<button onclick='comentar(" + jsonObject[i].id + ")'>";
-                        salida += "<i id='gusta-no-icono' class='fas fa-comments'></i>";
-                    salida += "</button>";
-//                salida += "</form>";
-//                salida += "</form>";
+                salida += "<button onclick='comentar(" + jsonObject[i].id + ")'>";
+                    salida += "<i id='gusta-no-icono' class='fas fa-comments'></i>";
+                salida += "</button>";
             salida += "</section>";
             salida += "<section>";
                 salida += "<span>" + jsonObject[i].comentarios + "</span>";
@@ -113,7 +85,7 @@ class Obtener {
             salida += "</section>";
             salida += "</article>";
 salida += "<!-- Comentarios -->";
-            salida += "<div id='comentarios-" + jsonObject[i].id + "' class='ocultar w3-container comentarios'>";
+            salida += "<div id='comentarios-" + jsonObject[i].id + "' class='ocultar comentarios'>";
                 salida += "<section id='comentado-" + jsonObject[i].id + "' class='comentado-" + jsonObject[i].id + "'>";
                     for (let ii in jsonObject[i].comentario) {
 
@@ -124,7 +96,7 @@ salida += "<!-- Comentarios -->";
                                     salida += "<img src='../../i_img/red_social/i/"+jsonObject[i].comentario[ii][iii].foto+"'"; 
                                     salida += "alt='Avatar' class='foto'>";
                                     salida += "<div>";
-                                        salida += "<span>" + jsonObject[i].comentario[ii][iii].fecha + ", De </span>";
+                                        salida += "<span>" + jsonObject[i].comentario[ii][iii].fecha + ", Por </span>";
                                         salida += "<h6 class='titulo'>" + jsonObject[i].comentario[ii][iii].nombre + "</h6>";
                                         salida += "<p>" + jsonObject[i].comentario[ii][iii].comentario + "</p>";
                                     salida += "</div>";
@@ -149,72 +121,3 @@ salida += "<!-- Comentarios -->";
         document.querySelector(".n-grid > .area-3 > div.publicacion").innerHTML = salida;
     }
 }
-//function 
-//comentar(id) {
-//    var x = document.getElementById("comentarios-"+id);
-//    
-//    if (x.className.indexOf("w3-show") == -1) {
-//        x.className += " w3-show";
-////        x.previousElementSibling.className += " w3-theme-d1";
-//    } else {
-//        x.className = x.className.replace("w3-show", "");
-////        x.previousElementSibling.className = 
-////        x.previousElementSibling.className.replace(" w3-theme-d1", "");
-//    }
-    
-//    const comentados = document.querySelector("#comentados" + id);
-//  
-//    comentados.addEventListener('submit', function (e) {
-//        e.preventDefault();
-//        
-//        let publicacion = document.forms["comentados" + id]["publicacion"].value;
-////        let comentar = document.forms["comentados" + id]["comentar"].value;
-//    
-//        let datos = new FormData(comentados);
-//    
-//        datos.append('publicacion', publicacion);
-//        datos.append('comentar', comentar);
-//    
-//        fetch('../../sql/red-social/ComentariosInicio.php', {
-//            method: 'POST',
-//            body: datos
-//        }).then(function (response) {
-//            if (response.ok) {
-//                return response.json();
-//            } else {
-//                throw "Error en la llamada";
-//            }
-//        }).then(function (json) {
-////            Obtener.publicacion();
-////            RePublicar.datos();
-//            jsonComentado = json;
-//            Comentarios.comentados(id);
-//        }).catch(function (error) {
-//            console.log(error);
-//        });
-////    });
-//}
-//class Comentarios {
-//    static
-//    comentados(id) {
-//        let salida = "";
-//        
-//        for (let i in jsonComentado) {
-//            console.log(jsonComentado);
-////            console.log("id-" + jsonObject[i].id + "idU-" + jsonObject[i].idUsuario);
-//salida += `
-//            <!-- 
-//                Comentarios 
-//            -->
-//
-//            <div class="comentario">
-//                <img src="../../front-multimedia/red-social/imagen/avatar3.png" alt="Avatar" style="width:100%;">
-//                <p>${jsonComentado[i].comentario}</p>
-//                <span class="time-right">${jsonComentado[i].fecha}</span>
-//            </div>
-//                        `;
-//        }
-//        document.querySelector(".comentado-"+id).innerHTML = salida;
-//    }
-//}
-

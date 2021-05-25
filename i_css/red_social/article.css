@@ -5,12 +5,8 @@
 /*.n-grid > .area-2 > article > :nth-child(2) {
     margin-top: 3em;
 }*/
-.n-grid > .area-3 > div {
-    margin: 3em 6em 0em 6em;
-}
-.n-grid > .area-3 > div > article {
-    margin-top: 3em;
-}
+.n-grid > .area-3 > div { margin: 3em 6em 0em 6em; }
+.n-grid > .area-3 > div > article { margin-top: 3em; }
 .n-grid > .area-3 > div > article > .articulo-head {
     display: flex;
     flex-direction: row;
@@ -33,9 +29,7 @@
     color: var(--n-color-dos-uno);
     font-size: 0.70em;
 }
-.n-grid > .area-3 > div > article > .articulo-head > section > div > h6 {
-    margin: 0;
-}
+.n-grid > .area-3 > div > article > .articulo-head > section > div > h6 { margin: 0; }
 .n-grid > .area-3 > div > article > .articulo-head > section > div > h6 > span {
     color: var(--n-color-dos-uno);
     font-weight: normal;
@@ -43,53 +37,25 @@
     transform: scaleY(0); 
     letter-spacing: normal;
 }
-/*.n-grid > .area-3 > div > article > .articulo-head > section > span {
-    color: var(--n-color-dos);
-    font-family: var(--n-fuente-dos);
-    font-size: 0.70em;
-}*/
-.n-grid > .area-3 > div > article > .articulo-head > section > button {
-    background-color: var(--n-color);
-}
-.n-grid > .area-3 > div > article > .articulo-body {
-    margin: 0em 0em 1em 0em;
-}
-.n-grid > .area-3 > div > article > .articulo-body > p {
-    /*font-size: 0.90em;*/
-}
-.n-grid > .area-3 > div > article > .articulo-body > img {
-    border-radius: var(--n-radio);
-}
+.n-grid > .area-3 > div > article > .articulo-head > section > button { background-color: var(--n-color); }
+.n-grid > .area-3 > div > article > .articulo-body { margin: 0em 0em 1em 0em; }
+.n-grid > .area-3 > div > article > .articulo-body > img { border-radius: var(--n-radio); }
 .n-grid > .area-3 > div > article > .articulo-footer {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;  
 }
-.n-grid > .area-3 > div > article > .articulo-footer  > section > button {
-    background-color: var(--n-color);
-}
+.n-grid > .area-3 > div > article > .articulo-footer  > section > button,
 .n-grid > .area-3 > div > article > .articulo-footer  > section > form > button {
-    background-color: var(--n-color);
+    background-color: var(--n-color); 
 }
-.n-grid > .area-3 > div > article > .articulo-footer  > section > span {
-    margin: 0em 0.70em 0em 0em;
-}
+.n-grid > .area-3 > div > article > .articulo-footer  > section > span { margin: 0em 0.70em 0em 0em; }
 /* Comentarios
 --------------------------------------------------------------------------------*/
-.ocultar {display:none}
-.mostrar {display:block!important}
-
-
-.n-grid > .area-3 > div > .comentarios  {
-/*    display: flex;
-    flex-direction: row;
-    justify-content: space-between;*/
-    margin: 0em 1.50em 0em 1.50em;
-}
+.n-grid > .area-3 > div > .ocultar { display:none; }
+.mostrar { display:block!important; }
+.n-grid > .area-3 > div > .comentarios  { margin: 0em 1.50em 0em 1.50em; }
 .n-grid > .area-3 > div > .comentarios > section {
-/*    float: left;
-    position: relative;
-    top: 0.50em;*/
     color: var(--n-color);
     background-color: var(--n-color-dos);
     border-radius: var(--n-radio);
@@ -103,51 +69,42 @@
 }
 .n-grid > .area-3 > div > .comentarios > section > div > img.foto {
     float: left;
-    width: 36px;
-    height: 36px;
+    width: 24px;
+    height: 24px;
     margin-right: 0.10em;
     border-radius: 50%;
 }
-.n-grid > .area-3 > div > .comentarios > section > div > div > span {
-    font-size: 0.60em;
+.n-grid > .area-3 > div > .comentarios > section > .comentario > div > span { font-size: 0.60em; }
+.n-grid > .area-3 > div > .comentarios > section > .comentario > div > h6 { margin: 0; font-size: 0.60em; }
+.n-grid > .area-3 > div > .comentarios > section > .comentario > div > p {
+    font-size: 0.70em;
+    margin-left: 1.50em;
+    border-left: 0.10em solid var(--n-color);
+    padding-left: 1.50em;
 }
-.n-grid > .area-3 > div > .comentarios > section > div > div > h6 {
-    margin: 0;
-    font-size: 0.60em;
-}
-.n-grid > .area-3 > div > .comentarios > section > .comentario > p {
-    font-size: 0.60em;
-}
-/*
-    Comentar
-*/
-textarea {
-    color: var(--n-color);
-    background-color: var(--n-color-tres);
-    width: 100%;
-    border: none;
-    border-radius: var(--n-radio);
-    padding: 0.625em;
-    resize: none;
-}
-textarea:focus {
-    outline: none;
-}
-#comentar {
-    color: var(--n-color);
-    background-color: var(--n-color-dos);
-    font-family: var(--n-fuente);
+/* Comentar
+--------------------------------------------------------------------------------*/
+.n-grid > .area-3 > div > .comentarios > form > textarea {
     font-size: 0.90em;
     width: 100%;
-    margin-top: 0.50em;
-    border: none;
+    border-radius: var(--n-radio);
+    padding: var(--n-relleno)
+}
+.n-grid > .area-3 > div > .comentarios > form > textarea:focus {
+    color: var(--n-color);
+    background-color: var(--n-color-tres);
+    resize: none;
+}
+.n-grid > .area-3 > div > .comentarios > form > button {
+    color: var(--n-color);
+    background-color: var(--n-color-dos);
+    font-size: 0.80em;
+    width: 100%;
     border-radius: var(--n-radio);
     padding: var(--n-relleno);
-    outline: none;
-    cursor: pointer;
 }
-#comentar:hover {
-    color: var(--n-color);
-    background-color: var(--n-color);
-    text-shadow: var(--n-sombra-de-texto-dos);
+.n-grid > .area-3 > div > .comentarios > form > button:hover {
+    color: var(--n-color-dos);
+    background-color: var(--n-color-tres);
+    text-shadow: var(--n-sombra-de-texto);
 }
