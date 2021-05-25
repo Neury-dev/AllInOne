@@ -18,8 +18,8 @@
 }
 .n-grid > .area-3 > div > article > .articulo-head > section > img.foto {
     float: left;
-    width: 3em;
-    height: 3em;
+    width: 48px;
+    height: 48px;
     margin-right: 0.10em;
     border-radius: 50%;
 }
@@ -78,28 +78,45 @@
 --------------------------------------------------------------------------------*/
 .ocultar {display:none}
 .mostrar {display:block!important}
-.comentario {
-    border: 2px solid #dedede;
-    background-color: #f1f1f1;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px 0;
+
+
+.n-grid > .area-3 > div > .comentarios  {
+/*    display: flex;
+    flex-direction: row;
+    justify-content: space-between;*/
+    margin: 0em 1.50em 0em 1.50em;
 }
-.comentario::after {
+.n-grid > .area-3 > div > .comentarios > section {
+/*    float: left;
+    position: relative;
+    top: 0.50em;*/
+    color: var(--n-color);
+    background-color: var(--n-color-dos);
+    border-radius: var(--n-radio);
+    padding: var(--n-relleno);
+}
+.n-grid > .area-3 > div > .comentarios > section > .comentario::after {
     content: "";
     clear: both;
     display: table;
+    margin-bottom: 1em;
 }
-.comentario > img {
+.n-grid > .area-3 > div > .comentarios > section > div > img.foto {
     float: left;
-    max-width: 60px;
-    width: 100%;
-    margin-right: 20px;
+    width: 36px;
+    height: 36px;
+    margin-right: 0.10em;
     border-radius: 50%;
 }
-.time-right {
-    float: right;
-    color: #aaa;
+.n-grid > .area-3 > div > .comentarios > section > div > div > span {
+    font-size: 0.60em;
+}
+.n-grid > .area-3 > div > .comentarios > section > div > div > h6 {
+    margin: 0;
+    font-size: 0.60em;
+}
+.n-grid > .area-3 > div > .comentarios > section > .comentario > p {
+    font-size: 0.60em;
 }
 /*
     Comentar

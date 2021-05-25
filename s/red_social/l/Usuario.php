@@ -1,7 +1,11 @@
 <?php
 session_start();
 require_once "../../Conexion.php";
-
+//
+//https://www.php.net/manual/es/function.session-id.php
+//https://www.php.net/manual/es/function.session-create-id.php
+//https://www.php.net/manual/es/function.session-name.php
+//
 class Usuario {
     public function 
     visitado() {

@@ -29,7 +29,7 @@ class PublicacionInicio {
             $comentarios = $sqlComentarios->fetch_all(MYSQLI_ASSOC);
             
             foreach ($comentarios as $comentario) {
-                $sqlComentarioImgs = $GLOBALS["base"]->conexion->query("SELECT foto FROM `Usuarios` WHERE id = '" . $comentario["yo"] . "'");
+                $sqlComentarioImgs = $GLOBALS["base"]->conexion->query("SELECT nombre, foto FROM `Usuarios` WHERE id = '" . $comentario["yo"] . "'");
                 $comentarioImgs = $sqlComentarioImgs->fetch_all(MYSQLI_ASSOC);
 
             foreach ($comentarioImgs as $comentarioImg) {
@@ -39,7 +39,8 @@ class PublicacionInicio {
                     "yo"            => $comentario["yo"],
                     "publicacion"   => $comentario["publicacion"],
                     "comentario"    => $comentario["comentario"],
-                    "foto"        => $comentarioImg["foto"],
+                    "nombre"        => $comentarioImg["nombre"],
+                    "foto"          => $comentarioImg["foto"],
                     "fecha"         => $fechaDeComentario->format('d M Y')
                 ));
             }

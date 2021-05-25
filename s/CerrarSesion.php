@@ -3,8 +3,8 @@
 require_once 'Conexion.php';
 
 session_start();
-session_unset();
-session_destroy();
+//session_unset();
+//session_destroy();
 
 class CerrarSesion extends Conexion {
 
@@ -13,7 +13,7 @@ class CerrarSesion extends Conexion {
         $this->conexion = CerrarSesion::olvidar();
         var_dump($this->conexion);
         CerrarSesion::session_unset($this->conexion);
-        CerrarSesion::destroy($this->conexion);
+        CerrarSesion::session_destroy($_SESSION["johnDoe"]);//$_SESSION["johnDoe"] = '';
     }
 
 }

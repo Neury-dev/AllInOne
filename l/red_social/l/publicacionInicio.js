@@ -113,17 +113,21 @@ class Obtener {
             salida += "</section>";
             salida += "</article>";
 salida += "<!-- Comentarios -->";
-            salida += "<div id='comentarios-" + jsonObject[i].id + "' class='ocultar w3-container'>";
+            salida += "<div id='comentarios-" + jsonObject[i].id + "' class='ocultar w3-container comentarios'>";
                 salida += "<section id='comentado-" + jsonObject[i].id + "' class='comentado-" + jsonObject[i].id + "'>";
                     for (let ii in jsonObject[i].comentario) {
 
                         for (let iii in jsonObject[i].comentario[ii]) {
 
-                            if(jsonObject[i].id == jsonObject[i].comentario[ii][iii].publicacion) {
+                            if(jsonObject[i].id == jsonObject[i].comentario[ii][iii].publicacion) { 
                                 salida += "<div class='comentario'>";
-                                    salida += "<img src='../../i_img/red_social/i/"+jsonObject[i].comentario[ii][iii].foto+"'";                                      salida += "alt='Avatar' style='width:100%;'>";
-                                    salida += "<p>" + jsonObject[i].comentario[ii][iii].comentario + "</p>";
-                                    salida += "<span class='time-right'>" + jsonObject[i].comentario[ii][iii].fecha + "</span>";
+                                    salida += "<img src='../../i_img/red_social/i/"+jsonObject[i].comentario[ii][iii].foto+"'"; 
+                                    salida += "alt='Avatar' class='foto'>";
+                                    salida += "<div>";
+                                        salida += "<span>" + jsonObject[i].comentario[ii][iii].fecha + ", De </span>";
+                                        salida += "<h6 class='titulo'>" + jsonObject[i].comentario[ii][iii].nombre + "</h6>";
+                                        salida += "<p>" + jsonObject[i].comentario[ii][iii].comentario + "</p>";
+                                    salida += "</div>";
                                 salida += "</div>";
                             }
                         }
