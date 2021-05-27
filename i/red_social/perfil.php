@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../i_css/red_social/header.css">
     <link rel="stylesheet" href="../../i_css/red_social/perfil/perfil.css"/>
     <link rel="stylesheet" href="../../i_css/red_social/perfil/nav.css"/>
-    <link rel="stylesheet" href="../../i_css/red_social/perfil/publicar.css"/>
+    <link rel="stylesheet" href="../../i_css/red_social/perfil/menu.css"/>
     <link rel="stylesheet" href="../../i_css/red_social/perfil/article.css"/>
     <!--Iconos-->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -86,9 +86,9 @@
                 </section>
             </main>
         </section>
-<!--
-    nav 
--->
+<!------------------------------------------------------------------------------
+nav 
+------------------------------------------------------------------------------->
         <section class="area-2">
             <nav>
                 <ul>
@@ -108,17 +108,15 @@
         <section class="area-3">
             <section>
                 <h5 class="titulo">Publicar?</h5>
-                <section class="section-nav">
-                    <button class="tablinks" onclick="openCity(event, 'n-articulo')"><i class='fas fa-file-alt'></i></button>
-                    <button class="tablinks" onclick="openCity(event, 'n-imagen')"><i class='fas fa-images'></i></button>
-                    <button class="tablinks" onclick="openCity(event, 'n-audio')"><i class='fas fa-play'></i></button>
-                    <button class="tablinks" onclick="openCity(event, 'n-video')"><i class='fas fa-video'></i></button>
+                <section class="menu">
+                    <button class="enlace" onclick="menu(event, 'n-articulo')"><i class='fas fa-file-alt'></i></button>
+                    <button class="enlace" onclick="menu(event, 'n-imagen')"><i class='fas fa-images'></i></button>
+                    <button class="enlace" onclick="menu(event, 'n-audio')"><i class='fas fa-play'></i></button>
+                    <button class="enlace" onclick="menu(event, 'n-video')"><i class='fas fa-video'></i></button>
                 </section>  
-                <div id="n-articulo" class="tabcontent">
-                    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+                <div id="n-articulo" class="contenido">
+                    <span class="cerrar">&times</span>
                     <form action="../../s/red_social/Publicar.php" method="POST" name="form-articulo" id="form-articulo" enctype="multipart/form-data">
-<!--                        <label for="titulo" class="etiqueta">Titulo</label>
-                        <input type="text" name="titulo" id="titulo" placeholder="Titulo...">-->
                         <label for="articulo" class="etiqueta">Publicación</label>
                         <textarea name="publicacion" id="publicacion" rows="5" cols="10" placeholder="Publicación..." required=""></textarea>
                         <label for="imagen" class="cargar-archivo">Seleccionar Imagen</label>
@@ -128,7 +126,7 @@
                     </form>
                 </div>
 
-                <div id="n-imagen" class="tabcontent">
+                <div id="n-imagen" class="contenido">
                     <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form" id="form" enctype="multipart/form-data">
                         <label for="imagen" class="cargar-archivo">Seleccionar Imagen</label>
@@ -137,7 +135,7 @@
                         <button type="submit" name="subir-archivo" id="subir-archivo" value="Imagen">Subir</button>
                     </form>
                 </div>
-                <div id="n-audio" class="tabcontent">
+                <div id="n-audio" class="contenido">
                     <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form" id="form" enctype="multipart/form-data">
                         <label for="audio" class="cargar-archivo">Seleccionar Audio</label>
@@ -146,7 +144,7 @@
                         <button type="submit" name="subir-archivo" id="subir-archivo" value="Audio">Subir</button>
                     </form>
                 </div>
-                <div id="n-video" class="tabcontent">
+                <div id="n-video" class="contenido">
                     <span class="topright">&times</span>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form" id="form" enctype="multipart/form-data">
                         <label for="video" class="cargar-archivo">Seleccionar Video</label>
@@ -162,7 +160,7 @@
         </section>
         <section class="area-4">
             <section class="sesion-1">
-                <h2  class="nombre"></h2>
+                <h2  class="nombre titulo"></h2>
                 <p class="nacimiento"></p>
                 <p class="correo"></p>
                 <p class="numero"></p>
@@ -172,7 +170,7 @@
                 <p class="ciudad"></p>
             </section>
             <section class="sesion-2">
-                <h4>Intereses</h4>
+                <h4 class="titulo">Intereses</h4>
                 <p>
                     <span>span</span>
                     <span>span</span>
@@ -197,7 +195,7 @@
                 </p>
             </section>
             <section class="sesion-3">
-                <h4>Otros</h4>
+                <h4 class="titulo">Otros</h4>
                 <p>text</p>
                 <p>text</p>
                 <p>text</p>
@@ -209,7 +207,7 @@
     </section>
 <script src="../../l/red_social/i/header.js" async=""></script>
 <script src="../../l/red_social/l/perfil.js" async=""></script>
-<script src="../../l/red_social/i/main.js" defer=""></script>
+<script src="../../l/red_social/i/menu.js" defer=""></script>
 <script src="../../l/red_social/l/publicacion.js" defer=""></script>
 <script>
 //var boton = document.querySelector(".n-img-perfil-header");

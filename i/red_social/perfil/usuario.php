@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../../i_css/red_social/perfil/perfil.css"/>
     <link rel="stylesheet" href="../../../i_css/red_social/perfil/chat.css" />
     <link rel="stylesheet" href="../../../i_css/red_social/perfil/nav.css"/>
-    <link rel="stylesheet" href="../../../i_css/red_social/perfil/publicar.css"/>
+    <link rel="stylesheet" href="../../../i_css/red_social/perfil/menu.css"/>
     <link rel="stylesheet" href="../../../i_css/red_social/perfil/article.css"/>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>

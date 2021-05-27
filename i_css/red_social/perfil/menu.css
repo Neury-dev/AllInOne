@@ -1,0 +1,109 @@
+/* 
+    Created on : 26 dic. 2020, 16:12:07
+    Author     : neury-dev
+*/
+.n-grid > .area-3 > section {
+    margin: 0em 6em 0em 6em;
+}
+.n-grid > .area-3 > section > .menu {
+    background-color: var(--n-color-dos);
+    border-radius: 2em;
+    overflow: hidden;
+}
+.n-grid > .area-3 > section > .menu > button {
+    color: var(--n-color);
+    background-color: inherit;
+    float: left;
+    padding: 10px 12px;
+}
+.n-grid > .area-3 > section > .menu > button:hover {
+    color: var(--n-color-dos);
+    background-color: var(--n-color-tres);
+    border-radius: 2em;
+    text-shadow: var(--n-sombra-de-texto);
+}
+.n-grid > .area-3 > section > .menu > button.activo {
+    color: var(--n-color-dos);
+    background-color: var(--n-color);
+    border-radius: 2em;
+}
+
+/* Contenido
+--------------------------------------------------------------------------------*/
+.n-grid > .area-3 > section > .contenido {
+    display: none;
+    padding: 6px 12px;
+    animation: fadeEffect 1s;
+}
+/* Style the close button */
+.topright {
+    float: right;
+    font-size: 28px;
+}
+
+.topright:hover {color: red;}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.n-grid > .area-3 > section > div > form {
+    margin-top: 4em;
+}
+.n-grid > .area-3 > section > .contenido > #form-articulo > .etiqueta {
+    color: var(--n-color-dos);
+    font-family: var(--n-fuente-dos);
+    font-size: 0.80em;
+    font-weight: bold;
+}
+.n-grid > .area-3 > section > .contenido > #form-articulo > #publicacion {
+    font-size: 0.90em;
+    width: 100%;
+    margin-bottom: 0.50em;
+    border-radius: var(--n-radio);
+    padding: var(--n-relleno);
+}
+.n-grid > .area-3 > section > .contenido > #form-articulo > #publicacion:focus {
+    color: var(--n-color);
+    background-color: var(--n-color-tres);
+}
+.n-grid > .area-3 > section > .contenido > #form-articulo > #publicacion {
+    resize: none;
+}
+.n-grid > .area-3 > section > .contenido > form > .cargar-archivo {
+    color: var(--n-color-dos);
+    background-color: var(--n-color-tres);
+    font-size: 0.70em;
+    border: 0.10em solid var(--n-color-dos);
+    border-radius: var(--n-radio);
+    padding: var(--n-relleno);
+    text-shadow: var(--n-sombra-de-texto);
+}
+.n-grid > .area-3 > section > .contenido > form > input:disabled {
+    color: var(--n-color-dos);
+    background-color: var(--n-color);
+    font-family: var(--n-fuente-dos);
+    font-size: 0.70em;
+    border: 0.10em solid var(--n-color-dos);
+    border-radius: var(--n-radio);
+    padding: var(--n-relleno);
+    cursor: not-allowed;
+}
+.n-grid > .area-3 > section > .contenido > form > #subir, 
+.n-grid > .area-3 > section > .contenido > form > #subir-archivo {
+    color: var(--n-color);
+    background-color: var(--n-color-dos);
+    font-weight: bold;
+    font-size: 0.80em;
+    width: 100%;
+    margin-top: 0.20em;
+    border-radius: var(--n-radio);
+    padding: var(--n-relleno);
+}
+.n-grid > .area-3 > section > .contenido > form >  #subir:hover, 
+.n-grid > .area-3 > section > .contenido > form > #subir-archivo:hover {
+    color: var(--n-color-dos);
+    background-color: var(--n-color-tres);
+    text-shadow: var(--n-sombra-de-texto);
+}
+
