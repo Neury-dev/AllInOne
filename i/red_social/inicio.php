@@ -99,10 +99,7 @@ main
 ------------------------------------------------------------------------------->
         <section class="area-2">
             <main>
-<!--
-    - Opción para remplazar el JS.
-    https://www.w3schools.com/cssref/sel_target.asp
--->
+
             </main>
         </section>
 <!------------------------------------------------------------------------------

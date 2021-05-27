@@ -107,11 +107,7 @@
         </section>
         <section class="area-3">
             <section>
-                <p>Publicar?</p>
-                <!--
-                    - Opción para remplazar el JS.
-                    https://www.w3schools.com/cssref/sel_target.asp
-                -->
+                <h5 class="titulo">Publicar?</h5>
                 <section class="section-nav">
                     <button class="tablinks" onclick="openCity(event, 'n-articulo')"><i class='fas fa-file-alt'></i></button>
                     <button class="tablinks" onclick="openCity(event, 'n-imagen')"><i class='fas fa-images'></i></button>
@@ -160,9 +156,9 @@
                     </form>
                 </div>
             </section>
-            <section class="publicacion">
+            <div class="publicacion">
                 <!--publicaiones-->   
-            </section>
+            </div>
         </section>
         <section class="area-4">
             <section class="sesion-1">

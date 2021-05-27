@@ -11,25 +11,17 @@ https://docs.github.com/es/github/authenticating-to-github/generating-a-new-ssh-
         https://www.youtube.com/playlist?list=PLFE4xF86y6sCsYfTud5DfDPWAH10u7Jhu    - 
         https://www.youtube.com/playlist?list=PLFE4xF86y6sAlMCA-rml_imQWmnc849U-    -
     - Iniciar o Registro
-        https://www.w3schools.com/howto/howto_css_social_login.asp
-        https://www.w3schools.com/howto/howto_css_form_icon.asp
         https://www.w3schools.com/howto/howto_js_form_steps.asp
     - Home "Inicio" y perfil
         https://www.w3schools.com/w3css/tryw3css_templates_social.htm
     - Iconos
-        Sapo: <i class='fas fa-frog'></i> 
-        Estrella: <i class='fas fa-star'></i>  / <i class='far fa-star'></i>
-        Estrella 50 - 50: <i class='fas fa-star-half-alt'></i>
-        Estrella media: <i class='fas fa-star-half'></i> / <i class='far fa-star-half'></i>
-        Estrella de lado: <i class='fas fa-splotch'></i>
-        Me gusta y no me gusta: <i class='fas fa-thumbs-down'></i> / <i class='far fa-thumbs-down'></i> / <i class='fas fa-thumbs-up'></i> / <i class='far fa-thumbs-up'></i>
+        <button style='font-size:24px'>Button <i class='fas fa-trash-alt'></i></button>
+
     -Zoom de imagen y lupa
         https://www.w3schools.com/howto/howto_js_image_zoom.asp
         https://www.w3schools.com/howto/howto_js_image_magnifier_glass.asp
         https://www.w3schools.com/howto/howto_css_flip_image.asp
     - Chat
-        https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_examples_mail
-        https://www.w3schools.com/w3css/tryw3css_templates_mail.htm
         https://www.w3schools.com/howto/howto_css_chat.asp
     - Grid: Cambio de anchura
         https://www.w3schools.com/howto/howto_js_list_grid_view.asp
@@ -45,15 +37,6 @@ https://www.php.net/manual/es/ref.array.php
 https://www.php.net/manual/en/function.file
 
 https://repo.progsbase.com/repoviewer/no.inductive.idea10.programs/JSON/latest/
-
-- Importar ultima version de los archivos
-encabezado HTTP: como solicitar la ultima version del fichero (last-modified) 
-
-- Font Awesome: Iconos individuales
-https://fontello.com/
-
-- SVG
-https://getwaves.io/
 
 - Animacion
 <div class="iconos">

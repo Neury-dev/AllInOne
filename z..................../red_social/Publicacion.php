@@ -15,6 +15,8 @@ class Publicacion {
         $this->sql = $GLOBALS["base"]->conexion->query("SELECT * FROM `Publicaciones` WHERE idUsuario = '" . $_SESSION["johnDoe"] . "' ORDER BY id DESC");
         $this->resultado = $this->sql->fetch_all(MYSQLI_ASSOC);
 
+//        if (empty($this->resultado)) { echo 'No hay publicaciones.'; }
+
         foreach ($this->resultado as $valor) {
             $this->sql = $GLOBALS["base"]->conexion->query("SELECT id, nombre, foto FROM `Usuarios` WHERE id = '" . $valor["idUsuario"] . "'");
             $this->resultado = $this->sql->fetch_all(MYSQLI_ASSOC);
@@ -26,7 +28,6 @@ class Publicacion {
 
                 foreach ($this->resultado as $imagen) {
                     $fecha = DateTime::createFromFormat('Y-m-d H:i:s', $valor['fecha']);
-                    
                     array_push($this->obtenidos, array(
                         "id"            => $valor["id"],
                         "idUsuario"     => $valor["idUsuario"],
@@ -35,11 +36,7 @@ class Publicacion {
                         "foto"          => $usuario["foto"],
                         "publicacion"   => $valor["publicacion"],
                         "imagen"        => $imagen["imagen"],
-                        "fecha"         => $fecha->format('d M Y'),
-                        "gustaSi"       => $valor["gustaSi"],
-                        "gustaNo"       => $valor["gustaNo"],
-                        "comentarios"   => $valor["comentarios"],
-                        "compartida"    => $valor["compartida"]
+                        "fecha"         => $fecha->format('d M Y')
                     ));
                 }
             }

@@ -6,10 +6,9 @@
 .n-grid > .area-3 > section {
     margin: 0em 6em 0em 6em;
 }
-.n-grid > .area-3 > section > p {
-    color: var(--n-color-dos);
-    font-family: var(--n-fuente);
-}
+/*.n-grid > .area-3 > section > p {
+    font-weight: bold;
+}*/
 .section-nav {
     background-color: var(--n-color-dos);
     border-radius: 2em;

@@ -3,13 +3,8 @@ var jsonObject;
 fetch('../../s/red_social/l/Publicacion.php').then(function (response) {
     return response.json();
 }).then(function (json) {
-//    console.log(json.vacio);
-    
-//    if(json[0]) {
-//        document.querySelector(".n-grid > .area-3 > section.publicacion").innerHTML = "No tienes publicaciones.";
-//    } else {
-        jsonObject = json;
-//    }
+    jsonObject = json;
+
     Obtener.publicacion();
 }).catch(function (err) {
     console.log('Fetch problem: ' + err.message);
@@ -26,8 +21,10 @@ class Obtener {
                 <section class="articulo-head">
                     <section>
                         <img src="../../i_img//red_social/i/${jsonObject[i].foto}" class="foto" alt="alt"/>
-                        <span class="">${jsonObject[i].fecha}, Por</span>
-                        <h2>${jsonObject[i].nombre}</h2>
+                        <div>
+                            <span class="">${jsonObject[i].fecha}, Por</span>
+                            <h6 class='titulo'>${jsonObject[i].nombre}</h6>
+                        </div>
                     </section>  
                     <section>
                         <button><i class='fas fa-ellipsis-v'></i></button>
@@ -40,14 +37,34 @@ class Obtener {
                 </section>
                 <hr>
                 <section class="articulo-footer">
-                    <section><button><i class='fas fa-star'></i></button></section><section><span class="">100</span></section>
-                            <section><button><i class='fas fa-frog'></i></button></section><section><span class="">100</span></section>
-                    <section><button><i class='fas fa-comments'></i></button></section><section><span class="">100</span></section>
-                    <section><button><i class='fas fa-share'></i></button></section><section><span class="">100</span></section>
+                    <section>
+                        <button><i class='fas fa-star'></i></button>
+                    </section>
+                    <section>
+                        <span>${jsonObject[i].gustaSi}</span>
+                    </section>
+                    <section>
+                        <button><i class='fas fa-frog'></i></button>
+                    </section>
+                    <section>
+                        <span>${jsonObject[i].gustaNo}</span>
+                    </section>
+                    <section>
+                        <button><i class='fas fa-comments'></i></button>
+                    </section>
+                    <section>
+                        <span>${jsonObject[i].comentarios}</span>
+                    </section>
+                    <section>
+                        <button><i class='fas fa-share'></i></button>
+                    </section>
+                    <section>
+                        <span>${jsonObject[i].compartida}</span>
+                    </section>
                 </section>
             </article>
             `;
         }
-        document.querySelector(".n-grid > .area-3 > section.publicacion").innerHTML = salida;
+        document.querySelector(".n-grid > .area-3 > div.publicacion").innerHTML = salida;
     }
 }
