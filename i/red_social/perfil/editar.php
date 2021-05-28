@@ -11,9 +11,9 @@
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
-<!-- 
-    header
--->
+<!------------------------------------------------------------------------------ 
+header
+------------------------------------------------------------------------------->
     <header id="n-header" class="n-grid-header">
         <section class="area-1">
             <h1><a href="http://localhost/AllInOne/index.php" style="display: block;">AllInOne</a></h1>
@@ -61,25 +61,25 @@
         <a href="../../../s/CerrarSesion.php">Salir</a>
     </div>
     <section class="n-grid">
-<!--
-    main 
--->
+<!------------------------------------------------------------------------------ 
+main
+------------------------------------------------------------------------------->
         <section class="area-1">
             <main>
                 <img src="../../../i_img/red_social/i/app.jpg" class="portada" alt="alt"/>
                 <section class="contenedor">
                     <img class="foto" alt="alt"/>
                     <!--<h2>Neury E. Aguasvivas L.</h2>-->
-                    <section class="perfil-nav">
+<!--                    <section class="perfil-nav">
                         <button><i class='fas fa-user-friends'></i></button>
                         <button><i class='fas fa-comments'></i></button>
-                    </section>
+                    </section>-->
                 </section>
             </main>
         </section>
-<!--
-    nav 
--->
+<!------------------------------------------------------------------------------ 
+nav
+------------------------------------------------------------------------------->
         <section class="area-2">
             <nav>
                 <ul>
@@ -96,12 +96,12 @@
                 </ul>
             </nav>
         </section>
-<!-- 
-    Editar
--->
+<!------------------------------------------------------------------------------ 
+Editar
+------------------------------------------------------------------------------->
         <section class="area-3">
             <section>
-                <h3>Intereses</h3>
+                <h3 class="titulo">Intereses</h3>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form" id="form" enctype="multipart/form-data">
                     <label for="intereses" hidden="">Intereses</label>
                     <select name="intereses" id="intereses">
@@ -111,7 +111,7 @@
                 </form>
             </section>
             <section>
-                <h3>Datos</h3>
+                <h3 class="titulo">Datos</h3>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form" id="form" enctype="multipart/form-data">
                     <label for="foto">Foto</label>
                     <input type="file" name="foto" id="foto">
@@ -154,7 +154,7 @@
         </section>
         <section class="area-4">
             <section class="sesion-1">
-                <h2 class="nombre"></h2>
+                <h2 class="nombre titulo"></h2>
                 <p class="nacimiento"></p>
                 <p class="correo"></p>
                 <p class="numero"></p>
@@ -164,7 +164,7 @@
                 <p class="ciudad"></p>
             </section>
             <section class="sesion-2">
-                <h4>Intereses</h4>
+                <h4 class="titulo">Intereses</h4>
                 <p>
                     <span>span</span>
                     <span>span</span>
@@ -189,7 +189,7 @@
                 </p>
             </section>
             <section class="sesion-3">
-                <h4>Otros</h4>
+                <h4 class="titulo">Otros</h4>
                 <p>text</p>
                 <p>text</p>
                 <p>text</p>

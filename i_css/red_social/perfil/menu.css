@@ -32,23 +32,22 @@
 --------------------------------------------------------------------------------*/
 .n-grid > .area-3 > section > .contenido {
     display: none;
-    padding: 6px 12px;
+    padding: 0.50em;
     animation: fadeEffect 1s;
 }
-/* Style the close button */
-.topright {
+.n-grid > .area-3 > section > .contenido > .cerrar {
     float: right;
-    font-size: 28px;
+    background-color: var(--n-color);
+    font-size: 2em;
 }
-
-.topright:hover {color: red;}
+.n-grid > .area-3 > section > .contenido > .cerrar:hover { color: var(--n-color-rojo); }
 
 @keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
 }
 .n-grid > .area-3 > section > div > form {
-    margin-top: 4em;
+    margin-top: 2.50em;
 }
 .n-grid > .area-3 > section > .contenido > #form-articulo > .etiqueta {
     color: var(--n-color-dos);

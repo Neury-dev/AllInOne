@@ -16,9 +16,9 @@
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
-<!-- 
-    header
--->
+<!------------------------------------------------------------------------------ 
+header
+------------------------------------------------------------------------------->
     <header id="n-header" class="n-grid-header">
         <section class="area-1">
             <h1><a href="http://localhost/AllInOne/index.php" style="display: block;">AllInOne</a></h1>
@@ -70,9 +70,9 @@
         <a href="../../s/CerrarSesion.php">Salir</a>
     </div>
     <section class="n-grid">
-<!--
-    main 
--->
+<!------------------------------------------------------------------------------ 
+main
+------------------------------------------------------------------------------->
         <section class="area-1">
             <main>
                 <img src="../../i_img//red_social/i/app.jpg" class="portada" alt="alt"/>
@@ -109,13 +109,13 @@ nav
             <section>
                 <h5 class="titulo">Publicar?</h5>
                 <section class="menu">
-                    <button class="enlace" onclick="menu(event, 'n-articulo')"><i class='fas fa-file-alt'></i></button>
-                    <button class="enlace" onclick="menu(event, 'n-imagen')"><i class='fas fa-images'></i></button>
-                    <button class="enlace" onclick="menu(event, 'n-audio')"><i class='fas fa-play'></i></button>
-                    <button class="enlace" onclick="menu(event, 'n-video')"><i class='fas fa-video'></i></button>
+                    <button class="enlace" onclick="Menu.abrir(event, 'n-articulo')"><i class='fas fa-file-alt'></i></button>
+                    <button class="enlace" onclick="Menu.abrir(event, 'n-imagen')"><i class='fas fa-images'></i></button>
+                    <button class="enlace" onclick="Menu.abrir(event, 'n-audio')"><i class='fas fa-play'></i></button>
+                    <button class="enlace" onclick="Menu.abrir(event, 'n-video')"><i class='fas fa-video'></i></button>
                 </section>  
                 <div id="n-articulo" class="contenido">
-                    <span class="cerrar">&times</span>
+                    <button class="cerrar" onclick="Menu.cerrar()">&times</button>
                     <form action="../../s/red_social/Publicar.php" method="POST" name="form-articulo" id="form-articulo" enctype="multipart/form-data">
                         <label for="articulo" class="etiqueta">Publicación</label>
                         <textarea name="publicacion" id="publicacion" rows="5" cols="10" placeholder="Publicación..." required=""></textarea>
@@ -127,7 +127,7 @@ nav
                 </div>
 
                 <div id="n-imagen" class="contenido">
-                    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+                    <button class="cerrar" onclick="Menu.cerrar()">&times</button>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form" id="form" enctype="multipart/form-data">
                         <label for="imagen" class="cargar-archivo">Seleccionar Imagen</label>
                         <input type="file" name="imagen" id="imagen" hidden="">
@@ -136,7 +136,7 @@ nav
                     </form>
                 </div>
                 <div id="n-audio" class="contenido">
-                    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+                    <button class="cerrar" onclick="Menu.cerrar()">&times</button>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form" id="form" enctype="multipart/form-data">
                         <label for="audio" class="cargar-archivo">Seleccionar Audio</label>
                         <input type="file" name="audio" id="audio" hidden="">
@@ -145,7 +145,7 @@ nav
                     </form>
                 </div>
                 <div id="n-video" class="contenido">
-                    <span class="topright">&times</span>
+                    <button class="cerrar" onclick="Menu.cerrar()">&times</button>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form" id="form" enctype="multipart/form-data">
                         <label for="video" class="cargar-archivo">Seleccionar Video</label>
                         <input type="file" name="video" id="video" hidden="">

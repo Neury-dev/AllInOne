@@ -41,7 +41,7 @@
     z-index: 1;
     width: 8em;
     height: 8em;
-    border-radius: 50% 50% 50% 1em;
+    border-radius: 50% 50% 50% 0.50em;
 }
 /*.n-grid > .area-1 > main > .contenedor > h2 {
     position: relative;
