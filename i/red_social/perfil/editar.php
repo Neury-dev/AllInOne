@@ -1,13 +1,16 @@
 <?php require_once '../../../s/red_social/s/SesionIniciada.php'; ?>
 <html>
 <head>
-    <title>Editar</title>
+    <title>AllInOne | Red Social | Edición</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://localhost/AllInOne/i_css/i/root.css">
     <link rel="stylesheet" href="../../../i_css/red_social/header.css">
     <link rel="stylesheet" href="../../../i_css/red_social/perfil/perfil.css"/>
     <link rel="stylesheet" href="../../../i_css/red_social/perfil/nav.css"/>
     <link rel="stylesheet" href="../../../i_css/red_social/perfil/editar.css"/>
+    <!-- Iconos -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
@@ -97,61 +100,68 @@ nav
             </nav>
         </section>
 <!------------------------------------------------------------------------------ 
-Editar
+Edición del perfil
 ------------------------------------------------------------------------------->
         <section class="area-3">
             <section>
-                <h3 class="titulo">Intereses</h3>
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form" id="form" enctype="multipart/form-data">
+                <h5 class="titulo">Foto y Portada</h5>
+                <form action="" method="POST" name="form" id="form" enctype="multipart/form-data">
+                    <label for="foto">Foto</label>
+                    <input type="file" name="foto" id="foto">
+                    <label for="portada">Portada</label>
+                    <input type="file" name="portada" id="portada">
+                    <button type="submit" name="editar" id="editar" value="Editar">Editar Tu Figura</button>
+                </form>
+            </section>
+            <section>
+                <h5 class="titulo">Intereses</h5>
+                <form action="" method="POST" name="form" id="form">
                     <label for="intereses" hidden="">Intereses</label>
                     <select name="intereses" id="intereses">
                         <option value="">Escoger interes</option>
                     </select>
-                    <button type="submit" name="interes" id="interes" value="Interes">Escoger</button>
+                    <button type="submit" name="interes" id="interes" value="Interes">Escoger Intereses</button>
                 </form>
             </section>
             <section>
-                <h3 class="titulo">Datos</h3>
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form" id="form" enctype="multipart/form-data">
-                    <label for="foto">Foto</label>
-                    <input type="file" name="foto" id="foto">
-                    
+                <h5 class="titulo">Datos</h5>
+                <form action="" method="POST" name="form" id="form">
                     <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Ingresar nombre...">
-                    
+                        <input type="text" name="nombre" id="nombre" placeholder="Ingresar nombre...">
                     <label for="apellido">Apellido</label>
-                    <input type="text" name="apellido" id="apellido" placeholder="Ingresar pellido...">
-                    
-                    <label for="nacimiento">Cumpleaños</label>
-                    <input type="date" name="nacimiento" id="nacimiento">
-                    
+                        <input type="text" name="apellido" id="apellido" placeholder="Ingresar pellido...">
                     <label for="correo">Correo</label>
-                    <input type="email" name="correo" id="correo" placeholder="Ingresar correo...">
-                    
+                        <input type="email" name="correo" id="correo" disabled="">
                     <label for="numero">Celular</label>
-                    <input type="tel" name="numero" id="numero" placeholder="Ingresar numero...">
-                    
-<!--                    <label for="estado">Estado</label>
-                    <select name="estado" id="estado">
+                        <input type="tel" name="numero" id="numero" placeholder="Ingresar numero...">
+                    <label for="estado">Genero</label>
+                    <select name="genero" id="genero">
                         <option value="Soltero">Soltero</option>
                         <option value="Casado">Casado</option>
-                    </select>-->
-
+                    </select>
+                    <label for="nacimiento">Cumpleaños</label>
+                        <input type="date" name="nacimiento" id="nacimiento">
                     <label for="pais">País</label>
                     <select name="pais" id="pais">
                         <option value="">Escoger país</option>
                     </select>
-                    
-<!--                    <label for="ciudad">Ciudad</label>
-                    <select name="ciudad" id="ciudad">
-                        <option value="...">...</option>
-                        <option value="...">...</option>
-                    </select>-->
-                    
-                    <button type="submit" name="editar" id="editar" value="Editar">Editar</button>
+                    <button type="submit" name="editar" id="editar" value="Editar">Editar Datos</button>
+                </form>
+            </section>
+            <section>
+                <h5 class="titulo">Contraseña</h5>
+                <form action="" method="POST" name="form" id="form">
+                    <label for="codigo">Contraseña antigua</label>
+                        <input type="file" name="codigo" id="codigo">
+                    <label for="codigo-nuevo">Contraseña nueva</label>
+                        <input type="file" name="codigo-nuevo" id="codigo-nuevo">
+                    <button type="submit" name="editar" id="editar" value="Editar">Editar Contraseña</button>
                 </form>
             </section>
         </section>
+<!------------------------------------------------------------------------------ 
+Datos del perfil
+------------------------------------------------------------------------------->
         <section class="area-4">
             <section class="sesion-1">
                 <h2 class="nombre titulo"></h2>
@@ -200,8 +210,8 @@ Editar
         </section>
     </section>
 <script src="../../../l/red_social/i/header.js" async=""></script>
-<script src="../../../l/red_social/l/editar.js" async=""></script>
-<!--<script src="../../../l/red_social/perfil/editar.js" defer=""></script>-->
+<script src="../../../l/red_social/l/perfil/perfil.js" async=""></script>
+<script src="../../../l/red_social/l/perfil/edicion.js" defer=""></script>
 <script>
    
 

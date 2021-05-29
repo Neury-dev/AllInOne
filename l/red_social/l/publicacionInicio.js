@@ -1,7 +1,7 @@
 var jsonObject;
 var jsonComentado;
 
-fetch('../../s/red_social/l/PublicacionInicio_1.php').then(function (response) {
+fetch('../../s/red_social/l/PublicacionInicio.php').then(function (response) {
     return response.json();
 }).then(function (json) {// console.log("Cero: " + json[0].comentario[0][0].comentario);
     jsonObject = json;
@@ -23,7 +23,7 @@ class Obtener {
                     salida += "<img src='../../i_img/red_social/i/"+jsonObject[i].foto + "'class='foto' alt='alt'/>";
                     salida += "<div>";
                         salida += "<span>" + jsonObject[i].fecha + ", Por </span>";
-                        salida += "<h6 class='titulo'>" + jsonObject[i].nombre + "<span> " + jsonObject[i].por + " </span>" + jsonObject[i].autor + "</h6>";
+                        salida += "<h6 class='titulo'>" + jsonObject[i].nombre + "<span> " + jsonObject[i].de + " </span>" + jsonObject[i].autor + "</h6>";
                     salida += "</div>";
                 salida += "</section>";  
                 salida += "<section>";

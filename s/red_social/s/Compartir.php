@@ -51,7 +51,7 @@ class Compartir {
                 }
             } elseif(empty($compartida)) {
                 $sqlCompartir = $GLOBALS["base"]->conexion-> 
-                query("INSERT INTO `Publicaciones`(`idUsuario`, `publicacion`, `fecha`, `gustaSi`, `gustaNo`, `compartida`, `por`, `autor`) "
+                query("INSERT INTO `Publicaciones`(`idUsuario`, `publicacion`, `fecha`, `gustaSi`, `gustaNo`, `compartida`, `de`, `autor`) "
                     . "VALUES ('".$_SESSION["johnDoe"]."', '".$articulo."', NOW(), '0', '0', '0', 'De', '".$nombre."')");
 
                 $this->ok2 = $GLOBALS["base"]->conexion->insert_id;

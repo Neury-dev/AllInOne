@@ -26,10 +26,12 @@ select {
 label { font-weight: bold; }
 button,
 input,
-textArea { 
+textArea, 
+select { 
     border: none;
     outline: none; 
 }
+input:disabled { cursor: not-allowed; }
 .titulo { transform: scaleY(1.7); letter-spacing: -0.08em; }
 :root {
     --n-fuente:                 "Georgia", Garamond, serif;

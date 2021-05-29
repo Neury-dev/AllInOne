@@ -19,8 +19,8 @@
     color: var(--n-color);
     background-color: inherit;
     float: left;
-    border: none;
-    outline: none;
+    /*border: none;*/
+    /*outline: none;*/
     padding: 14px 16px;
     font-size: 1.0625em;
 }
