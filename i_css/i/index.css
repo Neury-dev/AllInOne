@@ -167,7 +167,7 @@
     font-size: 0.70em;
 }
 .n-grid > .area-3 > article.trasladar {
-    transform: translate(0.75em, 0em);
+    /*transform: translate(0.75em, 0em);*/
 }
 /*
     Diapositiva
@@ -191,6 +191,7 @@
     float: left;
     width: 200px;
     height: 350px;
+    shape-margin: 0.75em;
 }
 .area-3 > img.slide-1 {
     shape-outside: url(i_img/i/blob-1.png);

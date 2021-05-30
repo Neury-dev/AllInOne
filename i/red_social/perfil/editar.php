@@ -110,42 +110,43 @@ Edición del perfil
                     <input type="file" name="foto" id="foto">
                     <label for="portada">Portada</label>
                     <input type="file" name="portada" id="portada">
-                    <button type="submit" name="editar" id="editar" value="Editar">Editar Tu Figura</button>
+                    <button type="submit" name="editar" value="Editar">Editar Como Te Vez</button>
                 </form>
             </section>
             <section>
                 <h5 class="titulo">Intereses</h5>
-                <form action="" method="POST" name="form" id="form">
+                <form action="" method="POST" name="interes" id="interes">
                     <label for="intereses" hidden="">Intereses</label>
                     <select name="intereses" id="intereses">
                         <option value="">Escoger interes</option>
                     </select>
-                    <button type="submit" name="interes" id="interes" value="Interes">Escoger Intereses</button>
+                    <button type="submit" name="editar-interes" value="Editar Interes">Escoger Interes</button>
                 </form>
             </section>
             <section>
-                <h5 class="titulo">Datos</h5>
-                <form action="" method="POST" name="form" id="form">
+                <h5 class="titulo">Datos <small class="res-datos"></small></h5>
+                <form action="" method="POST" name="datos" id="datos">
                     <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre" id="nombre" placeholder="Ingresar nombre...">
+                        <input type="text" name="nombre" id="nombre" required="">
                     <label for="apellido">Apellido</label>
-                        <input type="text" name="apellido" id="apellido" placeholder="Ingresar pellido...">
+                        <input type="text" name="apellido" id="apellido" required="">
                     <label for="correo">Correo</label>
                         <input type="email" name="correo" id="correo" disabled="">
                     <label for="numero">Celular</label>
-                        <input type="tel" name="numero" id="numero" placeholder="Ingresar numero...">
-                    <label for="estado">Genero</label>
-                    <select name="genero" id="genero">
-                        <option value="Soltero">Soltero</option>
-                        <option value="Casado">Casado</option>
+                        <input type="tel" name="numero" id="numero">
+                    <label for="sexo">Sexo</label>
+                    <select name="sexo" id="sexo">
+                        <option value="" class="sexo"></option>
+                        <option value="Hombre">Hombre</option>
+                        <option value="Mujer">Mujer</option>
                     </select>
                     <label for="nacimiento">Cumpleaños</label>
                         <input type="date" name="nacimiento" id="nacimiento">
                     <label for="pais">País</label>
                     <select name="pais" id="pais">
-                        <option value="">Escoger país</option>
+                        <option value="" class="pais"></option>
                     </select>
-                    <button type="submit" name="editar" id="editar" value="Editar">Editar Datos</button>
+                    <button type="submit" name="editar-datos" value="Editar Datos">Editar Datos</button>
                 </form>
             </section>
             <section>
@@ -155,7 +156,7 @@ Edición del perfil
                         <input type="file" name="codigo" id="codigo">
                     <label for="codigo-nuevo">Contraseña nueva</label>
                         <input type="file" name="codigo-nuevo" id="codigo-nuevo">
-                    <button type="submit" name="editar" id="editar" value="Editar">Editar Contraseña</button>
+                    <button type="submit" name="editar" value="Editar">Editar Contraseña</button>
                 </form>
             </section>
         </section>
@@ -212,6 +213,7 @@ Datos del perfil
 <script src="../../../l/red_social/i/header.js" async=""></script>
 <script src="../../../l/red_social/l/perfil/perfil.js" async=""></script>
 <script src="../../../l/red_social/l/perfil/edicion.js" defer=""></script>
+<!--<script src="../../../l/red_social/i/editar.js" defer=""></script>-->
 <script>
    
 

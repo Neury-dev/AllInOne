@@ -9,6 +9,14 @@
 }
 .n-grid > .area-3 > section { margin: 0em 6em 0em 6em; }
 .n-grid > .area-3 > section > h5 { border-bottom: 0.10em solid var(--n-color-dos-uno); }
+.n-grid > .area-3 > section > h5 > small {
+    color: var(--n-color-verde);
+    font-family: var(--n-fuente-tres);
+    font-weight: normal;
+    letter-spacing: normal;
+    /*transform: scaleY(1) !important;*/ 
+}
+.n-grid > .area-3 > section > h5 > small > span { color: var(--n-color-rojo); }
 .n-grid > .area-3 > section > form > label, 
 .n-grid > .area-3 > section > form > input, 
 .n-grid > .area-3 > section > form > select,
