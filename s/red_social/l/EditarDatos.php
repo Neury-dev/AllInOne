@@ -7,15 +7,16 @@ class EditarDatos {
     
     public function 
     deEdicion() {
-        if (isset($_POST['editar-datos'])) {
-            $nombre     = $_POST["nombre"];
-            $apellido   = $_POST['apellido'];
-            $correo     = $_POST['correo'];
-            $numero     = $_POST['numero'];
-            $sexo       = $_POST["sexo"];
-            $nacimiento = $_POST['nacimiento'];
-            $pais       = $_POST['pais'];
-
+        $nombre     = $_POST["nombre"];
+        $apellido   = $_POST['apellido'];
+        $correo     = $_POST['correo'];
+        $numero     = $_POST['numero'];
+        $sexo       = $_POST["sexo"];
+        $nacimiento = $_POST['nacimiento'];
+        $pais       = $_POST['pais'];
+        $editar     = $_POST['editar-datos'];
+        
+        if (isset($editar)) {
             $this->sql = $GLOBALS["base"]->conexion-> 
                 query("UPDATE `Usuarios` SET "
                     . "`nombre`='$nombre',"
@@ -28,11 +29,10 @@ class EditarDatos {
 
             echo !empty($this->sql) ? "Actualizados." : "<span>No actualizados.</span>";
         } else {
-            echo "<span>No se a podido actualizar los datos.<span>";
+            echo "<span>No ha actualizado los datos.<span>";
         }
     }
 }
 
 $ejecutarEditarDatos = new EditarDatos();
 $editarDatos = $ejecutarEditarDatos->deEdicion();
-?>

@@ -105,16 +105,16 @@ Edición del perfil
         <section class="area-3">
             <section>
                 <h5 class="titulo">Foto y Portada</h5>
-                <form action="" method="POST" name="form" id="form" enctype="multipart/form-data">
+                <form action="" method="POST" name="fotos" id="fotos" enctype="multipart/form-data">
                     <label for="foto">Foto</label>
                     <input type="file" name="foto" id="foto">
                     <label for="portada">Portada</label>
                     <input type="file" name="portada" id="portada">
-                    <button type="submit" name="editar" value="Editar">Editar Como Te Vez</button>
+                    <button type="submit" name="editar-foto" value="Editar Foto">Editar Como Te Vez</button>
                 </form>
             </section>
             <section>
-                <h5 class="titulo">Intereses</h5>
+                <h5 class="titulo">Intereses  <small class="res-intereses"></small></h5>
                 <form action="" method="POST" name="interes" id="interes">
                     <label for="intereses" hidden="">Intereses</label>
                     <select name="intereses" id="intereses">
@@ -151,12 +151,12 @@ Edición del perfil
             </section>
             <section>
                 <h5 class="titulo">Contraseña</h5>
-                <form action="" method="POST" name="form" id="form">
-                    <label for="codigo">Contraseña antigua</label>
-                        <input type="file" name="codigo" id="codigo">
-                    <label for="codigo-nuevo">Contraseña nueva</label>
-                        <input type="file" name="codigo-nuevo" id="codigo-nuevo">
-                    <button type="submit" name="editar" value="Editar">Editar Contraseña</button>
+                <form action="" method="POST" name="codigo" id="codigo">
+                    <label for="actual">Contraseña actual</label>
+                        <input type="password" name="actual" id="actual">
+                    <label for="nueva">Contraseña nueva</label>
+                        <input type="password" name="nueva" id="nueva">
+                    <button type="submit" name="editar-codigo" value="Editar Codigo">Editar Contraseña</button>
                 </form>
             </section>
         </section>

@@ -33,21 +33,20 @@
 .n-grid > .area-3 > section > .contenido {
     display: none;
     padding: 0.50em;
-    animation: fadeEffect 1s;
 }
 .n-grid > .area-3 > section > .contenido > .cerrar {
     float: right;
     background-color: var(--n-color);
-    font-size: 2em;
 }
-.n-grid > .area-3 > section > .contenido > .cerrar:hover { color: var(--n-color-rojo); }
-
-@keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
+.n-grid > .area-3 > section > .contenido > .cerrar > .flechas {
+    border: solid var(--n-color-dos);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
 }
+.n-grid > .area-3 > section > .contenido > .cerrar > .flechas:hover {  border: solid var(--n-color-rojo); }
 .n-grid > .area-3 > section > div > form {
-    margin-top: 2.50em;
+    margin-top: 1.50em;
 }
 .n-grid > .area-3 > section > .contenido > #form-articulo > .etiqueta {
     color: var(--n-color-dos);

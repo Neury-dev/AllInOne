@@ -1,4 +1,5 @@
-const formDatos       = document.querySelector("#datos");
+const formDatos         = document.querySelector("#datos");
+var   resDatos          = document.querySelector(".n-grid > .area-3 > section > h5 > .res-datos");
 const editarNombre      = document.querySelector("#nombre");
 const editarApellido    = document.querySelector("#apellido");
 const editarCorreo      = document.querySelector("#correo");
@@ -7,7 +8,8 @@ const editarSexo        = document.querySelector("#sexo > .sexo");
 const editarNacimiento  = document.querySelector("#nacimiento");
 const editarPais        = document.querySelector("#pais > .pais");
 const editarFecha       = document.querySelector("#fecha");
-var   resDatos          = document.querySelector(".n-grid > .area-3 > section > h5 > .res-datos");
+const formIntereses     = document.querySelector("#interes");
+var   resIntereses      = document.querySelector(".n-grid > .area-3 > section > h5 > .res-intereses");
 
 var jsonObject;
 /*
@@ -64,6 +66,33 @@ document.querySelector("#pais").addEventListener('click', Paises.delPlaneta());
 --------------------------------------------------------------------------------*/
 class Editar {
     static
+    intereses() {
+        let intereses       = document.forms["interes"]["intereses"].value;
+        let editarInteres   = document.forms["interes"]["editar-interes"].value;
+
+        let datos           = new FormData(formIntereses);
+
+        datos.append('intereses', intereses);
+        datos.append('editar-interes', editarInteres);
+
+        fetch('../../../s/red_social/l/EditarIntereses.php', {
+            method: 'POST',
+            body: datos
+        }).then(function(response) {
+            if(response.ok) { 
+                return response.text(); 
+            } else { 
+                throw "Error con la respuesta."; 
+            }
+        }).then(function(texto) {
+            console.log(texto);
+            resIntereses.innerHTML = texto;
+            leer();
+        }).catch(function(error) {
+            console.log(error);
+        });
+    }
+    static
     datos() {
         let nombre      = document.forms["datos"]["nombre"].value;
         let apellido    = document.forms["datos"]["apellido"].value;
@@ -95,7 +124,6 @@ class Editar {
                 throw "Error con la respuesta."; 
             }
         }).then(function(texto) {
-            console.log(texto);
             resDatos.innerHTML = texto;
             leer();
         }).catch(function(error) {
@@ -103,10 +131,15 @@ class Editar {
         });
     }
 }
+formIntereses.addEventListener('submit', function(e) {
+    e.preventDefault();
+    Editar.intereses(); 
+});
 formDatos.addEventListener('submit', function(e) {
     e.preventDefault();
     Editar.datos(); 
 });
+
 
 
 
@@ -149,7 +182,7 @@ formDatos.addEventListener('submit', function(e) {
 leer();
 /* intereses 
 --------------------------------------------------------------------------------*/
-var intereses = ["Agua","Arroz"];
+var intereses = ["11", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 
 class Intereses {
     static

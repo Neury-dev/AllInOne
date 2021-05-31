@@ -7,11 +7,12 @@
     <link rel="icon" href="http://localhost/AllInOne/i_img/i/neury-dev.jpg" type="image/jpg" sizes="16x16">
     <!--CSS-->
     <link rel="stylesheet" href="http://localhost/AllInOne/i_css/i/root.css" />
-    <link rel="stylesheet" href="../../i_css/red_social/header.css">
-    <link rel="stylesheet" href="../../i_css/red_social/perfil/perfil.css"/>
-    <link rel="stylesheet" href="../../i_css/red_social/perfil/nav.css"/>
-    <link rel="stylesheet" href="../../i_css/red_social/perfil/menu.css"/>
-    <link rel="stylesheet" href="../../i_css/red_social/perfil/article.css"/>
+    <link rel="stylesheet" href="../../i_css/red_social/header.css" />
+    <link rel="stylesheet" href="../../i_css/red_social/perfil/perfil.css" />
+    <link rel="stylesheet" href="../../i_css/red_social/perfil/nav.css" />
+    <link rel="stylesheet" href="../../i_css/red_social/perfil/menu.css" />
+    <link rel="stylesheet" href="../../i_css/red_social/perfil/article.css" />
+    <link rel="stylesheet" href="../../i_css/i/flechas.css" />
     <!--Iconos-->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
@@ -115,7 +116,7 @@ nav
                     <button class="enlace" onclick="Menu.abrir(event, 'n-video')"><i class='fas fa-video'></i></button>
                 </section>  
                 <div id="n-articulo" class="contenido">
-                    <button class="cerrar" onclick="Menu.cerrar()">&times</button>
+                    <button class="cerrar" onclick="Menu.cerrar()"><i class="flechas up"></i></button>
                     <form action="../../s/red_social/Publicar.php" method="POST" name="form-articulo" id="form-articulo" enctype="multipart/form-data">
                         <label for="articulo" class="etiqueta">Publicación</label>
                         <textarea name="publicacion" id="publicacion" rows="5" cols="10" placeholder="Publicación..." required=""></textarea>
@@ -127,7 +128,7 @@ nav
                 </div>
 
                 <div id="n-imagen" class="contenido">
-                    <button class="cerrar" onclick="Menu.cerrar()">&times</button>
+                    <button class="cerrar" onclick="Menu.cerrar()"><i class="flechas up"></i></button>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form" id="form" enctype="multipart/form-data">
                         <label for="imagen" class="cargar-archivo">Seleccionar Imagen</label>
                         <input type="file" name="imagen" id="imagen" hidden="">
@@ -136,7 +137,7 @@ nav
                     </form>
                 </div>
                 <div id="n-audio" class="contenido">
-                    <button class="cerrar" onclick="Menu.cerrar()">&times</button>
+                    <button class="cerrar" onclick="Menu.cerrar()"><i class="flechas up"></i></button>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form" id="form" enctype="multipart/form-data">
                         <label for="audio" class="cargar-archivo">Seleccionar Audio</label>
                         <input type="file" name="audio" id="audio" hidden="">
@@ -145,7 +146,7 @@ nav
                     </form>
                 </div>
                 <div id="n-video" class="contenido">
-                    <button class="cerrar" onclick="Menu.cerrar()">&times</button>
+                    <button class="cerrar" onclick="Menu.cerrar()"><i class="flechas up"></i></button>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form" id="form" enctype="multipart/form-data">
                         <label for="video" class="cargar-archivo">Seleccionar Video</label>
                         <input type="file" name="video" id="video" hidden="">
