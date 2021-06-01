@@ -106,6 +106,9 @@ nav
                 </ul>
             </nav>
         </section>
+<!------------------------------------------------------------------------------
+Publicar
+------------------------------------------------------------------------------->
         <section class="area-3">
             <section>
                 <h5 class="titulo">Publicar?</h5>
@@ -117,13 +120,13 @@ nav
                 </section>  
                 <div id="n-articulo" class="contenido">
                     <button class="cerrar" onclick="Menu.cerrar()"><i class="flechas up"></i></button>
-                    <form action="../../s/red_social/Publicar.php" method="POST" name="form-articulo" id="form-articulo" enctype="multipart/form-data">
-                        <label for="articulo" class="etiqueta">Publicación</label>
-                        <textarea name="publicacion" id="publicacion" rows="5" cols="10" maxlength='140' placeholder="Publicación..." required=""></textarea>
+                    <form action="" method="POST" name="todo" id="todo" enctype="multipart/form-data">
+                        <label for="publicacion" class="etiqueta">Publicación</label>
+                        <textarea name="publicacion" id="publicacion" rows="3" cols="10" maxlength='140' placeholder="Publicación..." required=""></textarea>
                         <label for="imagen" class="cargar-archivo">Seleccionar Imagen</label>
                         <input type="file" name="imagen" id="imagen" hidden="" required="">
                         <input type="text" disabled="">
-                        <button type="submit" name="subir" id="subir" value="Articulo">Subir</button>
+                        <button type="submit" name="publicar-todo" id="publicar-todo" value="Publicar Todo">Publicar</button>
                     </form>
                 </div>
 
@@ -210,6 +213,7 @@ nav
 <script src="../../l/red_social/l/perfil.js" async=""></script>
 <script src="../../l/red_social/i/menu.js" defer=""></script>
 <script src="../../l/red_social/l/publicacion.js" defer=""></script>
+<script src="../../l/red_social/l/publicar.js" defer=""></script>
 <script>
 //var boton = document.querySelector(".n-img-perfil-header");
 //

@@ -71,7 +71,7 @@ class Obtener {
                 salida += "<form action='' method='POST' name='compartir" + jsonObject[i].id + "' id='compartir" + jsonObject[i].id + "'>";
                     salida += "<input type='text' hidden='' name='compartido' value='" + jsonObject[i].id + "'>";
                     salida += "<input type='text' hidden='' name='nombre' value='" + jsonObject[i].nombre + "'>";
-                    salida += "<input type='text' hidden='' name='usuario' value='" + jsonObject[i].idUsuario + "'>";
+                    salida += "<input type='text' hidden='' name='usuario' value='" + jsonObject[i].yo + "'>";
                     salida += "<input type='text' hidden='' name='articulo' value='" + jsonObject[i].publicacion + "'>"
                     salida += "<input type='text' hidden='' name='imagen' value='" + jsonObject[i].imagen + "'>";
                     salida += "<button type='submit' name='compartir-boton' value='No' onclick='compartir(" + jsonObject[i].id + ")'>";
@@ -107,7 +107,7 @@ salida += "<!-- Comentarios -->";
                 salida += "</section>";
 
                 salida += "<form action='' method='POST' name='comentario" + jsonObject[i].id + "' id='comentario" + jsonObject[i].id + "'>";
-                    salida += "<input type='text' hidden='' name='usuario' value='" + jsonObject[i].idUsuario + "'>";
+                    salida += "<input type='text' hidden='' name='usuario' value='" + jsonObject[i].yo + "'>";
                     salida += "<input type='text' hidden='' name='publicacion' value='" + jsonObject[i].id + "'>";
                     salida += "<textarea name='comentario' placeholder='Comentar...' rows='2' maxlength='98'></textarea>";
                     salida += "<button type='submit' name='comentar' id='comentar' value='Comentar'"; 

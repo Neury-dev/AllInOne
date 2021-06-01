@@ -1,10 +1,12 @@
 <?php
 session_start();
 require_once '../../Conexion.php';
-//class Publicar {
-//    //put your code here
-//}
-if(isset($_POST["subir"])) {
+
+echo "dentro";
+
+if(isset($_POST["publicar-todo"])) {
+    
+echo "dentro";
 
     $imagen         = $_FILES['imagen']['tmp_name'];
     $imagen_tipo    = exif_imagetype($_FILES['imagen']['tmp_name']);
@@ -62,6 +64,8 @@ if(isset($_POST["subir"])) {
             } 
             
             if ($_FILES['imagen']['tmp_name']) {
+                echo "Publicación: " . $descripcion . "<br>";
+                
                 $sql = $GLOBALS["base"]->conexion-> 
                 query("INSERT INTO "
                     . "`Publicaciones`("
@@ -89,11 +93,12 @@ if(isset($_POST["subir"])) {
 
                 if ($sql === true) {
                     echo "Imagen final: " . $namefinal.$ext . "<br>";
+                    
                     $sql3 = $GLOBALS["base"]->conexion-> 
-                    query("INSERT INTO `Imagenes`(`idUsuario`, `idPublicacion`, `imagen`, `fecha`) "
+                    query("INSERT INTO `Imagenes`(`yo`, `publicacion`, `imagen`, `fecha`) "
                     . "VALUES ('".$_SESSION["johnDoe"]."', '".$GLOBALS["base"]->conexion->insert_id."', '".$namefinal.$ext."', NOW())"); 
                     
-                    header("Location: http://localhost/AllInOne/i/red_social/perfil.php");
+                     echo !empty($sql3) ? "Hecho" : "<span>No hecho</span>";
                 }
             }
         }
