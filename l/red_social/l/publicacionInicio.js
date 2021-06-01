@@ -109,7 +109,7 @@ salida += "<!-- Comentarios -->";
                 salida += "<form action='' method='POST' name='comentario" + jsonObject[i].id + "' id='comentario" + jsonObject[i].id + "'>";
                     salida += "<input type='text' hidden='' name='usuario' value='" + jsonObject[i].idUsuario + "'>";
                     salida += "<input type='text' hidden='' name='publicacion' value='" + jsonObject[i].id + "'>";
-                    salida += "<textarea name='comentario' placeholder='Comentar...' rows='2' maxlength='140'></textarea>";
+                    salida += "<textarea name='comentario' placeholder='Comentar...' rows='2' maxlength='98'></textarea>";
                     salida += "<button type='submit' name='comentar' id='comentar' value='Comentar'"; 
                         salida += "onclick='comentado(" + jsonObject[i].id + ")'>";
                         salida += "<i id='comentar-icono' class='fa fa-comment'></i>";

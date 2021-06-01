@@ -119,7 +119,7 @@ nav
                     <button class="cerrar" onclick="Menu.cerrar()"><i class="flechas up"></i></button>
                     <form action="../../s/red_social/Publicar.php" method="POST" name="form-articulo" id="form-articulo" enctype="multipart/form-data">
                         <label for="articulo" class="etiqueta">Publicación</label>
-                        <textarea name="publicacion" id="publicacion" rows="5" cols="10" placeholder="Publicación..." required=""></textarea>
+                        <textarea name="publicacion" id="publicacion" rows="5" cols="10" maxlength='140' placeholder="Publicación..." required=""></textarea>
                         <label for="imagen" class="cargar-archivo">Seleccionar Imagen</label>
                         <input type="file" name="imagen" id="imagen" hidden="" required="">
                         <input type="text" disabled="">
