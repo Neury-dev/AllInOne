@@ -72,7 +72,7 @@
 -->
         <section class="area-1">
             <main>
-                <img src="../../../i_img/red_social/i/app.jpg" class="portada" alt="alt"/>
+                <img src="../../../i_img/red_social/i/foto.jpg" class="portada" alt="alt"/>
                 <section class="contenedor">
                     <img class="foto" alt=""/>
                     <section class="perfil-nav">

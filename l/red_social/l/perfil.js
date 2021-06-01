@@ -1,17 +1,16 @@
-var nombre, apellido, nacimiento, correo, codigo, numero, sexo, estado, pais, ciudad, fecha, foto;
-
-nombre      = document.querySelector(".nombre");
-apellido    = document.querySelector(".apellido");
-nacimiento  = document.querySelector(".nacimiento");
-correo      = document.querySelector(".correo");
-codigo      = document.querySelector(".codigo");
-numero      = document.querySelector(".numero");
-sexo        = document.querySelector(".sexo");
-estado      = document.querySelector(".estado");
-pais        = document.querySelector(".pais");
-ciudad      = document.querySelector(".ciudad");
-fecha       = document.querySelector(".fecha");
-foto        = document.querySelector("img.foto");
+var nombre      = document.querySelector(".nombre");
+var apellido    = document.querySelector(".apellido");
+var nacimiento  = document.querySelector(".nacimiento");
+var correo      = document.querySelector(".correo");
+var codigo      = document.querySelector(".codigo");
+var numero      = document.querySelector(".numero");
+var sexo        = document.querySelector(".sexo");
+var estado      = document.querySelector(".estado");
+var pais        = document.querySelector(".pais");
+var ciudad      = document.querySelector(".ciudad");
+var fecha       = document.querySelector(".fecha");
+var foto        = document.querySelector("img.foto");
+var portada     = document.querySelector("img.portada");
 
 fetch('../../s/red_social/l/Sesion.php', {
     method: 'GET'
@@ -31,6 +30,7 @@ fetch('../../s/red_social/l/Sesion.php', {
     ciudad.innerHTML        = json[0].ciudad;
 //    fecha.innerHTML         = json[0].fecha;
     foto.src                = '../../i_img/red_social/i/' + json[0].foto;
+    portada.src             = '../../i_img/red_social/i/' + json[0].portada;
 }).catch(function (err) {
     console.log('Fetch problem: ' + err.message);
 });

@@ -10,6 +10,10 @@ const editarPais        = document.querySelector("#pais > .pais");
 const editarFecha       = document.querySelector("#fecha");
 const formIntereses     = document.querySelector("#interes");
 var   resIntereses      = document.querySelector(".n-grid > .area-3 > section > h5 > .res-intereses");
+const formCodigo        = document.querySelector("#codigo");
+var   resCodigo         = document.querySelector(".n-grid > .area-3 > section > h5 > .res-codigo");
+const formEliminar      = document.querySelector("#eliminar");
+var   resEliminar       = document.querySelector(".n-grid > .area-3 > section > h5 > .res-eliminar");
 
 var jsonObject;
 /*
@@ -130,6 +134,68 @@ class Editar {
             console.log(error);
         });
     }
+    static
+    codigo() {
+        let nueva           = document.forms["codigo"]["nueva"].value;
+        let repetir         = document.forms["codigo"]["repetir"].value;
+        let editarCodigo    = document.forms["codigo"]["editar-codigo"].value;
+
+        let datos           = new FormData(formCodigo);
+
+        datos.append('nueva', nueva);
+        datos.append('repetir', repetir);
+        datos.append('editar-codigo', editarCodigo);
+
+        fetch('../../../s/red_social/l/EditarCodigo.php', {
+            method: 'POST',
+            body: datos
+        }).then(function(response) {
+            if(response.ok) { 
+                return response.text(); 
+            } else { 
+                throw "Error con la respuesta."; 
+            }
+        }).then(function(texto) {
+            resCodigo.innerHTML = texto;
+            leer();
+        }).catch(function(error) {
+            console.log(error);
+        });
+    }
+    static
+    eliminar() {
+        let correo          = document.forms["eliminar"]["correo"].value;
+        let codigo          = document.forms["eliminar"]["codigo"].value;
+        let editarEliminar  = document.forms["eliminar"]["editar-eliminar"].value;
+
+        let datos           = new FormData(formEliminar);
+
+        datos.append('correo', correo);
+        datos.append('codigo', codigo);
+        datos.append('editar-eliminar', editarEliminar);
+
+        fetch('../../../s/red_social/l/EditarEliminar.php', {
+            method: 'POST',
+            body: datos
+        }).then(function(response) {
+            if(response.ok) { 
+                return response.text(); 
+            } else { 
+                throw "Error con la respuesta."; 
+            }
+        }).then(function(texto) {
+            formEliminar.reset();
+            resEliminar.innerHTML = texto;
+
+            if (resEliminar.innerHTML.length === 7) {
+                setTimeout(function(){ 
+                    window.location = "http://localhost/AllInOne/s/CerrarSesion.php";
+                }, 2000);
+            }
+        }).catch(function(error) {
+            console.log(error);
+        });
+    }
 }
 formIntereses.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -138,6 +204,14 @@ formIntereses.addEventListener('submit', function(e) {
 formDatos.addEventListener('submit', function(e) {
     e.preventDefault();
     Editar.datos(); 
+});
+formCodigo.addEventListener('submit', function(e) {
+    e.preventDefault();
+    Editar.codigo(); 
+});
+formEliminar.addEventListener('submit', function(e) {
+    e.preventDefault();
+    Editar.eliminar(); 
 });
 
 

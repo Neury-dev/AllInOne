@@ -76,9 +76,9 @@ main
 ------------------------------------------------------------------------------->
         <section class="area-1">
             <main>
-                <img src="../../i_img//red_social/i/app.jpg" class="portada" alt="alt"/>
+                <img class="portada" alt="portada"/>
                 <section class="contenedor">
-                    <img class="foto" alt=""/>
+                    <img class="foto" alt="foto"/>
                     <!--<h2>Neury E. Aguasvivas L.</h2>-->
                     <section class="perfil-nav">
                         <!--<button><i class='fas fa-user-friends'></i></button>-->

@@ -33,7 +33,7 @@
                 </form>
             </section>
             <section class="columna">
-                <form action="s/red_social/Registrar.php" method="POST" autocomplete=""> 
+                <form action="s/red_social/s/Registrar.php" method="POST" autocomplete=""> 
                    <h3 class="titulo">Registrarse</h3>
                     <section class="input-contenedor">
                         <i class="fas fa-envelope-open-text"></i>

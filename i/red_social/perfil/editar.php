@@ -69,9 +69,9 @@ main
 ------------------------------------------------------------------------------->
         <section class="area-1">
             <main>
-                <img src="../../../i_img/red_social/i/app.jpg" class="portada" alt="alt"/>
+                <img class="portada" alt="portada"/>
                 <section class="contenedor">
-                    <img class="foto" alt="alt"/>
+                    <img class="foto" alt="foto"/>
                     <!--<h2>Neury E. Aguasvivas L.</h2>-->
 <!--                    <section class="perfil-nav">
                         <button><i class='fas fa-user-friends'></i></button>
@@ -150,13 +150,23 @@ Edición del perfil
                 </form>
             </section>
             <section>
-                <h5 class="titulo">Contraseña</h5>
+                <h5 class="titulo">Contraseña  <small class="res-codigo"></small></h5>
                 <form action="" method="POST" name="codigo" id="codigo">
-                    <label for="actual">Contraseña actual</label>
-                        <input type="password" name="actual" id="actual">
                     <label for="nueva">Contraseña nueva</label>
                         <input type="password" name="nueva" id="nueva">
+                    <label for="repetir">Repetir contraseña</label>
+                        <input type="password" name="repetir" id="repetir">
                     <button type="submit" name="editar-codigo" value="Editar Codigo">Editar Contraseña</button>
+                </form>
+            </section>
+            <section>
+                <h5 class="titulo">Eliminar Cuenta  <small class="res-eliminar"></small></h5>
+                <form action="" method="POST" name="eliminar" id="eliminar">
+                    <label for="correo">Correo</label>
+                        <input type="email" name="correo" id="correo">
+                    <label for="codigo">Contraseña</label>
+                        <input type="password" name="codigo" id="codigo">
+                    <button type="submit" name="editar-eliminar" value="Editar Eliminar">Eliminar Cuenta</button>
                 </form>
             </section>
         </section>
