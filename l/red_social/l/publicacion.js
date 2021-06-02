@@ -1,15 +1,20 @@
 var jsonObject;
 
-fetch('../../s/red_social/l/Publicacion.php').then(function (response) {
-    return response.json();
-}).then(function (json) {
-    jsonObject = json;
+class Publicacion {
+    static
+    yo() {
+        fetch('../../s/red_social/l/Publicacion.php').then(function (response) {
+            return response.json();
+        }).then(function (json) {
+            jsonObject = json;
 
-    Obtener.publicacion();
-}).catch(function (err) {
-    console.log('Fetch problem: ' + err.message);
-});
-
+            Obtener.publicacion();
+        }).catch(function (err) {
+            console.log('Fetch problem: ' + err.message);
+        });
+    }
+}
+Publicacion.yo();
 class Obtener {
     static
     publicacion() {

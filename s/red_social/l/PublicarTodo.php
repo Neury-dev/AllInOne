@@ -1,14 +1,8 @@
 <?php
 session_start();
 require_once '../../Conexion.php';
-header("Content-Type: application/x-www-form-urlencoded; charset=UTF-8");
-
-echo "dentro";
 
 if(isset($_POST["publicar-todo"])) {
-    
-echo "dentro";
-
     $imagen         = $_FILES['imagen']['tmp_name'];
     $imagen_tipo    = exif_imagetype($_FILES['imagen']['tmp_name']);
     
@@ -65,8 +59,6 @@ echo "dentro";
             } 
             
             if ($_FILES['imagen']['tmp_name']) {
-                echo "Publicación: " . $descripcion . "<br>";
-                
                 $sql = $GLOBALS["base"]->conexion-> 
                 query("INSERT INTO "
                     . "`Publicaciones`("
@@ -93,8 +85,6 @@ echo "dentro";
                     . ")"); 
 
                 if ($sql === true) {
-                    echo "Imagen final: " . $namefinal.$ext . "<br>";
-                    
                     $sql3 = $GLOBALS["base"]->conexion-> 
                     query("INSERT INTO `Imagenes`(`yo`, `publicacion`, `imagen`, `fecha`) "
                     . "VALUES ('".$_SESSION["johnDoe"]."', '".$GLOBALS["base"]->conexion->insert_id."', '".$namefinal.$ext."', NOW())"); 

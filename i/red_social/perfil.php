@@ -120,7 +120,7 @@ Publicar
                 </section>  
                 <div id="n-articulo" class="contenido">
                     <button class="cerrar" onclick="Menu.cerrar()"><i class="flechas up"></i></button>
-                    <form action="" method="POST" name="todo" id="todo" enctype="multipart/form-data" onsubmit="loadDoc()">
+                    <form action="" method="POST" name="todo" id="todo" enctype="multipart/form-data">
                         <label for="publicacion" class="etiqueta">Publicación</label>
                         <textarea name="publicacion" id="publicacion" rows="3" cols="10" maxlength='140' placeholder="Publicación..." required=""></textarea>
                         <label for="imagen" class="cargar-archivo">Seleccionar Imagen</label>
@@ -213,73 +213,6 @@ Publicar
 <script src="../../l/red_social/l/perfil.js" async=""></script>
 <script src="../../l/red_social/i/menu.js" defer=""></script>
 <script src="../../l/red_social/l/publicacion.js" defer=""></script>
-<!--<script src="../../l/red_social/l/publicar.js" defer=""></script>-->
-<script>
-function 
-loadDoc() {
-    let publicacion     = document.forms["todo"]["publicacion"].value;
-    let imagen          = document.forms["todo"]["imagen"].files[0];
-    let publicarTodo    = document.forms["todo"]["publicar-todo"].value;
-//    let publicacion     = document.getElementById("publicacion").value;
-//    let imagen          = document.getElementById("imagen").value;
-//    let publicarTodo    = document.getElementById("publicar-todo").value;
-        
-    var xhttp = new XMLHttpRequest();
-  
-    xhttp.onreadystatechange = function() {
-        if (this.readyState === 4 && this.status === 200) {
-//            document.getElementById("demo").innerHTML = this.responseText;
-            console.log("Res " + this.responseText);
-        }
-    };
-  
-    xhttp.open("POST", "../../../s/red_social/l/PublicarTodo.php", true);
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("publicacion="+encodeURIComponent(publicacion) +
-            "&imagen="+encodeURIComponent(imagen)+
-            "&publicar-todo="+encodeURIComponent(publicarTodo)
-    );
-}
-</script>
-<script>
-//var boton = document.querySelector(".n-img-perfil-header");
-//
-//class HeaderNav {
-//    
-//    contructor(ejecutar) {
-//        ejecutar.onclick = function() {
-//            var dropdowns = document.getElementsByClassName("dropdown-content");
-//        var i;
-//        for (i = 0; i < dropdowns.length; i++) {
-//          var openDropdown = dropdowns[i];
-//          if (openDropdown.classList.contains('display')) {
-//            openDropdown.classList.remove('display');
-//          }
-//        }
-//        };
-//        
-//    }
-//    
-////    function headerNav() {
-////        document.getElementById("myDropdown").classList.toggle("display");
-////    }
-//}
-////new HeaderNav(boton);
-//let eje = new HeaderNav(boton);
-
-
-//window.onclick = function(event) {
-//  if (!event.target.matches('.dropbtn')) {
-//    var dropdowns = document.getElementsByClassName("dropdown-content");
-//    var i;
-//    for (i = 0; i < dropdowns.length; i++) {
-//      var openDropdown = dropdowns[i];
-//      if (openDropdown.classList.contains('display')) {
-//        openDropdown.classList.remove('display');
-//      }
-//    }
-//  }
-//}
-</script>
+<script src="../../l/red_social/l/publicar.js" defer=""></script>
 </body>
 </html>

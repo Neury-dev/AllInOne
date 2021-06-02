@@ -1,9 +1,5 @@
 const formTodo = document.querySelector('#todo');
 
-//var cabecera = new Headers();
-
-//cabecera.append('Content-Type', 'image/jpeg');
-
 class Publicar {
     static
     todo() {
@@ -12,23 +8,17 @@ class Publicar {
         let publicarTodo    = document.forms["todo"]["publicar-todo"].value;
 
         let datos           = new FormData(formTodo);
-
+        
         datos.append('publicacion', publicacion);
         datos.append('imagen', imagen);
         datos.append('publicar-todo', publicarTodo);
 
-        fetch('../../../s/red_social/l/PublicarTodo.php', {
+        fetch('../../s/red_social/l/PublicarTodo.php', {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
-//            mode: 'cors', // no-cors, *cors, same-origin
-//            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-//            credentials: 'same-origin', // include, *same-origin, omit
             headers: {
-////                'Content-Type': 'application/json',
-                'Content-Type': 'application/x-www-form-urlencoded'
+                'Content-Disposition' : 'form-data'
             },
-//            redirect: 'follow', // manual, *follow, error
-//            referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-            body: new FormData(formTodo)
+            body: datos
         }).then(function(response) {
             if(response.ok) { 
                 return response.text(); 
@@ -37,8 +27,7 @@ class Publicar {
             }
         }).then(function(texto) {
             formTodo.reset();
-//            resEliminar.innerHTML = texto;
-            console.log(texto);
+            Publicacion.yo();
         }).catch(function(error) {
             console.log(error);
         });
