@@ -8,28 +8,29 @@ class Publicacion {
     private $resultado;
     private $obtenidos;
 
-    public function time_ago($f) {
-        $diferencia = time() - $f;
+    public static function 
+    tiempoTranscurrido($fecha) {
+        $transcurrido = time() - $fecha;
 
-        if ($diferencia < 1) {
+        if ($transcurrido < 1) {
             return 'Justo ahora';
         }
 
-        $condicion = array(
+        $periodo = array(
             12 * 30 * 24 * 60 * 60  => 'año',
-            30 * 24 * 60 * 60       => 'mes',
+            30 * 24 * 60 * 60       => 'me',
             24 * 60 * 60            => 'dia',
-            60 * 60                 => 'horas',
-            60                      => 'minutos',
-            1                       => 'segundos',
+            60 * 60                 => 'hora',
+            60                      => 'minuto',
+            1                       => 'segundo',
         );
-        foreach ($condicion as $secs => $str) {
-            $d = $diferencia / $secs;
+        
+        foreach ($periodo as $pasado => $indice) {
+            $redondear = $transcurrido / $pasado;
 
-            if ($d >= 1) {
-                //redondear
-                $t = round($d);
-                return 'hace ' . $t . '' . $str . ($t > 1 ? 's' : '');
+            if ($redondear >= 1) {
+                $tiempo = round($redondear);
+                return 'Hace ' . $tiempo . ' ' . $indice . ($tiempo > 1 ? 's' : '');
             }
         }
     }
@@ -53,17 +54,12 @@ class Publicacion {
                 $this->resultado = $this->sql->fetch_all(MYSQLI_ASSOC);
 
                 foreach ($this->resultado as $imagen) {
-//                    $fecha = DateTime::createFromFormat('Y-m-d H:i:s', $valor['fecha']);
-                    
                     array_push($this->obtenidos, array(
-//                        "id"            => $valor["id"],
-//                        "yo"            => $valor["yo"],
                         "nombre"        => $yo["nombre"],
                         "foto"          => $yo["foto"],
                         "publicacion"   => $valor["publicacion"],
                         "imagen"        => $imagen["imagen"],
-//                        "fecha"         => $fecha->format('d M Y'),
-                        "fecha"         => time_ago(strtotime($valor['fecha'])),
+                        "fecha"         => self::tiempoTranscurrido(strtotime($valor['fecha'])),
                         "gustaSi"       => $valor["gustaSi"],
                         "gustaNo"       => $valor["gustaNo"],
                         "comentarios"   => $valor["comentarios"],

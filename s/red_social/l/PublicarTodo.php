@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once '../../Conexion.php';
+header("Content-Type: application/x-www-form-urlencoded; charset=UTF-8");
 
 echo "dentro";
 
