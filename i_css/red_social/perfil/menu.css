@@ -5,6 +5,13 @@
 .n-grid > .area-3 > section {
     margin: 0em 6em 0em 6em;
 }
+.n-grid > .area-3 > section > h5 > small {
+    color: var(--n-color-verde);
+    font-family: var(--n-fuente-tres);
+    font-weight: normal;
+    letter-spacing: normal;
+}
+.n-grid > .area-3 > section > h5 > small > span { color: var(--n-color-rojo); }
 .n-grid > .area-3 > section > .menu {
     background-color: var(--n-color-dos);
     border-radius: 2em;

@@ -111,7 +111,7 @@ Publicar
 ------------------------------------------------------------------------------->
         <section class="area-3">
             <section>
-                <h5 class="titulo">Publicar?</h5>
+                <h5 class="titulo">Publicar? <small id="res"></small></h5>
                 <section class="menu">
                     <button class="enlace" onclick="Menu.abrir(event, 'n-articulo')"><i class='fas fa-file-alt'></i></button>
                     <button class="enlace" onclick="Menu.abrir(event, 'n-imagen')"><i class='fas fa-images'></i></button>

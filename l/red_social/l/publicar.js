@@ -1,4 +1,5 @@
-const formTodo = document.querySelector('#todo');
+const formTodo  = document.querySelector('#todo');
+const res       = document.querySelector('#res');
 
 class Publicar {
     static
@@ -14,7 +15,7 @@ class Publicar {
         datos.append('publicar-todo', publicarTodo);
 
         fetch('../../s/red_social/l/PublicarTodo.php', {
-            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            method: 'POST',
             headers: {
                 'Content-Disposition' : 'form-data'
             },
@@ -23,11 +24,12 @@ class Publicar {
             if(response.ok) { 
                 return response.text(); 
             } else { 
-                throw "Error con la respuesta."; 
+                throw "Error de URL."; 
             }
         }).then(function(texto) {
             formTodo.reset();
             Publicacion.yo();
+            res.innerHTML = texto;
         }).catch(function(error) {
             console.log(error);
         });

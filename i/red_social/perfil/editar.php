@@ -114,7 +114,7 @@ Edición del perfil
                 </form>
             </section>
             <section>
-                <h5 class="titulo">Intereses  <small class="res-intereses"></small></h5>
+                <h5 class="titulo">Intereses <small class="res-intereses"></small></h5>
                 <form action="" method="POST" name="interes" id="interes">
                     <label for="intereses" hidden="">Intereses</label>
                     <select name="intereses" id="intereses">
