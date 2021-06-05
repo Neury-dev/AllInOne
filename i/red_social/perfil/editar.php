@@ -104,13 +104,13 @@ Edición del perfil
 ------------------------------------------------------------------------------->
         <section class="area-3">
             <section>
-                <h5 class="titulo">Foto y Portada</h5>
+                <h5 class="titulo">Foto y Portada <small class="res-fotos"></small></h5>
                 <form action="" method="POST" name="fotos" id="fotos" enctype="multipart/form-data">
                     <label for="foto">Foto</label>
                     <input type="file" name="foto" id="foto">
                     <label for="portada">Portada</label>
                     <input type="file" name="portada" id="portada">
-                    <button type="submit" name="editar-foto" value="Editar Foto">Editar Como Te Vez</button>
+                    <button type="submit" name="editar-fotos" value="Editar Fotos">Editar Como Te Vez</button>
                 </form>
             </section>
             <section>

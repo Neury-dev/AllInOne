@@ -25,7 +25,8 @@ class EditarDatos {
                     . "`numero`='$numero',"
                     . "`sexo`='$sexo',"
                     . "`nacimiento`='$nacimiento',"
-                    . "`pais`='$pais' WHERE id = '".$_SESSION['johnDoe']."'");
+                    . "`pais`='$pais' WHERE id = '".$_SESSION['johnDoe']."'"
+                . "");
 
             echo !empty($this->sql) ? "Actualizados." : "<span>No actualizados.</span>";
         } else {

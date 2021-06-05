@@ -8,6 +8,8 @@ const editarPais        = document.querySelector("#pais > .pais");
 const editarFecha       = document.querySelector("#fecha");
 
 
+const formFotos     = document.querySelector("#fotos");
+var   resFotos      = document.querySelector(".res-fotos");
 const formDatos     = document.querySelector("#datos");
 var   resDatos      = document.querySelector(".res-datos");
 const formIntereses = document.querySelector("#interes");
@@ -293,6 +295,37 @@ document.querySelector("#pais").addEventListener('click', Paises.delPlaneta());
 --------------------------------------------------------------------------------*/
 class Editar {
     static
+    fotos() {
+        let foto        = document.forms["fotos"]["foto"].files[0];
+        let portada     = document.forms["fotos"]["portada"].files[0];
+        let editarFoto  = document.forms["fotos"]["editar-foto"].value;
+
+        let datos           = new FormData(formFotos);
+
+        datos.append('foto', foto);
+        datos.append('portada', portada);
+        datos.append('editar-fotos', editarFoto);
+
+        fetch('../../../s/red_social/l/EditarFoto.php', {
+            method: 'POST',
+            headers: {
+                'Content-Disposition' : 'form-data'
+            },
+            body: datos
+        }).then(function(response) {
+            if(response.ok) { 
+                return response.text(); 
+            } else { 
+                throw "Error de URL"; 
+            }
+        }).then(function(texto) {
+            resFotos.innerHTML = texto;
+            leer();
+        }).catch(function(error) {
+            console.log(error);
+        });
+    }
+    static
     intereses() {
         let intereses       = document.forms["interes"]["intereses"].value;
         let editarInteres   = document.forms["interes"]["editar-interes"].value;
@@ -420,6 +453,10 @@ class Editar {
         });
     }
 }
+formFotos.addEventListener('submit', function(e) {
+    e.preventDefault();
+    Editar.fotos(); 
+});
 formIntereses.addEventListener('submit', function(e) {
     e.preventDefault();
     Editar.intereses(); 

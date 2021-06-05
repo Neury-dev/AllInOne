@@ -125,7 +125,7 @@ Publicar
                         <textarea name="publicacion" id="publicacion" rows="3" cols="10" maxlength='140' placeholder="Publicación..." required=""></textarea>
                         <label for="imagen" class="cargar-archivo">Seleccionar Imagen</label>
                         <input type="file" name="imagen" id="imagen" hidden="" required="">
-                        <input type="text" disabled="">
+                        <input type="text" disabled="" id="img-nombre">
                         <button type="submit" name="publicar-todo" id="publicar-todo" value="Publicar Todo">Publicar</button>
                     </form>
                 </div>

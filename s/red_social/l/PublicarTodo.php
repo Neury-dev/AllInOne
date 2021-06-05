@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once '../../Conexion.php';
+
 class PublicarTodo {
     private $sql;
     

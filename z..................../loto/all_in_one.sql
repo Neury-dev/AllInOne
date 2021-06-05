@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 21-05-2021 a las 02:50:13
+-- Tiempo de generación: 05-06-2021 a las 03:19:39
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.2
 
@@ -205,33 +205,15 @@ CREATE TABLE `Comentarios` (
 --
 
 INSERT INTO `Comentarios` (`id`, `yo`, `usuario`, `publicacion`, `comentario`, `fecha`) VALUES
-(1, '1', '1', '38', '', '2021-04-19 10:03:59'),
-(2, '1', '1', '38', '', '2021-04-19 10:12:51'),
-(3, '1', '1', '38', 'SameSite', '2021-04-19 12:09:08'),
-(4, '1', '1', '38', 'SameSite', '2021-04-19 12:10:32'),
-(5, '1', '1', '38', '', '2021-04-19 12:12:33'),
-(6, '1', '1', '36', 'cookies', '2021-04-19 12:13:39'),
-(7, '1', '1', '36', '', '2021-04-19 12:15:48'),
-(8, '1', '1', '36', 'style', '2021-04-19 12:18:12'),
-(9, '1', '1', '36', '', '2021-04-19 12:20:31'),
-(10, '1', '1', '36', 'atributo', '2021-04-19 12:22:28'),
-(11, '1', '5', '7', 'publicacion', '2021-04-19 12:23:59'),
-(12, '1', '5', '7', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini', '2021-04-19 12:42:26'),
-(13, '1', '5', '7', ' Ut enim ad minim ', '2021-04-19 13:45:52'),
-(14, '1', '5', '7', '', '2021-04-19 13:47:13'),
-(15, '1', '5', '7', 'publicacion', '2021-04-19 13:48:29'),
-(16, '1', '4', '6', 'document', '2021-04-19 13:49:07'),
-(17, '1', '4', '6', '', '2021-04-19 13:59:51'),
-(18, '1', '4', '6', 'sed do eiusmod tempor ', '2021-04-19 14:03:14'),
-(19, '1', '4', '6', '', '2021-04-19 14:06:13'),
-(20, '1', '4', '6', 'Lorem ipsum dolor', '2021-04-19 14:07:18'),
-(21, '1', '3', '5', '', '2021-04-19 14:08:57'),
-(22, '1', '3', '5', '“SameSite“ ', '2021-04-19 14:15:09'),
-(23, '1', '3', '5', '', '2021-04-19 14:16:06'),
-(24, '1', '3', '5', '“SameSite“', '2021-04-19 14:16:35'),
-(25, '1', '3', '5', '', '2021-04-19 14:17:15'),
-(26, '1', '2', '4', '“SameSite“', '2021-04-19 14:17:52'),
-(27, '1', '2', '4', '', '2021-04-19 14:29:12');
+(1, '1', '1', '38', 'Hello. How are you today?', '2021-05-25 02:04:15'),
+(2, '1', '1', '36', 'How are you?', '2021-05-25 02:22:16'),
+(3, '5', '1', '36', 'Bien', '2021-05-25 02:23:46'),
+(4, '5', '1', '36', 'Enserio', '2021-05-25 02:24:07'),
+(5, '5', '1', '38', 'Ahora si', '2021-05-25 02:24:21'),
+(6, '1', '1', '1', 'Comentario', '2021-05-25 02:59:13'),
+(7, '5', '1', '1', 'Respuesta.', '2021-05-25 03:00:12'),
+(8, '1', '2', '2', 'Comentario.', '2021-05-25 14:18:31'),
+(9, '5', '2', '2', 'Respuesta.', '2021-05-25 14:19:46');
 
 -- --------------------------------------------------------
 
@@ -717,7 +699,11 @@ INSERT INTO `Historial` (`id`, `fecha`, `sorteo`, `loto`, `lotoMas`, `superMas`)
 (403, '2021-05-08', '1159', '10 14 21 23 36 37', '10', '05'),
 (404, '2021-05-12', '1160', '01 09 13 16 30 32', '04', '07'),
 (405, '2021-05-15', '1061', '02 17 18 28 36 38', '07', '05'),
-(406, '2021-05-19', '1062', '08 11 12 19 26 32', '03', '06');
+(406, '2021-05-19', '1062', '08 11 12 19 26 32', '03', '06'),
+(407, '2021-05-22', '1163', '05 07 09 15 24 38', '02', '03'),
+(408, '2021-05-26', '1164', '04 06 11 19 21 28', '06', '12'),
+(409, '2021-05-29', '1165', '14 21 22 26 30 32', '07', '14'),
+(410, '2021-06-02', '1166', '07 16 18 29 34 36', '04', '02');
 
 -- --------------------------------------------------------
 
@@ -750,8 +736,8 @@ INSERT INTO `HistorialCoincidente` (`id`, `idHistorial`, `fecha`, `sorteo`, `lot
 
 CREATE TABLE `Imagenes` (
   `id` bigint(20) NOT NULL,
-  `idUsuario` bigint(20) NOT NULL,
-  `idPublicacion` text COLLATE utf8_unicode_ci NOT NULL,
+  `yo` bigint(20) NOT NULL,
+  `publicacion` bigint(20) NOT NULL,
   `imagen` text COLLATE utf8_unicode_ci NOT NULL,
   `fecha` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -760,23 +746,60 @@ CREATE TABLE `Imagenes` (
 -- Volcado de datos para la tabla `Imagenes`
 --
 
-INSERT INTO `Imagenes` (`id`, `idUsuario`, `idPublicacion`, `imagen`, `fecha`) VALUES
-(1, 1, '1', 'ID--NAME-CBC434.jpg', '2021-01-02 00:15:00'),
-(2, 2, '2', 'ID--NAME-CEBE80.jpg', '2021-01-02 00:15:12'),
-(3, 1, '3', 'ID--NAME-DD6F27.jpg', '2021-01-04 14:36:40'),
-(4, 2, '4', 'ID--NAME-706B1B.jpg', '2021-01-05 20:06:35'),
-(5, 3, '5', 'ID--NAME-5D244D.jpg', '2021-04-10 11:35:45'),
-(6, 4, '6', 'ID--NAME-29CFCC.jpg', '2021-04-10 11:43:03'),
-(7, 5, '7', 'ID--NAME-248261.jpg', '2021-04-12 10:10:53'),
-(30, 1, '30', 'ID--NAME-248261.jpg', '2021-04-15 21:43:47'),
-(31, 1, '31', 'ID--NAME-248261.jpg', '2021-04-15 21:43:59'),
-(32, 1, '32', 'ID--NAME-29CFCC.jpg', '2021-04-15 21:44:28'),
-(33, 1, '33', 'ID--NAME-5D244D.jpg', '2021-04-15 21:44:38'),
-(34, 1, '34', 'ID--NAME-29CFCC.jpg', '2021-04-15 22:00:46'),
-(35, 1, '35', 'ID--NAME-5D244D.jpg', '2021-04-15 22:00:58'),
-(42, 1, '36', 'ID--NAME-5D244D.jpg', '2021-04-15 23:20:20'),
-(43, 1, '37', 'ID--NAME-5D244D.jpg', '2021-04-18 04:00:50'),
-(44, 1, '38', 'ID--NAME-248261.jpg', '2021-04-18 04:05:55');
+INSERT INTO `Imagenes` (`id`, `yo`, `publicacion`, `imagen`, `fecha`) VALUES
+(1, 1, 1, 'ID--NAME-CBC434.jpg', '2021-01-02 00:15:00'),
+(2, 2, 2, 'ID--NAME-CEBE80.jpg', '2021-01-02 00:15:12'),
+(3, 1, 3, 'ID--NAME-DD6F27.jpg', '2021-01-04 14:36:40'),
+(4, 2, 4, 'ID--NAME-706B1B.jpg', '2021-01-05 20:06:35'),
+(5, 3, 5, 'ID--NAME-5D244D.jpg', '2021-04-10 11:35:45'),
+(6, 4, 6, 'ID--NAME-29CFCC.jpg', '2021-04-10 11:43:03'),
+(7, 5, 7, 'ID--NAME-248261.jpg', '2021-04-12 10:10:53'),
+(30, 1, 30, 'ID--NAME-248261.jpg', '2021-04-15 21:43:47'),
+(31, 1, 31, 'ID--NAME-248261.jpg', '2021-04-15 21:43:59'),
+(32, 1, 32, 'ID--NAME-29CFCC.jpg', '2021-04-15 21:44:28'),
+(33, 1, 33, 'ID--NAME-5D244D.jpg', '2021-04-15 21:44:38'),
+(34, 1, 34, 'ID--NAME-29CFCC.jpg', '2021-04-15 22:00:46'),
+(35, 1, 35, 'ID--NAME-5D244D.jpg', '2021-04-15 22:00:58'),
+(42, 1, 36, 'ID--NAME-5D244D.jpg', '2021-04-15 23:20:20'),
+(43, 1, 37, 'ID--NAME-5D244D.jpg', '2021-04-18 04:00:50'),
+(44, 1, 38, 'ID--NAME-248261.jpg', '2021-04-18 04:05:55'),
+(45, 1, 39, 'ID--NAME-B61094.jpg', '2021-06-01 13:46:31'),
+(46, 24, 40, 'ID--NAME-0E1EF5.jpg', '2021-06-02 05:40:52'),
+(47, 24, 41, 'ID--NAME-BAC4FD.jpg', '2021-06-02 05:52:38'),
+(48, 24, 42, 'ID--NAME-865C4C.jpg', '2021-06-02 05:55:04'),
+(49, 24, 43, 'ID--NAME-521614.jpg', '2021-06-02 06:00:36'),
+(50, 24, 44, 'ID--NAME-BA6648.jpg', '2021-06-02 06:01:50'),
+(51, 1, 45, 'ID--NAME-F78231.jpg', '2021-06-03 02:14:08'),
+(52, 7, 46, 'ID--NAME-C6BA5B.jpg', '2021-06-04 02:48:13');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `Intereses`
+--
+
+CREATE TABLE `Intereses` (
+  `id` int(11) NOT NULL,
+  `yo` text COLLATE utf8_unicode_ci NOT NULL,
+  `interes` text COLLATE utf8_unicode_ci NOT NULL,
+  `fecha` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `Intereses`
+--
+
+INSERT INTO `Intereses` (`id`, `yo`, `interes`, `fecha`) VALUES
+(8, '1', '1', '2021-05-30 21:49:47'),
+(9, '1', '2', '2021-05-30 21:49:50'),
+(10, '1', '3', '2021-05-30 21:49:58'),
+(11, '1', '4', '2021-05-30 21:50:02'),
+(12, '1', '5', '2021-05-30 21:50:05'),
+(13, '1', '6', '2021-05-30 21:50:11'),
+(14, '1', '7', '2021-05-30 21:50:14'),
+(15, '1', '8', '2021-05-30 21:50:17'),
+(16, '1', '9', '2021-05-30 21:50:19'),
+(17, '1', '10', '2021-05-30 21:50:22');
 
 -- --------------------------------------------------------
 
@@ -786,14 +809,14 @@ INSERT INTO `Imagenes` (`id`, `idUsuario`, `idPublicacion`, `imagen`, `fecha`) V
 
 CREATE TABLE `Publicaciones` (
   `id` bigint(20) NOT NULL,
-  `idUsuario` bigint(20) NOT NULL,
+  `yo` bigint(20) NOT NULL,
   `publicacion` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `fecha` datetime NOT NULL,
+  `fecha` datetime NOT NULL DEFAULT current_timestamp(),
   `gustaSi` text COLLATE utf8_unicode_ci DEFAULT NULL,
   `gustaNo` text COLLATE utf8_unicode_ci DEFAULT NULL,
   `comentarios` text COLLATE utf8_unicode_ci DEFAULT NULL,
   `compartida` text COLLATE utf8_unicode_ci DEFAULT NULL,
-  `por` text COLLATE utf8_unicode_ci DEFAULT NULL,
+  `de` text COLLATE utf8_unicode_ci DEFAULT NULL,
   `autor` text COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -801,16 +824,24 @@ CREATE TABLE `Publicaciones` (
 -- Volcado de datos para la tabla `Publicaciones`
 --
 
-INSERT INTO `Publicaciones` (`id`, `idUsuario`, `publicacion`, `fecha`, `gustaSi`, `gustaNo`, `comentarios`, `compartida`, `por`, `autor`) VALUES
-(1, 1, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ', '2021-01-02 00:15:00', '1', '1', '0', '0', ' ', ' '),
-(2, 2, '2222222222222222222Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ', '2021-01-02 00:15:11', '1', '1', '0', '0', ' ', ' '),
+INSERT INTO `Publicaciones` (`id`, `yo`, `publicacion`, `fecha`, `gustaSi`, `gustaNo`, `comentarios`, `compartida`, `de`, `autor`) VALUES
+(1, 1, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ', '2021-01-02 00:15:00', '1', '1', '2', '0', ' ', ' '),
+(2, 2, '2222222222222222222Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ', '2021-01-02 00:15:11', '1', '1', '2', '0', ' ', ' '),
 (3, 1, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ', '2021-01-04 14:36:40', '0', '0', '0', '0', ' ', ' '),
 (4, 2, '2222222222222222222Lorem ipsum dolor ', '2021-01-05 20:06:35', '1', '2', '2', '0', ' ', ' '),
 (5, 3, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ', '2021-04-10 11:35:45', '1', '1', '5', '1', ' ', ' '),
 (6, 4, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ', '2021-04-10 11:43:02', '1', '1', '5', '0', ' ', ' '),
-(7, 5, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ', '2021-04-12 10:10:52', '2', '0', '5', '1', ' ', ' '),
-(36, 1, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ', '2021-04-15 23:20:20', '1', '1', '5', '0', 'por', 'Aguasvivas'),
-(38, 1, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ', '2021-04-18 04:05:55', '1', '1', '5', '0', 'por', 'Mujer');
+(7, 5, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ', '2021-04-12 10:10:52', '2', '0', '6', '1', ' ', ' '),
+(36, 1, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ', '2021-04-15 23:20:20', '1', '1', '9', '0', 'De', 'Aguasvivas'),
+(38, 1, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ', '2021-04-18 04:05:55', '1', '1', '10', '0', 'De', 'Mujer'),
+(39, 1, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sdaffdddddddddd', '2021-06-01 13:46:30', '0', '0', '0', '0', ' ', ' '),
+(40, 24, 's', '2021-06-02 05:40:52', '0', '0', '0', '0', ' ', ' '),
+(41, 24, 'c', '2021-06-02 05:52:37', '0', '0', '0', '0', ' ', ' '),
+(42, 24, 'w', '2021-06-02 05:55:04', '0', '0', '0', '0', ' ', ' '),
+(43, 24, 'bsfasdf', '2021-06-02 06:00:35', '0', '0', '0', '0', ' ', ' '),
+(44, 24, 't', '2021-06-02 06:01:50', '0', '0', '0', '0', ' ', ' '),
+(45, 1, 'fsdsf', '2021-06-03 02:14:08', '0', '0', '0', '0', ' ', ' '),
+(46, 7, 's', '2021-06-04 02:48:12', '0', '0', '0', '0', ' ', ' ');
 
 -- --------------------------------------------------------
 
@@ -926,28 +957,30 @@ CREATE TABLE `Usuarios` (
   `id` bigint(20) NOT NULL,
   `nombre` text COLLATE utf8_unicode_ci NOT NULL,
   `apellido` text COLLATE utf8_unicode_ci NOT NULL,
-  `nacimiento` date NOT NULL,
   `correo` text COLLATE utf8_unicode_ci NOT NULL,
-  `codigo` text COLLATE utf8_unicode_ci NOT NULL,
   `numero` text COLLATE utf8_unicode_ci NOT NULL,
   `sexo` text COLLATE utf8_unicode_ci NOT NULL,
-  `estado` text COLLATE utf8_unicode_ci NOT NULL,
+  `nacimiento` date NOT NULL,
   `pais` text COLLATE utf8_unicode_ci NOT NULL,
-  `ciudad` text COLLATE utf8_unicode_ci NOT NULL,
+  `codigo` text COLLATE utf8_unicode_ci NOT NULL,
   `fecha` datetime NOT NULL,
-  `foto` text COLLATE utf8_unicode_ci NOT NULL
+  `foto` text COLLATE utf8_unicode_ci NOT NULL,
+  `portada` text COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `Usuarios`
 --
 
-INSERT INTO `Usuarios` (`id`, `nombre`, `apellido`, `nacimiento`, `correo`, `codigo`, `numero`, `sexo`, `estado`, `pais`, `ciudad`, `fecha`, `foto`) VALUES
-(1, 'Neury', 'Doe', '2020-01-01', 'neury@email.com', 'neury', '809 000 0000', 'Femenina', 'Soltera', 'RD', 'SD', '2021-01-01 16:47:03', 'avatar3.png'),
-(2, 'Eleasar', 'Doe', '2020-01-01', 'eleasar@email.com', 'neury', '809 000 0000', 'Femenina', 'Soltera', 'RD', 'SD', '2021-01-04 17:08:53', 'avatar3.png'),
-(3, 'Aguasvivas', 'Doe', '2001-01-01', 'aguasvivas@email.com', 'neury', '809 000 0000', 'Femenina', 'Soltera', 'RD', 'SD', '2021-01-05 21:28:10', 'avatar3.png'),
-(4, 'Lorenzo', 'Doe', '2001-01-01', 'lorenzo@email.com', 'neury', '809 000 0000', 'Femenina', 'Soltera', 'RD', 'SD', '2021-04-09 17:14:50', 'avatar3.png'),
-(5, 'Mujer', 'Doe', '2001-01-01', 'mujer@email.com', 'neury', '809 000 0000', 'Femenina', 'Soltera', 'RD', 'SD', '2021-04-09 17:16:25', 'avatar.png');
+INSERT INTO `Usuarios` (`id`, `nombre`, `apellido`, `correo`, `numero`, `sexo`, `nacimiento`, `pais`, `codigo`, `fecha`, `foto`, `portada`) VALUES
+(1, 'Neury', 'Doe', 'neury@email.com', '829 933 5860', 'Hombre', '1991-09-21', 'Dominican Republic', 'neury', '2021-01-01 16:47:03', 'foto.jpg', 'portada.jpg'),
+(2, 'Eleasar', 'Doe', 'eleasar@email.com', '809 000 0000', 'Femenina', '2020-01-01', 'RD', 'neury', '2021-01-04 17:08:53', 'foto.jpg', 'portada.jpg'),
+(3, 'Aguasvivas', 'Doe', 'aguasvivas@email.com', '809 000 0000', 'Femenina', '2001-01-01', 'RD', 'neury', '2021-01-05 21:28:10', 'foto.jpg', 'portada.jpg'),
+(4, 'Lorenzo', 'Doe', 'lorenzo@email.com', '809 000 0000', 'Femenina', '2001-01-01', 'RD', 'neury', '2021-04-09 17:14:50', 'foto.jpg', 'portada.jpg'),
+(5, 'Mujer', 'Doe', 'mujer@email.com', '809 000 0000', 'Femenina', '2001-01-01', 'RD', 'neury', '2021-04-09 17:16:25', 'foto.jpg', 'portada.jpg'),
+(6, 'John', 'Doe', 'jonha@email.com', '809 000 0000', 'Sin definir', '2001-01-01', 'Sin definir', 'neury', '2021-05-31 21:52:20', 'foto.jpg', 'portada.jpg'),
+(7, 'John', 'Doe', 'jonh@email.com', '809 000 0000', 'Sin definir', '2001-01-01', 'Sin definir', 'neury', '2021-05-31 21:58:29', 'foto.jpg', 'portada.jpg'),
+(24, 'John', 'Doe', 'jane@email.com', '809 000 0000', 'Sin definir', '2001-01-01', 'Sin definir', 'neury', '2021-06-02 04:58:49', 'foto.jpg', 'portada.jpg');
 
 -- --------------------------------------------------------
 
@@ -1058,6 +1091,12 @@ ALTER TABLE `Imagenes`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `Intereses`
+--
+ALTER TABLE `Intereses`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `Publicaciones`
 --
 ALTER TABLE `Publicaciones`
@@ -1144,7 +1183,7 @@ ALTER TABLE `Chats`
 -- AUTO_INCREMENT de la tabla `Comentarios`
 --
 ALTER TABLE `Comentarios`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `Compartidas`
@@ -1162,7 +1201,7 @@ ALTER TABLE `Gusta`
 -- AUTO_INCREMENT de la tabla `Historial`
 --
 ALTER TABLE `Historial`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=407;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=411;
 
 --
 -- AUTO_INCREMENT de la tabla `HistorialCoincidente`
@@ -1174,13 +1213,19 @@ ALTER TABLE `HistorialCoincidente`
 -- AUTO_INCREMENT de la tabla `Imagenes`
 --
 ALTER TABLE `Imagenes`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+
+--
+-- AUTO_INCREMENT de la tabla `Intereses`
+--
+ALTER TABLE `Intereses`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de la tabla `Publicaciones`
 --
 ALTER TABLE `Publicaciones`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT de la tabla `SistemaPHP`
@@ -1204,7 +1249,7 @@ ALTER TABLE `Transaccion`
 -- AUTO_INCREMENT de la tabla `Usuarios`
 --
 ALTER TABLE `Usuarios`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT de la tabla `Ventas`

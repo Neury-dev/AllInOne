@@ -1,7 +1,12 @@
 const formTodo  = document.querySelector('#todo');
 const res       = document.querySelector('#res');
+const img = document.querySelector("#imagen");
 
 class Publicar {
+    static
+    imgNombre() {
+        document.querySelector("#img-nombre").value = img.files[0].name;
+    }
     static
     todo() {
         let publicacion     = document.forms["todo"]["publicacion"].value;
@@ -35,6 +40,9 @@ class Publicar {
         });
     }
 }
+img.oninput = function() {
+    Publicar.imgNombre();
+};
 formTodo.addEventListener('submit', function(e) {
     e.preventDefault();
     Publicar.todo(); 
