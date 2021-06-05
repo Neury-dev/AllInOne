@@ -298,15 +298,15 @@ class Editar {
     fotos() {
         let foto        = document.forms["fotos"]["foto"].files[0];
         let portada     = document.forms["fotos"]["portada"].files[0];
-        let editarFoto  = document.forms["fotos"]["editar-foto"].value;
+        let editarFotos = document.forms["fotos"]["editar-fotos"].value;
 
         let datos           = new FormData(formFotos);
 
         datos.append('foto', foto);
         datos.append('portada', portada);
-        datos.append('editar-fotos', editarFoto);
+        datos.append('editar-fotos', editarFotos);
 
-        fetch('../../../s/red_social/l/EditarFoto.php', {
+        fetch('../../../s/red_social/l/EditarFotos.php', {
             method: 'POST',
             headers: {
                 'Content-Disposition' : 'form-data'
@@ -320,7 +320,7 @@ class Editar {
             }
         }).then(function(texto) {
             resFotos.innerHTML = texto;
-            leer();
+            Perfil.yo();
         }).catch(function(error) {
             console.log(error);
         });
@@ -342,12 +342,11 @@ class Editar {
             if(response.ok) { 
                 return response.text(); 
             } else { 
-                throw "Error con la respuesta."; 
+                throw "Error de URL"; 
             }
         }).then(function(texto) {
-            console.log(texto);
             resIntereses.innerHTML = texto;
-            leer();
+            Perfil.yo();
         }).catch(function(error) {
             console.log(error);
         });
@@ -381,11 +380,12 @@ class Editar {
             if(response.ok) { 
                 return response.text(); 
             } else { 
-                throw "Error con la respuesta."; 
+                throw "Error de URL"; 
             }
         }).then(function(texto) {
             resDatos.innerHTML = texto;
             leer();
+            Perfil.yo();
         }).catch(function(error) {
             console.log(error);
         });
@@ -409,11 +409,11 @@ class Editar {
             if(response.ok) { 
                 return response.text(); 
             } else { 
-                throw "Error con la respuesta."; 
+                throw "Error de URL"; 
             }
         }).then(function(texto) {
+            formCodigo.reset();
             resCodigo.innerHTML = texto;
-            leer();
         }).catch(function(error) {
             console.log(error);
         });
@@ -437,7 +437,7 @@ class Editar {
             if(response.ok) { 
                 return response.text(); 
             } else { 
-                throw "Error con la respuesta."; 
+                throw "Error de URL"; 
             }
         }).then(function(texto) {
             formEliminar.reset();

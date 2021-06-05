@@ -223,10 +223,5 @@ Datos del perfil
 <script src="../../../l/red_social/i/header.js" async=""></script>
 <script src="../../../l/red_social/l/perfil/perfil.js" async=""></script>
 <script src="../../../l/red_social/l/perfil/edicion.js" defer=""></script>
-<!--<script src="../../../l/red_social/i/editar.js" defer=""></script>-->
-<script>
-   
-
-</script>
 </body>
 </html>
