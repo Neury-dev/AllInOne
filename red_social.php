@@ -3,9 +3,11 @@
         <title>AllInOne | Red Social</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="i_img/i/neury-dev.jpg" type="image/jpg" sizes="16x16">
+        <link rel="icon" href="http://localhost/AllInOne/i_img/i/neury-dev.jpg" type="image/jpg" sizes="16x16">
+        <!--CSS-->
         <link rel="stylesheet" href="http://localhost/AllInOne/i_css/i/root.css" />
         <link rel="stylesheet" href="i_css/red_social/red_social.css">
+        <!--Iconos-->
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     </head>
 <body>

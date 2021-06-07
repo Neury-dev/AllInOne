@@ -1,8 +1,9 @@
 <?php
 session_start();
 require_once '../../Conexion.php';
+require_once '../../Globales.php';
 
-class Chats {
+class Chats extends Globales {
     private $sql;
     private $resultado;
     private $obtenidos;
@@ -32,8 +33,6 @@ class Chats {
                 $this->resultado = $this->sql->fetch_all(MYSQLI_ASSOC);
 
             foreach ($this->resultado as $usuario) {
-                $fecha = DateTime::createFromFormat('Y-m-d H:i:s', $valor['fecha']);
-
                 array_push($this->obtenidos, array(
                     "id"        => $valor["id"],
                     "de"        => $valor["de"],
@@ -41,7 +40,7 @@ class Chats {
                     "mensaje"   => $valor["mensaje"],
                     "nombre"    => $usuario["nombre"],
                     "foto"      => $usuario["foto"],
-                    "fecha"     => $fecha->format('d M Y')
+                    "fecha"     => self::tiempoTranscurrido(strtotime($valor['fecha']))
                 ));
             }
             }

@@ -1,23 +1,26 @@
 <html>
 <head>
-    <title>Chat</title>
+    <title>AllInOne | Red Social | Chats</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="http://localhost/AllInOne/i_img/i/neury-dev.jpg" type="image/jpg" sizes="16x16">
+    <!--CSS-->
+    <link rel="stylesheet" href="http://localhost/AllInOne/i_css/i/root.css" />
     <link rel="stylesheet" href="../../../i_css/red_social/header.css">
     <link rel="stylesheet" href="../../../i_css/red_social/perfil/chats.css"/>
-    
+    <!--Iconos-->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
-<!-- 
-    header
--->
+<!------------------------------------------------------------------------------ 
+header
+-------------------------------------------------------------------------------->
     <header id="n-header" class="n-grid-header">
         <section class="area-1">
             <h1><a href="http://localhost/AllInOne/index.php" style="display: block;">AllInOne</a></h1>
         </section>
         <section class="area-2">
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="form" id="form" enctype="multipart/form-data">
+            <form action="" method="POST" name="form" id="form" enctype="multipart/form-data">
                 <input type="search" name="buscar" id="buscar" placeholder="Buscar gente...">
             </form>
         </section>
@@ -57,15 +60,9 @@
         <a href="../../i/red_social/perfil/editar.php">Editar</a>
         <a href="#">Salir</a>
     </div>
-<!--    <nav></nav>
-    <aside></aside>
-    <main></main>
-    <section></section>
-    <article></article>
-    <footer></footer>-->
-<!-- 
+<!------------------------------------------------------------------------------
     Chats 
--->
+------------------------------------------------------------------------------->
 <section class="n-grid">
     <section class="area-1">
         <nav id="contactados">

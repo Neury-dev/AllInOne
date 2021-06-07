@@ -22,16 +22,22 @@ class Conseguir {
 
         for (let i in jsonObject) {
             if (jsonObject[i].de === de) {
-                salida += "<div class='container darker'>";
-                    salida += "<img src='../../../i_img/red_social/i/" + jsonObject[i].foto + "' alt='Avatar' class='right' style='width:100%;'>";
-                    salida += "<p>" + jsonObject[i].mensaje + "</p>";
-                    salida += "<span class='time-left'>" + jsonObject[i].fecha + "</span>";
+                salida += "<div class='yo'>";
+                    salida += "<img src='../../../i_img/red_social/i/" + jsonObject[i].foto + "' alt=''>";
+                    salida += "<div>";
+                        salida += "<span>" + jsonObject[i].fecha + "</span><br>";
+                        salida += "<h6 class='titulo'>" + jsonObject[i].nombre + "</h6>";
+                        salida += "<p>" + jsonObject[i].mensaje + "</p>";
+                    salida += "</div>";
                 salida += "</div>";
             } else {
-                salida += "<div class='container'>";
-                    salida += "<img src='../../../i_img/red_social/i/" + jsonObject[i].foto + "' alt='Avatar' style='width:100%;'>";
-                    salida += "<p>" + jsonObject[i].mensaje + "</p>";
-                    salida += "<span class='time-right'>" + jsonObject[i].fecha + "</span>";
+                salida += "<div class='usuario'>";
+                    salida += "<img src='../../../i_img/red_social/i/" + jsonObject[i].foto + "' alt=''>";
+                    salida += "<div>";
+                        salida += "<span>" + jsonObject[i].fecha + "</span>";
+                        salida += "<h6 class='titulo'>" + jsonObject[i].nombre + "</h6>";
+                        salida += "<p>" + jsonObject[i].mensaje + "</p>";
+                    salida += "</div>";
                 salida += "</div>";
             } 
         }
@@ -149,16 +155,15 @@ class GetContactados {
         let salida = "";
 
         for (let i in jsonContactados) {
-            salida += "<div class='w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey'>";
-                salida += "<div class='w3-container'>";
-                    salida += "<img class='w3-round w3-margin-right' style='width:15%;'"; 
-                        salida += "src='../../../i_img/red_social/i/" + jsonContactados[i].foto + "'>";
+            salida += "<div>";
+                salida += "<img src='../../../i_img/red_social/i/" + jsonContactados[i].foto + "'>";
+                salida += "<div class=''>";
                     salida += "<form action='' method='POST' name='contactado-"+jsonContactados[i].ok+"' id='contactado-"+jsonContactados[i].ok+"'>";
                         salida += "<input type='hidden' id='chat-contactado' name='chat-contactado' value='" + jsonContactados[i].ok + "'>";
-                        salida += "<button type='submit' onclick='Chats.mensajes("+jsonContactados[i].ok+")'>"+jsonContactados[i].nombre+"</button>";
+                        salida += "<button class='titulo' type='submit' onclick='Chats.mensajes("+jsonContactados[i].ok+")'>"+jsonContactados[i].nombre+"</button>";
                     salida += "</form>";
-                    salida += "<h6>Subject: " + jsonContactados[i].nombre + "</h6>";
-                    salida += "<p>Chat con: " + jsonContactados[i].ok + "</p>";
+//                    salida += "<h6>Subject: " + jsonContactados[i].nombre + "</h6>";
+//                    salida += "<p>Chat con: " + jsonContactados[i].ok + "</p>";
                 salida += "</div>";
             salida += "</div>";
         }
