@@ -13,8 +13,9 @@ class Contactados {
         $this->obtenidos = array();
         
         $this->sql = $GLOBALS["base"]->conexion->
-        query("SELECT `de`, `para` FROM `ChatDePara` "
-            . "WHERE `de` = '".$_SESSION['johnDoe']."' OR `para` = '".$_SESSION['johnDoe']."' ORDER BY `fechaFinalizada` DESC");
+        query("SELECT * FROM `ChatDePara` WHERE "
+            . "`de` = '".$_SESSION['johnDoe']."' OR "
+            . "`para` = '".$_SESSION['johnDoe']."' ORDER BY `fechaFinalizada` DESC");
         $this->resultado = $this->sql->fetch_all(MYSQLI_ASSOC);
 
         foreach ($this->resultado as $valor) {
@@ -29,8 +30,8 @@ class Contactados {
             array_push($this->obtenidos, array(
                 "ok"        => $this->ok,
                 "nombre"    => $usuario["nombre"],
-                "foto"      => $usuario["foto"]
-                
+                "foto"      => $usuario["foto"],
+                "fecha"     => $valor['fechaFinalizada']
             ));
         }
         }

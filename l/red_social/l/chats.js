@@ -1,7 +1,6 @@
 var jsonContactados, jsonObject, de;
-/*
-    * john Doe 
- */
+/*john Doe 
+--------------------------------------------------------------------------------*/
 fetch('../../../s/red_social/l/Sesion.php', {
     method: 'GET'
 }).then(function (response) {
@@ -12,9 +11,8 @@ fetch('../../../s/red_social/l/Sesion.php', {
 }).catch(function (err) {
     console.log('Fetch problem: ' + err.message);
 });
-/*
-    * Chat 
-*/
+/*Chat 
+--------------------------------------------------------------------------------*/
 class Conseguir {
     static
     chat() {
@@ -25,10 +23,10 @@ class Conseguir {
                 salida += "<div class='yo'>";
                     salida += "<img src='../../../i_img/red_social/i/" + jsonObject[i].foto + "' alt=''>";
                     salida += "<div>";
-                        salida += "<span>" + jsonObject[i].fecha + "</span><br>";
+                        salida += "<span>" + jsonObject[i].fecha + "</span>";
                         salida += "<h6 class='titulo'>" + jsonObject[i].nombre + "</h6>";
-                        salida += "<p>" + jsonObject[i].mensaje + "</p>";
                     salida += "</div>";
+                    salida += "<p>" + jsonObject[i].mensaje + "</p>";
                 salida += "</div>";
             } else {
                 salida += "<div class='usuario'>";
@@ -36,8 +34,8 @@ class Conseguir {
                     salida += "<div>";
                         salida += "<span>" + jsonObject[i].fecha + "</span>";
                         salida += "<h6 class='titulo'>" + jsonObject[i].nombre + "</h6>";
-                        salida += "<p>" + jsonObject[i].mensaje + "</p>";
                     salida += "</div>";
+                    salida += "<p>" + jsonObject[i].mensaje + "</p>";
                 salida += "</div>";
             } 
         }
@@ -62,11 +60,8 @@ class Chats {
                 method: 'POST',
                 body: datos
             }).then(function (response) {
-                if (response.ok) {
-                    return response.json();
-                } else {
-                    throw "Error en la llamada";
-                }
+                if (response.ok) { return response.json(); } 
+                else { throw "Error de URL"; }
             }).then(function (json) {console.log("Chats.mensajes > " + json);
                 jsonObject = json;
                 Conseguir.chat();
@@ -78,9 +73,8 @@ class Chats {
         });
     }
 }
-/*
-    * Chat con 
- */
+/*Chat con 
+--------------------------------------------------------------------------------*/
 class ChatCon {
     static
     reMensaje() {
@@ -101,11 +95,8 @@ class ChatCon {
                 method: 'POST',
                 body: datos
             }).then(function (response) {
-                if (response.ok) {
-                    return response.json();
-                } else {
-                    throw "Error en la llamada";
-                }
+                if (response.ok) { return response.json(); } 
+                else { throw "Error de URL"; }
             }).then(function (json) { console.log("con > " + chatCon + " Mas: " + json);
                 jsonObject = json;
                 Conseguir.chat();
@@ -118,36 +109,26 @@ class ChatCon {
         });
     }
 }
-/*
-    * Chats en contacto 
- */
+/*Chats en contacto 
+--------------------------------------------------------------------------------*/
 class ReGetChatCon {
     static
-      usuario() {
-        fetch('../../../s/red_social/l/Contactados.php').then(function (response) {
-            return response.json();
+     usuario() {
+        fetch('../../../s/red_social/l/Contactados.php', {
+            method: 'GET'
+        }).then(function (response) {
+            if (response.ok) { return response.json(); } 
+            else { throw "Error de URL"; }
         }).then(function (json) {
-            console.log(json);
             jsonContactados = json;
-//    setTimeout(function(){
+
             GetContactados.publicar();
-//    }, 1000);
         }).catch(function (err) {
             console.log('Ha ocurrido un error: ' + err.message);
         });
     }
 }
-fetch('../../../s/red_social/l/Contactados.php').then(function (response) {
-    return response.json();
-}).then(function (json) {
-    console.log(json);
-    jsonContactados = json;
-//    setTimeout(function(){
-        GetContactados.publicar();
-//    }, 1000);
-}).catch(function (err) {
-    console.log('Ha ocurrido un error: ' + err.message);
-});
+ReGetChatCon.usuario();
 
 class GetContactados {
     static
@@ -157,6 +138,7 @@ class GetContactados {
         for (let i in jsonContactados) {
             salida += "<div>";
                 salida += "<img src='../../../i_img/red_social/i/" + jsonContactados[i].foto + "'>";
+                salida += "<span>" + jsonContactados[i].fecha + "</span>";
                 salida += "<div class=''>";
                     salida += "<form action='' method='POST' name='contactado-"+jsonContactados[i].ok+"' id='contactado-"+jsonContactados[i].ok+"'>";
                         salida += "<input type='hidden' id='chat-contactado' name='chat-contactado' value='" + jsonContactados[i].ok + "'>";

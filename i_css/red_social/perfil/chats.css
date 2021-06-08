@@ -36,34 +36,36 @@
     margin-top: 2em;
 }
 .n-grid > .area-2 > main {
+    display: flex;
+    flex-direction: column;
     background-color: var(--n-color-dos);
     border-radius: var(--n-radio);
     padding: 3em;
 }
-.n-grid > .area-2 > main > .yo { color: var(--n-color); }
+/*.n-grid > .area-2 > main > .yo { color: var(--n-color); }*/
+.n-grid > .area-2 > main > .yo { 
+    color: var(--n-color); 
+}
 .n-grid > .area-2 > main > .yo > img {
     float: right;
     width: 24px;
     height: 24px;
-    margin: 0.10em;
+    margin-left: 0.10em;
+    margin-bottom: 0.30em;
     border-radius: 50%;
 }
-.n-grid > .area-2 > main > .yo > div > span {
-    float: right; 
-    font-size: 0.60em; 
-}
+.n-grid > .area-2 > main > .yo > div { float: right;}
+.n-grid > .area-2 > main > .yo > div > span { font-size: 0.60em; }
 .n-grid > .area-2 > main > .yo > div > h6 { 
-    float: right; 
     font-size: 0.60em; 
-    text-align: right;
-    margin: 0;
-    margin-top: -0.75em;
+    text-align: right; 
+    margin: 0; 
 }
-.n-grid > .area-2 > main > .yo > div > p {
-    font-size: 0.70em;
+.n-grid > .area-2 > main > .yo > p {
     text-align: right;
-    margin-top: 0.50em;
-    margin-right: 1.50em;
+    font-size: 0.70em;
+    margin-top: 2em;
+    margin-right: 1.30em;
     border-right: 0.10em solid var(--n-color);
     padding-right: 1.50em;
     clear: both;
@@ -78,7 +80,7 @@
 }
 .n-grid > .area-2 > main > .usuario > div > span { font-size: 0.60em; }
 .n-grid > .area-2 > main > .usuario > div > h6 { margin: 0; font-size: 0.60em; }
-.n-grid > .area-2 > main > .usuario > div > p {
+.n-grid > .area-2 > main > .usuario > p {
     font-size: 0.70em;
     margin-left: 1.50em;
     border-left: 0.10em solid var(--n-color);
